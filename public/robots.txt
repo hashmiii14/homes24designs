@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://homes24designs.in/sitemap.xml
+Host: https://homes24designs.in

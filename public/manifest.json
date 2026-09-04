@@ -1,21 +1,68 @@
 {
-  "name": "HOMES24DESIGNS",
+  "id": "/",
+  "name": "HOMES24DESIGNS | Luxury Interior Designers in Delhi",
   "short_name": "HOMES24",
-  "description": "Premium Interior Design & Home Interior Solutions in Delhi",
+  "description": "HOMES24DESIGNS is a Delhi-based interior design studio offering premium home interiors, modular kitchens, living rooms, bedrooms, wardrobes and custom interior solutions across Delhi and Delhi NCR.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#f7f4ef",
   "theme_color": "#1c1917",
+  "categories": ["lifestyle", "business"],
   "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
     {
       "src": "/favicon.svg",
       "sizes": "32x32",
       "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "Explore interior design services",
+      "url": "/services"
     },
     {
-      "src": "/apple-touch-icon.svg",
-      "sizes": "180x180",
-      "type": "image/svg+xml"
+      "name": "Free Consultation",
+      "short_name": "Consultation",
+      "description": "Book a design consultation",
+      "url": "/contact"
+    },
+    {
+      "name": "Pricing Guide",
+      "short_name": "Pricing",
+      "description": "View interior package pricing",
+      "url": "/pricing"
     }
   ]
 }

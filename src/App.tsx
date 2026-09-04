@@ -24,7 +24,7 @@ export default function App() {
       <BrowserRouter>
         <Loader />
         <Header />
-        <main>
+        <main id="main-content" tabIndex={-1} className="outline-none">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />

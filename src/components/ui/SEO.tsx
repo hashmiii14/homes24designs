@@ -19,8 +19,11 @@ export default function SEO({
   type = 'website',
   jsonLd,
 }: SEOProps) {
-  const fullTitle = title || 'HOMES24DESIGNS | Luxury Interior Designers in Delhi';
+  const fullTitle = title || 'HOMES24DESIGNS | Luxury Interior Designers in Delhi NCR';
   const url = `${siteConfig.url}${path}`;
+  const fullImageUrl = image.startsWith('http')
+    ? image
+    : `${siteConfig.url}${image.startsWith('/') ? image : `/${image}`}`;
   const jsonLdArray = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 
   useEffect(() => {
@@ -36,12 +39,17 @@ export default function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:type" content={type} />
-      <meta property="og:image" content={`${siteConfig.url}${image}`} />
+      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={fullTitle} />
+      <meta property="og:locale" content="en_IN" />
       <meta property="og:site_name" content={siteConfig.name} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${siteConfig.url}${image}`} />
+      <meta name="twitter:image" content={fullImageUrl} />
+      <meta name="twitter:image:alt" content={fullTitle} />
       {jsonLdArray.map((ld, i) => (
         <script key={i} type="application/ld+json">
           {JSON.stringify(ld)}
