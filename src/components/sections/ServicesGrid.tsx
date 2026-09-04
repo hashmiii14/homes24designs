@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 
 export default function ServicesGrid() {
   return (
-    <section className="py-20 md:py-32 bg-stone-50">
+    <section className="py-16 md:py-24 bg-stone-50">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -16,12 +16,12 @@ export default function ServicesGrid() {
           />
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {services.map((service, i) => (
-            <Reveal key={service.slug} delay={i * 80}>
+            <Reveal key={service.slug} delay={i * 60}>
               <Link
                 to={`/services/${service.slug}`}
-                className="group block h-full bg-ivory overflow-hidden transition-all duration-500 ease-lux hover:shadow-xl"
+                className="group flex flex-col h-full bg-ivory border border-stone-200/80 overflow-hidden transition-all duration-500 ease-lux hover:shadow-xl hover:-translate-y-1"
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -32,19 +32,21 @@ export default function ServicesGrid() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute top-4 right-4 w-9 h-9 bg-ivory/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:translate-x-0 translate-x-3">
+                  <div className="absolute top-4 right-4 w-8 h-8 bg-ivory/90 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:translate-x-0 translate-x-3 shadow-sm">
                     <ArrowUpRight className="w-4 h-4 text-charcoal-800" strokeWidth={1.5} />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 md:p-7">
-                  <h3 className="text-xl font-medium text-charcoal-800 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-stone-600">
-                    {service.description}
-                  </p>
+                <div className="p-5 flex flex-col flex-1 justify-between">
+                  <div>
+                    <h3 className="text-lg font-medium text-charcoal-800 mb-2 group-hover:text-accent transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-xs md:text-sm leading-relaxed text-stone-600 line-clamp-3">
+                      {service.description}
+                    </p>
+                  </div>
                   <span className="inline-flex items-center gap-1.5 mt-4 text-xs font-medium tracking-wide uppercase text-accent">
                     Learn More
                     <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />

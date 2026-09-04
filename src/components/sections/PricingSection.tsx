@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 
 export default function PricingSection() {
   return (
-    <section className="py-20 md:py-32 bg-ivory">
+    <section className="py-16 md:py-24 bg-ivory">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -16,7 +16,7 @@ export default function PricingSection() {
           />
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {pricingPlans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 100}>
               <div

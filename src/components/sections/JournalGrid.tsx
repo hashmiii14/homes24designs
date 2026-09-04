@@ -13,7 +13,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
   const posts = limit ? journalPosts.slice(0, limit) : journalPosts;
 
   return (
-    <section className={`py-20 md:py-32 ${showHeading ? 'bg-ivory' : 'bg-stone-50'}`}>
+    <section className={`py-16 md:py-24 ${showHeading ? 'bg-ivory' : 'bg-stone-50'}`}>
       <div className="container-lux">
         {showHeading && (
           <Reveal>
@@ -25,7 +25,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
           </Reveal>
         )}
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {posts.map((post, i) => (
             <Reveal key={post.slug} delay={i * 80}>
               <Link to={`/journal/${post.slug}`} className="group block h-full">

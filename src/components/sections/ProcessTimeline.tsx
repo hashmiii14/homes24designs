@@ -11,7 +11,7 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-20 md:py-32 bg-stone-50">
+    <section className="py-16 md:py-24 bg-stone-50">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -22,7 +22,7 @@ export default function ProcessTimeline() {
         </Reveal>
 
         {/* Desktop timeline */}
-        <div className="mt-16 hidden lg:block">
+        <div className="mt-12 hidden lg:block">
           <div className="relative">
             {/* Line */}
             <div className="absolute top-12 left-0 right-0 h-px bg-stone-300" />

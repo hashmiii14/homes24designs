@@ -14,7 +14,7 @@ export default function PortfolioGrid() {
   }, [filter]);
 
   return (
-    <section className="py-20 md:py-32 bg-ivory">
+    <section className="py-16 md:py-24 bg-ivory">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -26,7 +26,7 @@ export default function PortfolioGrid() {
 
         {/* Filters */}
         <Reveal delay={100}>
-          <div className="mt-10 flex flex-wrap justify-center gap-2 md:gap-3">
+          <div className="mt-8 md:mt-10 flex flex-wrap justify-center gap-2 md:gap-3">
             {portfolioFilters.map((f) => (
               <button
                 key={f}
@@ -44,7 +44,7 @@ export default function PortfolioGrid() {
         </Reveal>
 
         {/* Grid */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {filtered.map((project, i) => (
             <Reveal key={project.id} delay={i * 60}>
               <button

@@ -8,7 +8,7 @@ export default function ContactSection() {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.mapsQuery)}`;
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-ivory">
+    <section id="contact" className="py-16 md:py-24 bg-ivory">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -18,7 +18,7 @@ export default function ContactSection() {
           />
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="mt-10 md:mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
           {/* Contact details */}
           <Reveal>
             <div className="space-y-8">

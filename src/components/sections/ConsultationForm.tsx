@@ -93,13 +93,13 @@ export default function ConsultationForm() {
   }
 
   return (
-    <section id="consultation" className="py-20 md:py-32 bg-stone-50">
+    <section id="consultation" className="py-16 md:py-24 bg-stone-50">
       <div className="container-lux">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
-          {/* Left: heading */}
-          <div className="lg:col-span-2">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+          {/* Left: heading & trust card */}
+          <div className="lg:col-span-2 flex flex-col justify-between h-full">
             <Reveal>
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-3">
                 <span className="h-px w-8 bg-accent" />
                 <span className="text-xs font-medium tracking-[0.2em] uppercase text-accent">
                   Consultation
@@ -108,11 +108,11 @@ export default function ConsultationForm() {
               <h2 className="text-section font-light text-charcoal-800">
                 Let's design a home that feels like yours.
               </h2>
-              <p className="mt-5 text-base leading-relaxed text-stone-600">
-                Share a few details about your space and requirements. We will get back to you to
-                schedule a consultation.
+              <p className="mt-4 text-base leading-relaxed text-stone-600">
+                Share a few details about your space and requirements. We will get back to you promptly to
+                schedule your personalised consultation.
               </p>
-              <div className="mt-8 space-y-3">
+              <div className="mt-6 space-y-3">
                 <a href={`tel:${siteConfig.phoneRaw}`} className="flex items-center gap-3 text-sm text-charcoal-700 hover:text-accent transition-colors">
                   <span className="w-8 h-8 flex items-center justify-center bg-charcoal-800 text-ivory">
                     <span className="text-xs">PH</span>
@@ -123,6 +123,27 @@ export default function ConsultationForm() {
                   <Mail className="w-8 h-8 p-2 bg-charcoal-800 text-ivory" strokeWidth={1.5} />
                   {siteConfig.email}
                 </a>
+              </div>
+
+              {/* What to Expect Box (Fills desktop left column void) */}
+              <div className="mt-8 p-6 bg-ivory border border-stone-200/80">
+                <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-medium block mb-3">
+                  What to Expect Next
+                </span>
+                <div className="space-y-3 text-xs text-stone-600">
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-charcoal-800 text-ivory flex items-center justify-center shrink-0 text-[10px] mt-0.5">1</span>
+                    <span>Direct phone or WhatsApp connect within 24 business hours.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-charcoal-800 text-ivory flex items-center justify-center shrink-0 text-[10px] mt-0.5">2</span>
+                    <span>Preliminary space assessment & budget ballpark estimation.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-charcoal-800 text-ivory flex items-center justify-center shrink-0 text-[10px] mt-0.5">3</span>
+                    <span>Comprehensive 3D layout planning with zero upfront obligation.</span>
+                  </div>
+                </div>
               </div>
             </Reveal>
           </div>
