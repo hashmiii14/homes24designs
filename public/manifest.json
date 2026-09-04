@@ -1,0 +1,21 @@
+{
+  "name": "HOMES24DESIGNS",
+  "short_name": "HOMES24",
+  "description": "Premium Interior Design & Home Interior Solutions in Delhi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f4ef",
+  "theme_color": "#1c1917",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ]
+}
