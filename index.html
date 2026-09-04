@@ -112,8 +112,151 @@
       }
     }
     </script>
+
+    <!-- Immediate 0ms Luxury Entry Loader Styles -->
+    <style>
+      #h24-initial-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #0c0a09;
+        color: #f7f4ef;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: auto;
+      }
+      #h24-initial-loader.h24-hidden {
+        opacity: 0;
+        transform: scale(1.02);
+        pointer-events: none;
+      }
+      .h24-loader-grid {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        opacity: 0.06;
+        background-image: linear-gradient(rgba(247, 244, 239, 1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(247, 244, 239, 1) 1px, transparent 1px);
+        background-size: 60px 60px;
+        pointer-events: none;
+      }
+      .h24-loader-content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .h24-loader-title {
+        color: #f7f4ef;
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: clamp(2rem, 5vw, 2.75rem);
+        font-weight: 300;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        margin: 0;
+        line-height: 1.1;
+      }
+      .h24-loader-subtitle {
+        color: #a8855f;
+        font-size: 0.75rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-top: 0.35rem;
+        margin-bottom: 0;
+      }
+      .h24-loader-track {
+        margin-top: 2rem;
+        width: 140px;
+        height: 1.5px;
+        background-color: #2e2822;
+        overflow: hidden;
+        position: relative;
+        border-radius: 1px;
+      }
+      .h24-loader-bar {
+        height: 100%;
+        background-color: #a8855f;
+        width: 0%;
+        animation: h24FillBar 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .h24-loader-tag {
+        margin-top: 0.85rem;
+        color: #7d6e5a;
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      @keyframes h24FillBar {
+        0% { width: 0%; }
+        45% { width: 55%; }
+        80% { width: 88%; }
+        100% { width: 100%; }
+      }
+    </style>
   </head>
   <body>
+    <!-- Immediate 0ms Luxury Entrance Loader -->
+    <div id="h24-initial-loader">
+      <div class="h24-loader-grid"></div>
+      <div class="h24-loader-content">
+        <h1 class="h24-loader-title">HOMES24</h1>
+        <p class="h24-loader-subtitle">DESIGNS</p>
+        <div class="h24-loader-track">
+          <div class="h24-loader-bar"></div>
+        </div>
+        <p class="h24-loader-tag">Interior Design Studio</p>
+      </div>
+    </div>
+    <script>
+      (function() {
+        var loader = document.getElementById('h24-initial-loader');
+        if (!loader) return;
+
+        // Skip immediately if visited in this session
+        if (sessionStorage.getItem('h24d_loaded')) {
+          loader.style.display = 'none';
+          return;
+        }
+
+        var startTime = Date.now();
+        var minDuration = 1200;
+        var isDismissing = false;
+
+        window.__h24_dismiss_loader = function() {
+          if (isDismissing || !loader) return;
+          var elapsed = Date.now() - startTime;
+          var remaining = Math.max(0, minDuration - elapsed);
+
+          setTimeout(function() {
+            if (isDismissing) return;
+            isDismissing = true;
+            loader.classList.add('h24-hidden');
+            try { sessionStorage.setItem('h24d_loaded', '1'); } catch(e) {}
+            setTimeout(function() {
+              if (loader && loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+              }
+            }, 800);
+          }, remaining);
+        };
+
+        // Safety fallback if React takes longer or error occurs
+        setTimeout(function() {
+          if (window.__h24_dismiss_loader) {
+            window.__h24_dismiss_loader();
+          }
+        }, 2500);
+      })();
+    </script>
+
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-charcoal-800 focus:text-ivory focus:px-4 focus:py-2 focus:text-sm">Skip to content</a>
     
     <!-- Pre-rendered Semantic Fallback Shell for Crawlers and Instant First Paint -->
