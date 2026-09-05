@@ -4,8 +4,9 @@
 
 @layer base {
   :root {
-    color-scheme: light;
+    color-scheme: light only;
     forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
   }
 
   html {
@@ -13,15 +14,31 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling: touch;
-    color-scheme: light;
+    color-scheme: light only;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+    background-color: #f7f4ef !important;
+    color: #1c1917 !important;
   }
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #f7f4ef;
-    color: #1c1917;
+    background-color: #f7f4ef !important;
+    color: #1c1917 !important;
     overflow-x: hidden;
-    color-scheme: light;
+    color-scheme: light only;
+    forced-color-adjust: none;
+    -webkit-forced-color-adjust: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root, html, body {
+      color-scheme: light only !important;
+      forced-color-adjust: none !important;
+      -webkit-forced-color-adjust: none !important;
+      background-color: #f7f4ef !important;
+      color: #1c1917 !important;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

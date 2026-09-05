@@ -8,16 +8,16 @@ import ScrollToTop from '@/components/layout/ScrollToTop';
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
 import CallButton from '@/components/layout/CallButton';
 import HomePage from '@/pages/HomePage';
+import AboutPage from '@/pages/AboutPage';
+import ServicesPage from '@/pages/ServicesPage';
+import ServiceDetailPage from '@/pages/ServiceDetailPage';
+import ContactPage from '@/pages/ContactPage';
 
-// Lazy load secondary pages for optimal initial load speed
-const AboutPage = lazy(() => import('@/pages/AboutPage'));
-const ServicesPage = lazy(() => import('@/pages/ServicesPage'));
-const ServiceDetailPage = lazy(() => import('@/pages/ServiceDetailPage'));
+// Lazy load remaining secondary pages
 const PricingPage = lazy(() => import('@/pages/PricingPage'));
 const JournalPage = lazy(() => import('@/pages/JournalPage'));
 const JournalArticlePage = lazy(() => import('@/pages/JournalArticlePage'));
 const FAQPage = lazy(() => import('@/pages/FAQPage'));
-const ContactPage = lazy(() => import('@/pages/ContactPage'));
 const PrivacyPage = lazy(() => import('@/pages/PrivacyPage'));
 const TermsPage = lazy(() => import('@/pages/TermsPage'));
 const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));

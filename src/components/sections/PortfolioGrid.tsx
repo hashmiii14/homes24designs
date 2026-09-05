@@ -47,7 +47,14 @@ export default function PortfolioGrid() {
         <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {filtered.map((project, i) => (
             <Reveal key={project.id} delay={i * 60}>
-              <div className="group block w-full text-left">
+              <div
+                onClick={() => setLightbox(i)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setLightbox(i); } }}
+                role="button"
+                tabIndex={0}
+                className="group block w-full text-left cursor-pointer touch-manipulation focus:outline-none focus:ring-2 focus:ring-accent"
+                aria-label={`View details of ${project.title}`}
+              >
                 <div className="relative aspect-[4/5] overflow-hidden bg-stone-100">
                   <img
                     src={project.image}
@@ -64,15 +71,12 @@ export default function PortfolioGrid() {
                     <h3 className="text-lg font-medium text-ivory mt-1">{project.title}</h3>
                     <p className="text-xs text-stone-300 mt-0.5">{project.location}</p>
                     <div className="mt-3.5">
-                      <button
-                        type="button"
-                        onClick={() => setLightbox(i)}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-ivory/15 hover:bg-accent text-ivory text-[11px] font-medium tracking-wider uppercase border border-ivory/30 backdrop-blur-sm transition-all duration-300 active:scale-95"
-                        aria-label={`View details of ${project.title}`}
+                      <span
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-ivory/15 group-hover:bg-accent text-ivory text-[11px] font-medium tracking-wider uppercase border border-ivory/30 backdrop-blur-sm transition-all duration-300 active:scale-95"
                       >
-                        <Eye className="w-3.5 h-3.5 text-accent-light" strokeWidth={1.5} />
+                        <Eye className="w-3.5 h-3.5 text-accent-light group-hover:text-ivory transition-colors" strokeWidth={1.5} />
                         <span>View Details</span>
-                      </button>
+                      </span>
                     </div>
                   </div>
                 </div>

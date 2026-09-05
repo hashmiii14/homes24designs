@@ -19,7 +19,11 @@ export default function ServicesGrid() {
         <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {services.map((service, i) => (
             <Reveal key={service.slug} delay={i * 60} className="h-full">
-              <div className="group flex flex-col h-full bg-ivory border border-stone-200/80 overflow-hidden transition-all duration-500 ease-lux hover:shadow-xl hover:border-accent/40">
+              <Link
+                to={`/services/${service.slug}`}
+                className="group flex flex-col h-full bg-ivory border border-stone-200/80 overflow-hidden transition-all duration-500 ease-lux hover:shadow-xl hover:border-accent/40 cursor-pointer block touch-manipulation text-left"
+                aria-label={`View ${service.title} service details`}
+              >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 shrink-0">
                   <img
@@ -35,13 +39,8 @@ export default function ServicesGrid() {
                 {/* Content */}
                 <div className="p-5 flex flex-col flex-1 justify-between">
                   <div>
-                    <h3 className="text-lg font-medium text-charcoal-800 mb-2">
-                      <Link
-                        to={`/services/${service.slug}`}
-                        className="hover:text-accent transition-colors"
-                      >
-                        {service.title}
-                      </Link>
+                    <h3 className="text-lg font-medium text-charcoal-800 mb-2 group-hover:text-accent transition-colors">
+                      {service.title}
                     </h3>
                     <p className="text-xs md:text-sm leading-relaxed text-stone-600 line-clamp-3">
                       {service.description}
@@ -49,16 +48,15 @@ export default function ServicesGrid() {
                   </div>
 
                   <div className="pt-4 mt-4 border-t border-stone-200/60">
-                    <Link
-                      to={`/services/${service.slug}`}
-                      className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-stone-100/90 hover:bg-charcoal-800 text-charcoal-800 hover:text-ivory text-xs font-medium tracking-wider uppercase transition-all duration-300 group/btn"
+                    <div
+                      className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-stone-100/90 group-hover:bg-charcoal-800 text-charcoal-800 group-hover:text-ivory text-xs font-medium tracking-wider uppercase transition-all duration-300"
                     >
                       <span>Learn More</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 text-accent group-hover/btn:text-accent-light group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" strokeWidth={1.5} />
-                    </Link>
+                      <ArrowUpRight className="w-3.5 h-3.5 text-accent group-hover:text-accent-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={1.5} />
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>
