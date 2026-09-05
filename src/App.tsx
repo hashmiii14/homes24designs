@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -6,17 +7,19 @@ import Loader from '@/components/layout/Loader';
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
 import BackToTop from '@/components/layout/BackToTop';
 import HomePage from '@/pages/HomePage';
-import AboutPage from '@/pages/AboutPage';
-import ServicesPage from '@/pages/ServicesPage';
-import ServiceDetailPage from '@/pages/ServiceDetailPage';
-import PricingPage from '@/pages/PricingPage';
-import JournalPage from '@/pages/JournalPage';
-import JournalArticlePage from '@/pages/JournalArticlePage';
-import FAQPage from '@/pages/FAQPage';
-import ContactPage from '@/pages/ContactPage';
-import PrivacyPage from '@/pages/PrivacyPage';
-import TermsPage from '@/pages/TermsPage';
-import NotFoundPage from '@/pages/NotFoundPage';
+
+// Lazy load secondary pages for optimal initial load speed
+const AboutPage = lazy(() => import('@/pages/AboutPage'));
+const ServicesPage = lazy(() => import('@/pages/ServicesPage'));
+const ServiceDetailPage = lazy(() => import('@/pages/ServiceDetailPage'));
+const PricingPage = lazy(() => import('@/pages/PricingPage'));
+const JournalPage = lazy(() => import('@/pages/JournalPage'));
+const JournalArticlePage = lazy(() => import('@/pages/JournalArticlePage'));
+const FAQPage = lazy(() => import('@/pages/FAQPage'));
+const ContactPage = lazy(() => import('@/pages/ContactPage'));
+const PrivacyPage = lazy(() => import('@/pages/PrivacyPage'));
+const TermsPage = lazy(() => import('@/pages/TermsPage'));
+const NotFoundPage = lazy(() => import('@/pages/NotFoundPage'));
 
 export default function App() {
   return (
@@ -25,20 +28,22 @@ export default function App() {
         <Loader />
         <Header />
         <main id="main-content" tabIndex={-1} className="outline-none">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services/:slug" element={<ServiceDetailPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/journal" element={<JournalPage />} />
-            <Route path="/journal/:slug" element={<JournalArticlePage />} />
-            <Route path="/faq" element={<FAQPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
+          <Suspense fallback={<div className="min-h-[50vh] bg-ivory" />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/:slug" element={<ServiceDetailPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/journal" element={<JournalPage />} />
+              <Route path="/journal/:slug" element={<JournalArticlePage />} />
+              <Route path="/faq" element={<FAQPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Suspense>
         </main>
         <Footer />
         <WhatsAppButton />

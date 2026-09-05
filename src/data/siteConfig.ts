@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: 'HOMES24DESIGNS',
   legalName: 'EHTASHAMUL ISLAM',
-  tagline: 'Luxury Residential Interior Design Studio · Delhi NCR',
+  tagline: 'Best Interior Designer in Okhla, New Delhi · Luxury Residential Studio',
   description:
-    "Delhi NCR's premier luxury interior design studio. Bespoke residential interiors, modular kitchens, living rooms, bedrooms, 3D visualization, and 45-day turnkey handover.",
+    'Recognized as the best interior designer in Okhla, New Delhi. HOMES24DESIGNS in Batla House, Jamia Nagar delivers bespoke residential interiors, modular kitchens, luxury wardrobes, and 45-day turnkey execution across South Delhi & Delhi NCR.',
   url: (import.meta.env.VITE_SITE_URL as string) || 'https://homes24designs.vercel.app',
   email: 'homes24designs@gmail.com',
   phone: '+91 9818083436',

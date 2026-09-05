@@ -26,8 +26,8 @@ export default function Hero() {
             style={{ animation: 'fadeDown 0.8s 0.3s cubic-bezier(0.16,1,0.3,1) both' }}
           >
             <span className="h-px w-10 bg-accent-light" />
-            <span className="text-xs font-medium tracking-[0.25em] uppercase text-accent-light">
-              Interior Design Studio · Delhi
+            <span className="text-xs font-medium tracking-[0.22em] uppercase text-accent-light">
+              Best Interior Designer in Okhla · New Delhi
             </span>
           </div>
 
@@ -75,7 +75,7 @@ export default function Hero() {
           >
             <MapPin className="w-4 h-4 text-accent-light" strokeWidth={1.5} />
             <span className="text-sm tracking-wide font-medium">
-              • New Delhi
+              • Okhla, Jamia Nagar, New Delhi
             </span>
           </div>
         </div>

@@ -24,9 +24,12 @@ export default function HomePage() {
     alternateName: [
       'Homes 24 Designs',
       'HOMES24DESIGNS Okhla',
-      'Homes24Designs South Delhi',
+      'Best Interior Designer in Okhla New Delhi',
+      'Interior Designer in Okhla',
+      'Interior Designer Jamia Nagar Batla House',
       'Interior Designers Near Me',
     ],
+    slogan: 'Best Interior Designer in Okhla, New Delhi',
     legalName: siteConfig.legalName,
     description: siteConfig.description,
     url: siteConfig.url,
@@ -35,6 +38,7 @@ export default function HomePage() {
     priceRange: '₹₹₹',
     email: siteConfig.email,
     telephone: siteConfig.phone,
+    hasMap: 'https://maps.google.com/maps?q=M-74%2C+First+Floor%2C+Batla+House%2C+Jamia+Nagar%2C+New+Delhi%2C+Delhi+110025',
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${siteConfig.address.line1}, ${siteConfig.address.line2}`,
@@ -52,7 +56,13 @@ export default function HomePage() {
     founder: {
       '@type': 'Person',
       name: siteConfig.proprietor,
-      jobTitle: 'Proprietor & Founder',
+      jobTitle: 'Proprietor & Principal Designer',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '28',
+      bestRating: '5',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -62,7 +72,7 @@ export default function HomePage() {
         itemOffered: {
           '@type': 'Service',
           name: s.title,
-          description: s.shortDesc,
+          description: s.description,
         },
       })),
     },
@@ -89,8 +99,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="HOMES24DESIGNS | Best Interior Designers in Okhla, South Delhi & Delhi NCR"
-        description="Looking for the best interior designers near you? HOMES24DESIGNS in Batla House, Jamia Nagar, Okhla offers bespoke luxury interiors, modular kitchens, wardrobes & turnkey execution across South Delhi & Delhi NCR. Call +91 9818083436."
+        title="Best Interior Designer in Okhla, New Delhi | HOMES24DESIGNS"
+        description="HOMES24DESIGNS is recognized as the best interior designer in Okhla, New Delhi. Located in Batla House, Jamia Nagar, we craft luxury residential interiors, modular kitchens, wardrobes & turnkey homes across South Delhi & Delhi NCR. Call +91 9818083436."
         path="/"
         jsonLd={[jsonLd, websiteLd, faqLd]}
       />

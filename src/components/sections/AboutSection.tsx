@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import { siteConfig } from '@/data/siteConfig';
+import Logo from '@/components/ui/Logo';
 
 export default function AboutSection() {
   const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
@@ -43,7 +44,7 @@ export default function AboutSection() {
               <div className="flex items-center gap-3 mb-2.5">
                 <span className="h-px w-8 bg-accent" />
                 <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-                  About HOMES24DESIGNS · Meet The Founder
+                  Best Interior Designer in Okhla, New Delhi · Founder Profile
                 </span>
               </div>
               <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
@@ -117,9 +118,7 @@ export default function AboutSection() {
                       <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400">
                         Enterprise
                       </span>
-                      <span className="text-xs font-medium text-charcoal-800">
-                        HOMES24DESIGNS
-                      </span>
+                      <Logo variant="dark" size="sm" linkTo={null} className="items-end mt-1" />
                     </div>
                   </div>
                 </div>
@@ -150,7 +149,7 @@ export default function AboutSection() {
                   <div className="flex items-center gap-3 mb-2.5">
                     <span className="h-px w-8 bg-accent" />
                     <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-                      About HOMES24DESIGNS · Meet The Founder
+                      Best Interior Designer in Okhla, New Delhi · Founder Profile
                     </span>
                   </div>
                   <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
@@ -161,9 +160,8 @@ export default function AboutSection() {
 
                 {/* Business Introduction */}
                 <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is a New Delhi-based
-                  interior design studio dedicated to shaping residential spaces that balance quiet elegance with
-                  practical daily life. We combine creative vision with structured planning to turn houses into personal sanctuaries.
+                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as the{' '}
+                  <strong className="font-semibold text-charcoal-800">best interior designer in Okhla, New Delhi</strong>, dedicated to shaping residential spaces that balance quiet elegance with practical daily life. Headquartered in Batla House, Jamia Nagar, we combine creative vision with structured planning to turn houses into personal sanctuaries.
                 </p>
 
                 {/* Founder Story */}
@@ -176,8 +174,8 @@ export default function AboutSection() {
                   </div>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                     <strong className="font-semibold text-charcoal-800">Ehtashamul Islam</strong> is the proprietor
-                    of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space
-                    planning, and personalized residential interior solutions across Delhi and Delhi NCR. Guided by an
+                    and principal designer of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space
+                    planning, and personalized residential interior solutions across Okhla, Jamia Nagar, Batla House, South Delhi, and Delhi NCR. Guided by an
                     appreciation for spatial balance, practical ergonomics, and material integrity, he leads each
                     project with direct personal involvement and meticulous attention to detail.
                   </p>

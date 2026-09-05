@@ -7,7 +7,7 @@ export default function JournalPage() {
     <>
       <SEO
         title="Journal — Interior Design Ideas & Guides | HOMES24DESIGNS"
-        description="Practical interior design articles for Delhi homes — from planning and materials to lighting, cost and modular kitchen design."
+        description="Practical interior design guides for homes in Okhla, South Delhi & Delhi NCR — spatial planning, modular kitchens, material selection, cost breakdowns, and expert design advice."
         path="/journal"
         jsonLd={{
           '@context': 'https://schema.org',

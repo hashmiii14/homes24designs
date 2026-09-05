@@ -10,7 +10,18 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
+  build: {
+    target: 'es2020',
+    cssCodeSplit: true,
+    chunkSizeWarningLimit: 600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'helmet': ['react-helmet-async'],
+          'lucide': ['lucide-react'],
+        },
+      },
+    },
   },
 });

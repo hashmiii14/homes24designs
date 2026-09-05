@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { navItems, siteConfig } from '@/data/siteConfig';
 import { useScrollPosition, useBodyScrollLock } from '@/hooks';
+import Logo from '@/components/ui/Logo';
 
 export default function Header() {
   const scrolled = useScrollPosition();
@@ -30,24 +31,7 @@ export default function Header() {
         <div className="container-lux">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link to="/" className="group" aria-label="HOMES24DESIGNS home">
-              <div className="flex flex-col leading-none">
-                <span
-                  className={`font-serif text-xl md:text-2xl font-normal tracking-[0.12em] uppercase transition-colors duration-300 ${
-                    transparent ? 'text-ivory' : 'text-charcoal-900'
-                  }`}
-                >
-                  HOMES<span className="font-light tracking-[0.16em] text-accent">24</span>
-                </span>
-                <span
-                  className={`text-[8.5px] md:text-[9.5px] tracking-[0.38em] uppercase font-semibold font-sans transition-colors duration-300 ${
-                    transparent ? 'text-stone-300' : 'text-accent'
-                  }`}
-                >
-                  DESIGNS
-                </span>
-              </div>
-            </Link>
+            <Logo variant="header-adaptive" transparent={transparent} size="md" />
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex items-center gap-8">
@@ -117,9 +101,7 @@ export default function Header() {
           }`}
         >
           <div className="flex items-center justify-between h-16 px-6 border-b border-stone-200">
-            <span className="text-sm font-medium tracking-[0.2em] uppercase text-charcoal-800">
-              Menu
-            </span>
+            <Logo variant="dark" size="sm" onClick={() => setMenuOpen(false)} />
             <button
               onClick={() => setMenuOpen(false)}
               className="p-2 text-charcoal-700 hover:text-accent transition-colors"

@@ -5,6 +5,11 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
+    question: 'Who is the best interior designer in Okhla, New Delhi?',
+    answer:
+      'HOMES24DESIGNS, led by proprietor and principal designer Ehtashamul Islam, is recognized as the best interior designer in Okhla, New Delhi. Headquartered in Batla House, Jamia Nagar, our studio specializes in bespoke residential interiors, waterproof modular kitchens (IS:710 BWP marine ply), luxury wardrobes, and 45-day turnkey delivery across Okhla, Jasola, New Friends Colony, South Delhi, and Delhi NCR.',
+  },
+  {
     question: 'What does an interior designer do?',
     answer:
       'An interior designer plans the layout, functionality, materials, finishes, lighting and styling of your space. At HOMES24DESIGNS, we work from understanding your lifestyle through to a coordinated design direction, so every room feels intentional and liveable.',
@@ -30,9 +35,9 @@ export const faqItems: FAQItem[] = [
       'Yes. We design modular kitchens with workflow-optimised layouts, cabinet and storage planning, finish and hardware selection, backsplash treatment and integrated lighting.',
   },
   {
-    question: 'Do you work in Delhi NCR?',
+    question: 'Do you provide interior design services in Okhla, Jamia Nagar and South Delhi?',
     answer:
-      'Yes. We are based in New Delhi and serve Delhi, New Delhi, South East Delhi and the wider Delhi NCR region.',
+      'Yes. Our studio is located at M-74, First Floor, Batla House, Jamia Nagar, New Delhi 110025. We provide on-site interior design consultations and turnkey execution across Okhla, Jamia Nagar, Batla House, Jasola, New Friends Colony, Greater Kailash, Saket, and throughout South Delhi and Delhi NCR.',
   },
   {
     question: 'Can I request customised interior design?',

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Home, ArrowRight } from 'lucide-react';
 import SEO from '@/components/ui/SEO';
+import Logo from '@/components/ui/Logo';
 
 export default function NotFoundPage() {
   return (
@@ -16,6 +17,9 @@ export default function NotFoundPage() {
           backgroundSize: '80px 80px',
         }} />
         <div className="container-lux relative z-10 text-center">
+          <div className="mb-8 flex justify-center">
+            <Logo variant="light" size="lg" />
+          </div>
           <h1 className="text-8xl md:text-9xl font-light text-ivory">404</h1>
           <p className="mt-4 text-lg text-stone-400">
             The page you are looking for could not be found.

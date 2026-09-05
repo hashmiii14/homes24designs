@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Instagram, MapPin, Mail, Phone } from 'lucide-react';
 import { siteConfig, navItems } from '@/data/siteConfig';
 import { services } from '@/data/services';
+import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -12,12 +13,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex flex-col leading-none mb-4">
-              <span className="text-xl font-light tracking-[0.2em] text-ivory">HOMES24</span>
-              <span className="text-[10px] tracking-[0.4em] uppercase font-medium text-accent-light">
-                DESIGNS
-              </span>
-            </div>
+            <Logo variant="light" size="md" className="mb-4" />
             <p className="text-sm leading-relaxed text-stone-400 max-w-xs">
               Premium interior design and home interior solutions for contemporary homes in
               Delhi and Delhi NCR.
