@@ -205,7 +205,7 @@
     }
     </script>
 
-    <!-- Immediate 0ms Luxury Entry Loader Styles -->
+    <!-- Immediate 0ms Luxury Entry Loader Styles (matching Luxe Interiors design language) -->
     <style>
       #h24-initial-loader {
         position: fixed;
@@ -215,25 +215,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #0c0a09;
-        color: #f7f4ef;
+        background-color: #f7f4ef;
+        color: #1c1917;
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: translateY(0);
+        transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.4s ease 0.5s;
         pointer-events: auto;
+        will-change: transform;
       }
       #h24-initial-loader.h24-hidden {
-        opacity: 0;
-        transform: scale(1.02);
-        pointer-events: none;
-      }
-      .h24-loader-grid {
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
-        opacity: 0.06;
-        background-image: linear-gradient(rgba(247, 244, 239, 1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(247, 244, 239, 1) 1px, transparent 1px);
-        background-size: 60px 60px;
+        transform: translateY(-100%);
         pointer-events: none;
       }
       .h24-loader-content {
@@ -243,90 +234,92 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0 1.5rem;
+      }
+      .h24-loader-overline {
+        color: #8a7a68;
+        font-size: 11px;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin: 0 0 1.25rem 0;
       }
       .h24-loader-title {
-        color: #f7f4ef;
+        color: #1c1917;
         font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: clamp(2rem, 5vw, 2.75rem);
-        font-weight: 300;
-        letter-spacing: 0.3em;
+        font-size: clamp(2.4rem, 6vw, 3.6rem);
+        font-weight: 400;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         margin: 0;
-        line-height: 1.1;
+        line-height: 1;
+      }
+      .h24-loader-title span {
+        color: #a8855f;
+        font-weight: 300;
+        letter-spacing: 0.18em;
       }
       .h24-loader-subtitle {
         color: #a8855f;
-        font-size: 0.75rem;
-        letter-spacing: 0.5em;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 0.45em;
         text-transform: uppercase;
         font-weight: 600;
-        margin-top: 0.35rem;
+        margin-top: 0.5rem;
         margin-bottom: 0;
       }
       .h24-loader-track {
-        margin-top: 1.75rem;
+        margin-top: 2.25rem;
         width: 160px;
         height: 2px;
-        background-color: rgba(255, 255, 255, 0.12);
+        background-color: #e5dfd5;
         overflow: hidden;
         position: relative;
         border-radius: 1px;
       }
       .h24-loader-bar {
         height: 100%;
-        background: linear-gradient(90deg, #8a6d4a, #c4a585);
+        background-color: #a8855f;
         width: 0%;
         transition: width 0.04s linear;
       }
-      .h24-loader-meta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 160px;
-        margin-top: 0.65rem;
-      }
-      .h24-loader-tag {
+      .h24-loader-status {
         color: #9c8a72;
-        font-size: 9px;
-        letter-spacing: 0.28em;
+        font-size: 10px;
+        letter-spacing: 0.25em;
         text-transform: uppercase;
         font-weight: 500;
-        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        animation: h24Pulse 1.8s ease-in-out infinite;
       }
-      .h24-loader-pct {
-        color: #c4a585;
-        font-size: 10px;
-        font-family: 'Inter', system-ui, monospace, sans-serif;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        margin: 0;
+      @keyframes h24Pulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
       }
     </style>
   </head>
   <body>
-    <!-- Immediate 0ms Luxury Entrance Loader with Live Progress -->
+    <!-- Immediate 0ms Luxury Entrance Loader -->
     <div id="h24-initial-loader">
-      <div class="h24-loader-grid"></div>
       <div class="h24-loader-content">
-        <h1 class="h24-loader-title">HOMES<span style="color: #a8855f; font-weight: 300;">24</span></h1>
+        <p class="h24-loader-overline">Interior Design Studio</p>
+        <h1 class="h24-loader-title">HOMES<span>24</span></h1>
         <p class="h24-loader-subtitle">DESIGNS</p>
         <div class="h24-loader-track">
           <div id="h24-bar" class="h24-loader-bar"></div>
         </div>
-        <div class="h24-loader-meta">
-          <p class="h24-loader-tag">STUDIO</p>
-          <p id="h24-pct" class="h24-loader-pct">0%</p>
-        </div>
+        <p class="h24-loader-status">Loading...</p>
       </div>
     </div>
     <script>
       (function() {
         var loader = document.getElementById('h24-initial-loader');
         var bar = document.getElementById('h24-bar');
-        var pct = document.getElementById('h24-pct');
         if (!loader) return;
 
-        var duration = 2000; // 2 seconds total loading duration
+        var duration = 1800; // 1.8 seconds loading progress
         var startTime = performance.now ? performance.now() : Date.now();
         var isDone = false;
 
@@ -337,19 +330,16 @@
           var now = performance.now ? performance.now() : Date.now();
           var progress = Math.min(1, (now - startTime) / duration);
 
-          // Natural luxury deceleration curve
+          // Smooth luxury deceleration curve
           var eased = 1 - Math.pow(1 - progress, 2.2);
-          var currentPct = Math.round(eased * 100);
 
-          if (bar) bar.style.width = currentPct + '%';
-          if (pct) pct.textContent = currentPct + '%';
+          if (bar) bar.style.width = (eased * 100) + '%';
 
           if (progress < 1) {
             requestAnimationFrame(tick);
           } else {
             isDone = true;
             if (bar) bar.style.width = '100%';
-            if (pct) pct.textContent = '100%';
 
             setTimeout(function() {
               window.__h24_loaded = true;
@@ -360,8 +350,8 @@
                 if (loader && loader.parentNode) {
                   loader.parentNode.removeChild(loader);
                 }
-              }, 650);
-            }, 120);
+              }, 900);
+            }, 80);
           }
         }
 
