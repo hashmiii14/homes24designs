@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Calendar, Clock, BookOpen, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Calendar, Clock, BookOpen, CheckCircle2 } from 'lucide-react';
 import { journalPosts } from '@/data/journal';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';

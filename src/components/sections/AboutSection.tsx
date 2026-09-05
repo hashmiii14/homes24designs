@@ -10,7 +10,6 @@ import {
   Phone,
   MessageCircle,
   Quote,
-  Sparkles,
   CheckCircle2,
   ArrowRight,
 } from 'lucide-react';
@@ -129,9 +128,11 @@ export default function AboutSection() {
               <div className="space-y-4">
                 {/* Eyebrow & Main Title */}
                 <div>
-                  <div className="flex items-center gap-2 text-xs tracking-wider uppercase text-accent font-semibold mb-2">
-                    <Sparkles className="w-3.5 h-3.5" strokeWidth={1.5} />
-                    <span>About HOMES24DESIGNS · Meet The Founder</span>
+                  <div className="flex items-center gap-3 mb-2.5">
+                    <span className="h-px w-8 bg-accent" />
+                    <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
+                      About HOMES24DESIGNS · Meet The Founder
+                    </span>
                   </div>
                   <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
                     Designed Around Your Vision.{' '}
