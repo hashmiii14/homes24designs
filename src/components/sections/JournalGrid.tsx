@@ -98,10 +98,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 items-stretch ${showHeading ? 'mt-10 md:mt-12' : 'mt-6'}`}>
           {filteredPosts.map((post, i) => (
             <Reveal key={post.slug} delay={i * 50} className="h-full">
-              <Link
-                to={`/journal/${post.slug}`}
-                className="group flex flex-col h-full bg-white border border-stone-200/90 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-500 overflow-hidden"
-              >
+              <div className="group flex flex-col h-full bg-white border border-stone-200/90 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-500 overflow-hidden">
                 {/* Image Container with Consistent Aspect Ratio */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-stone-100 shrink-0">
                   <img
@@ -142,8 +139,13 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
                     </div>
 
                     {/* Title with Predictable Line-Height and 2-Line Truncation */}
-                    <h3 className="font-serif text-lg sm:text-[1.15rem] font-medium text-charcoal-900 leading-snug group-hover:text-accent transition-colors duration-300 line-clamp-2">
-                      {post.title}
+                    <h3 className="font-serif text-lg sm:text-[1.15rem] font-medium text-charcoal-900 leading-snug line-clamp-2">
+                      <Link
+                        to={`/journal/${post.slug}`}
+                        className="hover:text-accent transition-colors duration-300"
+                      >
+                        {post.title}
+                      </Link>
                     </h3>
 
                     {/* Excerpt with Controlled 2-Line Truncation */}
@@ -152,21 +154,25 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
                     </p>
                   </div>
 
-                  {/* Aligned Card Footer */}
-                  <div className="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-accent group-hover:text-accent-dark transition-colors">
+                  {/* Aligned Card Footer with explicit Link Button */}
+                  <div className="mt-5 pt-3.5 border-t border-stone-100 flex items-center justify-between">
+                    <Link
+                      to={`/journal/${post.slug}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider uppercase text-accent hover:text-accent-dark transition-colors py-1 px-2.5 -ml-2 rounded bg-stone-50 hover:bg-stone-100"
+                      aria-label={`Read guide: ${post.title}`}
+                    >
                       <span>Read Guide</span>
                       <ArrowUpRight
                         className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                         strokeWidth={1.5}
                       />
-                    </span>
+                    </Link>
                     <span className="text-[11px] text-stone-400 tracking-wider uppercase">
                       HOMES24DESIGNS
                     </span>
                   </div>
                 </div>
-              </Link>
+              </div>
             </Reveal>
           ))}
         </div>

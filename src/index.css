@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: light;
+    forced-color-adjust: none;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    color-scheme: light;
   }
 
   body {
@@ -14,6 +21,7 @@
     background-color: #f7f4ef;
     color: #1c1917;
     overflow-x: hidden;
+    color-scheme: light;
   }
 
   h1, h2, h3, h4, h5, h6 {

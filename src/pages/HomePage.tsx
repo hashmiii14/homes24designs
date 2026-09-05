@@ -7,6 +7,7 @@ import PortfolioGrid from '@/components/sections/PortfolioGrid';
 import WhyUs from '@/components/sections/WhyUs';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import PricingSection from '@/components/sections/PricingSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ConsultationForm from '@/components/sections/ConsultationForm';
 import JournalGrid from '@/components/sections/JournalGrid';
 import InstagramSection from '@/components/sections/InstagramSection';
@@ -112,6 +113,7 @@ export default function HomePage() {
       <WhyUs />
       <ProcessTimeline />
       <PricingSection />
+      <TestimonialsSection />
       <ConsultationForm />
       <JournalGrid limit={3} />
       <InstagramSection />

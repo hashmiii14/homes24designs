@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { X } from 'lucide-react';
+import { X, Eye } from 'lucide-react';
 import { portfolioProjects, portfolioFilters } from '@/data/portfolio';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
@@ -47,10 +47,7 @@ export default function PortfolioGrid() {
         <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
           {filtered.map((project, i) => (
             <Reveal key={project.id} delay={i * 60}>
-              <button
-                onClick={() => setLightbox(i)}
-                className="group block w-full text-left"
-              >
+              <div className="group block w-full text-left">
                 <div className="relative aspect-[4/5] overflow-hidden bg-stone-100">
                   <img
                     src={project.image}
@@ -59,16 +56,27 @@ export default function PortfolioGrid() {
                     loading="lazy"
                     decoding="async"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/70 via-charcoal-900/10 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/85 via-charcoal-900/30 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-500" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
                     <span className="text-[10px] tracking-[0.2em] uppercase text-accent-light">
                       {project.type} · {project.style}
                     </span>
                     <h3 className="text-lg font-medium text-ivory mt-1">{project.title}</h3>
                     <p className="text-xs text-stone-300 mt-0.5">{project.location}</p>
+                    <div className="mt-3.5">
+                      <button
+                        type="button"
+                        onClick={() => setLightbox(i)}
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-ivory/15 hover:bg-accent text-ivory text-[11px] font-medium tracking-wider uppercase border border-ivory/30 backdrop-blur-sm transition-all duration-300 active:scale-95"
+                        aria-label={`View details of ${project.title}`}
+                      >
+                        <Eye className="w-3.5 h-3.5 text-accent-light" strokeWidth={1.5} />
+                        <span>View Details</span>
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </button>
+              </div>
             </Reveal>
           ))}
         </div>

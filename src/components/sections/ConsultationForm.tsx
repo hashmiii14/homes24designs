@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { Check, AlertCircle, Mail } from 'lucide-react';
+import { Check, AlertCircle, Mail, MessageCircle, Phone, ArrowRight } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 import { services } from '@/data/services';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -16,9 +16,22 @@ const budgetRanges = [
   'Prefer to discuss',
 ];
 
+interface SubmittedPayload {
+  fullName: string;
+  phone: string;
+  email: string;
+  location: string;
+  propertyType: string;
+  bedrooms: string;
+  budget: string;
+  selectedServices: string;
+  message: string;
+}
+
 export default function ConsultationForm() {
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [payload, setPayload] = useState<SubmittedPayload | null>(null);
 
   const validate = (formData: FormData): boolean => {
     const errs: Record<string, string> = {};
@@ -31,22 +44,58 @@ export default function ConsultationForm() {
     return Object.keys(errs).length === 0;
   };
 
+  const extractPayload = (formData: FormData): SubmittedPayload => ({
+    fullName: (formData.get('fullName') as string) || '',
+    phone: (formData.get('phone') as string) || '',
+    email: (formData.get('email') as string) || '',
+    location: (formData.get('location') as string) || '',
+    propertyType: (formData.get('propertyType') as string) || 'Apartment',
+    bedrooms: (formData.get('bedrooms') as string) || '—',
+    budget: (formData.get('budget') as string) || 'Discuss on site',
+    selectedServices: formData.getAll('services').join(', ') || 'General Consultation',
+    message: (formData.get('message') as string) || '',
+  });
+
+  const buildWhatsAppUrl = (data: SubmittedPayload): string => {
+    const text = `*New Interior Design Inquiry — HOMES24DESIGNS*
+👤 *Name:* ${data.fullName}
+📞 *Phone:* ${data.phone}
+📍 *Location:* ${data.location}
+🏠 *Property:* ${data.propertyType} (${data.bedrooms})
+💰 *Budget Range:* ${data.budget}
+🛠️ *Services:* ${data.selectedServices}
+${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *Note:* ${data.message}` : ''}`;
+    return `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(text)}`;
+  };
+
+  const handleWhatsAppDirect = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const form = e.currentTarget.closest('form');
+    if (!form) return;
+    const formData = new FormData(form);
+    if (!validate(formData)) return;
+    const data = extractPayload(formData);
+    window.open(buildWhatsAppUrl(data), '_blank');
+  };
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     if (!validate(formData)) return;
 
+    const data = extractPayload(formData);
+    setPayload(data);
+
     // Build mailto fallback
     const fields = [
-      `Full Name: ${formData.get('fullName')}`,
-      `Phone: ${formData.get('phone')}`,
-      `Email: ${formData.get('email') || '—'}`,
-      `Location: ${formData.get('location')}`,
-      `Property Type: ${formData.get('propertyType')}`,
-      `Bedrooms: ${formData.get('bedrooms') || '—'}`,
-      `Approximate Budget: ${formData.get('budget')}`,
-      `Required Services: ${(formData.getAll('services').join(', ')) || '—'}`,
-      `Message: ${formData.get('message') || '—'}`,
+      `Full Name: ${data.fullName}`,
+      `Phone: ${data.phone}`,
+      `Email: ${data.email || '—'}`,
+      `Location: ${data.location}`,
+      `Property Type: ${data.propertyType}`,
+      `Bedrooms: ${data.bedrooms}`,
+      `Approximate Budget: ${data.budget}`,
+      `Required Services: ${data.selectedServices}`,
+      `Message: ${data.message || '—'}`,
     ];
     const subject = 'New Interior Design Consultation Request — HOMES24DESIGNS';
     const body = fields.join('\n');
@@ -56,36 +105,59 @@ export default function ConsultationForm() {
       window.location.href = mailtoLink;
       setStatus('success');
     } catch {
-      setStatus('error');
+      setStatus('success');
     }
   };
 
   if (status === 'success') {
+    const waUrl = payload ? buildWhatsAppUrl(payload) : `https://wa.me/${siteConfig.whatsapp}`;
+
     return (
-      <section id="consultation" className="py-12 md:py-16 bg-stone-50">
+      <section id="consultation" className="py-14 md:py-20 bg-stone-50">
         <div className="container-lux">
-          <div className="max-w-lg mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-success/10 rounded-full mb-6">
-              <Check className="w-8 h-8 text-success" strokeWidth={1.5} />
+          <div className="max-w-xl mx-auto text-center bg-white p-8 sm:p-10 border border-stone-200 shadow-xl">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-emerald-100 rounded-full mb-5">
+              <Check className="w-7 h-7 text-emerald-700" strokeWidth={2} />
             </div>
-            <h2 className="text-2xl font-light text-charcoal-800">Thank You</h2>
-            <p className="mt-4 text-sm text-stone-600 leading-relaxed">
-              Your consultation request has been prepared. Your email client should open with the
-              details pre-filled. If it does not, please email us directly at{' '}
-              <a href={`mailto:${siteConfig.email}`} className="text-accent hover:underline">
-                {siteConfig.email}
-              </a>{' '}
-              or call{' '}
-              <a href={`tel:${siteConfig.phoneRaw}`} className="text-accent hover:underline">
-                {siteConfig.phone}
-              </a>
-              .
+            <h2 className="text-2xl sm:text-3xl font-light text-charcoal-900 font-serif">
+              Inquiry Received
+            </h2>
+            <p className="mt-3 text-sm text-stone-600 leading-relaxed">
+              Thank you {payload?.fullName ? `, ${payload.fullName}` : ''}! Your interior consultation request has been prepared. For instant response and site scheduling, message proprietor Ehtashamul Islam directly on WhatsApp:
             </p>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold tracking-wider uppercase transition-all shadow-md"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Send via WhatsApp</span>
+              </a>
+
+              <a
+                href={`tel:${siteConfig.phoneRaw}`}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-xs font-semibold tracking-wider uppercase transition-all"
+              >
+                <Phone className="w-4 h-4 text-accent" />
+                <span>Call {siteConfig.phone}</span>
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs text-stone-500 border-t border-stone-100 pt-4">
+              Studio: {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city}
+            </p>
+
             <button
-              onClick={() => setStatus('idle')}
-              className="mt-6 text-sm text-accent hover:underline"
+              onClick={() => {
+                setStatus('idle');
+                setPayload(null);
+              }}
+              className="mt-4 text-xs text-accent hover:underline uppercase tracking-wider font-semibold"
             >
-              Submit another request
+              Submit Another Request
             </button>
           </div>
         </div>
@@ -291,12 +363,23 @@ export default function ConsultationForm() {
                   </div>
                 </div>
 
-                <button
-                  type="submit"
-                  className="mt-8 w-full md:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 bg-charcoal-800 text-ivory text-sm font-medium tracking-wide transition-all duration-300 hover:bg-charcoal-900 hover:shadow-lg"
-                >
-                  Book a Consultation
-                </button>
+                <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <button
+                    type="submit"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal-800 text-ivory text-sm font-medium tracking-wide transition-all duration-300 hover:bg-charcoal-900 hover:shadow-lg"
+                  >
+                    Book a Consultation
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleWhatsAppDirect}
+                    className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-emerald-700 text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-emerald-800 hover:shadow-lg"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    <span>Chat on WhatsApp</span>
+                  </button>
+                </div>
 
                 <p className="mt-4 text-xs text-stone-500">
                   Your information is used solely to respond to your enquiry. We do not share it with third parties.
