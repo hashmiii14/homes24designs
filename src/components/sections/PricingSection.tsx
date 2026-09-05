@@ -76,7 +76,7 @@ export default function PricingSection() {
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-stone-200/30 mt-auto">
+                <div className="mt-auto pt-6 border-t border-stone-200/30">
                   <p className={`text-2xl font-light ${plan.highlighted ? 'text-ivory' : 'text-charcoal-800'}`}>
                     Custom Quote
                   </p>

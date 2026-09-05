@@ -32,7 +32,7 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '6 min read',
     image:
-      'https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=80',
     alt: 'Modern interior design ideas for homes in Delhi',
     content: [
       {
@@ -103,8 +103,8 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '5 min read',
     image:
-      'https://images.pexels.com/photos/7546323/pexels-photo-7546323.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Home interior design cost in Delhi',
+      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Home interior design cost and budget planning in Delhi',
     content: [
       {
         heading: 'Why there is no single answer',
@@ -172,8 +172,8 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '6 min read',
     image:
-      'https://images.pexels.com/photos/7515855/pexels-photo-7515855.png?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Modular kitchen design ideas for Indian homes',
+      'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Modular kitchen design ideas and workflow for Indian homes',
     content: [
       {
         heading: 'Design around how you cook',
@@ -229,8 +229,8 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '5 min read',
     image:
-      'https://images.pexels.com/photos/6585757/pexels-photo-6585757.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Luxury bedroom interior design',
+      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Luxury bedroom interior design with warm layered lighting',
     content: [
       {
         heading: 'Luxury is about how a room feels',
@@ -285,7 +285,7 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '6 min read',
     image:
-      'https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=1200&q=80',
     alt: 'Living room interior design ideas for modern homes',
     content: [
       {
@@ -340,7 +340,7 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '5 min read',
     image:
-      'https://images.pexels.com/photos/14186868/pexels-photo-14186868.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1200&q=80',
     alt: 'False ceiling and lighting ideas for Indian homes',
     content: [
       {
@@ -388,7 +388,7 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '5 min read',
     image:
-      'https://images.pexels.com/photos/8092433/pexels-photo-8092433.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80',
     alt: 'How to choose an interior designer in Delhi',
     content: [
       {
@@ -437,8 +437,8 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '5 min read',
     image:
-      'https://images.pexels.com/photos/27164969/pexels-photo-27164969.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Small apartment interior design ideas',
+      'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Small apartment interior design ideas and spatial optimization',
     content: [
       {
         heading: 'Small does not mean compromised',
@@ -486,8 +486,8 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '6 min read',
     image:
-      'https://images.pexels.com/photos/33529500/pexels-photo-33529500.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Luxury home interior design',
+      'https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Luxury home interior design architectural detailing and craftsmanship',
     content: [
       {
         heading: 'Luxury is not a price tag',
@@ -534,8 +534,8 @@ export const journalPosts: JournalPost[] = [
     author: 'HOMES24DESIGNS',
     readingTime: '5 min read',
     image:
-      'https://images.pexels.com/photos/7174113/pexels-photo-7174113.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Interior design mistakes homeowners should avoid',
+      'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Interior design mistakes homeowners should avoid in room planning',
     content: [
       {
         heading: 'Mistake 1: Poor lighting',

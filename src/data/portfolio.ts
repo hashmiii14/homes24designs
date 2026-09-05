@@ -21,11 +21,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A warm, light-filled living room with a restrained palette, layered lighting and considered furniture placement.',
     image:
-      'https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Contemporary living room interior in Delhi',
+      'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Contemporary living room interior design in New Delhi',
     gallery: [
-      'https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/7546323/pexels-photo-7546323.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Living Room', 'Contemporary'],
   },
@@ -38,11 +38,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A sleek modular kitchen with optimised counter layout, integrated appliances and warm under-cabinet lighting.',
     image:
-      'https://images.pexels.com/photos/7515855/pexels-photo-7515855.png?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80',
     alt: 'Modern modular kitchen interior in Delhi NCR',
     gallery: [
-      'https://images.pexels.com/photos/7515855/pexels-photo-7515855.png?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/7148841/pexels-photo-7148841.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Kitchen', 'Contemporary'],
   },
@@ -55,11 +55,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A restful bedroom with layered lighting, a custom wardrobe and a calm, tactile finish palette.',
     image:
-      'https://images.pexels.com/photos/6585757/pexels-photo-6585757.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Luxury bedroom interior in South East Delhi',
+      'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Luxury bedroom interior design in South East Delhi',
     gallery: [
-      'https://images.pexels.com/photos/6585757/pexels-photo-6585757.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/4682136/pexels-photo-4682136.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Bedroom', 'Luxury'],
   },
@@ -72,11 +72,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A space-optimised walk-in wardrobe with warm wood shelving, integrated lighting and clean lines.',
     image:
-      'https://images.pexels.com/photos/6580395/pexels-photo-6580395.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Walk-in wardrobe design in New Delhi',
+      'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Custom walk-in wardrobe and dressing suite in New Delhi',
     gallery: [
-      'https://images.pexels.com/photos/6580395/pexels-photo-6580395.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/7587738/pexels-photo-7587738.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Wardrobe', 'Contemporary'],
   },
@@ -89,11 +89,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A complete home interior with a cohesive design language across living, dining and bedroom spaces.',
     image:
-      'https://images.pexels.com/photos/7546323/pexels-photo-7546323.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Full home interior design in Delhi',
+      'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Full home residential interior design in Delhi',
     gallery: [
-      'https://images.pexels.com/photos/7546323/pexels-photo-7546323.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/8092433/pexels-photo-8092433.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Full Home', 'Luxury'],
   },
@@ -106,11 +106,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'An open-plan dining and living area with warm neutral tones, natural light and understated elegance.',
     image:
-      'https://images.pexels.com/photos/8092433/pexels-photo-8092433.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Dining and living space interior in Delhi NCR',
+      'https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Open plan dining and living space interior in Delhi NCR',
     gallery: [
-      'https://images.pexels.com/photos/8092433/pexels-photo-8092433.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/34887637/pexels-photo-34887637.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Living Room', 'Contemporary'],
   },
@@ -123,11 +123,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A layered false ceiling with concealed cove lighting, defining zones and adding warmth after dark.',
     image:
-      'https://images.pexels.com/photos/14186868/pexels-photo-14186868.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'False ceiling and lighting design in New Delhi',
+      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80',
+    alt: 'False ceiling with cove lighting detail in New Delhi',
     gallery: [
-      'https://images.pexels.com/photos/14186868/pexels-photo-14186868.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/19840855/pexels-photo-19840855.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1540932239986-30128078f3c5?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Full Home', 'Luxury'],
   },
@@ -140,11 +140,11 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A refined bedroom with a soft palette, wallpaper accent and warm bedside lighting.',
     image:
-      'https://images.pexels.com/photos/4682136/pexels-photo-4682136.jpeg?auto=compress&cs=tinysrgb&w=1260',
-    alt: 'Elegant bedroom interior in Delhi',
+      'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Elegant bedroom interior design in Delhi',
     gallery: [
-      'https://images.pexels.com/photos/4682136/pexels-photo-4682136.jpeg?auto=compress&cs=tinysrgb&w=1260',
-      'https://images.pexels.com/photos/27531873/pexels-photo-27531873.jpeg?auto=compress&cs=tinysrgb&w=1260',
+      'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1598928636135-d146006ff4be?auto=format&fit=crop&w=1200&q=80',
     ],
     category: ['Bedroom', 'Contemporary'],
   },

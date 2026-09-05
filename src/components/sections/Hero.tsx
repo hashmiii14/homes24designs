@@ -8,8 +8,8 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Luxury living room interior design by HOMES24DESIGNS in Delhi"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80"
+          alt="Luxury architectural home interior design by HOMES24DESIGNS in Delhi"
           className="w-full h-full object-cover object-center"
           fetchPriority="high"
         />
