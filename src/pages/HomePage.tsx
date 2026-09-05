@@ -43,6 +43,11 @@ export default function HomePage() {
       longitude: 77.2882,
     },
     areaServed: siteConfig.serviceAreas,
+    founder: {
+      '@type': 'Person',
+      name: siteConfig.proprietor,
+      jobTitle: 'Proprietor & Founder',
+    },
     sameAs: [siteConfig.instagram],
   };
 

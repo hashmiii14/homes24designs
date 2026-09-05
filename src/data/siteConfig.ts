@@ -21,6 +21,15 @@ export const siteConfig = {
   instagram: 'https://www.instagram.com/homes24designs',
   gst: '07AHGPI4995P2ZH',
   udyam: 'UDYAM-DL-09-0040538',
+  proprietor: 'EHTASHAMUL ISLAM',
+  constitution: 'Proprietorship',
+  enterpriseType: 'Micro Enterprise',
+  registrationDate: '07 October 2025',
+  udyamRegistrationDate: '19 October 2025',
+  registeredActivities: [
+    'Architectural and engineering activities and related technical consultancy',
+    'Specialized design activities / activities of interior decorators',
+  ],
   mapsQuery: 'M-74, First Floor, Batla House, Jamia Nagar, New Delhi, Delhi 110025',
   ogImage: 'https://homes24designs.vercel.app/og-image.jpg',
 } as const;

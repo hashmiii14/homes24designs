@@ -1,24 +1,34 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import SEO from '@/components/ui/SEO';
 import PageHeader from '@/components/layout/PageHeader';
-import Reveal from '@/components/ui/Reveal';
-import Button from '@/components/ui/Button';
+import AboutSection from '@/components/sections/AboutSection';
 import ProcessTimeline from '@/components/sections/ProcessTimeline';
 import WhyUs from '@/components/sections/WhyUs';
+import Reveal from '@/components/ui/Reveal';
+import Button from '@/components/ui/Button';
 import { siteConfig } from '@/data/siteConfig';
 
 export default function AboutPage() {
   return (
     <>
       <SEO
-        title="About HOMES24DESIGNS | Interior Design Studio in Delhi"
-        description="Learn about HOMES24DESIGNS — a Delhi-based interior design studio offering personalised residential interior solutions across Delhi and Delhi NCR."
+        title="About HOMES24DESIGNS | Founder Ehtashamul Islam | Interior Design Studio in Delhi"
+        description="Learn about HOMES24DESIGNS and proprietor Ehtashamul Islam — a Delhi-based interior design studio offering personalized residential interior solutions across Delhi and Delhi NCR."
         path="/about"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'AboutPage',
           name: 'About HOMES24DESIGNS',
+          description: siteConfig.description,
+          mainEntity: {
+            '@type': 'InteriorDesignFirm',
+            name: siteConfig.name,
+            legalName: siteConfig.legalName,
+            founder: {
+              '@type': 'Person',
+              name: siteConfig.proprietor,
+              jobTitle: 'Proprietor & Founder',
+            },
+          },
         }}
       />
       <PageHeader
@@ -28,59 +38,12 @@ export default function AboutPage() {
         breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'About' }]}
       />
 
-      <section className="py-20 md:py-28 bg-ivory">
-        <div className="container-lux">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <Reveal className="relative">
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src="https://images.pexels.com/photos/7174113/pexels-photo-7174113.jpeg?auto=compress&cs=tinysrgb&w=1260"
-                  alt="Interior design by HOMES24DESIGNS in Delhi"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </Reveal>
-            <div>
-              <Reveal>
-                <h2 className="text-section font-light text-charcoal-800 mb-6">
-                  Our Approach
-                </h2>
-                <div className="space-y-4 text-base leading-relaxed text-stone-600">
-                  <p>
-                    HOMES24DESIGNS is a New Delhi-based interior design studio working across
-                    residential interiors. We believe that good design is not about filling a
-                    space — it is about understanding how a home is used, and then making
-                    decisions that serve that use.
-                  </p>
-                  <p>
-                    Our process begins with listening. We want to understand your routine, your
-                    preferences, your space and your expectations. From there, we develop a
-                    design direction that balances aesthetics with functionality — because a
-                    home that looks beautiful but does not work for daily life is not good design.
-                  </p>
-                  <p>
-                    We work across spatial planning, material and finish selection, lighting
-                    design, furniture direction and detailing. Every element is considered as
-                    part of a cohesive whole, so the finished home feels intentional and
-                    distinctly yours.
-                  </p>
-                </div>
-              </Reveal>
-              <Reveal delay={150}>
-                <div className="mt-8">
-                  <Button to="/contact" variant="primary">Start Your Project</Button>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutSection />
 
       <WhyUs />
       <ProcessTimeline />
 
-      <section className="py-20 md:py-28 bg-ivory">
+      <section className="py-20 md:py-28 bg-stone-100/60 border-t border-stone-200">
         <div className="container-lux">
           <Reveal>
             <div className="max-w-2xl">
