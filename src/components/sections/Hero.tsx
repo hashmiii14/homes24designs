@@ -67,8 +67,8 @@ export default function Hero() {
     const handler = () => setIsLoaded(true);
     window.addEventListener('h24-loader-done', handler);
 
-    // Safety fallback: if event was somehow missed, trigger after 4.2s
-    const timer = setTimeout(() => setIsLoaded(true), 4200);
+    // Safety fallback: if event was somehow missed, trigger after 3.2s
+    const timer = setTimeout(() => setIsLoaded(true), 3200);
 
     return () => {
       window.removeEventListener('h24-loader-done', handler);
