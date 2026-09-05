@@ -73,20 +73,11 @@ export default function Hero() {
             style={{ animation: 'fadeIn 0.8s 1.1s cubic-bezier(0.16,1,0.3,1) both' }}
           >
             <MapPin className="w-4 h-4 text-accent-light" strokeWidth={1.5} />
-            <span className="text-sm tracking-wide">
-              {siteConfig.serviceAreas.join(' • ')}
+            <span className="text-sm tracking-wide font-medium">
+              • New Delhi
             </span>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div
-        className="absolute bottom-8 right-8 lg:right-12 z-10 hidden md:flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-ivory/70"
-        style={{ animation: 'fadeIn 0.8s 1.3s cubic-bezier(0.16,1,0.3,1) both' }}
-      >
-        <span>Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-ivory/60 to-transparent" />
       </div>
     </section>
   );

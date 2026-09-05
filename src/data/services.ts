@@ -38,8 +38,8 @@ export const services: Service[] = [
     longDescription:
       'We design modular kitchens that balance workflow, storage and aesthetics. From counter layout to cabinet finishes, hardware and lighting, every element is planned for daily use and long-term durability — without compromising on visual refinement.',
     image:
-      'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80',
-    alt: 'Contemporary modular kitchen design in Delhi by HOMES24DESIGNS',
+      'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Modern luxury modular kitchen design with island and custom cabinetry in Delhi by HOMES24DESIGNS',
     features: [
       'Workflow-optimised counter layout',
       'Cabinet and storage planning',

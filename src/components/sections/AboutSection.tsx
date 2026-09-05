@@ -519,6 +519,48 @@ export default function AboutSection() {
             </div>
           </div>
         </Reveal>
+
+        {/* ===================================================================
+            PART 6: STUDIO LOCATION GOOGLE MAP EMBED
+            =================================================================== */}
+        <Reveal delay={220}>
+          <div className="bg-white border border-stone-200/90 shadow-sm overflow-hidden">
+            <div className="p-5 md:p-6 border-b border-stone-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <MapPin className="w-4 h-4 text-accent" strokeWidth={1.5} />
+                  <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
+                    Studio Location · New Delhi
+                  </span>
+                </div>
+                <h4 className="text-base sm:text-lg font-normal text-charcoal-900 font-serif">
+                  Visit HOMES24DESIGNS in Batla House, Jamia Nagar
+                </h4>
+                <p className="text-xs text-stone-500 mt-0.5">
+                  {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pincode}
+                </p>
+              </div>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.mapsQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 border border-stone-300 text-charcoal-800 text-xs font-medium uppercase tracking-wider hover:bg-stone-100 transition-colors shrink-0"
+              >
+                <span>Open in Google Maps</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+            <div className="relative w-full h-[280px] sm:h-[340px] bg-stone-100">
+              <iframe
+                title="HOMES24DESIGNS Studio Location Map"
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(siteConfig.mapsQuery)}&output=embed`}
+                className="w-full h-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -33,15 +33,15 @@ export default function Header() {
             <Link to="/" className="group" aria-label="HOMES24DESIGNS home">
               <div className="flex flex-col leading-none">
                 <span
-                  className={`text-lg md:text-xl font-light tracking-[0.2em] transition-colors duration-300 ${
-                    transparent ? 'text-ivory' : 'text-charcoal-800'
+                  className={`font-serif text-xl md:text-2xl font-normal tracking-[0.12em] uppercase transition-colors duration-300 ${
+                    transparent ? 'text-ivory' : 'text-charcoal-900'
                   }`}
                 >
-                  HOMES24
+                  HOMES<span className="font-light tracking-[0.16em] text-accent">24</span>
                 </span>
                 <span
-                  className={`text-[9px] md:text-[10px] tracking-[0.4em] uppercase font-medium transition-colors duration-300 ${
-                    transparent ? 'text-accent-light' : 'text-accent'
+                  className={`text-[8.5px] md:text-[9.5px] tracking-[0.38em] uppercase font-semibold font-sans transition-colors duration-300 ${
+                    transparent ? 'text-stone-300' : 'text-accent'
                   }`}
                 >
                   DESIGNS

@@ -7,10 +7,11 @@ import Reveal from '@/components/ui/Reveal';
 
 const propertyTypes = ['Apartment', 'Flat', 'Villa', 'Independent House', 'Other'];
 const budgetRanges = [
-  'Under ₹3 Lakhs',
-  '₹3 - ₹6 Lakhs',
-  '₹6 - ₹12 Lakhs',
-  '₹12 - ₹25 Lakhs',
+  '₹50,000 – ₹1.5 Lakhs',
+  '₹1.5 – ₹3 Lakhs',
+  '₹3 – ₹6 Lakhs',
+  '₹6 – ₹12 Lakhs',
+  '₹12 – ₹25 Lakhs',
   '₹25 Lakhs+',
   'Prefer to discuss',
 ];

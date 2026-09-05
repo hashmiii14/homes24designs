@@ -12,7 +12,7 @@ export default function PricingSection() {
           <SectionHeading
             eyebrow="Pricing"
             title="Designed Around Your Scope"
-            description="Three starting points based on the breadth of your interior requirements. Every quote is customised after a consultation."
+            description="Transparent starting points based on the breadth of your interior requirements, starting from ₹50,000. Every quote is customised after a detailed consultation."
           />
         </Reveal>
 
@@ -77,9 +77,14 @@ export default function PricingSection() {
                 </div>
 
                 <div className="mt-auto pt-6 border-t border-stone-200/30">
-                  <p className={`text-2xl font-light ${plan.highlighted ? 'text-ivory' : 'text-charcoal-800'}`}>
-                    Custom Quote
-                  </p>
+                  <div>
+                    <span className={`text-[10px] tracking-[0.18em] uppercase block ${plan.highlighted ? 'text-accent-light' : 'text-accent font-medium'}`}>
+                      Estimated Investment
+                    </span>
+                    <p className={`text-2xl sm:text-[1.65rem] font-light font-serif mt-1 ${plan.highlighted ? 'text-ivory' : 'text-charcoal-900'}`}>
+                      {plan.startingPrice}
+                    </p>
+                  </div>
                   <Link
                     to="/contact"
                     className={`mt-4 inline-flex items-center justify-center w-full py-3 text-sm font-medium tracking-wide transition-all duration-300 ${

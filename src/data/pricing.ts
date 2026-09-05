@@ -2,6 +2,7 @@ export interface PricingPlan {
   name: string;
   tagline: string;
   suitableFor: string;
+  startingPrice: string;
   scope: string[];
   inclusions: string[];
   highlighted?: boolean;
@@ -11,8 +12,9 @@ export interface PricingPlan {
 export const pricingPlans: PricingPlan[] = [
   {
     name: 'ESSENTIAL',
-    tagline: 'For focused interior requirements.',
-    suitableFor: 'Individual rooms or specific interior needs.',
+    tagline: 'For focused room interiors, lighting or modular upgrades.',
+    suitableFor: 'Individual rooms, kitchens or specific interior needs.',
+    startingPrice: 'Starts at ₹50,000',
     scope: [
       'Single room or focused area',
       'Design direction and layout',
@@ -29,8 +31,9 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'SIGNATURE',
-    tagline: 'For broader residential interior requirements.',
+    tagline: 'For comprehensive multi-room or floor transformations.',
     suitableFor: 'Multiple rooms or larger home interiors.',
+    startingPrice: 'Starts at ₹2.5 Lakhs',
     scope: [
       'Multiple rooms or full-floor design',
       'Detailed spatial planning',
@@ -51,8 +54,9 @@ export const pricingPlans: PricingPlan[] = [
   },
   {
     name: 'LUXE',
-    tagline: 'For highly customised premium interiors.',
+    tagline: 'For turnkey, bespoke architectural luxury residences.',
     suitableFor: 'Full home interiors with premium customisation.',
+    startingPrice: 'Starts at ₹5.0 Lakhs+',
     scope: [
       'Complete home interior design',
       'Bespoke spatial planning',
@@ -74,4 +78,4 @@ export const pricingPlans: PricingPlan[] = [
 ];
 
 export const pricingNote =
-  'Every home is different. Final pricing depends on space, scope, materials, finishes and customisation.';
+  'Every home is different. Packages start from ₹50,000 with transparent scopes. Final pricing depends on space, scope, materials, finishes and customisation.';
