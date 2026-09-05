@@ -39,20 +39,16 @@ export default function AboutSection() {
       <div className="container-lux relative z-10 space-y-12 md:space-y-14">
         {/* Mobile Heading: Positioned directly ABOVE the founder portrait on mobile screens */}
         <div className="lg:hidden">
-          <Reveal>
-            <div>
-              <div className="flex items-center gap-3 mb-2.5">
-                <span className="h-px w-8 bg-accent" />
-                <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-                  Best Interior Designer in Okhla, New Delhi · Founder Profile
-                </span>
-              </div>
-              <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
-                Designed Around Your Vision.{' '}
-                <span className="italic font-normal text-stone-700">Built Around Your Trust.</span>
-              </h2>
-            </div>
-          </Reveal>
+          <div className="flex items-center gap-3 mb-2.5">
+            <span className="h-px w-8 bg-accent" />
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
+              Best Interior Designer in Okhla, New Delhi · Founder Profile
+            </span>
+          </div>
+          <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
+            Designed Around Your Vision.{' '}
+            <span className="italic font-normal text-stone-700">Built Around Your Trust.</span>
+          </h2>
         </div>
 
         {/* ===================================================================

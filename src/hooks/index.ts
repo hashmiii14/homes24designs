@@ -10,6 +10,13 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
     const el = ref.current;
     if (!el) return;
 
+    // Immediately reveal elements that are already within or near the visible viewport on mount
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 80) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -17,7 +24,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -50px 0px', ...options }
+      { threshold: 0.05, rootMargin: '40px 0px 40px 0px', ...options }
     );
 
     observer.observe(el);

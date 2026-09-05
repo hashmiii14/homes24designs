@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-0 sm:min-h-[720px] md:min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[5.25rem] sm:pt-28 md:pt-32">
+    <section className="relative min-h-0 sm:min-h-[640px] md:min-h-[720px] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-start sm:justify-center lg:justify-end overflow-hidden pt-[5.25rem] sm:pt-24 md:pt-28 lg:pt-32">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -143,7 +143,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-lux w-full pb-7 sm:pb-12 md:pb-16 text-left">
+      <div className="relative z-10 container-lux w-full pb-7 sm:pb-10 lg:pb-16 text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Eyebrow */}
           <div
