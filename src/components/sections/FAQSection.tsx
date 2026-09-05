@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 import Button from '@/components/ui/Button';
 
 export default function FAQSection() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section className="py-12 md:py-16 lg:py-18 bg-stone-50">

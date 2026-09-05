@@ -114,11 +114,11 @@ export default function HomePage() {
       <ProcessTimeline />
       <PricingSection />
       <TestimonialsSection />
-      <ConsultationForm />
       <JournalGrid limit={3} />
       <InstagramSection />
       <FAQSection />
       <ContactSection />
+      <ConsultationForm />
     </>
   );
 }
