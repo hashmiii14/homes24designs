@@ -85,7 +85,7 @@ export default function HomePage() {
       <ProcessTimeline />
       <PricingSection />
       <ConsultationForm />
-      <JournalGrid limit={3} />
+      <JournalGrid limit={6} />
       <InstagramSection />
       <FAQSection />
       <ContactSection />
