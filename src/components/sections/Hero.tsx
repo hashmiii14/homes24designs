@@ -4,7 +4,7 @@ import { siteConfig } from '@/data/siteConfig';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden pt-28 sm:pt-32 md:pt-36">
+    <section className="relative min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-end overflow-hidden pt-24 sm:pt-28 md:pt-32">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -18,7 +18,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-lux w-full pb-12 sm:pb-16 md:pb-20 text-left">
+      <div className="relative z-10 container-lux w-full pb-10 sm:pb-12 md:pb-16 text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
           <div
             className="flex items-center gap-3 mb-5"

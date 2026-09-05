@@ -43,7 +43,7 @@ export default function AboutPage() {
       <WhyUs />
       <ProcessTimeline />
 
-      <section className="py-20 md:py-28 bg-stone-100/60 border-t border-stone-200">
+      <section className="py-12 md:py-16 lg:py-18 bg-stone-100/60 border-t border-stone-200">
         <div className="container-lux">
           <Reveal>
             <div className="max-w-2xl">

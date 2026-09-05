@@ -15,7 +15,7 @@ const values = [
 
 export default function WhyUs() {
   return (
-    <section className="py-16 md:py-24 bg-charcoal-900 relative overflow-hidden">
+    <section className="py-12 md:py-16 lg:py-18 bg-charcoal-900 relative overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: 'linear-gradient(rgba(247,244,239,1) 1px, transparent 1px), linear-gradient(90deg, rgba(247,244,239,1) 1px, transparent 1px)',

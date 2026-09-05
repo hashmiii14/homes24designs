@@ -9,7 +9,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-16 md:py-24 bg-stone-50">
+    <section className="py-12 md:py-16 lg:py-18 bg-stone-50">
       <div className="container-lux">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left Column: Heading & Sticky Assistance Card */}

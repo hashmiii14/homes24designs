@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 
 export default function PricingSection() {
   return (
-    <section className="py-16 md:py-24 bg-ivory">
+    <section className="py-12 md:py-16 lg:py-18 bg-ivory">
       <div className="container-lux">
         <Reveal>
           <SectionHeading

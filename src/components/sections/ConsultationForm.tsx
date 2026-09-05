@@ -61,7 +61,7 @@ export default function ConsultationForm() {
 
   if (status === 'success') {
     return (
-      <section id="consultation" className="py-20 md:py-32 bg-stone-50">
+      <section id="consultation" className="py-12 md:py-16 bg-stone-50">
         <div className="container-lux">
           <div className="max-w-lg mx-auto text-center">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-success/10 rounded-full mb-6">
@@ -93,11 +93,11 @@ export default function ConsultationForm() {
   }
 
   return (
-    <section id="consultation" className="py-16 md:py-24 bg-stone-50">
+    <section id="consultation" className="py-12 md:py-16 lg:py-18 bg-stone-50">
       <div className="container-lux">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-start">
           {/* Left: heading & trust card */}
-          <div className="lg:col-span-2 flex flex-col justify-between h-full">
+          <div className="lg:col-span-2 flex flex-col">
             <Reveal>
               <div className="flex items-center gap-3 mb-3">
                 <span className="h-px w-8 bg-accent" />

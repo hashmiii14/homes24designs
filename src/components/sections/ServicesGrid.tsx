@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 
 export default function ServicesGrid() {
   return (
-    <section className="py-16 md:py-24 bg-stone-50">
+    <section className="py-12 md:py-16 lg:py-18 bg-stone-50">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
