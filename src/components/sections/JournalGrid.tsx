@@ -107,6 +107,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
                     alt={post.alt}
                     className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                     width="600"
                     height="375"
                   />

@@ -19,7 +19,7 @@ export const services: Service[] = [
     longDescription:
       'A comprehensive interior design service covering every room in your home. We coordinate layout, materials, finishes, lighting, furniture and styling into one cohesive design language, so the entire residence feels intentional, functional and distinctly yours.',
     image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=650&q=75',
     alt: 'Full home residential interior design in Delhi by HOMES24DESIGNS',
     features: [
       'Complete spatial planning',
@@ -38,7 +38,7 @@ export const services: Service[] = [
     longDescription:
       'We design modular kitchens that balance workflow, storage and aesthetics. From counter layout to cabinet finishes, hardware and lighting, every element is planned for daily use and long-term durability — without compromising on visual refinement.',
     image:
-      'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=650&q=75',
     alt: 'Modern luxury modular kitchen design with island and custom cabinetry in Delhi by HOMES24DESIGNS',
     features: [
       'Workflow-optimised counter layout',
@@ -57,7 +57,7 @@ export const services: Service[] = [
     longDescription:
       'The living room is where your home is experienced most. We bring together seating, lighting, media units, wall treatments and decor to create a space that is both comfortable for daily life and refined for entertaining.',
     image:
-      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=650&q=75',
     alt: 'Modern elegant living room interior design in Delhi by HOMES24DESIGNS',
     features: [
       'Furniture layout and selection',
@@ -76,7 +76,7 @@ export const services: Service[] = [
     longDescription:
       'Bedrooms should feel calm, personal and restful. We design bedroom interiors that balance comfort with refinement — from bed placement and wardrobe design to lighting layers, finishes and textiles that suit your routine.',
     image:
-      'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=650&q=75',
     alt: 'Luxury master bedroom interior design in Delhi by HOMES24DESIGNS',
     features: [
       'Bed layout and positioning',
@@ -95,7 +95,7 @@ export const services: Service[] = [
     longDescription:
       'Effective storage is invisible when it works. We design wardrobes and built-in storage that maximise every square foot, with internal configurations tailored to your belongings and finishes that complement the room around them.',
     image:
-      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=650&q=75',
     alt: 'Custom walk-in wardrobe and storage design in Delhi by HOMES24DESIGNS',
     features: [
       'Built-in and walk-in wardrobes',
@@ -114,7 +114,7 @@ export const services: Service[] = [
     longDescription:
       'Ceilings and lighting are the quiet foundation of interior atmosphere. We design false ceilings and layered lighting plans — ambient, task and accent — that add depth, define zones and bring warmth to your home after dark.',
     image:
-      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=650&q=75',
     alt: 'False ceiling and architectural layered lighting in Delhi by HOMES24DESIGNS',
     features: [
       'False ceiling design and layout',
@@ -133,7 +133,7 @@ export const services: Service[] = [
     longDescription:
       'Walls are the largest surface in any room. We plan wall treatments — paint, texture, wallpaper, panelling and feature walls — as part of the overall design, adding character without overwhelming the space.',
     image:
-      'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=650&q=75',
     alt: 'Textured wall finishes and architectural wall panelling in Delhi by HOMES24DESIGNS',
     features: [
       'Paint and colour planning',
@@ -152,7 +152,7 @@ export const services: Service[] = [
     longDescription:
       'When your needs fall outside standard categories, we design custom interior solutions around your specific space, routine and aesthetic preferences. Tell us what you need — we will build a plan around it.',
     image:
-      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=650&q=75',
     alt: 'Bespoke custom interior solutions in Delhi by HOMES24DESIGNS',
     features: [
       'Bespoke design brief',

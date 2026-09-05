@@ -67,6 +67,7 @@ export default function InstagramSection() {
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                   />
 
                   {/* Gradient Overlay */}

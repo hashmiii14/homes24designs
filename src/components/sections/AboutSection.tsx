@@ -35,6 +35,24 @@ export default function AboutSection() {
       />
 
       <div className="container-lux relative z-10 space-y-12 md:space-y-14">
+        {/* Mobile Heading: Positioned directly ABOVE the founder portrait on mobile screens */}
+        <div className="lg:hidden">
+          <Reveal>
+            <div>
+              <div className="flex items-center gap-3 mb-2.5">
+                <span className="h-px w-8 bg-accent" />
+                <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
+                  About HOMES24DESIGNS · Meet The Founder
+                </span>
+              </div>
+              <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
+                Designed Around Your Vision.{' '}
+                <span className="italic font-normal text-stone-700">Built Around Your Trust.</span>
+              </h2>
+            </div>
+          </Reveal>
+        </div>
+
         {/* ===================================================================
             PART 1: BALANCED 2-COLUMN FOUNDER SPOTLIGHT (ZERO GAP UNDER IMAGE)
             =================================================================== */}
@@ -126,8 +144,8 @@ export default function AboutSection() {
           <div className="lg:col-span-7 flex flex-col justify-between">
             <Reveal delay={60}>
               <div className="space-y-4">
-                {/* Eyebrow & Main Title */}
-                <div>
+                {/* Eyebrow & Main Title (Desktop only: on mobile it renders above the founder image) */}
+                <div className="hidden lg:block">
                   <div className="flex items-center gap-3 mb-2.5">
                     <span className="h-px w-8 bg-accent" />
                     <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
@@ -516,48 +534,6 @@ export default function AboutSection() {
                   <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
                 </Link>
               </div>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* ===================================================================
-            PART 6: STUDIO LOCATION GOOGLE MAP EMBED
-            =================================================================== */}
-        <Reveal delay={220}>
-          <div className="bg-white border border-stone-200/90 shadow-sm overflow-hidden">
-            <div className="p-5 md:p-6 border-b border-stone-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <MapPin className="w-4 h-4 text-accent" strokeWidth={1.5} />
-                  <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-                    Studio Location · New Delhi
-                  </span>
-                </div>
-                <h4 className="text-base sm:text-lg font-normal text-charcoal-900 font-serif">
-                  Visit HOMES24DESIGNS in Batla House, Jamia Nagar
-                </h4>
-                <p className="text-xs text-stone-500 mt-0.5">
-                  {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pincode}
-                </p>
-              </div>
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteConfig.mapsQuery)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-2 border border-stone-300 text-charcoal-800 text-xs font-medium uppercase tracking-wider hover:bg-stone-100 transition-colors shrink-0"
-              >
-                <span>Open in Google Maps</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-            </div>
-            <div className="relative w-full h-[280px] sm:h-[340px] bg-stone-100">
-              <iframe
-                title="HOMES24DESIGNS Studio Location Map"
-                src={`https://maps.google.com/maps?q=${encodeURIComponent(siteConfig.mapsQuery)}&output=embed`}
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
             </div>
           </div>
         </Reveal>

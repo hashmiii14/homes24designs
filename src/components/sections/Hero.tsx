@@ -8,10 +8,11 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1920&q=80"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=75"
           alt="Luxury architectural home interior design by HOMES24DESIGNS in Delhi"
           className="w-full h-full object-cover object-center"
           fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/90 via-charcoal-900/40 to-charcoal-900/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/80 via-charcoal-900/30 to-transparent" />
