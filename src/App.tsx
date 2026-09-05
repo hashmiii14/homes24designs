@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Loader from '@/components/layout/Loader';
@@ -43,6 +44,7 @@ export default function App() {
         <Footer />
         <WhatsAppButton />
         <BackToTop />
+        <SpeedInsights />
       </BrowserRouter>
     </HelmetProvider>
   );
