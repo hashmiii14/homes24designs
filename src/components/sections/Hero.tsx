@@ -147,7 +147,7 @@ export default function Hero() {
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Eyebrow */}
           <div
-            className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 md:mb-5"
+            className="flex items-center gap-2.5 sm:gap-3 mb-3.5 sm:mb-4 md:mb-5"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both' }
@@ -155,7 +155,7 @@ export default function Hero() {
             }
           >
             <span className="h-px w-8 sm:w-10 bg-accent-light" />
-            <span className="text-[11px] sm:text-xs font-medium tracking-[0.2em] sm:tracking-[0.22em] uppercase text-accent-light">
+            <span className="text-xs sm:text-xs font-medium tracking-[0.2em] sm:tracking-[0.22em] uppercase text-accent-light">
               <AnimatedWords
                 text="Best Interior Designer in Okhla · New Delhi"
                 startDelay={0.08}
@@ -165,7 +165,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-serif text-[2.15rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.06] sm:leading-[1.05] tracking-tight">
+          <h1 className="font-serif text-[2.45rem] xs:text-[2.65rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.08] sm:leading-[1.05] tracking-tight">
             <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
             <br />
             <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />
@@ -176,7 +176,7 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="mt-3.5 sm:mt-6 md:mt-8 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
+          <p className="mt-4 sm:mt-6 md:mt-8 text-sm sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
             <AnimatedWords
               text="A thoughtful combination of design, functionality, material selection and personalised planning for contemporary homes in Delhi and Delhi NCR."
               startDelay={0.95}
@@ -186,7 +186,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div
-            className="mt-4 sm:mt-8 md:mt-10 flex flex-row flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-4"
+            className="mt-5 sm:mt-8 md:mt-10 flex flex-row flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-4"
             style={
               isLoaded
                 ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
@@ -196,14 +196,14 @@ export default function Hero() {
             <Link
               to="/contact"
               onClick={handleConsultationClick}
-              className="inline-flex items-center justify-center px-4 py-2.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shrink-0"
+              className="inline-flex items-center justify-center px-5 py-3 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shrink-0"
             >
               Book a Consultation
             </Link>
             <Link
               to="/services"
               onClick={handleServicesClick}
-              className="inline-flex items-center justify-center px-4 py-2.5 sm:px-8 sm:py-3.5 border border-ivory/50 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory/15 active:scale-95 touch-manipulation text-center shrink-0"
+              className="inline-flex items-center justify-center px-5 py-3 sm:px-8 sm:py-3.5 border border-ivory/50 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory/15 active:scale-95 touch-manipulation text-center shrink-0"
             >
               Explore Our Services
             </Link>
@@ -211,15 +211,15 @@ export default function Hero() {
 
           {/* Location */}
           <div
-            className="mt-3.5 sm:mt-6 md:mt-10 flex items-center gap-2 text-stone-300"
+            className="mt-4 sm:mt-6 md:mt-10 flex items-center gap-2 text-stone-300"
             style={
               isLoaded
                 ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-light shrink-0" strokeWidth={1.5} />
-            <span className="text-[11px] sm:text-sm tracking-wide font-medium">
+            <MapPin className="w-4 h-4 text-accent-light shrink-0" strokeWidth={1.5} />
+            <span className="text-xs sm:text-sm tracking-wide font-medium">
               <AnimatedWords
                 text="• Okhla, Jamia Nagar, New Delhi"
                 startDelay={1.4}
