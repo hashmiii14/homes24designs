@@ -19,6 +19,13 @@ export default function Header() {
   const isHome = location.pathname === '/';
   const transparent = isHome && !scrolled && !menuOpen;
 
+  const handleNavClick = (path: string) => {
+    setMenuOpen(false);
+    if (path === '/' || location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <header
@@ -31,7 +38,12 @@ export default function Header() {
         <div className="container-lux">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Logo variant="header-adaptive" transparent={transparent} size="md" />
+            <Logo
+              variant="header-adaptive"
+              transparent={transparent}
+              size="md"
+              onClick={() => handleNavClick('/')}
+            />
 
             {/* Desktop nav */}
             <nav className="hidden lg:flex items-center gap-8">
@@ -41,6 +53,7 @@ export default function Header() {
                   <Link
                     key={item.path}
                     to={item.path}
+                    onClick={() => handleNavClick(item.path)}
                     className={`link-underline text-sm font-medium tracking-wide transition-colors duration-300 ${
                       transparent
                         ? active
@@ -88,7 +101,7 @@ export default function Header() {
       {/* Mobile menu overlay */}
       <div
         className={`fixed inset-0 z-[60] lg:hidden transition-all duration-500 ${
-          menuOpen ? 'visible opacity-100' : 'invisible opacity-0'
+          menuOpen ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'
         }`}
       >
         <div
@@ -101,7 +114,7 @@ export default function Header() {
           }`}
         >
           <div className="flex items-center justify-between h-16 px-6 border-b border-stone-200">
-            <Logo variant="dark" size="sm" onClick={() => setMenuOpen(false)} />
+            <Logo variant="dark" size="sm" onClick={() => handleNavClick('/')} />
             <button
               onClick={() => setMenuOpen(false)}
               className="p-2 text-charcoal-700 hover:text-accent transition-colors"
@@ -118,6 +131,7 @@ export default function Header() {
                 <Link
                   key={item.path}
                   to={item.path}
+                  onClick={() => handleNavClick(item.path)}
                   className={`py-3 text-lg font-light border-b border-stone-200/60 transition-colors ${
                     active ? 'text-accent' : 'text-charcoal-700 hover:text-accent'
                   }`}
@@ -136,6 +150,7 @@ export default function Header() {
           <div className="px-6 mt-4">
             <Link
               to="/contact"
+              onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center w-full py-3.5 bg-charcoal-800 text-ivory text-sm font-medium tracking-wide"
             >
               Book a Consultation

@@ -4,8 +4,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Loader from '@/components/layout/Loader';
+import ScrollToTop from '@/components/layout/ScrollToTop';
 import WhatsAppButton from '@/components/layout/WhatsAppButton';
-import BackToTop from '@/components/layout/BackToTop';
+import CallButton from '@/components/layout/CallButton';
 import HomePage from '@/pages/HomePage';
 
 // Lazy load secondary pages for optimal initial load speed
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Loader />
         <Header />
         <main id="main-content" tabIndex={-1} className="outline-none">
@@ -46,8 +48,8 @@ export default function App() {
           </Suspense>
         </main>
         <Footer />
+        <CallButton />
         <WhatsAppButton />
-        <BackToTop />
       </BrowserRouter>
     </HelmetProvider>
   );
