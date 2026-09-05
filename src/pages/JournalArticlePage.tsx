@@ -23,7 +23,10 @@ export default function JournalArticlePage() {
     description: post.metaDescription,
     image: post.image,
     datePublished: post.date,
-    author: { '@type': 'Organization', name: post.author },
+    author:
+      post.author === 'Ehtashamul Islam'
+        ? { '@type': 'Person', name: 'Ehtashamul Islam', jobTitle: 'Proprietor & Principal Designer' }
+        : { '@type': 'Organization', name: 'HOMES24DESIGNS' },
     publisher: { '@type': 'Organization', name: 'HOMES24DESIGNS' },
   };
 

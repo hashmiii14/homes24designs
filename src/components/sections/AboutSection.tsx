@@ -12,6 +12,7 @@ import {
   Quote,
   CheckCircle2,
   ArrowRight,
+  Clock,
 } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import { siteConfig } from '@/data/siteConfig';
@@ -141,7 +142,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column: Founder Narrative & Core Brand Story (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between">
+          <div className="lg:col-span-7 flex flex-col justify-start">
             <Reveal delay={60}>
               <div className="space-y-4">
                 {/* Eyebrow & Main Title (Desktop only: on mobile it renders above the founder image) */}
@@ -239,6 +240,67 @@ export default function AboutSection() {
                   >
                     Explore Services &rarr;
                   </Link>
+                </div>
+
+                {/* Founder's Direct Commitment & Consultation Guarantee Panel */}
+                <div className="pt-2">
+                  <div className="p-4 sm:p-5 bg-white border border-stone-200/90 shadow-sm space-y-3.5">
+                    <div className="flex items-center justify-between border-b border-stone-100 pb-2.5">
+                      <div className="flex items-center gap-2">
+                        <ShieldCheck className="w-4 h-4 text-accent" strokeWidth={1.8} />
+                        <span className="text-xs font-semibold tracking-wider uppercase text-charcoal-900">
+                          Direct Studio Commitment &amp; Guarantee
+                        </span>
+                      </div>
+                      <span className="text-[10px] font-medium tracking-wider uppercase text-accent bg-accent/10 px-2 py-0.5 border border-accent/20">
+                        Proprietor Supervised
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-semibold text-charcoal-800">
+                          <Compass className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.8} />
+                          <span>On-Site Survey</span>
+                        </div>
+                        <p className="text-[11px] leading-relaxed text-stone-600">
+                          Personal site survey across Okhla, South Delhi &amp; NCR with laser measurements and space viability audit.
+                        </p>
+                      </div>
+
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-semibold text-charcoal-800">
+                          <FileCheck className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.8} />
+                          <span>Transparent BOQ</span>
+                        </div>
+                        <p className="text-[11px] leading-relaxed text-stone-600">
+                          100% itemized pricing with genuine hardware brands (Hafele, Hettich, Merino) and zero hidden contractor markups.
+                        </p>
+                      </div>
+
+                      <div className="space-y-1">
+                        <div className="flex items-center gap-1.5 text-xs font-semibold text-charcoal-800">
+                          <Clock className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.8} />
+                          <span>Turnkey Handover</span>
+                        </div>
+                        <p className="text-[11px] leading-relaxed text-stone-600">
+                          45-day scheduled completion with weekly milestone progress logs shared directly by the proprietor.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Studio Visiting Hours & Location Strip */}
+                    <div className="pt-2.5 border-t border-stone-100 flex flex-wrap items-center justify-between gap-2 text-[11px] text-stone-500">
+                      <div className="flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
+                        <span>Studio: {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pincode}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 font-medium text-stone-600">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                        <span>Consultation Hours: 10:00 AM – 8:00 PM (Daily)</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Reveal>

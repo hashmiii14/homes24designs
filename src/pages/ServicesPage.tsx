@@ -9,8 +9,8 @@ export default function ServicesPage() {
   return (
     <>
       <SEO
-        title="Interior Design Services in Delhi | HOMES24DESIGNS"
-        description="Full home interiors, modular kitchens, living rooms, bedrooms, wardrobes, false ceiling, lighting, wall design and custom interior solutions across Delhi and Delhi NCR."
+        title="Interior Design Services in Okhla, South Delhi & Delhi NCR | HOMES24DESIGNS"
+        description="Full home interiors, modular kitchens, living rooms, bedrooms, wardrobes, false ceiling, lighting, wall design and custom turnkey solutions across Okhla, South Delhi & Delhi NCR."
         path="/services"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -36,10 +36,10 @@ export default function ServicesPage() {
                   Service Area &amp; Studio
                 </span>
                 <h2 className="text-section font-light text-charcoal-800 mb-4">
-                  Serving Delhi, New Delhi &amp; Delhi NCR
+                  Serving Okhla, South Delhi &amp; Delhi NCR
                 </h2>
                 <p className="text-sm sm:text-base leading-relaxed text-stone-600 mb-4">
-                  Our interior design and turnkey execution services are available across South Delhi, Central Delhi, New Delhi, Noida, Gurgaon, and the wider Delhi NCR region.
+                  Our interior design and turnkey execution services are available across Okhla, Jamia Nagar, Batla House, Jasola, New Friends Colony, South Delhi, Central Delhi, New Delhi, Noida, Gurgaon, and the wider Delhi NCR region.
                 </p>
                 <p className="text-xs text-stone-500">
                   Studio: {siteConfig.address.line1}, {siteConfig.address.line2}, {siteConfig.address.city} {siteConfig.address.pincode}

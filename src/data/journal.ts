@@ -560,4 +560,126 @@ export const journalPosts: JournalPost[] = [
       },
     ],
   },
+  {
+    slug: 'interior-designers-okhla-south-delhi-guide',
+    title: 'Interior Design in Okhla, Jamia Nagar & South Delhi: The Homeowner Guide',
+    seoTitle: 'Best Interior Designers in Okhla & South Delhi | HOMES24DESIGNS',
+    metaDescription:
+      'Complete guide to interior design in Okhla, Jamia Nagar, Batla House and South Delhi. Practical space planning, modular kitchens, wardrobes & realistic local cost breakdown.',
+    excerpt:
+      'A practical homeowner guide to interior design in Okhla, Jamia Nagar, and South Delhi — spatial planning, modular kitchens, custom wardrobes, and turnkey budgeting.',
+    date: '2026-08-28',
+    author: 'Ehtashamul Islam',
+    readingTime: '7 min read',
+    image: '/images/journal/post-11-okhla-south-delhi.jpg',
+    alt: 'Interior design in Okhla Jamia Nagar and South Delhi residential apartments',
+    content: [
+      {
+        heading: 'Navigating Floor Plans in Okhla, Jamia Nagar & South Delhi',
+        paragraphs: [
+          'Residential properties across Okhla, Jamia Nagar, Batla House, Jasola, and New Friends Colony vary widely in layout — from compact builder floors and independent multi-story homes to modern high-rise societies. Designing for these homes requires a deep understanding of local structural characteristics.',
+          'Many older and dense urban apartments face challenges with natural light intake, deep floor plates, and structural beam protrusions. Rather than treating these as flaws, thoughtful interior planning uses architectural cove lighting, recessed fluted panelling, and mirrored accent surfaces to visually amplify spatial volume and create bright, open living environments.',
+        ],
+      },
+      {
+        heading: 'Modular Kitchens Tailored for High-Use Family Homes',
+        paragraphs: [
+          'In South Delhi households, kitchens are dynamic spaces that handle heavy daily cooking, traditional spices, and extensive cookware collections. Off-the-shelf modular kitchen templates often deteriorate within two seasons under heavy use.',
+          'At HOMES24DESIGNS, our modular kitchens feature IS:710 Marine Grade Boiling Water Proof (BWP) ply carcasses, seamless anti-fingerprint acrylic or PU finishes, and soft-close German hardware from Hafele and Hettich. Deep pull-out tandem drawers, corner carousel units, and dedicated pantry tall units ensure that every inch of kitchen square footage performs effortlessly.',
+        ],
+      },
+      {
+        heading: 'Why Direct Studio Supervision Beats Fragmented Contractors',
+        paragraphs: [
+          'Hiring separate local carpenters, painters, electricians, and false ceiling teams frequently leads to miscommunication, escalating budgets, and extended timeline delays. When an issue arises, tradespeople inevitably blame one another.',
+          'HOMES24DESIGNS operates on a unified turnkey model. Founder Ehtashamul Islam personally visits your site, supervises material delivery, and oversees daily carpentry and finishing milestones. Homeowners receive structured weekly photo and video progress logs over WhatsApp, giving you absolute peace of mind without having to manage contractors yourself.',
+        ],
+      },
+      {
+        heading: 'Realistic Interior Design Budgets in South Delhi & Okhla',
+        paragraphs: [
+          'Interior design should never involve opaque estimates or hidden line-item shocks. Transparent pricing begins with a clear itemized Bill of Quantities (BOQ) covering materials, hardware brand specifications, and labor schedules.',
+          'Our projects range from targeted room renovations and modular kitchen packages starting at ₹50,000, to comprehensive full-floor signature transformations starting at ₹2.5 Lakhs, through to complete luxury turnkey residences starting at ₹5.0 Lakhs+. Every package includes direct proprietor oversight and clear warranty assurances.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the typical interior design timeline for an apartment in Okhla or South Delhi?',
+        answer:
+          'A typical 2BHK or 3BHK turnkey interior project takes between 35 to 45 working days from 3D layout sign-off to final handover, depending on modular woodwork complexity and custom detailing.',
+      },
+      {
+        question: 'Does HOMES24DESIGNS offer free on-site design surveys in Jamia Nagar and South Delhi?',
+        answer:
+          'Yes. We offer direct on-site consultation visits across Jamia Nagar, Batla House, Okhla, Jasola, New Friends Colony, and Greater Kailash. We measure the space, inspect plumbing/electrical layouts, and understand your family requirements firsthand.',
+      },
+      {
+        question: 'Can I visit your studio in Batla House to see material samples?',
+        answer:
+          'Absolutely. Our studio is located at M-74, First Floor, Batla House, Jamia Nagar, New Delhi - 110025. We have catalogues, veneer samples, acrylic finishes, and hardware options available for physical inspection during visiting hours (10:00 AM to 8:00 PM daily).',
+      },
+    ],
+  },
+  {
+    slug: 'interior-materials-delhi-ncr-weather-guide',
+    title: 'How to Choose Interior Materials for Delhi NCR Weather: Heat, Dust & Monsoon',
+    seoTitle: 'Best Interior Materials for Delhi NCR Weather | HOMES24DESIGNS',
+    metaDescription:
+      'Expert advice on selecting moisture-proof BWP marine plywood, dust-resistant acrylics, and termite-resistant joinery for homes across Delhi NCR, Okhla, and Noida.',
+    excerpt:
+      'How to choose interior materials that withstand Delhi NCR weather — boiling water proof marine ply, anti-fingerprint acrylics, dust-resistant joinery, and termite protection.',
+    date: '2026-09-02',
+    author: 'HOMES24DESIGNS',
+    readingTime: '6 min read',
+    image: '/images/journal/post-12-delhi-materials.jpg',
+    alt: 'Interior materials and finishes engineered for Delhi NCR climate',
+    content: [
+      {
+        heading: 'Delhi NCR’s Extreme Climate: Why Material Choice is Critical',
+        paragraphs: [
+          'Delhi NCR experiences one of the world’s most demanding domestic climate cycles: scorching summer temperatures exceeding 45°C, intense dusty squalls in April and May, followed by high-humidity monsoon downpours, and bone-chilling winter dampness.',
+          'In localities adjacent to the Yamuna riverbed — such as Okhla, Jamia Nagar, Batla House, Mayur Vihar, and Noida — ambient seasonal humidity levels fluctuate sharply. Inferior composite boards like MDF, particle board, or uncalibrated commercial plywood expand, bow, and delaminate within two years if exposed to these conditions.',
+        ],
+      },
+      {
+        heading: 'Plywood Hierarchy: Why BWP IS:710 Marine Grade is Non-Negotiable',
+        paragraphs: [
+          'When designing modular kitchens, bathroom vanities, and base storage, HOMES24DESIGNS strictly specifies IS:710 Boiling Water Proof (BWP) marine grade plywood bonded with unextended synthetic phenol formaldehyde resin.',
+          'Unlike standard Commercial MR (Moisture Resistant) ply, authentic BWP ply undergoes a 72-hour boiling water immersion test without layer delamination. This ensures that sink cabinetry, dish-drainer units, and utility ledges remain completely impervious to leaks, steam, and daily cleaning water.',
+        ],
+      },
+      {
+        heading: 'Dust-Repellent & Easy-Clean Surface Finishes',
+        paragraphs: [
+          'Delhi’s particulate dust settles quickly on high-touch furniture surfaces. High-gloss finishes often highlight every fingerprint and dust speck, requiring daily micro-polishing.',
+          'To combat this, we recommend zero-glare soft-touch matte acrylics or premium anti-fingerprint laminate sheets (Merino, Greenlam, or Royal Touche) combined with 2mm laser edge-banding. These surfaces repel static dust accumulation, resist domestic heat, and can be effortlessly wiped clean with a damp microfiber cloth.',
+        ],
+      },
+      {
+        heading: 'Termite Prevention & Moisture Damp-Proofing',
+        paragraphs: [
+          'Termites are a widespread concern across Delhi NCR ground and lower floors. Preventive protection must begin before carpentry commences, not after damage occurs.',
+          'We implement a multi-stage protocol: chemical wood-preservative priming for all wall-facing timber battens, heavy-duty aluminium carcase flooring under kitchen sinks, and sealed PVC skirting that creates an impenetrable barrier against floor-washing moisture.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Which plywood grade should I choose for bedroom wardrobes in Delhi?',
+        answer:
+          'For wardrobe carcase and internal shelves, calibrated IS:303 BWR (Boiling Water Resistant) or BWP grade plywood is ideal. For shutter doors, calibrated 18mm or 19mm ply prevents warping over long spans.',
+      },
+      {
+        question: 'Are matte finishes harder to maintain than glossy finishes in Delhi?',
+        answer:
+          'No. High-quality anti-fingerprint matte laminates and super-matte acrylics are actually much easier to maintain than high-gloss laminates because they do not show micro-scratches, smudges, or light dust layers.',
+      },
+      {
+        question: 'How does HOMES24DESIGNS verify raw material authenticity on-site?',
+        answer:
+          'All plywood sheets, hardware boxes, and laminate bundles are delivered in original manufacturer packaging with visible ISI markings, batch numbers, and holographic seals. Homeowners can physically inspect every board before cutting begins.',
+      },
+    ],
+  },
 ];

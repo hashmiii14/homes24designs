@@ -116,6 +116,16 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://homes24designs.in/journal/interior-designers-okhla-south-delhi-guide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://homes24designs.in/journal/interior-materials-delhi-ncr-weather-guide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://homes24designs.in/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

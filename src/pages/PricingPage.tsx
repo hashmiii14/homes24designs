@@ -8,8 +8,8 @@ export default function PricingPage() {
   return (
     <>
       <SEO
-        title="Interior Design Pricing in Delhi | HOMES24DESIGNS"
-        description="Essential, Signature and Luxe interior design packages for Delhi homes. Every quote is customised after a consultation based on your scope, space and materials."
+        title="Interior Design Cost & Packages in Delhi NCR | HOMES24DESIGNS"
+        description="Transparent interior design pricing and packages starting at ₹50,000 for homes in Okhla, South Delhi & Delhi NCR. Detailed BOQ, genuine hardware & 45-day handover."
         path="/pricing"
         jsonLd={{
           '@context': 'https://schema.org',

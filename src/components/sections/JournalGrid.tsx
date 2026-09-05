@@ -12,9 +12,9 @@ interface JournalGridProps {
 
 const filterCategories = [
   'All Articles',
-  'Kitchens & Storage',
+  'Kitchens & Materials',
   'Living & Bedrooms',
-  'Planning & Budgets',
+  'Planning & Local Guides',
   'Small Spaces',
 ] as const;
 
@@ -23,6 +23,8 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
 
   // Map category tag for clean visual pill
   const getCategoryTag = (slug: string) => {
+    if (slug.includes('materials')) return 'Materials & Durability';
+    if (slug.includes('okhla')) return 'Delhi & Okhla Guide';
     if (slug.includes('kitchen')) return 'Modular Kitchens';
     if (slug.includes('cost')) return 'Budget & Planning';
     if (slug.includes('bedroom')) return 'Bedroom Interiors';
@@ -37,17 +39,17 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
   // Filter posts based on category (used mainly on Journal page)
   const filteredPosts = useMemo(() => {
     let list = journalPosts;
-    if (selectedCategory === 'Kitchens & Storage') {
+    if (selectedCategory === 'Kitchens & Materials') {
       list = journalPosts.filter(
-        (p) => p.slug.includes('kitchen') || p.slug.includes('wardrobe') || p.slug.includes('small')
+        (p) => p.slug.includes('kitchen') || p.slug.includes('materials') || p.slug.includes('small')
       );
     } else if (selectedCategory === 'Living & Bedrooms') {
       list = journalPosts.filter(
         (p) => p.slug.includes('living') || p.slug.includes('bedroom') || p.slug.includes('ceiling')
       );
-    } else if (selectedCategory === 'Planning & Budgets') {
+    } else if (selectedCategory === 'Planning & Local Guides') {
       list = journalPosts.filter(
-        (p) => p.slug.includes('cost') || p.slug.includes('choose') || p.slug.includes('mistakes')
+        (p) => p.slug.includes('cost') || p.slug.includes('choose') || p.slug.includes('mistakes') || p.slug.includes('okhla')
       );
     } else if (selectedCategory === 'Small Spaces') {
       list = journalPosts.filter(

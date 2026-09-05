@@ -19,8 +19,14 @@ import { faqItems } from '@/data/faq';
 export default function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'InteriorDesignFirm',
+    '@type': ['InteriorDesignFirm', 'LocalBusiness', 'HomeAndConstructionBusiness'],
     name: siteConfig.name,
+    alternateName: [
+      'Homes 24 Designs',
+      'HOMES24DESIGNS Okhla',
+      'Homes24Designs South Delhi',
+      'Interior Designers Near Me',
+    ],
     legalName: siteConfig.legalName,
     description: siteConfig.description,
     url: siteConfig.url,
@@ -32,7 +38,7 @@ export default function HomePage() {
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${siteConfig.address.line1}, ${siteConfig.address.line2}`,
-      addressLocality: siteConfig.address.city,
+      addressLocality: 'Okhla, New Delhi',
       addressRegion: siteConfig.address.state,
       postalCode: siteConfig.address.pincode,
       addressCountry: siteConfig.address.country,
@@ -47,6 +53,18 @@ export default function HomePage() {
       '@type': 'Person',
       name: siteConfig.proprietor,
       jobTitle: 'Proprietor & Founder',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Residential Interior Design Services',
+      itemListElement: services.map((s) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: s.title,
+          description: s.shortDesc,
+        },
+      })),
     },
     sameAs: [siteConfig.instagram],
   };
@@ -71,8 +89,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="HOMES24DESIGNS | Luxury Interior Designers in Delhi"
-        description="HOMES24DESIGNS is a Delhi-based interior design studio offering premium home interiors, modular kitchens, living rooms, bedrooms, wardrobes and custom interior solutions across Delhi and Delhi NCR."
+        title="HOMES24DESIGNS | Best Interior Designers in Okhla, South Delhi & Delhi NCR"
+        description="Looking for the best interior designers near you? HOMES24DESIGNS in Batla House, Jamia Nagar, Okhla offers bespoke luxury interiors, modular kitchens, wardrobes & turnkey execution across South Delhi & Delhi NCR. Call +91 9818083436."
         path="/"
         jsonLd={[jsonLd, websiteLd, faqLd]}
       />

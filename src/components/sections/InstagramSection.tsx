@@ -18,7 +18,7 @@ const instagramPosts: InstagramPost[] = [
     category: 'Hospitality & Commercial',
     title: 'Nushka Cafe — Warm & Cozy Ambience',
     excerpt: 'A recently delivered cafe interior designed with intimate warm tones, curated lighting and inviting ambience.',
-    image: '/instagram/post-1-nushka-cafe.jpg',
+    image: '/images/instagram/post-1-nushka-cafe.jpg',
     url: 'https://www.instagram.com/p/DUhUg5XCQ3v/',
   },
   {
@@ -26,7 +26,7 @@ const instagramPosts: InstagramPost[] = [
     category: 'Residential Architecture',
     title: 'Modern Residential Villa & Facade',
     excerpt: 'Turnkey residential architecture and contemporary elevation delivered with clean lines and precision execution.',
-    image: '/instagram/post-2-residential-villa.jpg',
+    image: '/images/instagram/post-2-residential-villa.jpg',
     url: 'https://www.instagram.com/p/C7L2ALCJqYx/',
   },
   {
@@ -34,7 +34,7 @@ const instagramPosts: InstagramPost[] = [
     category: 'Modular Interiors',
     title: 'Minimalist Modular Kitchen & Living',
     excerpt: 'Simple, sophisticated and budget-friendly interior solutions featuring seamless storage and modern finishes.',
-    image: '/instagram/post-3-minimalist-kitchen.jpg',
+    image: '/images/instagram/post-3-minimalist-kitchen.jpg',
     url: 'https://www.instagram.com/p/DXWG-3xiZHk/',
   },
 ];

@@ -1,7 +1,8 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "homes24designs",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "HOMES24DESIGNS — Luxury Residential Interior Design Studio, New Delhi",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +12,6 @@
     "typecheck": "tsc --noEmit -p tsconfig.app.json"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.57.4",
     "csstype": "^3.2.3",
     "lucide-react": "^0.446.0",
     "react": "^18.3.1",

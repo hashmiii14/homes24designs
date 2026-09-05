@@ -5,6 +5,7 @@ import { siteConfig } from '@/data/siteConfig';
 interface SEOProps {
   title?: string;
   description?: string;
+  keywords?: string;
   path?: string;
   image?: string;
   type?: string;
@@ -14,6 +15,7 @@ interface SEOProps {
 export default function SEO({
   title,
   description = siteConfig.description,
+  keywords = 'interior designers near me, best interior designer near me, interior designers in okhla, interior designer jamia nagar, interior designer batla house, interior designer south delhi, interior designer new delhi, luxury interior designers delhi, modular kitchen okhla, turnkey interior designers delhi',
   path = '',
   image = siteConfig.ogImage,
   type = 'website',
@@ -34,6 +36,7 @@ export default function SEO({
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <link rel="canonical" href={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
