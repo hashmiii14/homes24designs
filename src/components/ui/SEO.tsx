@@ -35,6 +35,8 @@ export default function SEO({
   return (
     <Helmet>
       <title>{fullTitle}</title>
+      <meta name="color-scheme" content="only light" />
+      <meta name="theme-color" content="#f7f4ef" />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={url} />

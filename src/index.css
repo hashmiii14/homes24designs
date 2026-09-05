@@ -4,9 +4,14 @@
 
 @layer base {
   :root {
-    color-scheme: light only;
+    color-scheme: only light;
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
+  }
+
+  *, *::before, *::after {
+    forced-color-adjust: none !important;
+    -webkit-forced-color-adjust: none !important;
   }
 
   html {
@@ -14,7 +19,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling: touch;
-    color-scheme: light only;
+    color-scheme: only light;
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
     background-color: #f7f4ef !important;
@@ -26,17 +31,38 @@
     background-color: #f7f4ef !important;
     color: #1c1917 !important;
     overflow-x: hidden;
-    color-scheme: light only;
+    color-scheme: only light;
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
   }
 
   @media (prefers-color-scheme: dark) {
-    :root, html, body {
-      color-scheme: light only !important;
+    :root, html, body, #root {
+      color-scheme: only light !important;
       forced-color-adjust: none !important;
       -webkit-forced-color-adjust: none !important;
       background-color: #f7f4ef !important;
+      color: #1c1917 !important;
+    }
+
+    *, *::before, *::after {
+      forced-color-adjust: none !important;
+      -webkit-forced-color-adjust: none !important;
+    }
+
+    input, textarea, select, button {
+      color-scheme: only light !important;
+      forced-color-adjust: none !important;
+      -webkit-forced-color-adjust: none !important;
+      color: #1c1917 !important;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #9c8a72 !important;
+    }
+
+    select option {
+      background-color: #ffffff !important;
       color: #1c1917 !important;
     }
   }
