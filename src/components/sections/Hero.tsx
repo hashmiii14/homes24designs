@@ -102,8 +102,8 @@ export default function Hero() {
     const handler = () => setIsLoaded(true);
     window.addEventListener('h24-loader-done', handler);
 
-    // Safety fallback: if event was somehow missed, trigger after 2.2s
-    const timer = setTimeout(() => setIsLoaded(true), 2200);
+    // Safety fallback: if event was somehow missed, trigger after 2.5s
+    const timer = setTimeout(() => setIsLoaded(true), 2500);
 
     return () => {
       window.removeEventListener('h24-loader-done', handler);
@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-0 sm:min-h-[640px] md:min-h-[720px] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-start sm:justify-center lg:justify-end overflow-hidden pt-[5.25rem] sm:pt-24 md:pt-28 lg:pt-32">
+    <section className="relative min-h-[82svh] sm:min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-center sm:justify-end overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 lg:pb-16">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -143,7 +143,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-lux w-full pb-7 sm:pb-10 lg:pb-16 text-left">
+      <div className="relative z-10 container-lux w-full text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Eyebrow */}
           <div

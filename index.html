@@ -263,87 +263,108 @@
         margin-bottom: 0;
       }
       .h24-loader-track {
-        margin-top: 2rem;
-        width: 140px;
-        height: 1.5px;
-        background-color: #2e2822;
+        margin-top: 1.75rem;
+        width: 160px;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.12);
         overflow: hidden;
         position: relative;
         border-radius: 1px;
       }
       .h24-loader-bar {
         height: 100%;
-        background-color: #a8855f;
+        background: linear-gradient(90deg, #8a6d4a, #c4a585);
         width: 0%;
-        animation: h24FillBar 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        transition: width 0.04s linear;
+      }
+      .h24-loader-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 160px;
+        margin-top: 0.65rem;
       }
       .h24-loader-tag {
-        margin-top: 0.85rem;
-        color: #7d6e5a;
-        font-size: 10px;
-        letter-spacing: 0.3em;
+        color: #9c8a72;
+        font-size: 9px;
+        letter-spacing: 0.28em;
         text-transform: uppercase;
         font-weight: 500;
+        margin: 0;
       }
-      @keyframes h24FillBar {
-        0% { width: 0%; }
-        25% { width: 35%; }
-        55% { width: 70%; }
-        80% { width: 90%; }
-        95% { width: 98%; }
-        100% { width: 100%; }
+      .h24-loader-pct {
+        color: #c4a585;
+        font-size: 10px;
+        font-family: 'Inter', system-ui, monospace, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin: 0;
       }
     </style>
   </head>
   <body>
-    <!-- Immediate 0ms Luxury Entrance Loader -->
+    <!-- Immediate 0ms Luxury Entrance Loader with Live Progress -->
     <div id="h24-initial-loader">
       <div class="h24-loader-grid"></div>
       <div class="h24-loader-content">
         <h1 class="h24-loader-title">HOMES<span style="color: #a8855f; font-weight: 300;">24</span></h1>
         <p class="h24-loader-subtitle">DESIGNS</p>
         <div class="h24-loader-track">
-          <div class="h24-loader-bar"></div>
+          <div id="h24-bar" class="h24-loader-bar"></div>
         </div>
-        <p class="h24-loader-tag">Interior Design Studio</p>
+        <div class="h24-loader-meta">
+          <p class="h24-loader-tag">STUDIO</p>
+          <p id="h24-pct" class="h24-loader-pct">0%</p>
+        </div>
       </div>
     </div>
     <script>
       (function() {
         var loader = document.getElementById('h24-initial-loader');
+        var bar = document.getElementById('h24-bar');
+        var pct = document.getElementById('h24-pct');
         if (!loader) return;
 
-        var startTime = Date.now();
-        var minDuration = 2000; // 2 seconds loading as requested
-        var isDismissing = false;
+        var duration = 2000; // 2 seconds total loading duration
+        var startTime = performance.now ? performance.now() : Date.now();
+        var isDone = false;
 
         window.__h24_loaded = false;
 
-        window.__h24_dismiss_loader = function() {
-          if (isDismissing || !loader) return;
-          var elapsed = Date.now() - startTime;
-          var remaining = Math.max(0, minDuration - elapsed);
+        function tick() {
+          if (isDone) return;
+          var now = performance.now ? performance.now() : Date.now();
+          var progress = Math.min(1, (now - startTime) / duration);
 
-          setTimeout(function() {
-            if (isDismissing) return;
-            isDismissing = true;
-            window.__h24_loaded = true;
-            window.dispatchEvent(new CustomEvent('h24-loader-done'));
-            loader.classList.add('h24-hidden');
+          // Natural luxury deceleration curve
+          var eased = 1 - Math.pow(1 - progress, 2.2);
+          var currentPct = Math.round(eased * 100);
+
+          if (bar) bar.style.width = currentPct + '%';
+          if (pct) pct.textContent = currentPct + '%';
+
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            isDone = true;
+            if (bar) bar.style.width = '100%';
+            if (pct) pct.textContent = '100%';
+
             setTimeout(function() {
-              if (loader && loader.parentNode) {
-                loader.parentNode.removeChild(loader);
-              }
-            }, 800);
-          }, remaining);
-        };
+              window.__h24_loaded = true;
+              window.dispatchEvent(new CustomEvent('h24-loader-done'));
+              loader.classList.add('h24-hidden');
 
-        // Fallback after 2.8s to ensure loader clears if any script error
-        setTimeout(function() {
-          if (window.__h24_dismiss_loader) {
-            window.__h24_dismiss_loader();
+              setTimeout(function() {
+                if (loader && loader.parentNode) {
+                  loader.parentNode.removeChild(loader);
+                }
+              }, 650);
+            }, 120);
           }
-        }, 2800);
+        }
+
+        requestAnimationFrame(tick);
       })();
     </script>
 
