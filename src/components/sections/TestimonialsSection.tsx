@@ -1,4 +1,4 @@
-import { Star, CheckCircle2, Quote, MapPin, ArrowRight } from 'lucide-react';
+import { Star, Quote, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { testimonials } from '@/data/testimonials';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -29,12 +29,12 @@ export default function TestimonialsSection() {
               />
             </div>
 
-            <div className="shrink-0">
+            <div className="hidden lg:block shrink-0">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-xs font-medium tracking-wider uppercase transition-all duration-300 shadow-sm"
+                className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-charcoal-800 hover:text-accent transition-colors pb-1 border-b border-charcoal-800 hover:border-accent"
               >
-                <span>Book Free Consultation</span>
+                Share Your Experience
                 <ArrowRight className="w-3.5 h-3.5 text-accent" />
               </Link>
             </div>
@@ -47,19 +47,11 @@ export default function TestimonialsSection() {
             <Reveal key={item.id} delay={i * 60} className="h-full">
               <div className="flex flex-col justify-between h-full p-6 sm:p-7 bg-white border border-stone-200 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <div>
-                  {/* Rating Stars & Verified Pill */}
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <div className="flex items-center gap-1 text-accent">
-                      {[...Array(item.rating)].map((_, s) => (
-                        <Star key={s} className="w-4 h-4 fill-accent text-accent" />
-                      ))}
-                    </div>
-                    {item.verified && (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 border border-emerald-200/60 rounded">
-                        <CheckCircle2 className="w-3 h-3 text-emerald-600" />
-                        Verified Project
-                      </span>
-                    )}
+                  {/* Rating Stars */}
+                  <div className="flex items-center gap-1 text-accent mb-4">
+                    {[...Array(item.rating)].map((_, s) => (
+                      <Star key={s} className="w-4 h-4 fill-accent text-accent" />
+                    ))}
                   </div>
 
                   {/* Review Text */}

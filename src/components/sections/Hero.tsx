@@ -51,6 +51,41 @@ function AnimatedLine({
   );
 }
 
+function AnimatedWords({
+  text,
+  startDelay = 0,
+  className = '',
+  isLoaded = true,
+}: {
+  text: string;
+  startDelay?: number;
+  className?: string;
+  isLoaded?: boolean;
+}) {
+  const words = text.split(' ');
+  return (
+    <span className={`inline-block ${className}`}>
+      {words.map((word, wIdx) => (
+        <span key={wIdx} className="inline-block whitespace-nowrap mr-[0.26em]">
+          <span
+            className="inline-block will-change-transform"
+            style={
+              isLoaded
+                ? {
+                    animation: 'letterReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) both',
+                    animationDelay: `${startDelay + wIdx * 0.03}s`,
+                  }
+                : { opacity: 0 }
+            }
+          >
+            {word}
+          </span>
+        </span>
+      ))}
+    </span>
+  );
+}
+
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(
     typeof window !== 'undefined' ? Boolean(window.__h24_loaded) : false
@@ -67,8 +102,8 @@ export default function Hero() {
     const handler = () => setIsLoaded(true);
     window.addEventListener('h24-loader-done', handler);
 
-    // Safety fallback: if event was somehow missed, trigger after 3.2s
-    const timer = setTimeout(() => setIsLoaded(true), 3200);
+    // Safety fallback: if event was somehow missed, trigger after 2.2s
+    const timer = setTimeout(() => setIsLoaded(true), 2200);
 
     return () => {
       window.removeEventListener('h24-loader-done', handler);
@@ -110,47 +145,51 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container-lux w-full pb-10 sm:pb-12 md:pb-16 text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
+          {/* Eyebrow */}
           <div
             className="flex items-center gap-3 mb-5"
             style={
               isLoaded
-                ? { animation: 'fadeDown 0.8s 0.1s cubic-bezier(0.16,1,0.3,1) both' }
+                ? { animation: 'fadeDown 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
             <span className="h-px w-10 bg-accent-light" />
             <span className="text-xs font-medium tracking-[0.22em] uppercase text-accent-light">
-              Best Interior Designer in Okhla · New Delhi
+              <AnimatedWords
+                text="Best Interior Designer in Okhla · New Delhi"
+                startDelay={0.08}
+                isLoaded={isLoaded}
+              />
             </span>
           </div>
 
+          {/* Heading */}
           <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.05] tracking-tight">
-            <AnimatedLine text="Interiors Designed" startDelay={0.2} isLoaded={isLoaded} />
+            <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
             <br />
-            <AnimatedLine text="Around The Way" startDelay={0.65} isLoaded={isLoaded} />
+            <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />
             <br />
             <span className="italic text-accent-light">
-              <AnimatedLine text="You Live." startDelay={1.05} isLoaded={isLoaded} />
+              <AnimatedLine text="You Live." startDelay={0.75} isLoaded={isLoaded} />
             </span>
           </h1>
 
-          <p
-            className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl"
-            style={
-              isLoaded
-                ? { animation: 'fadeUp 0.8s 1.25s cubic-bezier(0.16,1,0.3,1) both' }
-                : { opacity: 0 }
-            }
-          >
-            A thoughtful combination of design, functionality, material selection and
-            personalised planning for contemporary homes in Delhi and Delhi NCR.
+          {/* Description */}
+          <p className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
+            <AnimatedWords
+              text="A thoughtful combination of design, functionality, material selection and personalised planning for contemporary homes in Delhi and Delhi NCR."
+              startDelay={0.95}
+              isLoaded={isLoaded}
+            />
           </p>
 
+          {/* Buttons */}
           <div
             className="mt-6 sm:mt-10 flex flex-row flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-4"
             style={
               isLoaded
-                ? { animation: 'fadeUp 0.8s 1.4s cubic-bezier(0.16,1,0.3,1) both' }
+                ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
@@ -170,17 +209,22 @@ export default function Hero() {
             </Link>
           </div>
 
+          {/* Location */}
           <div
             className="mt-6 sm:mt-10 flex items-center gap-2 text-stone-300"
             style={
               isLoaded
-                ? { animation: 'fadeIn 0.8s 1.6s cubic-bezier(0.16,1,0.3,1) both' }
+                ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <MapPin className="w-4 h-4 text-accent-light" strokeWidth={1.5} />
+            <MapPin className="w-4 h-4 text-accent-light shrink-0" strokeWidth={1.5} />
             <span className="text-xs sm:text-sm tracking-wide font-medium">
-              • Okhla, Jamia Nagar, New Delhi
+              <AnimatedWords
+                text="• Okhla, Jamia Nagar, New Delhi"
+                startDelay={1.4}
+                isLoaded={isLoaded}
+              />
             </span>
           </div>
         </div>
