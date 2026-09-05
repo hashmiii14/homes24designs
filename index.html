@@ -205,7 +205,7 @@
     }
     </script>
 
-    <!-- Immediate 0ms Luxury Entry Loader Styles (matching Luxe Interiors design language) -->
+    <!-- Immediate 0ms Luxury Dark Entry Loader Styles -->
     <style>
       #h24-initial-loader {
         position: fixed;
@@ -215,8 +215,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #f7f4ef;
-        color: #1c1917;
+        background-color: #0c0a09;
+        color: #f7f4ef;
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         transform: translateY(0);
         transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.4s ease 0.5s;
@@ -225,6 +225,16 @@
       }
       #h24-initial-loader.h24-hidden {
         transform: translateY(-100%);
+        pointer-events: none;
+      }
+      .h24-loader-grid {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        opacity: 0.05;
+        background-image: linear-gradient(rgba(247, 244, 239, 1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(247, 244, 239, 1) 1px, transparent 1px);
+        background-size: 60px 60px;
         pointer-events: none;
       }
       .h24-loader-content {
@@ -236,20 +246,12 @@
         text-align: center;
         padding: 0 1.5rem;
       }
-      .h24-loader-overline {
-        color: #8a7a68;
-        font-size: 11px;
-        letter-spacing: 0.28em;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin: 0 0 1.25rem 0;
-      }
       .h24-loader-title {
-        color: #1c1917;
+        color: #f7f4ef;
         font-family: 'Cormorant Garamond', Georgia, serif;
         font-size: clamp(2.4rem, 6vw, 3.6rem);
-        font-weight: 400;
-        letter-spacing: 0.16em;
+        font-weight: 300;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
         margin: 0;
         line-height: 1;
@@ -257,60 +259,45 @@
       .h24-loader-title span {
         color: #a8855f;
         font-weight: 300;
-        letter-spacing: 0.18em;
+        letter-spacing: 0.22em;
       }
       .h24-loader-subtitle {
         color: #a8855f;
         font-family: 'Inter', system-ui, sans-serif;
-        font-size: 0.68rem;
-        letter-spacing: 0.45em;
+        font-size: 0.7rem;
+        letter-spacing: 0.5em;
         text-transform: uppercase;
         font-weight: 600;
-        margin-top: 0.5rem;
+        margin-top: 0.55rem;
         margin-bottom: 0;
       }
       .h24-loader-track {
-        margin-top: 2.25rem;
+        margin-top: 2rem;
         width: 160px;
         height: 2px;
-        background-color: #e5dfd5;
+        background-color: rgba(255, 255, 255, 0.12);
         overflow: hidden;
         position: relative;
         border-radius: 1px;
       }
       .h24-loader-bar {
         height: 100%;
-        background-color: #a8855f;
+        background: linear-gradient(90deg, #8a6d4a, #c4a585);
         width: 0%;
         transition: width 0.04s linear;
-      }
-      .h24-loader-status {
-        color: #9c8a72;
-        font-size: 10px;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-top: 1rem;
-        margin-bottom: 0;
-        animation: h24Pulse 1.8s ease-in-out infinite;
-      }
-      @keyframes h24Pulse {
-        0%, 100% { opacity: 0.5; }
-        50% { opacity: 1; }
       }
     </style>
   </head>
   <body>
-    <!-- Immediate 0ms Luxury Entrance Loader -->
+    <!-- Immediate 0ms Luxury Dark Entrance Loader -->
     <div id="h24-initial-loader">
+      <div class="h24-loader-grid"></div>
       <div class="h24-loader-content">
-        <p class="h24-loader-overline">Interior Design Studio</p>
         <h1 class="h24-loader-title">HOMES<span>24</span></h1>
         <p class="h24-loader-subtitle">DESIGNS</p>
         <div class="h24-loader-track">
           <div id="h24-bar" class="h24-loader-bar"></div>
         </div>
-        <p class="h24-loader-status">Loading...</p>
       </div>
     </div>
     <script>
