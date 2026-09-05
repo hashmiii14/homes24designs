@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-end overflow-hidden pt-24 sm:pt-28 md:pt-32">
+    <section className="relative min-h-[580px] sm:min-h-[720px] md:min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-center sm:justify-end overflow-hidden pt-20 sm:pt-28 md:pt-32">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -143,19 +143,19 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-lux w-full pb-10 sm:pb-12 md:pb-16 text-left">
+      <div className="relative z-10 container-lux w-full pt-4 sm:pt-0 pb-8 sm:pb-12 md:pb-16 text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Eyebrow */}
           <div
-            className="flex items-center gap-3 mb-5"
+            className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 md:mb-5"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <span className="h-px w-10 bg-accent-light" />
-            <span className="text-xs font-medium tracking-[0.22em] uppercase text-accent-light">
+            <span className="h-px w-8 sm:w-10 bg-accent-light" />
+            <span className="text-[11px] sm:text-xs font-medium tracking-[0.2em] sm:tracking-[0.22em] uppercase text-accent-light">
               <AnimatedWords
                 text="Best Interior Designer in Okhla · New Delhi"
                 startDelay={0.08}
@@ -165,7 +165,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.05] tracking-tight">
+          <h1 className="font-serif text-[2.15rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.06] sm:leading-[1.05] tracking-tight">
             <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
             <br />
             <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />
@@ -176,7 +176,7 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="mt-6 sm:mt-8 text-sm sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
+          <p className="mt-3.5 sm:mt-6 md:mt-8 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
             <AnimatedWords
               text="A thoughtful combination of design, functionality, material selection and personalised planning for contemporary homes in Delhi and Delhi NCR."
               startDelay={0.95}
@@ -186,7 +186,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div
-            className="mt-6 sm:mt-10 flex flex-row flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-4"
+            className="mt-4 sm:mt-8 md:mt-10 flex flex-row flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-4"
             style={
               isLoaded
                 ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
@@ -211,15 +211,15 @@ export default function Hero() {
 
           {/* Location */}
           <div
-            className="mt-6 sm:mt-10 flex items-center gap-2 text-stone-300"
+            className="mt-3.5 sm:mt-6 md:mt-10 flex items-center gap-2 text-stone-300"
             style={
               isLoaded
                 ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <MapPin className="w-4 h-4 text-accent-light shrink-0" strokeWidth={1.5} />
-            <span className="text-xs sm:text-sm tracking-wide font-medium">
+            <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-light shrink-0" strokeWidth={1.5} />
+            <span className="text-[11px] sm:text-sm tracking-wide font-medium">
               <AnimatedWords
                 text="• Okhla, Jamia Nagar, New Delhi"
                 startDelay={1.4}

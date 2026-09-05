@@ -117,8 +117,8 @@ export default function HomePage() {
       <JournalGrid limit={3} />
       <InstagramSection />
       <FAQSection />
-      <ContactSection />
       <ConsultationForm />
+      <ContactSection />
     </>
   );
 }
