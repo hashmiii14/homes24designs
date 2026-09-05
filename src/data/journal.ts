@@ -334,7 +334,7 @@ export const journalPosts: JournalPost[] = [
     date: '2026-07-20',
     author: 'HOMES24DESIGNS',
     readingTime: '5 min read',
-    image: '/images/journal/post-6-false-ceiling.jpg',
+    image: '/images/services/false-ceiling-lighting.jpg',
     alt: 'False ceiling and lighting ideas for Indian homes',
     content: [
       {
@@ -571,7 +571,7 @@ export const journalPosts: JournalPost[] = [
     date: '2026-08-28',
     author: 'Ehtashamul Islam',
     readingTime: '7 min read',
-    image: '/images/journal/post-11-okhla-south-delhi.jpg',
+    image: '/images/hero/hero-bg.jpg',
     alt: 'Interior design in Okhla Jamia Nagar and South Delhi residential apartments',
     content: [
       {
@@ -632,7 +632,7 @@ export const journalPosts: JournalPost[] = [
     date: '2026-09-02',
     author: 'HOMES24DESIGNS',
     readingTime: '6 min read',
-    image: '/images/journal/post-12-delhi-materials.jpg',
+    image: '/images/services/living-room-interiors.jpg',
     alt: 'Interior materials and finishes engineered for Delhi NCR climate',
     content: [
       {

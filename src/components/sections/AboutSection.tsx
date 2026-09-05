@@ -71,23 +71,16 @@ export default function AboutSection() {
 
                 {/* Optimized WebP Portrait with Eager Loading & High Fetch Priority */}
                 <div className="relative aspect-[4/5] overflow-hidden bg-stone-200 border border-stone-300/90 shadow-lg">
-                  <picture>
-                    <source
-                      type="image/webp"
-                      srcSet="/ehtashamul-islam-600.webp 600w, /ehtashamul-islam-800.webp 800w, /ehtashamul-islam.webp 1024w"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 460px"
-                    />
-                    <img
-                      src="/ehtashamul-islam.webp"
-                      alt="Ehtashamul Islam, Proprietor of HOMES24DESIGNS"
-                      width="800"
-                      height="1000"
-                      loading="eager"
-                      fetchPriority="high"
-                      decoding="async"
-                      className="w-full h-full object-cover object-top transition-transform duration-700 ease-lux hover:scale-[1.02]"
-                    />
-                  </picture>
+                  <img
+                    src="/ehtashamul-islam.webp"
+                    alt="Ehtashamul Islam, Proprietor of HOMES24DESIGNS"
+                    width="800"
+                    height="1000"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-lux hover:scale-[1.02]"
+                  />
                   {/* Subtle vignette gradient at bottom */}
                   <div
                     className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-charcoal-900/50 via-charcoal-900/10 to-transparent pointer-events-none"
