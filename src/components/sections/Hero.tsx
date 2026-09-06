@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[66svh] sm:min-h-[82vh] lg:min-h-[86vh] max-h-[920px] flex flex-col justify-end overflow-hidden pt-20 sm:pt-28 md:pt-32 pb-7 sm:pb-12 lg:pb-16">
+    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[82vh] lg:min-h-[86vh] sm:max-h-[920px] flex flex-col justify-end overflow-hidden pt-20 sm:pt-28 md:pt-32 pb-7 sm:pb-12 lg:pb-16">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
