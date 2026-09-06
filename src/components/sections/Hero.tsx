@@ -128,8 +128,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[82vh] lg:min-h-[86vh] sm:max-h-[920px] flex flex-col justify-center sm:justify-end overflow-hidden pt-24 xs:pt-26 sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
-      {/* Background image */}
+    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-end overflow-hidden pt-20 sm:pt-28 md:pt-32 pb-6 xs:pb-8 sm:pb-10 lg:pb-12">
+      {/* Background image with cinematic warm luxury lighting */}
       <div className="absolute inset-0 overflow-hidden">
         <img
           src="/images/hero/hero-bg.jpg"
@@ -138,150 +138,104 @@ export default function Hero() {
           fetchPriority="high"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/50 to-charcoal-900/30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/85 via-charcoal-900/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/55 to-charcoal-900/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/90 via-charcoal-900/40 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-lux w-full text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
-          {/* Top Luxury Studio Badge Line */}
+          {/* Architectural Studio Overline */}
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-900/70 backdrop-blur-md border border-accent/40 text-[10px] xs:text-[11px] font-medium tracking-wider uppercase text-ivory/95 mb-2.5 sm:mb-3.5 w-fit shadow-sm"
-            style={
-              isLoaded
-                ? { animation: 'fadeDown 0.6s 0.02s cubic-bezier(0.16,1,0.3,1) both' }
-                : { opacity: 0 }
-            }
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
-            <span>Luxury Turnkey Residential Studio</span>
-            <span className="text-accent/60 hidden xs:inline">·</span>
-            <span className="text-stone-300 hidden xs:inline">Delhi NCR</span>
-          </div>
-
-          {/* Eyebrow */}
-          <div
-            className="flex items-center gap-2 sm:gap-3 mb-2.5 sm:mb-4 min-w-0"
+            className="flex items-center gap-2.5 sm:gap-3.5 mb-3 sm:mb-4 min-w-0"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <span className="h-px w-5 sm:w-10 bg-accent-light shrink-0" />
-            <span className="text-[10.5px] xs:text-[11px] sm:text-xs font-medium tracking-[0.14em] sm:tracking-[0.22em] uppercase text-accent-light leading-snug break-words">
+            <span className="h-px w-6 sm:w-10 bg-accent/80 shrink-0" />
+            <span className="text-[10.5px] xs:text-[11px] sm:text-xs font-medium tracking-[0.2em] sm:tracking-[0.26em] uppercase text-accent-light leading-snug break-words">
               <AnimatedWords
-                text="Best Interior Designer in Okhla · New Delhi"
+                text="Architecture & Bespoke Interiors · New Delhi"
                 startDelay={0.08}
                 isLoaded={isLoaded}
               />
             </span>
           </div>
 
-          {/* Heading - Large, Grand & Editorial inspired by Luxe */}
-          <h1 className="font-serif text-[2.5rem] xs:text-[3.15rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6rem] font-light text-ivory leading-[1.04] sm:leading-[1.02] tracking-tight break-words">
+          {/* Headline - Editorial Serif inspired by luxury architectural monographs */}
+          <h1 className="font-serif text-[2.45rem] xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.05] sm:leading-[1.02] tracking-tight break-words">
             <span className="block overflow-hidden py-0.5">
               <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
             </span>
             <span className="block overflow-hidden py-0.5">
-              <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />
+              <AnimatedLine text="Around The Way" startDelay={0.4} isLoaded={isLoaded} />
             </span>
             <span className="block overflow-hidden py-0.5">
               <span className="italic text-accent-light font-normal">
-                <AnimatedLine text="You Live." startDelay={0.75} isLoaded={isLoaded} />
+                <AnimatedLine text="You Live." startDelay={0.65} isLoaded={isLoaded} />
               </span>
             </span>
           </h1>
 
-          {/* Description & Supporting Editorial Line */}
-          <p className="mt-3 sm:mt-5 md:mt-6 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
-            <AnimatedWords
-              text="A thoughtful combination of design, functionality, material selection and personalised planning for contemporary homes in Delhi and Delhi NCR."
-              startDelay={0.95}
-              isLoaded={isLoaded}
-            />
-            <span className="block mt-1 sm:mt-1.5 text-stone-300/85 text-[11.5px] sm:text-sm font-normal">
-              <AnimatedWords
-                text="Bespoke luxury residences, modular kitchens and wardrobes crafted with architectural precision and guaranteed turnkey handover."
-                startDelay={1.1}
-                isLoaded={isLoaded}
-              />
-            </span>
+          {/* Refined Subtitle: Single Confident Architectural Statement */}
+          <p
+            className="mt-3.5 sm:mt-5 md:mt-6 text-xs xs:text-sm sm:text-base md:text-lg leading-relaxed text-stone-200/90 max-w-xl font-light"
+            style={
+              isLoaded
+                ? { animation: 'fadeIn 0.7s 0.85s cubic-bezier(0.16,1,0.3,1) both' }
+                : { opacity: 0 }
+            }
+          >
+            Bespoke residential interiors, modular kitchens and complete turnkey living across South Delhi and Delhi NCR — designed with architectural intent and delivered with precision.
           </p>
 
-          {/* Key Trust / Service Highlights Lines */}
+          {/* Action CTAs */}
           <div
-            className="mt-3 sm:mt-4 flex flex-wrap items-center gap-x-3.5 sm:gap-x-5 gap-y-1.5 text-[10.5px] xs:text-[11px] sm:text-xs text-stone-300/95 font-medium"
+            className="mt-5 sm:mt-7 md:mt-9 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-4 max-w-xs xs:max-w-none"
             style={
               isLoaded
-                ? { animation: 'fadeIn 0.7s 1.15s cubic-bezier(0.16,1,0.3,1) both' }
-                : { opacity: 0 }
-            }
-          >
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-              45-Day Turnkey Handover
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-              German Hardware Warranty
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-              100% Itemized BOQ
-            </span>
-          </div>
-
-          {/* Animated Location Pin - Positioned above buttons */}
-          <div
-            className="mt-2.5 sm:mt-3.5 flex items-center gap-2 text-stone-300/90"
-            style={
-              isLoaded
-                ? { animation: 'fadeIn 0.8s 1.25s cubic-bezier(0.16,1,0.3,1) both' }
-                : { opacity: 0 }
-            }
-          >
-            <span className="relative flex items-center justify-center w-5 h-5 shrink-0">
-              <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-accent opacity-75" />
-              <MapPin
-                className="w-4 h-4 text-accent-light shrink-0 relative z-10 animate-bounce"
-                style={{ animationDuration: '2.4s' }}
-                strokeWidth={1.75}
-              />
-            </span>
-            <span className="text-xs sm:text-sm tracking-wide font-medium">
-              <AnimatedWords
-                text="Okhla, Jamia Nagar, New Delhi"
-                startDelay={1.25}
-                isLoaded={isLoaded}
-              />
-            </span>
-          </div>
-
-          {/* Buttons: Stacked and compact on mobile ("Explore Our Services" below "Book a Consultation"), inline on desktop */}
-          <div
-            className="mt-3.5 sm:mt-6 md:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4"
-            style={
-              isLoaded
-                ? { animation: 'fadeUp 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
+                ? { animation: 'fadeUp 0.8s 1.05s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
             <Link
               to="/contact"
               onClick={handleConsultationClick}
-              className="inline-flex items-center justify-center px-4 py-1.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-[11px] sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-sm min-h-[34px] sm:min-h-[48px] w-auto"
+              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-md min-h-[42px] sm:min-h-[48px] w-full xs:w-auto"
             >
               Book a Consultation
             </Link>
             <Link
               to="/services"
               onClick={handleServicesClick}
-              className="inline-flex items-center justify-center px-4 py-1.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-[11px] sm:text-sm font-medium tracking-wider uppercase transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[34px] sm:min-h-[48px] w-auto"
+              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 border border-ivory/50 text-ivory text-xs sm:text-sm font-medium tracking-wider uppercase transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[42px] sm:min-h-[48px] w-full xs:w-auto"
             >
               Explore Our Services
             </Link>
+          </div>
+
+          {/* Authentic Studio Credentials Bar */}
+          <div
+            className="mt-6 sm:mt-8 md:mt-10 pt-4 sm:pt-6 border-t border-white/15 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 sm:gap-4 text-[11px] sm:text-xs text-stone-300/80 font-light"
+            style={
+              isLoaded
+                ? { animation: 'fadeIn 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
+                : { opacity: 0 }
+            }
+          >
+            <div className="flex items-center gap-2 text-stone-200">
+              <MapPin className="w-3.5 h-3.5 text-accent-light shrink-0" strokeWidth={1.5} />
+              <span className="tracking-wide">Studio: Batla House · Jamia Nagar, Okhla · New Delhi</span>
+            </div>
+            <div className="flex items-center gap-2.5 sm:gap-3.5 uppercase tracking-wider text-[10px] sm:text-[11px] text-stone-400">
+              <span>45-Day Turnkey</span>
+              <span className="w-1 h-1 rounded-full bg-accent/70 shrink-0" />
+              <span>German Hardware</span>
+              <span className="w-1 h-1 rounded-full bg-accent/70 shrink-0" />
+              <span>Itemized BOQ</span>
+            </div>
           </div>
         </div>
       </div>
