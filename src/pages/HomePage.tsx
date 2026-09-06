@@ -1,5 +1,7 @@
 import SEO from '@/components/ui/SEO';
 import Hero from '@/components/sections/Hero';
+import MarqueeStrip from '@/components/sections/MarqueeStrip';
+import StatsCounter from '@/components/sections/StatsCounter';
 import TrustStrip from '@/components/sections/TrustStrip';
 import HomeAboutSection from '@/components/sections/HomeAboutSection';
 import ServicesGrid from '@/components/sections/ServicesGrid';
@@ -106,6 +108,8 @@ export default function HomePage() {
         jsonLd={[jsonLd, websiteLd, faqLd]}
       />
       <Hero />
+      <MarqueeStrip />
+      <StatsCounter />
       <TrustStrip />
       <HomeAboutSection />
       <ServicesGrid />
@@ -114,10 +118,10 @@ export default function HomePage() {
       <ProcessTimeline />
       <PricingSection />
       <TestimonialsSection />
+      <ConsultationForm />
       <JournalGrid limit={3} />
       <InstagramSection />
       <FAQSection />
-      <ConsultationForm />
       <ContactSection />
     </>
   );
