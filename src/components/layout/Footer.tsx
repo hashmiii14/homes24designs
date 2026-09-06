@@ -105,17 +105,25 @@ export default function Footer() {
 
         {/* Trust badges */}
         <div className="mt-12 pt-8 border-t border-stone-700/50">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              <span className="text-xs text-stone-500">GST Registered Business</span>
-              <span className="hidden sm:inline text-stone-700">|</span>
-              <span className="text-xs text-stone-500">Udyam Registered Enterprise</span>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 sm:gap-x-6 gap-y-2 text-center md:text-left">
+              <span className="text-xs text-stone-400">
+                GSTIN: <span className="font-mono text-stone-300 font-medium tracking-wide">{siteConfig.gst}</span>
+              </span>
+              <span className="hidden sm:inline text-stone-700">·</span>
+              <span className="text-xs text-stone-400">
+                Udyam: <span className="font-mono text-stone-300 font-medium tracking-wide">{siteConfig.udyam}</span>
+              </span>
+              <span className="hidden sm:inline text-stone-700">·</span>
+              <span className="text-xs text-stone-400">
+                Proprietorship: <span className="text-stone-300 font-medium">{siteConfig.proprietor}</span>
+              </span>
             </div>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
-              <Link to="/privacy" className="text-xs text-stone-500 hover:text-accent-light transition-colors">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 shrink-0">
+              <Link to="/privacy" className="text-xs text-stone-400 hover:text-accent-light transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-xs text-stone-500 hover:text-accent-light transition-colors">
+              <Link to="/terms" className="text-xs text-stone-400 hover:text-accent-light transition-colors">
                 Terms &amp; Conditions
               </Link>
             </div>

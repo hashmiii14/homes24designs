@@ -59,6 +59,16 @@ export default function ConsultationForm() {
     return Object.keys(errs).length === 0;
   };
 
+  const clearError = (field: string) => {
+    if (errors[field]) {
+      setErrors((prev) => {
+        const copy = { ...prev };
+        delete copy[field];
+        return copy;
+      });
+    }
+  };
+
   const extractPayload = (formData: FormData): SubmittedPayload => ({
     fullName: (formData.get('fullName') as string) || '',
     phone: (formData.get('phone') as string) || '',
@@ -365,6 +375,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                       name="fullName"
                       id="fullName"
                       placeholder="e.g. Rahul Sharma"
+                      onChange={() => clearError('fullName')}
                       className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Full Name"
                     />
@@ -385,6 +396,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                       name="phone"
                       id="phone"
                       placeholder="e.g. 98180 83436"
+                      onChange={() => clearError('phone')}
                       className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Phone"
                     />
@@ -405,6 +417,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                       name="email"
                       id="email"
                       placeholder="e.g. rahul@example.com"
+                      onChange={() => clearError('email')}
                       className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Email"
                     />
@@ -425,6 +438,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                       name="location"
                       id="location"
                       placeholder="e.g. Batla House, Jamia Nagar, Okhla"
+                      onChange={() => clearError('location')}
                       className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Location"
                     />

@@ -7,7 +7,7 @@ export const siteConfig = {
   url: (import.meta.env.VITE_SITE_URL as string) || 'https://homes24designs.vercel.app',
   email: 'homes24designs@gmail.com',
   phone: '+91 9818083436',
-  phoneRaw: '919818083436',
+  phoneRaw: '+919818083436',
   whatsapp: '919818083436',
   address: {
     line1: 'M-74, First Floor',
