@@ -128,32 +128,47 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[96px] xs:pt-[104px] sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
+    <section className="relative bg-charcoal-900 min-h-screen min-h-[100dvh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[116px] xs:pt-[124px] sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
       {/* Background image with cinematic warm luxury lighting */}
-      <div className="absolute inset-0 overflow-hidden">
-        <picture>
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none select-none"
+        style={{
+          transform: 'translate3d(0, 0, 0)',
+          WebkitTransform: 'translate3d(0, 0, 0)',
+          backfaceVisibility: 'hidden',
+          WebkitBackfaceVisibility: 'hidden',
+          contain: 'paint layout',
+        }}
+      >
+        <picture className="w-full h-full block">
           <source media="(max-width: 640px)" srcSet="/images/hero/hero-bg-mobile.webp" type="image/webp" />
           <source media="(max-width: 640px)" srcSet="/images/hero/hero-bg-mobile.jpg" type="image/jpeg" />
           <source srcSet="/images/hero/hero-bg.webp" type="image/webp" />
           <img
             src="/images/hero/hero-bg.jpg"
             alt="Luxury architectural home interior design by HOMES24DESIGNS in Delhi"
-            className="w-full h-full object-cover object-[center_35%] sm:object-center"
+            className="w-full h-full object-cover object-[center_35%] sm:object-center block"
             loading="eager"
             fetchPriority="high"
             decoding="sync"
+            style={{
+              transform: 'translate3d(0, 0, 0)',
+              WebkitTransform: 'translate3d(0, 0, 0)',
+              backfaceVisibility: 'hidden',
+              WebkitBackfaceVisibility: 'hidden',
+            }}
           />
         </picture>
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/55 to-charcoal-900/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/90 via-charcoal-900/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/55 to-charcoal-900/35 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/90 via-charcoal-900/40 to-transparent pointer-events-none" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-lux w-full text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
-          {/* Subtle Studio Pill Badge (Positioned directly below header with crisp spacing) */}
+          {/* Subtle Studio Pill Badge (Positioned below header with elegant spacing) */}
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] xs:text-[11px] font-medium tracking-[0.14em] uppercase text-stone-200 mb-2 sm:mb-3.5 w-fit shadow-sm"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 sm:bg-white/10 sm:backdrop-blur-md border border-white/15 text-[10px] xs:text-[11px] font-medium tracking-[0.14em] uppercase text-stone-200 mb-2.5 sm:mb-3.5 w-fit shadow-sm"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.02s cubic-bezier(0.16,1,0.3,1) both' }

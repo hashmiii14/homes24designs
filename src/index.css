@@ -15,7 +15,6 @@
   }
 
   html {
-    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-overflow-scrolling: touch;
@@ -171,13 +170,11 @@
 @keyframes letterReveal {
   0% {
     opacity: 0;
-    transform: translateY(28px);
-    filter: blur(2px);
+    transform: translateY(22px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
 }
 
