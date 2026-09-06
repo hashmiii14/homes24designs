@@ -60,7 +60,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
   }, [selectedCategory, limit]);
 
   return (
-    <section id="journal" className="py-12 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
+    <section id="journal" className="py-10 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
       <div className="container-lux">
         {/* Section Heading — Editorial & Balanced */}
         {showHeading && (
@@ -76,13 +76,13 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
         {/* Filter Pills (Shown only on full Journal page) */}
         {!limit && (
           <Reveal delay={60}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 max-w-4xl mx-auto">
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5 max-w-4xl mx-auto">
               {filterCategories.map((cat) => (
                 <button
                   key={cat}
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
-                  className={`min-h-[38px] px-3.5 sm:px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-none touch-manipulation text-center flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
+                  className={`min-h-[36px] sm:min-h-[38px] px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-none touch-manipulation text-center flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
                     selectedCategory === cat
                       ? 'bg-charcoal-800 text-ivory shadow-sm ring-1 ring-charcoal-900'
                       : 'bg-white border border-stone-300 text-charcoal-700 hover:text-charcoal-900 hover:border-charcoal-400 hover:bg-stone-50'
@@ -97,7 +97,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
         )}
 
         {/* Editorial 3-Column Article Card Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 items-stretch ${showHeading ? 'mt-10 md:mt-12' : 'mt-6'}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-7 items-stretch ${showHeading ? 'mt-7 sm:mt-10 md:mt-12' : 'mt-6'}`}>
           {filteredPosts.map((post, i) => (
             <Reveal key={post.slug} delay={i * 50} className="h-full">
               <div className="group flex flex-col h-full bg-white border border-stone-200/90 shadow-sm hover:shadow-xl hover:border-accent/50 transition-all duration-500 overflow-hidden">

@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="py-12 md:py-16 lg:py-18 bg-stone-50 scroll-mt-20 overflow-hidden">
+    <section id="services" className="py-10 md:py-16 lg:py-18 bg-stone-50 scroll-mt-20 overflow-hidden">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -16,7 +16,7 @@ export default function ServicesGrid() {
           />
         </Reveal>
 
-        <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+        <div className="mt-7 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
           {services.map((service, i) => (
             <Reveal key={service.slug} delay={i * 60} className="h-full">
               <Link

@@ -47,7 +47,7 @@ const values = [
 
 export default function WhyUs() {
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-charcoal-900 relative overflow-hidden">
+    <section className="py-10 md:py-16 lg:py-18 bg-charcoal-900 relative overflow-hidden">
       {/* Subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: 'linear-gradient(rgba(247,244,239,1) 1px, transparent 1px), linear-gradient(90deg, rgba(247,244,239,1) 1px, transparent 1px)',
@@ -64,13 +64,13 @@ export default function WhyUs() {
           />
         </Reveal>
 
-        <div className="mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-700/30">
+        <div className="mt-7 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-700/30">
           {values.map((value, i) => (
             <Reveal key={i} delay={i * 60}>
-              <div className="bg-charcoal-900 p-6 md:p-8 h-full transition-colors duration-500 hover:bg-charcoal-800">
-                <value.icon className="w-7 h-7 text-accent-light mb-4" strokeWidth={1.5} />
-                <h3 className="text-base font-medium text-ivory mb-2">{value.title}</h3>
-                <p className="text-sm leading-relaxed text-stone-400">{value.desc}</p>
+              <div className="bg-charcoal-900 p-5 sm:p-6 md:p-8 h-full transition-colors duration-500 hover:bg-charcoal-800">
+                <value.icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent-light mb-3 sm:mb-4" strokeWidth={1.5} />
+                <h3 className="text-sm sm:text-base font-medium text-ivory mb-1.5 sm:mb-2">{value.title}</h3>
+                <p className="text-xs sm:text-sm leading-relaxed text-stone-400">{value.desc}</p>
               </div>
             </Reveal>
           ))}

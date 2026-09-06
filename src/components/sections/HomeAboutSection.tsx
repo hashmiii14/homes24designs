@@ -14,7 +14,7 @@ import Logo from '@/components/ui/Logo';
 
 export default function HomeAboutSection() {
   return (
-    <section id="about" className="py-12 md:py-16 lg:py-20 bg-ivory relative overflow-hidden">
+    <section id="about" className="py-10 md:py-16 lg:py-20 bg-ivory relative overflow-hidden">
       {/* Subtle architectural background line accents */}
       <div
         className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -28,8 +28,8 @@ export default function HomeAboutSection() {
 
       <div className="container-lux relative z-10">
         {/* Mobile Eyebrow & Heading: Positioned above portrait on mobile */}
-        <div className="lg:hidden mb-6">
-          <div className="flex items-center gap-2.5 mb-2.5">
+        <div className="lg:hidden mb-4 sm:mb-6">
+          <div className="flex items-center gap-2.5 mb-2">
             <span className="h-px w-8 bg-accent" />
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
               Interior Design Studio · New Delhi
@@ -41,7 +41,7 @@ export default function HomeAboutSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Left Column: Founder Portrait & Studio Quote (5 cols) */}
           <div className="lg:col-span-5 flex flex-col">
             <Reveal>

@@ -14,7 +14,7 @@ const marqueeItems = [
 export default function MarqueeStrip() {
   return (
     <div
-      className="w-full max-w-full bg-charcoal-900 border-y border-charcoal-700/60 py-3 sm:py-3.5 overflow-hidden select-none"
+      className="w-full max-w-full bg-charcoal-900 border-y border-charcoal-700/60 py-2.5 sm:py-3.5 overflow-hidden select-none"
       role="region"
       aria-label="Brand highlights and credentials"
     >
@@ -24,11 +24,11 @@ export default function MarqueeStrip() {
           <div className="flex items-center shrink-0">
             {marqueeItems.map((item, idx) => (
               <React.Fragment key={`marquee-1-${idx}`}>
-                <span className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.22em] text-ivory/85 whitespace-nowrap">
+                <span className="text-[10.5px] sm:text-xs font-medium uppercase tracking-[0.18em] sm:tracking-[0.22em] text-ivory/85 whitespace-nowrap">
                   {item}
                 </span>
                 <span
-                  className="w-1.5 h-1.5 rounded-full bg-accent/70 inline-block mx-4 sm:mx-6 shrink-0"
+                  className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-accent/70 inline-block mx-3 sm:mx-5 shrink-0"
                   aria-hidden="true"
                 />
               </React.Fragment>
@@ -39,11 +39,11 @@ export default function MarqueeStrip() {
           <div className="flex items-center shrink-0" aria-hidden="true">
             {marqueeItems.map((item, idx) => (
               <React.Fragment key={`marquee-2-${idx}`}>
-                <span className="text-[11px] sm:text-xs font-medium uppercase tracking-[0.22em] text-ivory/85 whitespace-nowrap">
+                <span className="text-[10.5px] sm:text-xs font-medium uppercase tracking-[0.18em] sm:tracking-[0.22em] text-ivory/85 whitespace-nowrap">
                   {item}
                 </span>
                 <span
-                  className="w-1.5 h-1.5 rounded-full bg-accent/70 inline-block mx-4 sm:mx-6 shrink-0"
+                  className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-accent/70 inline-block mx-3 sm:mx-5 shrink-0"
                   aria-hidden="true"
                 />
               </React.Fragment>

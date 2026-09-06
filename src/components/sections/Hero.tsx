@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[82svh] sm:min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-center sm:justify-end overflow-hidden pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 lg:pb-16">
+    <section className="relative min-h-[76svh] sm:min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-center sm:justify-end overflow-hidden pt-16 sm:pt-24 md:pt-28 lg:pt-32 pb-6 sm:pb-12 lg:pb-16">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -186,7 +186,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div
-            className="mt-5 sm:mt-8 md:mt-10 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-4"
+            className="mt-4 sm:mt-8 md:mt-10 flex flex-wrap items-center gap-2.5 sm:gap-4"
             style={
               isLoaded
                 ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
@@ -196,14 +196,14 @@ export default function Hero() {
             <Link
               to="/contact"
               onClick={handleConsultationClick}
-              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-lg min-h-[42px] sm:min-h-[48px]"
+              className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-md min-h-[38px] sm:min-h-[48px]"
             >
               Book a Consultation
             </Link>
             <Link
               to="/services"
               onClick={handleServicesClick}
-              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[42px] sm:min-h-[48px]"
+              className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[38px] sm:min-h-[48px]"
             >
               Explore Our Services
             </Link>
@@ -211,17 +211,17 @@ export default function Hero() {
 
           {/* Location */}
           <div
-            className="mt-3.5 sm:mt-6 md:mt-10 flex items-center gap-2 text-stone-300"
+            className="mt-2.5 sm:mt-6 md:mt-10 flex items-center gap-1.5 sm:gap-2 text-stone-300/90"
             style={
               isLoaded
                 ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <MapPin className="w-4 h-4 text-accent-light shrink-0" strokeWidth={1.5} />
-            <span className="text-xs sm:text-sm tracking-wide font-medium">
+            <MapPin className="w-3.5 h-3.5 text-accent-light shrink-0" strokeWidth={1.5} />
+            <span className="text-[11px] sm:text-sm tracking-wide font-medium">
               <AnimatedWords
-                text="• Okhla, Jamia Nagar, New Delhi"
+                text="Okhla, Jamia Nagar, New Delhi"
                 startDelay={1.4}
                 isLoaded={isLoaded}
               />

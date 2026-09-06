@@ -41,7 +41,7 @@ const instagramPosts: InstagramPost[] = [
 
 export default function InstagramSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-stone-100/70 border-t border-stone-200/60 overflow-hidden">
+    <section className="py-10 md:py-16 lg:py-18 bg-stone-100/70 border-t border-stone-200/60 overflow-hidden">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -51,7 +51,7 @@ export default function InstagramSection() {
           />
         </Reveal>
 
-        <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-7 sm:mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {instagramPosts.map((post, i) => (
             <Reveal key={post.id} delay={i * 100}>
               <a

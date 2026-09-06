@@ -115,11 +115,11 @@ export default function StatsCounter() {
   return (
     <section
       ref={sectionRef}
-      className="bg-stone-50 border-b border-stone-200/80 py-10 sm:py-14 lg:py-16 overflow-hidden"
-      aria-label="Verified performance and trust metrics"
+      className="bg-stone-50 border-b border-stone-200/80 py-6 sm:py-10 lg:py-14 overflow-hidden"
+      aria-label="Performance and trust metrics"
     >
       <div className="container-lux">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 lg:divide-x lg:divide-stone-200/80">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-5 sm:gap-8 lg:gap-0 lg:divide-x lg:divide-stone-200/80">
           {statsData.map((stat, idx) => {
             const Icon = stat.icon;
             const displayValue = stat.decimals
@@ -133,26 +133,26 @@ export default function StatsCounter() {
                   idx > 0 ? 'lg:pl-8 xl:pl-10' : ''
                 } ${idx < statsData.length - 1 ? 'lg:pr-8 xl:pr-10' : ''}`}
               >
-                <div className="flex items-center gap-2 mb-2 text-accent">
-                  <Icon className="w-4 h-4 text-accent shrink-0" strokeWidth={1.75} />
-                  <span className="text-[10px] sm:text-[11px] font-semibold tracking-widest uppercase text-stone-500 font-mono">
-                    Verified Metric
+                <div className="flex items-center gap-1.5 sm:gap-2 mb-1 sm:mb-2 text-accent">
+                  <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent shrink-0" strokeWidth={1.75} />
+                  <span className="text-[9.5px] sm:text-[11px] font-semibold tracking-wider sm:tracking-widest uppercase text-stone-500 font-mono">
+                    Performance Metric
                   </span>
                 </div>
 
-                <div className="flex items-baseline font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-charcoal-900 tracking-tight">
+                <div className="flex items-baseline font-serif text-2xl sm:text-4xl lg:text-5xl font-light text-charcoal-900 tracking-tight">
                   {stat.prefix && <span>{stat.prefix}</span>}
                   <span>{displayValue}</span>
-                  <span className="text-accent text-2xl sm:text-3xl lg:text-4xl ml-0.5">
+                  <span className="text-accent text-xl sm:text-3xl lg:text-4xl ml-0.5">
                     {stat.suffix}
                   </span>
                 </div>
 
-                <h3 className="text-xs sm:text-sm font-semibold tracking-wide uppercase text-charcoal-800 mt-2">
+                <h3 className="text-[11.5px] sm:text-sm font-semibold tracking-wide uppercase text-charcoal-800 mt-1 sm:mt-2">
                   {stat.label}
                 </h3>
 
-                <p className="text-[11px] sm:text-xs text-stone-500 mt-1 max-w-[240px] leading-relaxed">
+                <p className="text-[10.5px] sm:text-xs text-stone-500 mt-0.5 sm:mt-1 max-w-[240px] leading-snug">
                   {stat.sublabel}
                 </p>
               </div>

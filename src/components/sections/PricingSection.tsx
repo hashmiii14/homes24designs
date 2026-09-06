@@ -14,7 +14,7 @@ export default function PricingSection() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-ivory overflow-hidden">
+    <section className="py-10 md:py-16 lg:py-18 bg-ivory overflow-hidden">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -24,11 +24,11 @@ export default function PricingSection() {
           />
         </Reveal>
 
-        <div className="mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="mt-7 sm:mt-10 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
           {pricingPlans.map((plan, i) => (
             <Reveal key={plan.name} delay={i * 100}>
               <div
-                className={`relative h-full p-8 md:p-10 flex flex-col transition-all duration-500 ${
+                className={`relative h-full p-6 sm:p-8 md:p-10 flex flex-col transition-all duration-500 ${
                   plan.highlighted
                     ? 'bg-charcoal-800 text-ivory shadow-2xl md:scale-105'
                     : 'bg-stone-50 border border-stone-200 text-charcoal-800'

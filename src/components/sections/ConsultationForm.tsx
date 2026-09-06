@@ -225,9 +225,9 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
   }
 
   return (
-    <section id="consultation" className="py-12 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
+    <section id="consultation" className="py-10 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
       <div className="container-lux">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-14 items-start">
           {/* Left: heading & trust card */}
           <div className="lg:col-span-2 flex flex-col">
             <Reveal>

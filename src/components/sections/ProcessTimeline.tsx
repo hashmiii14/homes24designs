@@ -31,7 +31,7 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
+    <section className="py-10 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -42,7 +42,7 @@ export default function ProcessTimeline() {
         </Reveal>
 
         {/* Desktop timeline */}
-        <div className="mt-12 hidden lg:block">
+        <div className="mt-10 md:mt-12 hidden lg:block">
           <div className="relative">
             {/* Line */}
             <div className="absolute top-12 left-0 right-0 h-px bg-stone-300" />
@@ -67,17 +67,17 @@ export default function ProcessTimeline() {
         </div>
 
         {/* Mobile vertical timeline */}
-        <div className="mt-12 lg:hidden">
+        <div className="mt-7 sm:mt-10 lg:hidden">
           <div className="relative pl-8">
             <div className="absolute left-3 top-2 bottom-2 w-px bg-stone-300" />
             {steps.map((step, i) => (
               <Reveal key={step.num} delay={i * 80}>
-                <div className="relative pb-8 last:pb-0">
+                <div className="relative pb-6 sm:pb-8 last:pb-0">
                   <div className="absolute -left-8 top-1 flex items-center justify-center w-7 h-7 bg-ivory border border-accent rounded-full">
                     <span className="text-[10px] font-medium text-accent">{step.num}</span>
                   </div>
-                  <h3 className="text-base font-medium text-charcoal-800">{step.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-stone-600">{step.desc}</p>
+                  <h3 className="text-sm sm:text-base font-medium text-charcoal-800">{step.title}</h3>
+                  <p className="mt-1 sm:mt-1.5 text-xs sm:text-sm leading-relaxed text-stone-600">{step.desc}</p>
                 </div>
               </Reveal>
             ))}
