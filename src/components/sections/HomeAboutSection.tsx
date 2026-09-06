@@ -207,8 +207,63 @@ export default function HomeAboutSection() {
                   </div>
                 </div>
 
+                {/* Architectural Material & Engineering Standards (Balances Desktop Column Height) */}
+                <div className="p-4 bg-stone-50/90 border border-stone-200/90 shadow-2xs">
+                  <div className="flex items-center justify-between gap-2 border-b border-stone-200/80 pb-2 mb-3">
+                    <span className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-accent flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                      Studio Material &amp; Engineering Benchmark
+                    </span>
+                    <span className="text-[10px] uppercase font-medium text-stone-500 tracking-wider">
+                      Zero Unbranded Core
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs text-charcoal-800">
+                    <div className="space-y-0.5">
+                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Cabinetry Core</span>
+                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">HDHMR &amp; Marine BWP</span>
+                      <span className="text-[10px] text-stone-500 block">Action TESA / Greenply</span>
+                    </div>
+                    <div className="space-y-0.5">
+                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Hinges &amp; Slides</span>
+                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">German Soft-Close</span>
+                      <span className="text-[10px] text-stone-500 block">Hafele &amp; Hettich</span>
+                    </div>
+                    <div className="space-y-0.5">
+                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Surface Liners</span>
+                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">1mm Matt Laminates</span>
+                      <span className="text-[10px] text-stone-500 block">Merino &amp; Greenlam</span>
+                    </div>
+                    <div className="space-y-0.5">
+                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Finishes &amp; Polish</span>
+                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">PU &amp; Luxury Emulsion</span>
+                      <span className="text-[10px] text-stone-500 block">Asian Paints Zero-VOC</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Studio Metrics Row */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-0.5">
+                  <div className="p-3 bg-white border border-stone-200/90 text-center">
+                    <span className="block font-serif text-lg sm:text-xl font-normal text-charcoal-900 leading-none">10+</span>
+                    <span className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Years in Delhi NCR</span>
+                  </div>
+                  <div className="p-3 bg-white border border-stone-200/90 text-center">
+                    <span className="block font-serif text-lg sm:text-xl font-normal text-charcoal-900 leading-none">150+</span>
+                    <span className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Homes Delivered</span>
+                  </div>
+                  <div className="p-3 bg-white border border-stone-200/90 text-center">
+                    <span className="block font-serif text-lg sm:text-xl font-normal text-charcoal-900 leading-none">100%</span>
+                    <span className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Itemized BOQ</span>
+                  </div>
+                  <div className="p-3 bg-white border border-stone-200/90 text-center">
+                    <span className="block font-serif text-lg sm:text-xl font-normal text-charcoal-900 leading-none">0</span>
+                    <span className="text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Subcontract Handoff</span>
+                  </div>
+                </div>
+
                 {/* Navigation Actions */}
-                <div className="pt-3 flex flex-wrap items-center gap-3">
+                <div className="pt-2 flex flex-wrap items-center gap-3">
                   <Link
                     to="/about"
                     className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 bg-charcoal-800 text-ivory text-xs sm:text-sm font-semibold tracking-wide hover:bg-charcoal-900 active:scale-95 transition-all shadow-sm touch-manipulation"

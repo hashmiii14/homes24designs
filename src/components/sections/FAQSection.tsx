@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, FileCheck, Clock, ShieldCheck, Wrench } from 'lucide-react';
 import { faqItems } from '@/data/faq';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
@@ -75,6 +75,76 @@ export default function FAQSection() {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* Turnkey Living Assurance Charter (Fills bottom desktop void) */}
+        <div className="mt-12 lg:mt-16 pt-8 sm:pt-10 border-t border-stone-200/80">
+          <Reveal>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+              <div>
+                <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-accent block mb-1.5 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                  HOMES24DESIGNS Turnkey Assurance
+                </span>
+                <h3 className="font-serif text-xl sm:text-2xl font-light text-charcoal-900">
+                  Four Pillars of Homeowner Protection
+                </h3>
+              </div>
+              <p className="text-xs text-stone-500 max-w-md leading-relaxed">
+                Every residential interior project is executed under strict architectural protocols to eliminate common contractor delays, unbudgeted costs, and material compromises.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+              <div className="p-5 bg-white border border-stone-200/90 shadow-2xs">
+                <div className="w-8 h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent mb-3">
+                  <FileCheck className="w-4 h-4" strokeWidth={1.5} />
+                </div>
+                <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
+                  Fixed BOQ Protection
+                </h4>
+                <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
+                  Every board, hinge, polish code and hardware piece is locked before site work begins. Guaranteed zero surprise contractor escalations midway.
+                </p>
+              </div>
+
+              <div className="p-5 bg-white border border-stone-200/90 shadow-2xs">
+                <div className="w-8 h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent mb-3">
+                  <Clock className="w-4 h-4" strokeWidth={1.5} />
+                </div>
+                <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
+                  45-Day Handover Protocol
+                </h4>
+                <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
+                  Structured fabrication milestones with weekly photo &amp; video progress logs sent directly to homeowners for complete peace of mind.
+                </p>
+              </div>
+
+              <div className="p-5 bg-white border border-stone-200/90 shadow-2xs">
+                <div className="w-8 h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent mb-3">
+                  <ShieldCheck className="w-4 h-4" strokeWidth={1.5} />
+                </div>
+                <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
+                  Direct Founder Oversight
+                </h4>
+                <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
+                  No junior subcontractor delegation. Principal designer Ehtashamul Islam personally audits carcass alignment, leveling, and joinery on-site.
+                </p>
+              </div>
+
+              <div className="p-5 bg-white border border-stone-200/90 shadow-2xs">
+                <div className="w-8 h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent mb-3">
+                  <Wrench className="w-4 h-4" strokeWidth={1.5} />
+                </div>
+                <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
+                  10-Year Hardware Warranty
+                </h4>
+                <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
+                  Genuine Hafele and Hettich German fittings with original manufacturer warranty cards handed over to you upon final project completion.
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

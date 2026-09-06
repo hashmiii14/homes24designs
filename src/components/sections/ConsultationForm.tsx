@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { Check, AlertCircle, Mail, MessageCircle, Phone } from 'lucide-react';
+import { Check, AlertCircle, Mail, MessageCircle, Phone, Compass, ShieldCheck, MapPin } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 import { services } from '@/data/services';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -258,8 +258,8 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
               </div>
 
               {/* What to Expect Box (Fills desktop left column void) */}
-              <div className="mt-8 p-6 bg-ivory border border-stone-200/80">
-                <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-medium block mb-3">
+              <div className="mt-6 sm:mt-8 p-5 sm:p-6 bg-ivory border border-stone-200/80">
+                <span className="text-[11px] tracking-[0.2em] uppercase text-accent font-semibold block mb-3">
                   What to Expect Next
                 </span>
                 <div className="space-y-3 text-xs text-stone-600">
@@ -269,12 +269,58 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="w-5 h-5 rounded-full bg-charcoal-800 text-ivory flex items-center justify-center shrink-0 text-[10px] mt-0.5">2</span>
-                    <span>Preliminary space assessment & budget ballpark estimation.</span>
+                    <span>Preliminary space assessment &amp; budget ballpark estimation.</span>
                   </div>
                   <div className="flex items-start gap-2.5">
                     <span className="w-5 h-5 rounded-full bg-charcoal-800 text-ivory flex items-center justify-center shrink-0 text-[10px] mt-0.5">3</span>
                     <span>Comprehensive 3D layout planning with zero upfront obligation.</span>
                   </div>
+                </div>
+              </div>
+
+              {/* Homeowner Consultation Preparation & Deliverables Guarantee (Fills desktop side void) */}
+              <div className="mt-4 p-5 sm:p-6 bg-white border border-stone-200/90 shadow-2xs space-y-4">
+                <div>
+                  <span className="text-[11px] tracking-[0.18em] uppercase text-accent font-semibold block mb-2.5 flex items-center gap-1.5">
+                    <Compass className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
+                    Preparing For Your Discussion
+                  </span>
+                  <ul className="space-y-2 text-xs text-stone-600">
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                      <span><strong className="text-charcoal-900 font-medium">Floor Plan or Dimensions:</strong> Rough architectural layout or builder plan if available.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                      <span><strong className="text-charcoal-900 font-medium">Lifestyle Aspirations:</strong> Storage needs, modular kitchen habits, and preferred aesthetics.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                      <span><strong className="text-charcoal-900 font-medium">Target Timeline:</strong> Key move-in date or festival milestones for project handover.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="border-t border-stone-100 pt-3">
+                  <span className="text-[11px] tracking-[0.18em] uppercase text-accent font-semibold block mb-2.5 flex items-center gap-1.5">
+                    <ShieldCheck className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
+                    Our Architectural Handover Guarantee
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-stone-600">
+                    <div className="p-2.5 bg-stone-50 border border-stone-200/70">
+                      <span className="font-semibold text-charcoal-900 block text-xs">3D Realistic Renders</span>
+                      <span className="text-[10.5px] text-stone-500">Spatial walkthrough before carpentry</span>
+                    </div>
+                    <div className="p-2.5 bg-stone-50 border border-stone-200/70">
+                      <span className="font-semibold text-charcoal-900 block text-xs">100% Itemized BOQ</span>
+                      <span className="text-[10.5px] text-stone-500">Zero hidden contractor escalations</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border-t border-stone-100 pt-2 flex items-center gap-2 text-[11px] text-stone-500">
+                  <MapPin className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
+                  <span>Turnkey residential execution across South Delhi &amp; Delhi NCR</span>
                 </div>
               </div>
             </Reveal>
