@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[82vh] lg:min-h-[86vh] sm:max-h-[920px] flex flex-col justify-end overflow-hidden pt-20 sm:pt-28 md:pt-32 pb-7 sm:pb-12 lg:pb-16">
+    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[82vh] lg:min-h-[86vh] sm:max-h-[920px] flex flex-col justify-center sm:justify-end overflow-hidden pt-24 xs:pt-26 sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -145,6 +145,21 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container-lux w-full text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
+          {/* Top Luxury Studio Badge Line */}
+          <div
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-900/70 backdrop-blur-md border border-accent/40 text-[10px] xs:text-[11px] font-medium tracking-wider uppercase text-ivory/95 mb-2.5 sm:mb-3.5 w-fit shadow-sm"
+            style={
+              isLoaded
+                ? { animation: 'fadeDown 0.6s 0.02s cubic-bezier(0.16,1,0.3,1) both' }
+                : { opacity: 0 }
+            }
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse shrink-0" />
+            <span>Luxury Turnkey Residential Studio</span>
+            <span className="text-accent/60 hidden xs:inline">·</span>
+            <span className="text-stone-300 hidden xs:inline">Delhi NCR</span>
+          </div>
+
           {/* Eyebrow */}
           <div
             className="flex items-center gap-2 sm:gap-3 mb-2.5 sm:mb-4 min-w-0"
@@ -179,21 +194,51 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Description */}
-          <p className="mt-3 sm:mt-5 md:mt-7 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
+          {/* Description & Supporting Editorial Line */}
+          <p className="mt-3 sm:mt-5 md:mt-6 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
             <AnimatedWords
               text="A thoughtful combination of design, functionality, material selection and personalised planning for contemporary homes in Delhi and Delhi NCR."
               startDelay={0.95}
               isLoaded={isLoaded}
             />
+            <span className="block mt-1 sm:mt-1.5 text-stone-300/85 text-[11.5px] sm:text-sm font-normal">
+              <AnimatedWords
+                text="Bespoke luxury residences, modular kitchens and wardrobes crafted with architectural precision and guaranteed turnkey handover."
+                startDelay={1.1}
+                isLoaded={isLoaded}
+              />
+            </span>
           </p>
+
+          {/* Key Trust / Service Highlights Lines */}
+          <div
+            className="mt-3 sm:mt-4 flex flex-wrap items-center gap-x-3.5 sm:gap-x-5 gap-y-1.5 text-[10.5px] xs:text-[11px] sm:text-xs text-stone-300/95 font-medium"
+            style={
+              isLoaded
+                ? { animation: 'fadeIn 0.7s 1.15s cubic-bezier(0.16,1,0.3,1) both' }
+                : { opacity: 0 }
+            }
+          >
+            <span className="inline-flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+              45-Day Turnkey Handover
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+              German Hardware Warranty
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+              100% Itemized BOQ
+            </span>
+          </div>
 
           {/* Buttons: Stacked and compact on mobile ("Explore Our Services" below "Book a Consultation"), inline on desktop */}
           <div
-            className="mt-3.5 sm:mt-7 md:mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4"
+            className="mt-3.5 sm:mt-6 md:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4"
             style={
               isLoaded
-                ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
+                ? { animation: 'fadeUp 0.8s 1.25s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
@@ -215,7 +260,7 @@ export default function Hero() {
 
           {/* Animated Location Pin */}
           <div
-            className="mt-3 sm:mt-5 md:mt-8 flex items-center gap-2 text-stone-300/90"
+            className="mt-3 sm:mt-5 md:mt-7 flex items-center gap-2 text-stone-300/90"
             style={
               isLoaded
                 ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
