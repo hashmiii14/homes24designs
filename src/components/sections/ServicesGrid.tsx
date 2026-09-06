@@ -49,7 +49,7 @@ export default function ServicesGrid() {
 
                   <div className="pt-4 mt-4 border-t border-stone-200/60">
                     <div
-                      className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-stone-100/90 group-hover:bg-charcoal-800 text-charcoal-800 group-hover:text-ivory text-xs font-medium tracking-wider uppercase transition-all duration-300"
+                      className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-stone-100 group-hover:bg-charcoal-800 text-charcoal-800 group-hover:text-ivory text-xs font-semibold tracking-wider uppercase transition-all duration-300 min-h-[38px]"
                     >
                       <span>Learn More</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-accent group-hover:text-accent-light group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" strokeWidth={1.5} />

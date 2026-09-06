@@ -94,7 +94,7 @@ export default function Hero() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    if (window.__h24_loaded) {
+    if (window.__h24_loaded || !document.getElementById('h24-initial-loader')) {
       setIsLoaded(true);
       return;
     }
@@ -102,8 +102,8 @@ export default function Hero() {
     const handler = () => setIsLoaded(true);
     window.addEventListener('h24-loader-done', handler);
 
-    // Safety fallback: if event was somehow missed, trigger after 2.1s
-    const timer = setTimeout(() => setIsLoaded(true), 2100);
+    // Safety fallback: if event was somehow missed, trigger after 1.5s
+    const timer = setTimeout(() => setIsLoaded(true), 1500);
 
     return () => {
       window.removeEventListener('h24-loader-done', handler);
@@ -147,15 +147,15 @@ export default function Hero() {
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Eyebrow */}
           <div
-            className="flex items-center gap-2.5 sm:gap-3 mb-3.5 sm:mb-4 md:mb-5"
+            className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 md:mb-5"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <span className="h-px w-8 sm:w-10 bg-accent-light" />
-            <span className="text-xs sm:text-xs font-medium tracking-[0.2em] sm:tracking-[0.22em] uppercase text-accent-light">
+            <span className="h-px w-6 sm:w-10 bg-accent-light shrink-0" />
+            <span className="text-[11px] sm:text-xs font-medium tracking-[0.18em] sm:tracking-[0.22em] uppercase text-accent-light">
               <AnimatedWords
                 text="Best Interior Designer in Okhla · New Delhi"
                 startDelay={0.08}
@@ -165,7 +165,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-serif text-[2.45rem] xs:text-[2.65rem] sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.08] sm:leading-[1.05] tracking-tight">
+          <h1 className="font-serif text-[2.05rem] xs:text-[2.4rem] sm:text-5xl md:text-6xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.1] sm:leading-[1.05] tracking-tight">
             <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
             <br />
             <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />
@@ -176,7 +176,7 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="mt-4 sm:mt-6 md:mt-8 text-sm sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
+          <p className="mt-3.5 sm:mt-6 md:mt-8 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
             <AnimatedWords
               text="A thoughtful combination of design, functionality, material selection and personalised planning for contemporary homes in Delhi and Delhi NCR."
               startDelay={0.95}
@@ -186,7 +186,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div
-            className="mt-5 sm:mt-8 md:mt-10 flex flex-row flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-4"
+            className="mt-6 sm:mt-8 md:mt-10 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4"
             style={
               isLoaded
                 ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
@@ -196,14 +196,14 @@ export default function Hero() {
             <Link
               to="/contact"
               onClick={handleConsultationClick}
-              className="inline-flex items-center justify-center px-5 py-3 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shrink-0"
+              className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-lg"
             >
               Book a Consultation
             </Link>
             <Link
               to="/services"
               onClick={handleServicesClick}
-              className="inline-flex items-center justify-center px-5 py-3 sm:px-8 sm:py-3.5 border border-ivory/50 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory/15 active:scale-95 touch-manipulation text-center shrink-0"
+              className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center"
             >
               Explore Our Services
             </Link>

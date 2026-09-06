@@ -27,14 +27,14 @@ export default function NotFoundPage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-ivory text-charcoal-900 text-sm font-medium tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-ivory text-charcoal-900 text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation shadow-md min-h-[48px]"
             >
               <Home className="w-4 h-4" strokeWidth={1.5} />
               Back to Home
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-ivory/40 text-ivory text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory/10"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-ivory/60 text-ivory text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation min-h-[48px]"
             >
               Contact Us
               <ArrowRight className="w-4 h-4" strokeWidth={1.5} />

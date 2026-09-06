@@ -87,11 +87,12 @@ export default function PricingSection() {
                   </div>
                   <Link
                     to="/contact"
-                    className={`mt-4 inline-flex items-center justify-center w-full py-3 text-sm font-medium tracking-wide transition-all duration-300 ${
+                    className={`mt-5 inline-flex items-center justify-center w-full py-3.5 text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm active:scale-[0.98] touch-manipulation min-h-[46px] ${
                       plan.highlighted
                         ? 'bg-ivory text-charcoal-900 hover:bg-accent hover:text-ivory'
                         : 'bg-charcoal-800 text-ivory hover:bg-charcoal-900'
                     }`}
+                    style={plan.highlighted ? { color: '#0c0a09' } : { color: '#f7f4ef' }}
                   >
                     {plan.cta}
                   </Link>

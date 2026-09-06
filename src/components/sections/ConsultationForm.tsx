@@ -185,18 +185,20 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold tracking-wider uppercase transition-all shadow-md active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold tracking-wider uppercase transition-all shadow-md active:scale-95 touch-manipulation min-h-[44px]"
+                style={{ color: '#ffffff' }}
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>Message on WhatsApp</span>
+                <MessageCircle className="w-4 h-4 text-white" />
+                <span style={{ color: '#ffffff' }}>Message on WhatsApp</span>
               </a>
 
               <a
                 href={`tel:${siteConfig.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-xs font-semibold tracking-wider uppercase transition-all active:scale-95"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-xs font-semibold tracking-wider uppercase transition-all active:scale-95 touch-manipulation min-h-[44px]"
+                style={{ color: '#f7f4ef' }}
               >
                 <Phone className="w-4 h-4 text-accent" />
-                <span>Call {siteConfig.phone}</span>
+                <span style={{ color: '#f7f4ef' }}>Call {siteConfig.phone}</span>
               </a>
             </div>
 
@@ -291,87 +293,113 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {/* Full Name */}
-                  <div className="relative">
+                  <div>
+                    <label htmlFor="fullName" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                      Full Name <span className="text-accent">*</span>
+                    </label>
                     <input
                       type="text"
                       name="fullName"
                       id="fullName"
-                      placeholder=" "
-                      className="input-lux peer"
+                      placeholder="e.g. Rahul Sharma"
+                      className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Full Name"
                     />
-                    <label htmlFor="fullName" className="label-lux peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-accent peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-accent">
-                      Full Name *
-                    </label>
-                    {errors.fullName && <p className="mt-1 text-xs text-error">{errors.fullName}</p>}
+                    {errors.fullName && (
+                      <p className="mt-1.5 text-xs text-red-600 font-medium flex items-center gap-1">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.fullName}
+                      </p>
+                    )}
                   </div>
 
                   {/* Phone */}
-                  <div className="relative">
+                  <div>
+                    <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                      Phone Number <span className="text-accent">*</span>
+                    </label>
                     <input
                       type="tel"
                       name="phone"
                       id="phone"
-                      placeholder=" "
-                      className="input-lux peer"
+                      placeholder="e.g. 98180 83436"
+                      className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Phone"
                     />
-                    <label htmlFor="phone" className="label-lux peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-accent peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-accent">
-                      Phone *
-                    </label>
-                    {errors.phone && <p className="mt-1 text-xs text-error">{errors.phone}</p>}
+                    {errors.phone && (
+                      <p className="mt-1.5 text-xs text-red-600 font-medium flex items-center gap-1">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.phone}
+                      </p>
+                    )}
                   </div>
 
                   {/* Email */}
-                  <div className="relative">
+                  <div>
+                    <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                      Email Address <span className="text-xs font-normal lowercase text-stone-500">(optional)</span>
+                    </label>
                     <input
                       type="email"
                       name="email"
                       id="email"
-                      placeholder=" "
-                      className="input-lux peer"
+                      placeholder="e.g. rahul@example.com"
+                      className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Email"
                     />
-                    <label htmlFor="email" className="label-lux peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-accent peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-accent">
-                      Email
-                    </label>
-                    {errors.email && <p className="mt-1 text-xs text-error">{errors.email}</p>}
+                    {errors.email && (
+                      <p className="mt-1.5 text-xs text-red-600 font-medium flex items-center gap-1">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.email}
+                      </p>
+                    )}
                   </div>
 
                   {/* Location */}
-                  <div className="relative">
+                  <div>
+                    <label htmlFor="location" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                      Location / Area <span className="text-accent">*</span>
+                    </label>
                     <input
                       type="text"
                       name="location"
                       id="location"
-                      placeholder=" "
-                      className="input-lux peer"
+                      placeholder="e.g. Batla House, Jamia Nagar, Okhla"
+                      className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Location"
                     />
-                    <label htmlFor="location" className="label-lux peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-accent peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-accent">
-                      Location *
-                    </label>
-                    {errors.location && <p className="mt-1 text-xs text-error">{errors.location}</p>}
+                    {errors.location && (
+                      <p className="mt-1.5 text-xs text-red-600 font-medium flex items-center gap-1">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.location}
+                      </p>
+                    )}
                   </div>
 
                   {/* Property Type */}
                   <div>
-                    <label htmlFor="propertyType" className="block text-xs font-medium text-stone-500 mb-1.5">
+                    <label htmlFor="propertyType" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
                       Property Type
                     </label>
-                    <select id="propertyType" name="propertyType" className="input-lux cursor-pointer" defaultValue="">
-                      <option value="" disabled>Select</option>
+                    <select
+                      id="propertyType"
+                      name="propertyType"
+                      className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs cursor-pointer"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Select Property Type</option>
                       {propertyTypes.map((t) => <option key={t} value={t}>{t}</option>)}
                     </select>
                   </div>
 
                   {/* Bedrooms */}
                   <div>
-                    <label htmlFor="bedrooms" className="block text-xs font-medium text-stone-500 mb-1.5">
-                      Bedrooms
+                    <label htmlFor="bedrooms" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                      Bedrooms / Configuration
                     </label>
-                    <select id="bedrooms" name="bedrooms" className="input-lux cursor-pointer" defaultValue="">
-                      <option value="" disabled>Select</option>
+                    <select
+                      id="bedrooms"
+                      name="bedrooms"
+                      className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs cursor-pointer"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Select Configuration</option>
                       <option value="1BHK">1BHK</option>
                       <option value="2BHK">2BHK</option>
                       <option value="3BHK">3BHK</option>
@@ -382,72 +410,81 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
 
                   {/* Budget */}
                   <div className="md:col-span-2">
-                    <label htmlFor="budget" className="block text-xs font-medium text-stone-500 mb-1.5">
-                      Approximate Budget
+                    <label htmlFor="budget" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                      Approximate Budget Range
                     </label>
-                    <select id="budget" name="budget" className="input-lux cursor-pointer" defaultValue="">
-                      <option value="" disabled>Select</option>
+                    <select
+                      id="budget"
+                      name="budget"
+                      className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs cursor-pointer"
+                      defaultValue=""
+                    >
+                      <option value="" disabled>Select Estimated Budget</option>
                       {budgetRanges.map((b) => <option key={b} value={b}>{b}</option>)}
                     </select>
                   </div>
 
                   {/* Services */}
                   <div className="md:col-span-2">
-                    <p className="block text-xs font-medium text-stone-500 mb-2">Required Services</p>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    <p className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-2.5">
+                      Required Services <span className="text-xs font-normal lowercase text-stone-500">(select all that apply)</span>
+                    </p>
+                    <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-2.5">
                       {services.map((s) => (
-                        <label key={s.slug} className="flex items-center gap-2 text-sm text-stone-600 cursor-pointer">
-                          <input type="checkbox" name="services" value={s.shortTitle} className="w-4 h-4 accent-accent" />
-                          {s.shortTitle}
+                        <label key={s.slug} className="flex items-center gap-2.5 text-xs sm:text-sm text-charcoal-700 cursor-pointer p-2.5 bg-white border border-stone-200 hover:border-accent/40 transition-colors">
+                          <input type="checkbox" name="services" value={s.shortTitle} className="w-4 h-4 accent-accent rounded-xs shrink-0" />
+                          <span className="select-none">{s.shortTitle}</span>
                         </label>
                       ))}
                     </div>
                   </div>
 
                   {/* Message */}
-                  <div className="md:col-span-2 relative">
+                  <div className="md:col-span-2">
+                    <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                      Project Details / Note <span className="text-xs font-normal lowercase text-stone-500">(optional)</span>
+                    </label>
                     <textarea
                       name="message"
                       id="message"
-                      placeholder=" "
-                      rows={4}
-                      className="input-lux peer resize-none pt-5"
+                      placeholder="Share any details about your layout, expected timeline, or preferences..."
+                      rows={3}
+                      className="w-full p-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors resize-none shadow-2xs"
                       aria-label="Message"
                     />
-                    <label htmlFor="message" className="label-lux peer-focus:top-1.5 peer-focus:text-xs peer-focus:text-accent peer-[:not(:placeholder-shown)]:top-1.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-accent">
-                      Message
-                    </label>
                   </div>
                 </div>
 
-                <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal-800 text-ivory text-sm font-medium tracking-wide transition-all duration-300 hover:bg-charcoal-900 hover:shadow-lg disabled:opacity-75 disabled:cursor-not-allowed active:scale-98"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-md disabled:opacity-75 disabled:cursor-not-allowed active:scale-[0.98] touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-accent min-h-[50px]"
+                    style={{ color: '#f7f4ef' }}
                   >
                     {status === 'submitting' ? (
                       <>
-                        <span className="w-4 h-4 border-2 border-ivory border-t-transparent rounded-full animate-spin" />
-                        <span>Submitting Request...</span>
+                        <span className="w-4 h-4 border-2 border-ivory border-t-transparent rounded-full animate-spin shrink-0" />
+                        <span style={{ color: '#f7f4ef' }}>Submitting Request...</span>
                       </>
                     ) : (
-                      <span>Book a Consultation</span>
+                      <span style={{ color: '#f7f4ef' }}>Book a Consultation</span>
                     )}
                   </button>
 
                   <button
                     type="button"
                     onClick={handleWhatsAppDirect}
-                    className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-emerald-700 text-white text-sm font-medium tracking-wide transition-all duration-300 hover:bg-emerald-800 hover:shadow-lg active:scale-98"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-md active:scale-[0.98] touch-manipulation focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 min-h-[50px]"
+                    style={{ color: '#ffffff' }}
                   >
-                    <MessageCircle className="w-4 h-4" />
-                    <span>Chat on WhatsApp</span>
+                    <MessageCircle className="w-4 h-4 text-white shrink-0" />
+                    <span style={{ color: '#ffffff' }}>Chat on WhatsApp</span>
                   </button>
                 </div>
 
                 <p className="mt-4 text-xs text-stone-500">
-                  Your information is used solely to respond to your enquiry. We do not share it with third parties.
+                  Your information is used solely to respond to your enquiry. We respect your privacy and never share your details.
                 </p>
               </form>
             </Reveal>

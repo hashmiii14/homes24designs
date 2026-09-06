@@ -1,7 +1,7 @@
 import SEO from '@/components/ui/SEO';
 import Hero from '@/components/sections/Hero';
 import TrustStrip from '@/components/sections/TrustStrip';
-import AboutSection from '@/components/sections/AboutSection';
+import HomeAboutSection from '@/components/sections/HomeAboutSection';
 import ServicesGrid from '@/components/sections/ServicesGrid';
 import PortfolioGrid from '@/components/sections/PortfolioGrid';
 import WhyUs from '@/components/sections/WhyUs';
@@ -107,7 +107,7 @@ export default function HomePage() {
       />
       <Hero />
       <TrustStrip />
-      <AboutSection />
+      <HomeAboutSection />
       <ServicesGrid />
       <PortfolioGrid />
       <WhyUs />

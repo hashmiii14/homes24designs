@@ -76,16 +76,18 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
         {/* Filter Pills (Shown only on full Journal page) */}
         {!limit && (
           <Reveal delay={60}>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 max-w-4xl mx-auto">
               {filterCategories.map((cat) => (
                 <button
                   key={cat}
+                  type="button"
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3.5 py-1.5 text-xs font-medium tracking-wide uppercase transition-all duration-300 ${
+                  className={`min-h-[38px] px-3.5 sm:px-4 py-2 text-xs font-semibold tracking-wider uppercase transition-all duration-300 rounded-none touch-manipulation text-center flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
                     selectedCategory === cat
-                      ? 'bg-charcoal-800 text-ivory shadow-sm'
-                      : 'bg-white border border-stone-200 text-stone-600 hover:bg-stone-100'
+                      ? 'bg-charcoal-800 text-ivory shadow-sm ring-1 ring-charcoal-900'
+                      : 'bg-white border border-stone-300 text-charcoal-700 hover:text-charcoal-900 hover:border-charcoal-400 hover:bg-stone-50'
                   }`}
+                  style={selectedCategory === cat ? { color: '#f7f4ef' } : {}}
                 >
                   {cat}
                 </button>
@@ -183,10 +185,10 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
             <div className="mt-10 md:mt-12 text-center">
               <Link
                 to="/journal"
-                className="inline-flex items-center gap-2 px-7 py-3 border border-charcoal-800 text-charcoal-800 text-xs font-semibold tracking-widest uppercase hover:bg-charcoal-800 hover:text-ivory transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-charcoal-800 text-charcoal-800 text-xs font-semibold tracking-widest uppercase hover:bg-charcoal-800 hover:text-ivory active:scale-95 transition-all duration-300 shadow-sm touch-manipulation"
               >
                 <span>View All Articles</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
               </Link>
             </div>
           </Reveal>

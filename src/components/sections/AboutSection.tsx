@@ -209,21 +209,21 @@ export default function AboutSection() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary bg-accent hover:bg-accent-dark text-white inline-flex items-center gap-2 px-6 py-3 text-sm font-medium transition-colors shadow-sm"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-ivory text-sm font-medium transition-colors shadow-sm active:scale-95 touch-manipulation"
                   >
-                    <MessageCircle className="w-4 h-4" strokeWidth={1.5} />
+                    <MessageCircle className="w-4 h-4 text-ivory" strokeWidth={1.5} />
                     <span>Chat on WhatsApp</span>
                   </a>
                   <a
                     href={`tel:${siteConfig.phoneRaw}`}
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-charcoal-800 text-charcoal-800 text-sm font-medium hover:bg-charcoal-800 hover:text-ivory transition-colors"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-charcoal-800 text-charcoal-800 text-sm font-medium hover:bg-charcoal-800 hover:text-ivory transition-colors active:scale-95 touch-manipulation"
                   >
                     <Phone className="w-4 h-4" strokeWidth={1.5} />
                     <span>Call {siteConfig.phone}</span>
                   </a>
                   <Link
                     to="/services"
-                    className="text-xs text-charcoal-700 hover:text-accent transition-colors link-underline py-2 font-medium"
+                    className="inline-flex items-center text-xs text-charcoal-700 hover:text-accent transition-colors link-underline py-2 font-medium"
                   >
                     Explore Services &rarr;
                   </Link>
@@ -570,17 +570,17 @@ export default function AboutSection() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary bg-accent hover:bg-accent-dark text-white inline-flex items-center gap-2 px-6 py-3 text-sm font-medium transition-colors shadow-sm"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-accent hover:bg-accent-dark text-ivory text-sm font-semibold tracking-wide transition-all shadow-md active:scale-95 touch-manipulation"
                 >
-                  <MessageCircle className="w-4 h-4" strokeWidth={1.5} />
+                  <MessageCircle className="w-4 h-4 text-ivory" strokeWidth={1.5} />
                   <span>Chat on WhatsApp</span>
                 </a>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-stone-600 text-stone-200 text-sm font-medium hover:bg-white/10 hover:text-white transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-stone-400 text-ivory text-sm font-medium hover:bg-white/10 hover:text-white transition-all active:scale-95 touch-manipulation"
                 >
                   <span>Book Consultation</span>
-                  <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                  <ArrowRight className="w-4 h-4 text-accent-light" strokeWidth={1.5} />
                 </Link>
               </div>
             </div>

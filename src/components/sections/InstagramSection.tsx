@@ -123,10 +123,11 @@ export default function InstagramSection() {
               href={siteConfig.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-charcoal-800 text-ivory text-sm font-medium tracking-wide transition-all duration-300 ease-lux hover:bg-charcoal-900 hover:shadow-lg group"
+              className="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-charcoal-800 text-ivory text-sm font-semibold tracking-wide transition-all duration-300 ease-lux hover:bg-charcoal-900 hover:shadow-lg active:scale-95 touch-manipulation min-h-[48px] group"
+              style={{ color: '#f7f4ef' }}
             >
               <Instagram className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-110" />
-              <span>Follow @homes24designs on Instagram</span>
+              <span style={{ color: '#f7f4ef' }}>Follow @homes24designs on Instagram</span>
               <ArrowUpRight className="w-4 h-4 text-stone-400 group-hover:text-ivory transition-colors duration-300" />
             </a>
           </div>

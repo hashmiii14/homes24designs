@@ -11,6 +11,8 @@ interface ButtonProps {
   className?: string;
   type?: 'button' | 'submit';
   ariaLabel?: string;
+  showArrow?: boolean;
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -22,6 +24,8 @@ export default function Button({
   className = '',
   type = 'button',
   ariaLabel,
+  showArrow = true,
+  disabled = false,
 }: ButtonProps) {
   const base = {
     primary: 'btn-primary',
@@ -31,8 +35,8 @@ export default function Button({
 
   const content = (
     <>
-      {children}
-      {variant !== 'ghost' && <ArrowRight className="w-4 h-4" strokeWidth={1.5} />}
+      <span>{children}</span>
+      {variant !== 'ghost' && showArrow && <ArrowRight className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5" strokeWidth={1.5} />}
     </>
   );
 
@@ -59,7 +63,13 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={`${base} ${className}`} aria-label={ariaLabel}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={`${base} ${className}`}
+      aria-label={ariaLabel}
+    >
       {content}
     </button>
   );

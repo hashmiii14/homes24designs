@@ -71,13 +71,13 @@ export default function Header() {
             </nav>
 
             {/* CTA + mobile toggle */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 sm:gap-4">
               <Link
                 to="/contact"
-                className={`hidden md:inline-flex items-center px-6 py-2.5 text-xs font-medium tracking-[0.15em] uppercase transition-all duration-300 ${
+                className={`hidden md:inline-flex items-center justify-center px-5 lg:px-6 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-300 shadow-sm active:scale-95 touch-manipulation ${
                   transparent
-                    ? 'border border-ivory/40 text-ivory hover:bg-ivory hover:text-charcoal-900'
-                    : 'bg-charcoal-800 text-ivory hover:bg-charcoal-900'
+                    ? 'border border-ivory/60 text-ivory hover:bg-ivory hover:text-charcoal-900'
+                    : 'bg-charcoal-800 text-ivory hover:bg-charcoal-900 hover:shadow-md'
                 }`}
               >
                 Book a Consultation
@@ -85,8 +85,8 @@ export default function Header() {
 
               <button
                 onClick={() => setMenuOpen(true)}
-                className={`lg:hidden p-2 transition-colors ${
-                  transparent ? 'text-ivory' : 'text-charcoal-800'
+                className={`lg:hidden p-2.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent touch-manipulation ${
+                  transparent ? 'text-ivory hover:text-accent-light' : 'text-charcoal-800 hover:text-accent'
                 }`}
                 aria-label="Open menu"
                 aria-expanded={menuOpen}
@@ -151,7 +151,7 @@ export default function Header() {
             <Link
               to="/contact"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-center w-full py-3.5 bg-charcoal-800 text-ivory text-sm font-medium tracking-wide"
+              className="flex items-center justify-center w-full py-3.5 bg-charcoal-800 text-ivory text-sm font-semibold tracking-wide hover:bg-charcoal-900 active:scale-[0.98] transition-all shadow-md touch-manipulation"
             >
               Book a Consultation
             </Link>

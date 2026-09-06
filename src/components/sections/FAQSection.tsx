@@ -50,8 +50,9 @@ export default function FAQSection() {
                 <Reveal key={i} delay={i * 35}>
                   <div className="bg-white border border-stone-200/80 p-5 md:p-6 mb-3 transition-all duration-300 hover:border-accent/40">
                     <button
+                      type="button"
                       onClick={() => setOpen(open === i ? null : i)}
-                      className="flex items-center justify-between w-full text-left group gap-4"
+                      className="flex items-center justify-between w-full text-left group gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent touch-manipulation"
                       aria-expanded={open === i}
                     >
                       <span className={`text-base md:text-lg font-medium transition-colors ${open === i ? 'text-accent' : 'text-charcoal-800 group-hover:text-accent'}`}>

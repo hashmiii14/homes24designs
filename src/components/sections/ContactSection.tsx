@@ -73,8 +73,8 @@ export default function ContactSection() {
               </div>
 
               <div className="pt-6 border-t border-stone-200">
-                <div className="flex flex-wrap gap-3">
-                  <Button href={`tel:${siteConfig.phoneRaw}`} variant="primary">Call</Button>
+                <div className="flex flex-wrap items-center gap-3">
+                  <Button href={`tel:${siteConfig.phoneRaw}`} variant="primary">Call Us</Button>
                   <Button href={`https://wa.me/${siteConfig.whatsapp}`} variant="outline">WhatsApp Us</Button>
                 </div>
               </div>
