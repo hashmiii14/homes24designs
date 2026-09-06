@@ -112,28 +112,37 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
         // ignore localStorage errors
       }
 
-      // 2. Submit to Web3Forms API
-      await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          access_key: '5fca4f3b-6e7e-4074-a09b-c3971e42c26f',
-          subject: `New Design Consultation: ${data.fullName} (${data.location})`,
-          from_name: 'HOMES24DESIGNS Website',
-          name: data.fullName,
-          phone: data.phone,
-          email: data.email || 'Not provided',
-          location: data.location,
-          property_type: data.propertyType,
-          bedrooms: data.bedrooms,
-          budget: data.budget,
-          services: data.selectedServices,
-          message: data.message || 'No additional note',
-        }),
-      }).catch(() => null);
+      // 2. Submit to FormSubmit.co AJAX API
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${siteConfig.email}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            _subject: `New Design Consultation: ${data.fullName} (${data.propertyType} - ${data.location})`,
+            _template: 'table',
+            _captcha: 'false',
+            'Client Name': data.fullName,
+            'Contact Phone': data.phone,
+            'Email Address': data.email || 'Not provided',
+            'Location / Area': data.location,
+            'Property Type': data.propertyType,
+            'Configuration': data.bedrooms,
+            'Estimated Budget': data.budget,
+            'Services Required': data.selectedServices,
+            'Project Notes': data.message || 'No additional note',
+            'Submitted At': new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+          }),
+        });
+
+        if (!res.ok) {
+          console.warn('FormSubmit returned non-ok response:', res.status);
+        }
+      } catch (submitErr) {
+        console.error('FormSubmit network error:', submitErr);
+      }
 
       // Brief delay for natural submission feel
       await new Promise((resolve) => setTimeout(resolve, 600));
@@ -329,7 +338,15 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
           {/* Right: form */}
           <div className="lg:col-span-3">
             <Reveal delay={100}>
-              <form onSubmit={handleSubmit} className="bg-ivory p-6 md:p-10 shadow-sm" noValidate>
+              <form
+                onSubmit={handleSubmit}
+                action={`https://formsubmit.co/${siteConfig.email}`}
+                method="POST"
+                className="bg-ivory p-6 md:p-10 shadow-sm"
+                noValidate
+              >
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
                 {status === 'error' && (
                   <div className="mb-6 flex items-center gap-2 p-4 bg-error/10 text-error text-sm">
                     <AlertCircle className="w-4 h-4 shrink-0" strokeWidth={1.5} />
