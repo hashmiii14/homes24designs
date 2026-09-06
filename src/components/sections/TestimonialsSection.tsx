@@ -107,15 +107,14 @@ export default function TestimonialsSection() {
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0">
-              <a
-                href="https://wa.me/919818083436?text=Hello%20Ehtashamul%20bhai%2C%20I%20saw%20your%20HOMES24DESIGNS%20client%20reviews%20and%20want%20to%20discuss%20an%20interior%20project."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3.5 bg-accent hover:bg-accent-light text-ivory text-xs font-semibold tracking-wider uppercase transition-all shadow-sm active:scale-95 touch-manipulation min-h-[44px]"
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-accent-light/60 hover:bg-accent hover:border-accent text-ivory text-xs font-semibold tracking-wider uppercase transition-all shadow-sm active:scale-95 touch-manipulation min-h-[44px]"
                 style={{ color: '#f7f4ef' }}
               >
-                Chat on WhatsApp
-              </a>
+                <span>Discover Our Approach</span>
+                <ArrowRight className="w-3.5 h-3.5 text-accent-light" />
+              </Link>
             </div>
           </div>
         </Reveal>

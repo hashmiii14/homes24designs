@@ -137,12 +137,21 @@ export default function JournalArticlePage() {
                 </div>
               )}
 
-              {/* CTA */}
-              <div className="mt-12 p-8 bg-stone-50 border-l-2 border-accent">
-                <p className="text-lg font-light text-charcoal-800 mb-4">
-                  Let's design a home that feels like yours.
+              {/* Editorial Note & Bridge to Form */}
+              <div className="mt-12 p-6 sm:p-8 bg-stone-50 border-l-2 border-accent">
+                <p className="text-base sm:text-lg font-serif italic text-charcoal-800 mb-2">
+                  "Thoughtful interior design turns everyday routines into moments of ease."
                 </p>
-                <Button to="/contact" variant="primary">Book a Consultation</Button>
+                <p className="text-xs sm:text-sm text-stone-600 leading-relaxed mb-4">
+                  Have questions about your floor plan, modular kitchen layout, or materials? Share your project details below for an expert assessment.
+                </p>
+                <a
+                  href="#consultation"
+                  className="inline-flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-accent hover:text-accent-dark transition-colors"
+                >
+                  <span>Proceed to Consultation Form</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
               </div>
             </article>
 

@@ -30,13 +30,13 @@ export default function FAQSection() {
 
               {/* Direct Help Card */}
               <div className="mt-8 p-6 bg-ivory border border-stone-200/80">
-                <h3 className="text-sm font-medium text-charcoal-800 mb-1">Have a custom question?</h3>
+                <h3 className="text-sm font-medium text-charcoal-800 mb-1">Have a specific question?</h3>
                 <p className="text-xs leading-relaxed text-stone-500 mb-4">
-                  Speak directly with our design team about your specific layout and requirements.
+                  Need clarity on your floor plan, modular timeline, or material choices? Reach out directly to our team.
                 </p>
                 <div className="flex flex-col sm:flex-row lg:flex-col gap-2.5">
-                  <Button to="/contact" variant="primary" className="w-full justify-center">
-                    Book Consultation
+                  <Button to="/contact" variant="outline" className="w-full justify-center">
+                    Ask Our Design Team
                   </Button>
                 </div>
               </div>

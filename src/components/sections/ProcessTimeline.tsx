@@ -2,11 +2,31 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 
 const steps = [
-  { num: '01', title: 'Discover', desc: 'Understand the space, lifestyle, needs and budget.' },
-  { num: '02', title: 'Consult', desc: 'Discuss priorities, preferences and requirements.' },
-  { num: '03', title: 'Concept', desc: 'Develop the design direction and spatial planning.' },
-  { num: '04', title: 'Design & Coordinate', desc: 'Refine details and coordinate applicable execution requirements.' },
-  { num: '05', title: 'Complete', desc: 'Move toward completion and final handover.' },
+  {
+    num: '01',
+    title: 'Site Discovery',
+    desc: 'On-site laser measurements, architectural assessment, and deep review of your family’s routine and priorities.',
+  },
+  {
+    num: '02',
+    title: 'Spatial Planning',
+    desc: 'Bespoke 2D layouts and 3D concept moodboards mapping movement flows, ergonomics, and natural light.',
+  },
+  {
+    num: '03',
+    title: 'Material Curation',
+    desc: 'Hands-on selection of laminates, BWR ply, stone surfaces, and branded hardware (Hafele, Hettich) with itemized BOQ.',
+  },
+  {
+    num: '04',
+    title: 'Supervised Build',
+    desc: 'Milestone-based fabrication with direct on-site supervision by founder Ehtashamul Islam and weekly video logs.',
+  },
+  {
+    num: '05',
+    title: 'Turnkey Handover',
+    desc: 'Rigorous snag-list resolution, deep cleaning, hardware warranty handoff, and complete turnkey delivery in 45 days.',
+  },
 ];
 
 export default function ProcessTimeline() {

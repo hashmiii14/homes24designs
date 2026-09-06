@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   ShieldCheck,
   FileCheck,
@@ -7,17 +7,12 @@ import {
   MapPin,
   Quote,
   ArrowRight,
-  MessageCircle,
 } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import { siteConfig } from '@/data/siteConfig';
 import Logo from '@/components/ui/Logo';
 
 export default function HomeAboutSection() {
-  const whatsappUrl = `https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(
-    'Hello HOMES24DESIGNS, I would like to discuss an interior design project.'
-  )}`;
-
   return (
     <section id="about" className="py-12 md:py-16 lg:py-20 bg-ivory relative overflow-hidden">
       {/* Subtle architectural background line accents */}
@@ -206,11 +201,12 @@ export default function HomeAboutSection() {
                   </div>
                 </div>
 
-                {/* Primary Action Buttons */}
-                <div className="pt-2 flex flex-wrap items-center gap-3">
+                {/* Navigation Actions */}
+                <div className="pt-3 flex flex-wrap items-center gap-3">
                   <Link
                     to="/about"
                     className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 bg-charcoal-800 text-ivory text-xs sm:text-sm font-semibold tracking-wide hover:bg-charcoal-900 active:scale-95 transition-all shadow-sm touch-manipulation"
+                    style={{ color: '#f7f4ef' }}
                   >
                     <span>Meet the Founder &amp; Story</span>
                     <ArrowRight className="w-4 h-4 text-accent-light" strokeWidth={1.5} />
@@ -220,19 +216,8 @@ export default function HomeAboutSection() {
                     to="/services"
                     className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 border border-charcoal-800 text-charcoal-800 text-xs sm:text-sm font-medium tracking-wide hover:bg-charcoal-800 hover:text-ivory active:scale-95 transition-all touch-manipulation"
                   >
-                    Explore Services
+                    Explore Our Services
                   </Link>
-
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs sm:text-sm font-medium text-emerald-800 hover:text-emerald-900 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 active:scale-95 transition-all touch-manipulation"
-                    aria-label="Chat with HOMES24DESIGNS on WhatsApp"
-                  >
-                    <MessageCircle className="w-4 h-4 text-emerald-600" strokeWidth={1.8} />
-                    <span>WhatsApp</span>
-                  </a>
                 </div>
               </div>
             </Reveal>

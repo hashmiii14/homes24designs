@@ -5,6 +5,14 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 
 export default function PricingSection() {
+  const handlePlanClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const el = document.getElementById('consultation');
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="py-12 md:py-16 lg:py-18 bg-ivory overflow-hidden">
       <div className="container-lux">
@@ -87,6 +95,7 @@ export default function PricingSection() {
                   </div>
                   <Link
                     to="/contact"
+                    onClick={handlePlanClick}
                     className={`mt-5 inline-flex items-center justify-center w-full py-3.5 text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm active:scale-[0.98] touch-manipulation min-h-[46px] ${
                       plan.highlighted
                         ? 'bg-ivory text-charcoal-900 hover:bg-accent hover:text-ivory'

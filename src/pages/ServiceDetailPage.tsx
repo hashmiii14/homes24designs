@@ -97,8 +97,20 @@ export default function ServiceDetailPage() {
               </Reveal>
 
               <Reveal delay={200}>
-                <div className="mt-10">
-                  <Button to="/contact" variant="primary">Book a Consultation</Button>
+                <div className="mt-10 flex flex-wrap items-center gap-4">
+                  <a
+                    href="#consultation"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-95 touch-manipulation"
+                    style={{ color: '#f7f4ef' }}
+                  >
+                    <span>Request Service Consultation</span>
+                  </a>
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center text-xs text-charcoal-700 hover:text-accent font-medium transition-colors"
+                  >
+                    <span>Browse All Services &rarr;</span>
+                  </Link>
                 </div>
               </Reveal>
             </div>

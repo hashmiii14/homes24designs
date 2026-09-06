@@ -3,14 +3,46 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
 
 const values = [
-  { icon: Compass, title: 'Personalised Design', desc: 'Every home is designed around the people who live in it.' },
-  { icon: Ruler, title: 'Functional Planning', desc: 'Layouts that serve daily life, not just aesthetics.' },
-  { icon: Eye, title: 'Attention To Detail', desc: 'The small decisions that distinguish refined from ordinary.' },
-  { icon: Layers, title: 'Thoughtful Material Selection', desc: 'Materials chosen for how they feel, age and perform.' },
-  { icon: MessageSquare, title: 'Client-Focused Consultation', desc: 'We listen first, then design.' },
-  { icon: GitBranch, title: 'End-to-End Coordination', desc: 'From concept through to coordinated execution.' },
-  { icon: Home, title: 'Modern Residential Aesthetics', desc: 'Contemporary interiors with warmth and character.' },
-  { icon: MapPin, title: 'Delhi / NCR Understanding', desc: 'Local knowledge of climate, suppliers and context.' },
+  {
+    icon: Compass,
+    title: 'Personalised Spatial Planning',
+    desc: 'Custom floor layouts shaped around your family’s routine, natural light, and storage priorities — never cookie-cutter templates.',
+  },
+  {
+    icon: Ruler,
+    title: 'Ergonomics & Function',
+    desc: 'Considered work triangles, concealed storage, and spatial clearances that make everyday living fluid and clutter-free.',
+  },
+  {
+    icon: Eye,
+    title: 'Architectural Detailing',
+    desc: 'Precision shadow reveals, flush millwork joints, integrated ambient lighting, and seamless transitions that define true luxury.',
+  },
+  {
+    icon: Layers,
+    title: 'Tested Material Integrity',
+    desc: 'Calibrated BWR/BWP grade plywood, anti-fingerprint acrylics, and genuine branded hardware built to withstand Delhi’s seasonal humidity.',
+  },
+  {
+    icon: MessageSquare,
+    title: 'Transparent 100% BOQ',
+    desc: 'Detailed itemized schedules with honest brand specifications, zero ambiguous contractor extras, and milestone-linked billing.',
+  },
+  {
+    icon: GitBranch,
+    title: 'Direct Site Supervision',
+    desc: 'Proprietor Ehtashamul Islam personally visits sites to audit civil masonry, electrical routing, and carpentry alignment.',
+  },
+  {
+    icon: Home,
+    title: 'Warm Contemporary Aesthetic',
+    desc: 'Understated elegance combining crisp architectural lines with tactile textures, earthy tones, and warm layered illuminations.',
+  },
+  {
+    icon: MapPin,
+    title: 'Delhi NCR Expertise',
+    desc: 'Deep regional knowledge of local dust management, ventilation requirements, and direct access to premier Okhla & NCR vendor hubs.',
+  },
 ];
 
 export default function WhyUs() {

@@ -186,7 +186,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <div
-            className="mt-6 sm:mt-8 md:mt-10 flex flex-col xs:flex-row items-stretch xs:items-center gap-3 sm:gap-4"
+            className="mt-5 sm:mt-8 md:mt-10 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-4"
             style={
               isLoaded
                 ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
@@ -196,14 +196,14 @@ export default function Hero() {
             <Link
               to="/contact"
               onClick={handleConsultationClick}
-              className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-lg"
+              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-lg min-h-[42px] sm:min-h-[48px]"
             >
               Book a Consultation
             </Link>
             <Link
               to="/services"
               onClick={handleServicesClick}
-              className="inline-flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center"
+              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[42px] sm:min-h-[48px]"
             >
               Explore Our Services
             </Link>
@@ -211,7 +211,7 @@ export default function Hero() {
 
           {/* Location */}
           <div
-            className="mt-4 sm:mt-6 md:mt-10 flex items-center gap-2 text-stone-300"
+            className="mt-3.5 sm:mt-6 md:mt-10 flex items-center gap-2 text-stone-300"
             style={
               isLoaded
                 ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
