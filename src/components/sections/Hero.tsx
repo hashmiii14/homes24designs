@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-center sm:justify-end overflow-hidden pt-20 xs:pt-24 sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
+    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[76px] xs:pt-20 sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
       {/* Background image with cinematic warm luxury lighting */}
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -145,9 +145,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 container-lux w-full text-left">
         <div className="max-w-4xl lg:max-w-5xl text-left">
-          {/* Subtle Studio Pill Badge (Maintains vertical balance on phone screens) */}
+          {/* Subtle Studio Pill Badge (Positioned directly below header with crisp spacing) */}
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] xs:text-[11px] font-medium tracking-[0.14em] uppercase text-stone-200 mb-2.5 sm:mb-3.5 w-fit shadow-sm"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] xs:text-[11px] font-medium tracking-[0.14em] uppercase text-stone-200 mb-2 sm:mb-3.5 w-fit shadow-sm"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.02s cubic-bezier(0.16,1,0.3,1) both' }
@@ -160,7 +160,7 @@ export default function Hero() {
 
           {/* Architectural Studio Overline */}
           <div
-            className="flex items-center gap-2.5 sm:gap-3.5 mb-2.5 sm:mb-4 min-w-0"
+            className="flex items-center gap-2.5 sm:gap-3.5 mb-2 sm:mb-4 min-w-0"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.08s cubic-bezier(0.16,1,0.3,1) both' }
