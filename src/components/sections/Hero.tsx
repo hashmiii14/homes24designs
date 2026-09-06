@@ -128,7 +128,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-charcoal-900 min-h-screen min-h-[100dvh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[116px] xs:pt-[124px] sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
+    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[116px] xs:pt-[124px] sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
       {/* Background image with cinematic warm luxury lighting */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none select-none"

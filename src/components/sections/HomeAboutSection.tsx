@@ -17,11 +17,12 @@ export default function HomeAboutSection() {
     <section id="about" className="py-10 md:py-16 lg:py-20 bg-ivory relative overflow-hidden">
       {/* Subtle architectural background line accents */}
       <div
-        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        className="absolute inset-0 opacity-[0.025] pointer-events-none hidden sm:block"
         style={{
           backgroundImage:
             'linear-gradient(rgba(28,25,23,1) 1px, transparent 1px), linear-gradient(90deg, rgba(28,25,23,1) 1px, transparent 1px)',
           backgroundSize: '80px 80px',
+          contain: 'paint layout',
         }}
         aria-hidden="true"
       />
@@ -57,15 +58,20 @@ export default function HomeAboutSection() {
                 />
 
                 {/* Optimized Portrait */}
-                <div className="relative aspect-[4/5] overflow-hidden bg-stone-200 border border-stone-300 shadow-md">
+                <div
+                  className="relative aspect-[4/5] overflow-hidden bg-stone-200 border border-stone-300 shadow-md"
+                  style={{ transform: 'translate3d(0, 0, 0)' }}
+                >
                   <img
                     src="/ehtashamul-islam.webp"
                     alt="Ehtashamul Islam, Proprietor and Principal Designer at HOMES24DESIGNS"
                     width="800"
                     height="1000"
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-lux hover:scale-[1.02]"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="sync"
+                    className="w-full h-full object-cover object-top sm:transition-transform sm:duration-700 sm:ease-lux sm:hover:scale-[1.02]"
+                    style={{ transform: 'translate3d(0, 0, 0)' }}
                   />
                   <div
                     className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-charcoal-900/60 via-charcoal-900/20 to-transparent pointer-events-none"

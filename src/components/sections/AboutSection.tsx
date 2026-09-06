@@ -70,7 +70,10 @@ export default function AboutSection() {
                 />
 
                 {/* Optimized WebP Portrait with Eager Loading & High Fetch Priority */}
-                <div className="relative aspect-[4/5] overflow-hidden bg-stone-200 border border-stone-300/90 shadow-lg">
+                <div
+                  className="relative aspect-[4/5] overflow-hidden bg-stone-200 border border-stone-300/90 shadow-lg"
+                  style={{ transform: 'translate3d(0, 0, 0)' }}
+                >
                   <img
                     src="/ehtashamul-islam.webp"
                     alt="Ehtashamul Islam, Proprietor of HOMES24DESIGNS"
@@ -78,8 +81,9 @@ export default function AboutSection() {
                     height="1000"
                     loading="eager"
                     fetchPriority="high"
-                    decoding="async"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-lux hover:scale-[1.02]"
+                    decoding="sync"
+                    className="w-full h-full object-cover object-top sm:transition-transform sm:duration-700 sm:ease-lux sm:hover:scale-[1.02]"
+                    style={{ transform: 'translate3d(0, 0, 0)' }}
                   />
                   {/* Subtle vignette gradient at bottom */}
                   <div

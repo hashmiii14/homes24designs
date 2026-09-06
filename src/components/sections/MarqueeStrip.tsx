@@ -15,6 +15,7 @@ export default function MarqueeStrip() {
   return (
     <div
       className="w-full max-w-full bg-charcoal-900 border-y border-charcoal-700/80 py-3.5 sm:py-4.5 md:py-5 overflow-hidden select-none"
+      style={{ contain: 'paint layout', transform: 'translate3d(0, 0, 0)' }}
       role="region"
       aria-label="Brand highlights and credentials"
     >

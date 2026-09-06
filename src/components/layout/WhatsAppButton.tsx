@@ -5,7 +5,18 @@ export default function WhatsAppButton() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const handler = () => setVisible(window.scrollY > 300);
+    let ticking = false;
+    const handler = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isVisible = window.scrollY > 300;
+          setVisible((prev) => (prev !== isVisible ? isVisible : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    handler();
     window.addEventListener('scroll', handler, { passive: true });
     return () => window.removeEventListener('scroll', handler);
   }, []);
@@ -18,9 +29,10 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className={`fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 group transition-all duration-500 ease-lux ${
+      className={`fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 group transition-[opacity,transform] duration-300 ease-out ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
+      style={{ transform: 'translate3d(0, 0, 0)' }}
     >
       {/* Tooltip */}
       <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 whitespace-nowrap px-3 py-1.5 bg-charcoal-800 text-ivory text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none hidden md:block">
