@@ -54,7 +54,7 @@ export default function JournalArticlePage() {
       />
 
       {/* Header */}
-      <section className="pt-28 md:pt-36 pb-12 bg-stone-100">
+      <section className="pt-28 md:pt-36 pb-12 bg-stone-100 overflow-hidden">
         <div className="container-lux">
           <Breadcrumbs
             items={[
@@ -64,7 +64,7 @@ export default function JournalArticlePage() {
             ]}
           />
           <div className="mt-8 max-w-3xl">
-            <h1 className="text-display font-light text-charcoal-800">{post.title}</h1>
+            <h1 className="text-display font-light text-charcoal-800 break-words">{post.title}</h1>
             <div className="mt-5 flex items-center gap-4 text-xs text-stone-500">
               <span className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -84,7 +84,7 @@ export default function JournalArticlePage() {
       </section>
 
       {/* Featured image */}
-      <section className="pb-16 md:pb-20 bg-stone-100">
+      <section className="pb-16 md:pb-20 bg-stone-100 overflow-hidden">
         <div className="container-lux">
           <Reveal>
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
@@ -95,7 +95,7 @@ export default function JournalArticlePage() {
       </section>
 
       {/* Article content */}
-      <section className="py-16 md:py-24 bg-ivory">
+      <section className="py-16 md:py-24 bg-ivory overflow-hidden">
         <div className="container-lux">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <article className="lg:col-span-8 max-w-2xl">

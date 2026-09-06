@@ -14,7 +14,7 @@ export default function PortfolioGrid() {
   }, [filter]);
 
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-ivory">
+    <section className="py-12 md:py-16 lg:py-18 bg-ivory overflow-hidden">
       <div className="container-lux">
         <Reveal>
           <SectionHeading
@@ -91,7 +91,7 @@ export default function PortfolioGrid() {
       {/* Lightbox */}
       {lightbox !== null && filtered[lightbox] && (
         <div
-          className="fixed inset-0 z-[80] bg-charcoal-900/90 backdrop-blur-sm flex items-center justify-center p-6"
+          className="fixed inset-0 z-[80] bg-charcoal-900/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto overflow-x-hidden"
           onClick={() => setLightbox(null)}
         >
           <button

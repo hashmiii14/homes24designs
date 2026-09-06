@@ -100,7 +100,7 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-[60] lg:hidden transition-all duration-500 ${
+        className={`fixed inset-0 z-[60] lg:hidden transition-all duration-500 overflow-hidden ${
           menuOpen ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'
         }`}
       >

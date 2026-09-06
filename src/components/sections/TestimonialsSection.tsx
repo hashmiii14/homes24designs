@@ -6,7 +6,7 @@ import Reveal from '@/components/ui/Reveal';
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-14 md:py-20 lg:py-24 bg-stone-100/70 border-y border-stone-200/80">
+    <section id="testimonials" className="py-14 md:py-20 lg:py-24 bg-stone-100/70 border-y border-stone-200/80 overflow-hidden">
       <div className="container-lux">
         {/* Heading with Google Rating Proof */}
         <Reveal>

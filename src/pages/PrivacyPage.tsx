@@ -15,7 +15,7 @@ export default function PrivacyPage() {
         title="Privacy Policy"
         breadcrumbs={[{ label: 'Home', path: '/' }, { label: 'Privacy Policy' }]}
       />
-      <section className="py-16 md:py-24 bg-ivory">
+      <section className="py-16 md:py-24 bg-ivory overflow-hidden">
         <div className="container-lux">
           <div className="max-w-2xl space-y-6 text-sm leading-relaxed text-stone-600">
             <p className="text-base">

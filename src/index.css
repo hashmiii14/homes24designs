@@ -24,6 +24,9 @@
     -webkit-forced-color-adjust: none;
     background-color: #f7f4ef !important;
     color: #1c1917 !important;
+    overflow-x: hidden;
+    max-width: 100%;
+    overscroll-behavior-x: none;
   }
 
   body {
@@ -31,9 +34,20 @@
     background-color: #f7f4ef !important;
     color: #1c1917 !important;
     overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
     color-scheme: only light;
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
+    overscroll-behavior-x: none;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  #root {
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
   }
 
   @media (prefers-color-scheme: dark) {

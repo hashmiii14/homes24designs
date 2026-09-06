@@ -147,7 +147,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
     const waUrl = payload ? buildWhatsAppUrl(payload) : `https://wa.me/${siteConfig.whatsapp}`;
 
     return (
-      <section id="consultation" className="py-14 md:py-20 bg-stone-50 scroll-mt-20">
+      <section id="consultation" className="py-14 md:py-20 bg-stone-50 scroll-mt-20 overflow-hidden">
         <div className="container-lux">
           <div className="max-w-xl mx-auto bg-white p-8 sm:p-10 border border-stone-200 shadow-xl text-center">
             <div className="inline-flex items-center justify-center w-14 h-14 bg-emerald-100 rounded-full mb-5 text-emerald-700">
@@ -225,7 +225,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
   }
 
   return (
-    <section id="consultation" className="py-12 md:py-16 lg:py-18 bg-stone-50">
+    <section id="consultation" className="py-12 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
       <div className="container-lux">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 items-start">
           {/* Left: heading & trust card */}

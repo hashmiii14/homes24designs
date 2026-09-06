@@ -17,33 +17,33 @@ function AnimatedLine({
   let letterCounter = 0;
 
   return (
-    <span className={`inline-block ${className}`}>
+    <span className={`inline ${className}`}>
       {words.map((word, wIdx) => {
         const letters = word.split('');
         return (
-          <span key={wIdx} className="inline-block whitespace-nowrap">
-            {letters.map((char, cIdx) => {
-              const currentIdx = letterCounter++;
-              return (
-                <span
-                  key={cIdx}
-                  className="inline-block will-change-transform"
-                  style={
-                    isLoaded
-                      ? {
-                          animation: 'letterReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both',
-                          animationDelay: `${startDelay + currentIdx * 0.028}s`,
-                        }
-                      : { opacity: 0 }
-                  }
-                >
-                  {char}
-                </span>
-              );
-            })}
-            {wIdx < words.length - 1 && (
-              <span className="inline-block">&nbsp;</span>
-            )}
+          <span key={wIdx} className="inline">
+            <span className="inline-block whitespace-nowrap">
+              {letters.map((char, cIdx) => {
+                const currentIdx = letterCounter++;
+                return (
+                  <span
+                    key={cIdx}
+                    className="inline-block will-change-transform"
+                    style={
+                      isLoaded
+                        ? {
+                            animation: 'letterReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) both',
+                            animationDelay: `${startDelay + currentIdx * 0.028}s`,
+                          }
+                        : { opacity: 0 }
+                    }
+                  >
+                    {char}
+                  </span>
+                );
+              })}
+            </span>
+            {wIdx < words.length - 1 && ' '}
           </span>
         );
       })}
@@ -64,7 +64,7 @@ function AnimatedWords({
 }) {
   const words = text.split(' ');
   return (
-    <span className={`inline-block ${className}`}>
+    <span className={`inline ${className}`}>
       {words.map((word, wIdx) => (
         <span key={wIdx} className="inline-block whitespace-nowrap mr-[0.26em]">
           <span
@@ -147,15 +147,15 @@ export default function Hero() {
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Eyebrow */}
           <div
-            className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4 md:mb-5"
+            className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-5 min-w-0"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <span className="h-px w-6 sm:w-10 bg-accent-light shrink-0" />
-            <span className="text-[11px] sm:text-xs font-medium tracking-[0.18em] sm:tracking-[0.22em] uppercase text-accent-light">
+            <span className="h-px w-5 sm:w-10 bg-accent-light shrink-0" />
+            <span className="text-[10.5px] xs:text-[11px] sm:text-xs font-medium tracking-[0.14em] sm:tracking-[0.22em] uppercase text-accent-light leading-snug break-words">
               <AnimatedWords
                 text="Best Interior Designer in Okhla · New Delhi"
                 startDelay={0.08}
@@ -165,7 +165,7 @@ export default function Hero() {
           </div>
 
           {/* Heading */}
-          <h1 className="font-serif text-[2.05rem] xs:text-[2.4rem] sm:text-5xl md:text-6xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.1] sm:leading-[1.05] tracking-tight">
+          <h1 className="font-serif text-[1.8rem] xs:text-[2.35rem] sm:text-5xl md:text-6xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.12] sm:leading-[1.05] tracking-tight break-words">
             <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
             <br />
             <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />

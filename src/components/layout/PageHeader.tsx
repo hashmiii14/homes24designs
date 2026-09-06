@@ -19,7 +19,7 @@ export default function PageHeader({
   children,
 }: PageHeaderProps) {
   return (
-    <section className="pt-28 md:pt-36 pb-12 md:pb-16 bg-stone-100">
+    <section className="pt-28 md:pt-36 pb-12 md:pb-16 bg-stone-100 overflow-hidden">
       <div className="container-lux">
         <Breadcrumbs items={breadcrumbs} />
         <div className="mt-8 max-w-3xl">
@@ -31,7 +31,7 @@ export default function PageHeader({
               </span>
             </div>
           )}
-          <h1 className="text-display font-light text-charcoal-800">{title}</h1>
+          <h1 className="text-display font-light text-charcoal-800 break-words">{title}</h1>
           {description && (
             <p className="mt-5 text-base md:text-lg leading-relaxed text-stone-600">
               {description}

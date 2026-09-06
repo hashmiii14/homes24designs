@@ -53,7 +53,7 @@ export default function ServiceDetailPage() {
       />
 
       {/* Hero image */}
-      <section className="pb-20 md:pb-28 bg-ivory">
+      <section className="pb-12 md:pb-20 bg-ivory overflow-hidden">
         <div className="container-lux">
           <Reveal>
             <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
@@ -69,7 +69,7 @@ export default function ServiceDetailPage() {
       </section>
 
       {/* Content */}
-      <section className="py-20 md:py-28 bg-stone-50">
+      <section className="py-12 md:py-20 bg-stone-50 overflow-hidden">
         <div className="container-lux">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
             <div className="lg:col-span-2">
@@ -135,7 +135,7 @@ export default function ServiceDetailPage() {
 
       {/* Related articles */}
       {relatedArticles.length > 0 && (
-        <section className="py-20 md:py-28 bg-ivory">
+        <section className="py-12 md:py-20 bg-ivory overflow-hidden">
           <div className="container-lux">
             <Reveal>
               <h2 className="text-section font-light text-charcoal-800 mb-10">

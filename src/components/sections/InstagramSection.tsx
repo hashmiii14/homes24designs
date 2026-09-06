@@ -41,7 +41,7 @@ const instagramPosts: InstagramPost[] = [
 
 export default function InstagramSection() {
   return (
-    <section className="py-12 md:py-16 lg:py-18 bg-stone-100/70 border-t border-stone-200/60">
+    <section className="py-12 md:py-16 lg:py-18 bg-stone-100/70 border-t border-stone-200/60 overflow-hidden">
       <div className="container-lux">
         <Reveal>
           <SectionHeading

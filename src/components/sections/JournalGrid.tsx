@@ -60,7 +60,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
   }, [selectedCategory, limit]);
 
   return (
-    <section id="journal" className="py-12 md:py-16 lg:py-18 bg-stone-50">
+    <section id="journal" className="py-12 md:py-16 lg:py-18 bg-stone-50 overflow-hidden">
       <div className="container-lux">
         {/* Section Heading — Editorial & Balanced */}
         {showHeading && (

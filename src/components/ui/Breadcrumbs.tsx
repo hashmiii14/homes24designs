@@ -28,7 +28,7 @@ export default function Breadcrumbs({ items, jsonLd = true }: BreadcrumbsProps) 
       {jsonLd && (
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
       )}
-      <nav aria-label="Breadcrumb" className="flex items-center flex-wrap gap-1.5 text-sm">
+      <nav aria-label="Breadcrumb" className="flex items-center flex-wrap gap-1.5 text-xs sm:text-sm">
         {items.map((item, i) => (
           <span key={i} className="flex items-center gap-1.5">
             {item.path && i < items.length - 1 ? (
@@ -36,7 +36,7 @@ export default function Breadcrumbs({ items, jsonLd = true }: BreadcrumbsProps) 
                 {item.label}
               </Link>
             ) : (
-              <span className={i === items.length - 1 ? 'text-charcoal-700' : 'text-stone-500'}>
+              <span className={`${i === items.length - 1 ? 'text-charcoal-700 font-medium' : 'text-stone-500'} break-words`}>
                 {item.label}
               </span>
             )}

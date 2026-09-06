@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className={`fixed bottom-6 right-6 z-40 group transition-all duration-500 ease-lux ${
+      className={`fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 group transition-all duration-500 ease-lux ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
