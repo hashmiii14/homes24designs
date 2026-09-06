@@ -188,9 +188,9 @@ export default function Hero() {
             />
           </p>
 
-          {/* Buttons: Stacked on mobile ("Explore Our Services" below "Book a Consultation"), inline on desktop */}
+          {/* Buttons: Stacked and compact on mobile ("Explore Our Services" below "Book a Consultation"), inline on desktop */}
           <div
-            className="mt-4 sm:mt-7 md:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 max-w-xs sm:max-w-none"
+            className="mt-3.5 sm:mt-7 md:mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4"
             style={
               isLoaded
                 ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
@@ -200,14 +200,14 @@ export default function Hero() {
             <Link
               to="/contact"
               onClick={handleConsultationClick}
-              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-md min-h-[40px] sm:min-h-[48px] w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-4 py-1.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-[11px] sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-sm min-h-[34px] sm:min-h-[48px] w-auto"
             >
               Book a Consultation
             </Link>
             <Link
               to="/services"
               onClick={handleServicesClick}
-              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[40px] sm:min-h-[48px] w-full sm:w-auto"
+              className="inline-flex items-center justify-center px-4 py-1.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-[11px] sm:text-sm font-medium tracking-wider uppercase transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[34px] sm:min-h-[48px] w-auto"
             >
               Explore Our Services
             </Link>
