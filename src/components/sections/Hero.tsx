@@ -28,7 +28,7 @@ function AnimatedLine({
                 return (
                   <span
                     key={cIdx}
-                    className="inline-block will-change-transform"
+                    className="inline-block"
                     style={
                       isLoaded
                         ? {
@@ -68,7 +68,7 @@ function AnimatedWords({
       {words.map((word, wIdx) => (
         <span key={wIdx} className="inline-block whitespace-nowrap mr-[0.26em]">
           <span
-            className="inline-block will-change-transform"
+            className="inline-block"
             style={
               isLoaded
                 ? {
@@ -128,16 +128,22 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[76px] xs:pt-20 sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
+    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[96px] xs:pt-[104px] sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
       {/* Background image with cinematic warm luxury lighting */}
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          src="/images/hero/hero-bg.jpg"
-          alt="Luxury architectural home interior design by HOMES24DESIGNS in Delhi"
-          className="w-full h-full object-cover object-[center_35%] sm:object-center"
-          fetchPriority="high"
-          decoding="async"
-        />
+        <picture>
+          <source media="(max-width: 640px)" srcSet="/images/hero/hero-bg-mobile.webp" type="image/webp" />
+          <source media="(max-width: 640px)" srcSet="/images/hero/hero-bg-mobile.jpg" type="image/jpeg" />
+          <source srcSet="/images/hero/hero-bg.webp" type="image/webp" />
+          <img
+            src="/images/hero/hero-bg.jpg"
+            alt="Luxury architectural home interior design by HOMES24DESIGNS in Delhi"
+            className="w-full h-full object-cover object-[center_35%] sm:object-center"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/55 to-charcoal-900/35" />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/90 via-charcoal-900/40 to-transparent" />
       </div>
