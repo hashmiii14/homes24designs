@@ -43,20 +43,24 @@ export function useScrollPosition() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    let ticking = false;
     const handler = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const isScrolled = window.scrollY > 40;
-          setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
-          ticking = false;
-        });
-        ticking = true;
-      }
+      const y =
+        window.scrollY ||
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
+      setScrolled(y > 20);
     };
+
     handler();
     window.addEventListener('scroll', handler, { passive: true });
-    return () => window.removeEventListener('scroll', handler);
+    document.addEventListener('scroll', handler, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handler);
+      document.removeEventListener('scroll', handler);
+    };
   }, []);
 
   return scrolled;
