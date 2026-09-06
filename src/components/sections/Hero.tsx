@@ -233,12 +233,38 @@ export default function Hero() {
             </span>
           </div>
 
+          {/* Animated Location Pin - Positioned above buttons */}
+          <div
+            className="mt-2.5 sm:mt-3.5 flex items-center gap-2 text-stone-300/90"
+            style={
+              isLoaded
+                ? { animation: 'fadeIn 0.8s 1.25s cubic-bezier(0.16,1,0.3,1) both' }
+                : { opacity: 0 }
+            }
+          >
+            <span className="relative flex items-center justify-center w-5 h-5 shrink-0">
+              <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-accent opacity-75" />
+              <MapPin
+                className="w-4 h-4 text-accent-light shrink-0 relative z-10 animate-bounce"
+                style={{ animationDuration: '2.4s' }}
+                strokeWidth={1.75}
+              />
+            </span>
+            <span className="text-xs sm:text-sm tracking-wide font-medium">
+              <AnimatedWords
+                text="Okhla, Jamia Nagar, New Delhi"
+                startDelay={1.25}
+                isLoaded={isLoaded}
+              />
+            </span>
+          </div>
+
           {/* Buttons: Stacked and compact on mobile ("Explore Our Services" below "Book a Consultation"), inline on desktop */}
           <div
             className="mt-3.5 sm:mt-6 md:mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4"
             style={
               isLoaded
-                ? { animation: 'fadeUp 0.8s 1.25s cubic-bezier(0.16,1,0.3,1) both' }
+                ? { animation: 'fadeUp 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
@@ -256,32 +282,6 @@ export default function Hero() {
             >
               Explore Our Services
             </Link>
-          </div>
-
-          {/* Animated Location Pin */}
-          <div
-            className="mt-3 sm:mt-5 md:mt-7 flex items-center gap-2 text-stone-300/90"
-            style={
-              isLoaded
-                ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
-                : { opacity: 0 }
-            }
-          >
-            <span className="relative flex items-center justify-center w-5 h-5 shrink-0">
-              <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-accent opacity-75" />
-              <MapPin
-                className="w-4 h-4 text-accent-light shrink-0 relative z-10 animate-bounce"
-                style={{ animationDuration: '2.4s' }}
-                strokeWidth={1.75}
-              />
-            </span>
-            <span className="text-xs sm:text-sm tracking-wide font-medium">
-              <AnimatedWords
-                text="Okhla, Jamia Nagar, New Delhi"
-                startDelay={1.4}
-                isLoaded={isLoaded}
-              />
-            </span>
           </div>
         </div>
       </div>
