@@ -115,7 +115,7 @@ export default function StatsCounter() {
   return (
     <section
       ref={sectionRef}
-      className="bg-stone-50 border-b border-stone-200/80 py-6 sm:py-10 lg:py-14 overflow-hidden"
+      className="bg-stone-50 border-y border-stone-200/80 py-8 sm:py-12 lg:py-16 overflow-hidden"
       aria-label="Performance and trust metrics"
     >
       <div className="container-lux">

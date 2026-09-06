@@ -10,11 +10,16 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
     const el = ref.current;
     if (!el) return;
 
-    // Immediately reveal elements that are already within or near the visible viewport on mount
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight + 80) {
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setIsVisible(true);
       return;
+    }
+
+    // Elements already in visible viewport animate in with a slight stagger
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      const timer = setTimeout(() => setIsVisible(true), 60);
+      return () => clearTimeout(timer);
     }
 
     const observer = new IntersectionObserver(
@@ -24,7 +29,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.05, rootMargin: '40px 0px 40px 0px', ...options }
+      { threshold: 0.08, rootMargin: '0px 0px -20px 0px', ...options }
     );
 
     observer.observe(el);

@@ -128,18 +128,18 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[76svh] sm:min-h-[85vh] lg:min-h-[88vh] max-h-[920px] flex flex-col justify-center sm:justify-end overflow-hidden pt-16 sm:pt-24 md:pt-28 lg:pt-32 pb-6 sm:pb-12 lg:pb-16">
+    <section className="relative min-h-[66svh] sm:min-h-[82vh] lg:min-h-[86vh] max-h-[920px] flex flex-col justify-end overflow-hidden pt-20 sm:pt-28 md:pt-32 pb-7 sm:pb-12 lg:pb-16">
       {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <img
           src="/images/hero/hero-bg.jpg"
           alt="Luxury architectural home interior design by HOMES24DESIGNS in Delhi"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-[center_35%] sm:object-center"
           fetchPriority="high"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/90 via-charcoal-900/40 to-charcoal-900/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/80 via-charcoal-900/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/50 to-charcoal-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/85 via-charcoal-900/40 to-transparent" />
       </div>
 
       {/* Content */}
@@ -147,7 +147,7 @@ export default function Hero() {
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Eyebrow */}
           <div
-            className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 md:mb-5 min-w-0"
+            className="flex items-center gap-2 sm:gap-3 mb-2.5 sm:mb-4 min-w-0"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.05s cubic-bezier(0.16,1,0.3,1) both' }
@@ -164,19 +164,23 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Heading */}
-          <h1 className="font-serif text-[1.8rem] xs:text-[2.35rem] sm:text-5xl md:text-6xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.12] sm:leading-[1.05] tracking-tight break-words">
-            <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
-            <br />
-            <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />
-            <br />
-            <span className="italic text-accent-light">
-              <AnimatedLine text="You Live." startDelay={0.75} isLoaded={isLoaded} />
+          {/* Heading - Large, Grand & Editorial inspired by Luxe */}
+          <h1 className="font-serif text-[2.5rem] xs:text-[3.15rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6rem] font-light text-ivory leading-[1.04] sm:leading-[1.02] tracking-tight break-words">
+            <span className="block overflow-hidden py-0.5">
+              <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
+            </span>
+            <span className="block overflow-hidden py-0.5">
+              <AnimatedLine text="Around The Way" startDelay={0.45} isLoaded={isLoaded} />
+            </span>
+            <span className="block overflow-hidden py-0.5">
+              <span className="italic text-accent-light font-normal">
+                <AnimatedLine text="You Live." startDelay={0.75} isLoaded={isLoaded} />
+              </span>
             </span>
           </h1>
 
           {/* Description */}
-          <p className="mt-3.5 sm:mt-6 md:mt-8 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
+          <p className="mt-3 sm:mt-5 md:mt-7 text-xs sm:text-base md:text-lg leading-relaxed text-stone-200 max-w-xl">
             <AnimatedWords
               text="A thoughtful combination of design, functionality, material selection and personalised planning for contemporary homes in Delhi and Delhi NCR."
               startDelay={0.95}
@@ -184,9 +188,9 @@ export default function Hero() {
             />
           </p>
 
-          {/* Buttons */}
+          {/* Buttons: Stacked on mobile ("Explore Our Services" below "Book a Consultation"), inline on desktop */}
           <div
-            className="mt-4 sm:mt-8 md:mt-10 flex flex-wrap items-center gap-2.5 sm:gap-4"
+            className="mt-4 sm:mt-7 md:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 max-w-xs sm:max-w-none"
             style={
               isLoaded
                 ? { animation: 'fadeUp 0.8s 1.2s cubic-bezier(0.16,1,0.3,1) both' }
@@ -196,30 +200,37 @@ export default function Hero() {
             <Link
               to="/contact"
               onClick={handleConsultationClick}
-              className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-md min-h-[38px] sm:min-h-[48px]"
+              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 bg-ivory text-charcoal-900 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 hover:bg-accent hover:text-ivory active:scale-95 touch-manipulation text-center shadow-md min-h-[40px] sm:min-h-[48px] w-full sm:w-auto"
             >
               Book a Consultation
             </Link>
             <Link
               to="/services"
               onClick={handleServicesClick}
-              className="inline-flex items-center justify-center px-4 py-2 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[38px] sm:min-h-[48px]"
+              className="inline-flex items-center justify-center px-5 py-2.5 sm:px-8 sm:py-3.5 border border-ivory/60 text-ivory text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 hover:bg-ivory hover:text-charcoal-900 active:scale-95 touch-manipulation text-center min-h-[40px] sm:min-h-[48px] w-full sm:w-auto"
             >
               Explore Our Services
             </Link>
           </div>
 
-          {/* Location */}
+          {/* Animated Location Pin */}
           <div
-            className="mt-2.5 sm:mt-6 md:mt-10 flex items-center gap-1.5 sm:gap-2 text-stone-300/90"
+            className="mt-3 sm:mt-5 md:mt-8 flex items-center gap-2 text-stone-300/90"
             style={
               isLoaded
                 ? { animation: 'fadeIn 0.8s 1.35s cubic-bezier(0.16,1,0.3,1) both' }
                 : { opacity: 0 }
             }
           >
-            <MapPin className="w-3.5 h-3.5 text-accent-light shrink-0" strokeWidth={1.5} />
-            <span className="text-[11px] sm:text-sm tracking-wide font-medium">
+            <span className="relative flex items-center justify-center w-5 h-5 shrink-0">
+              <span className="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-accent opacity-75" />
+              <MapPin
+                className="w-4 h-4 text-accent-light shrink-0 relative z-10 animate-bounce"
+                style={{ animationDuration: '2.4s' }}
+                strokeWidth={1.75}
+              />
+            </span>
+            <span className="text-xs sm:text-sm tracking-wide font-medium">
               <AnimatedWords
                 text="Okhla, Jamia Nagar, New Delhi"
                 startDelay={1.4}

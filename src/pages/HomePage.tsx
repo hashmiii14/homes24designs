@@ -110,10 +110,10 @@ export default function HomePage() {
       <Hero />
       <MarqueeStrip />
       <TrustStrip />
-      <StatsCounter />
       <HomeAboutSection />
       <ServicesGrid />
       <PortfolioGrid />
+      <StatsCounter />
       <WhyUs />
       <ProcessTimeline />
       <PricingSection />

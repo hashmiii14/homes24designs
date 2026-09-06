@@ -3,7 +3,7 @@ import {
   ShieldCheck,
   FileCheck,
   Clock,
-  Sparkles,
+  Wrench,
   MapPin,
   Quote,
   ArrowRight,
@@ -174,7 +174,7 @@ export default function HomeAboutSection() {
 
                   <div className="p-3.5 bg-white border border-stone-200/90 shadow-sm flex items-start gap-3">
                     <div className="w-8 h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                      <Sparkles className="w-4 h-4" strokeWidth={1.75} />
+                      <Wrench className="w-4 h-4" strokeWidth={1.75} />
                     </div>
                     <div>
                       <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
