@@ -129,7 +129,7 @@ export default function StatsCounter() {
             return (
               <div
                 key={stat.label}
-                className={`flex flex-col ${
+                className={`flex flex-col min-w-0 ${
                   idx > 0 ? 'lg:pl-8 xl:pl-10' : ''
                 } ${idx < statsData.length - 1 ? 'lg:pr-8 xl:pr-10' : ''}`}
               >

@@ -150,6 +150,11 @@ export default function TestimonialsSection() {
         {/* Interactive Carousel Track */}
         <div
           className="relative w-full overflow-hidden"
+          style={{
+            contain: 'paint layout',
+            isolation: 'isolate',
+            WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+          }}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={handleTouchStart}

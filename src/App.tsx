@@ -29,7 +29,7 @@ export default function App() {
         <ScrollToTop />
         <Loader />
         <Header />
-        <main id="main-content" tabIndex={-1} className="outline-none">
+        <main id="main-content" tabIndex={-1} className="outline-none overflow-x-hidden w-full max-w-full">
           <Suspense fallback={<div className="min-h-[50vh] bg-ivory" />}>
             <Routes>
               <Route path="/" element={<HomePage />} />

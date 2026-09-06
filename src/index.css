@@ -22,24 +22,28 @@
     -webkit-forced-color-adjust: none;
     background-color: #f7f4ef !important;
     color: #1c1917 !important;
-    overflow-x: clip;
+    overflow-x: hidden;
     max-width: 100%;
+    width: 100%;
+    overscroll-behavior-x: none;
   }
 
   body {
     font-family: 'Inter', system-ui, sans-serif;
     background-color: #f7f4ef !important;
     color: #1c1917 !important;
-    overflow-x: clip;
+    overflow-x: hidden;
     max-width: 100%;
+    width: 100%;
     position: relative;
     color-scheme: only light;
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
-    touch-action: pan-y pinch-zoom;
+    overscroll-behavior-x: none;
+    touch-action: pan-y;
   }
 
-  #root {
+  #root, #main-content {
     overflow-x: hidden;
     max-width: 100%;
     width: 100%;

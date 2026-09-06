@@ -128,7 +128,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden pt-[116px] xs:pt-[124px] sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16">
+    <section
+      className="relative w-full max-w-full bg-charcoal-900 min-h-screen min-h-[100svh] sm:min-h-[85vh] lg:min-h-[88vh] xl:min-h-[92vh] max-h-[960px] flex flex-col justify-start sm:justify-end overflow-hidden overflow-x-hidden pt-[116px] xs:pt-[124px] sm:pt-28 md:pt-32 pb-8 xs:pb-10 sm:pb-12 lg:pb-16"
+      style={{ isolation: 'isolate' }}
+    >
       {/* Background image with cinematic warm luxury lighting */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none select-none"
@@ -146,7 +149,7 @@ export default function Hero() {
           <source srcSet="/images/hero/hero-bg.webp" type="image/webp" />
           <img
             src="/images/hero/hero-bg.jpg"
-            alt="Luxury architectural home interior design by HOMES24DESIGNS in Delhi"
+            alt="Luxury modern living room interior in South Delhi designed by HOMES24DESIGNS"
             className="w-full h-full object-cover object-[center_35%] sm:object-center block"
             loading="eager"
             fetchPriority="high"
@@ -164,11 +167,11 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-lux w-full text-left">
+      <div className="relative z-10 container-lux w-full max-w-full text-left overflow-hidden">
         <div className="max-w-4xl lg:max-w-5xl text-left">
           {/* Subtle Studio Pill Badge (Positioned below header with elegant spacing) */}
           <div
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 sm:bg-white/10 sm:backdrop-blur-md border border-white/15 text-[10px] xs:text-[11px] font-medium tracking-[0.14em] uppercase text-stone-200 mb-2.5 sm:mb-3.5 w-fit shadow-sm"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-charcoal-950/80 sm:bg-white/10 sm:backdrop-blur-md border border-white/15 text-[10px] xs:text-[11px] font-medium tracking-[0.14em] uppercase text-stone-200 mb-2.5 sm:mb-3.5 max-w-full shadow-sm"
             style={
               isLoaded
                 ? { animation: 'fadeDown 0.6s 0.02s cubic-bezier(0.16,1,0.3,1) both' }
@@ -176,7 +179,7 @@ export default function Hero() {
             }
           >
             <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-            <span>Luxury Turnkey Residential Studio · Delhi NCR</span>
+            <span className="truncate xs:whitespace-normal">Luxury Turnkey Residential Studio · Delhi NCR</span>
           </div>
 
           {/* Architectural Studio Overline */}
@@ -199,7 +202,7 @@ export default function Hero() {
           </div>
 
           {/* Headline - Editorial Serif */}
-          <h1 className="font-serif text-[2.45rem] xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.05] sm:leading-[1.02] tracking-tight break-words">
+          <h1 className="font-serif text-[2.2rem] xs:text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] xl:text-[5.75rem] font-light text-ivory leading-[1.05] sm:leading-[1.02] tracking-tight break-words max-w-full">
             <span className="block overflow-hidden py-0.5">
               <AnimatedLine text="Interiors Designed" startDelay={0.15} isLoaded={isLoaded} />
             </span>
@@ -250,7 +253,7 @@ export default function Hero() {
 
           {/* Studio Location Stamp */}
           <div
-            className="mt-2.5 sm:mt-3.5 flex items-center gap-2 text-stone-300/90 text-xs"
+            className="mt-2.5 sm:mt-3.5 flex items-center gap-2 text-stone-300/90 text-xs max-w-full"
             style={
               isLoaded
                 ? { animation: 'fadeIn 0.8s 1.1s cubic-bezier(0.16,1,0.3,1) both' }
@@ -258,7 +261,7 @@ export default function Hero() {
             }
           >
             <MapPin className="w-3.5 h-3.5 text-accent-light shrink-0" strokeWidth={1.5} />
-            <span className="tracking-wide text-xs">Studio: Batla House · Jamia Nagar, Okhla · New Delhi</span>
+            <span className="tracking-wide text-xs break-words">Studio: Batla House · Jamia Nagar, Okhla · New Delhi</span>
           </div>
 
           {/* Action CTAs: Petite and compact on mobile (w-auto, not stretched!) */}

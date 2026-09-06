@@ -14,12 +14,19 @@ const marqueeItems = [
 export default function MarqueeStrip() {
   return (
     <div
-      className="w-full max-w-full bg-charcoal-900 border-y border-charcoal-700/80 py-3.5 sm:py-4.5 md:py-5 overflow-hidden select-none"
-      style={{ contain: 'paint layout', transform: 'translate3d(0, 0, 0)' }}
+      className="relative w-full max-w-full bg-charcoal-900 border-y border-charcoal-700/80 py-3.5 sm:py-4.5 md:py-5 overflow-hidden select-none"
+      style={{
+        contain: 'paint layout',
+        isolation: 'isolate',
+        WebkitMaskImage: '-webkit-radial-gradient(white, black)',
+      }}
       role="region"
       aria-label="Brand highlights and credentials"
     >
-      <div className="w-full overflow-hidden">
+      <div
+        className="relative w-full overflow-hidden"
+        style={{ isolation: 'isolate', contain: 'paint' }}
+      >
         <div className="animate-marquee flex items-center">
           {/* First loop instance */}
           <div className="flex items-center shrink-0">
