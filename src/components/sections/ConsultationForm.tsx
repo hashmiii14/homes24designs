@@ -437,7 +437,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                       type="text"
                       name="location"
                       id="location"
-                      placeholder="e.g. Jasola, GK, Saket, Noida"
+                      placeholder="e.g. Noida"
                       onChange={() => clearError('location')}
                       className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Location"

@@ -177,7 +177,7 @@ export default function HomeAboutSection() {
                         Direct Site Supervision
                       </h4>
                       <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                        On-site quality audits cover civil masonry, electrical routing, and carpentry alignment — from layout to handover.
+                        Designer Ehtasham personally visits sites to audit civil masonry, electrical routing, and carpentry alignment — from layout to handover.
                       </p>
                     </div>
                   </div>

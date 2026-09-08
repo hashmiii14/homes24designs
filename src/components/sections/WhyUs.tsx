@@ -31,7 +31,7 @@ const values = [
   {
     icon: GitBranch,
     title: 'Direct Site Supervision',
-    desc: 'On-site quality audits cover civil masonry, electrical routing, and carpentry alignment — from layout to handover.',
+    desc: 'Designer Ehtasham personally visits sites to audit civil masonry, electrical routing, and carpentry alignment — from layout to handover.',
   },
   {
     icon: Home,
@@ -41,7 +41,7 @@ const values = [
   {
     icon: MapPin,
     title: 'Delhi NCR Expertise',
-    desc: 'Deep regional knowledge of local dust management and ventilation requirements.',
+    desc: 'Deep regional knowledge of local dust management, ventilation requirements, and direct access to premier Delhi NCR vendor hubs.',
   },
 ];
 
