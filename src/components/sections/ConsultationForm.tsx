@@ -328,7 +328,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-stone-600">
                     <div className="p-2.5 bg-stone-50 border border-stone-200/70">
                       <span className="font-semibold text-charcoal-900 block text-xs">3D Realistic Renders</span>
-                      <span className="text-[10.5px] text-stone-500">Spatial walkthrough before carpentry</span>
+                      <span className="text-[10.5px] text-stone-500">Spatial walkthrough before execution</span>
                     </div>
                     <div className="p-2.5 bg-stone-50 border border-stone-200/70">
                       <span className="font-semibold text-charcoal-900 block text-xs">100% Itemized BOQ</span>
