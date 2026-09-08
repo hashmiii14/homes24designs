@@ -77,8 +77,7 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-light shrink-0" strokeWidth={1.5} />
                 <span className="text-sm text-stone-400 leading-relaxed">
                   {siteConfig.address.line1}, {siteConfig.address.line2},{' '}
-                  {siteConfig.address.city}, {siteConfig.address.state}{' '}
-                  {siteConfig.address.pincode}, {siteConfig.address.country}
+                  {siteConfig.address.state} {siteConfig.address.pincode}, {siteConfig.address.country}
                 </span>
               </li>
               <li className="flex items-center gap-2.5">

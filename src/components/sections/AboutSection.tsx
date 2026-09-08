@@ -3,7 +3,6 @@ import {
   ShieldCheck,
   FileCheck,
   Building2,
-  MapPin,
   Compass,
   Palette,
   Layers,
@@ -13,6 +12,7 @@ import {
   CheckCircle2,
   ArrowRight,
   Clock,
+  MapPin,
 } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import { siteConfig } from '@/data/siteConfig';
@@ -24,14 +24,14 @@ export default function AboutSection() {
   )}`;
 
   return (
-    <section id="about" className="py-10 md:py-14 bg-ivory relative overflow-hidden">
-      {/* Subtle architectural background line accents */}
+    <section id="story" className="py-12 md:py-18 lg:py-22 bg-ivory relative overflow-hidden">
+      {/* Subtle blueprint grid accent */}
       <div
-        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(28,25,23,1) 1px, transparent 1px), linear-gradient(90deg, rgba(28,25,23,1) 1px, transparent 1px)',
-          backgroundSize: '80px 80px',
+            'linear-gradient(#2c2926 1px, transparent 1px), linear-gradient(90deg, #2c2926 1px, transparent 1px)',
+          backgroundSize: '48px 48px',
         }}
         aria-hidden="true"
       />
@@ -42,7 +42,7 @@ export default function AboutSection() {
           <div className="flex items-center gap-3 mb-2.5">
             <span className="h-px w-8 bg-accent" />
             <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-              Best Interior Designer in Okhla, New Delhi · Founder Profile
+              Best Interior Designer in New Delhi · Founder Profile
             </span>
           </div>
           <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
@@ -69,43 +69,16 @@ export default function AboutSection() {
                   aria-hidden="true"
                 />
 
-                {/* Optimized WebP Portrait with Eager Loading & High Fetch Priority */}
-                <div
-                  className="relative aspect-[4/5] overflow-hidden bg-stone-200 border border-stone-300/90 shadow-lg"
-                  style={{ transform: 'translate3d(0, 0, 0)' }}
-                >
-                  <img
-                    src="/ehtashamul-islam.webp"
-                    alt="Ehtasham, Principal Designer of HOMES24DESIGNS"
-                    width="800"
-                    height="1000"
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="sync"
-                    className="w-full h-full object-cover object-top sm:transition-transform sm:duration-700 sm:ease-lux sm:hover:scale-[1.02]"
-                    style={{ transform: 'translate3d(0, 0, 0)' }}
-                  />
-                  {/* Subtle vignette gradient at bottom */}
-                  <div
-                    className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-charcoal-900/50 via-charcoal-900/10 to-transparent pointer-events-none"
-                    aria-hidden="true"
-                  />
-                </div>
-
-                {/* Floating Nameplate Badge */}
-                <div className="mt-3 p-4 bg-white border border-stone-200/90 shadow-sm">
+                {/* Nameplate Badge */}
+                <div className="p-6 bg-white border border-stone-200/90 shadow-sm">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-accent block">
-                        Principal Designer
+                        Designer
                       </span>
-                      <h3 className="text-lg sm:text-xl font-normal text-charcoal-900 font-serif tracking-wide mt-0.5">
+                      <h3 className="text-xl sm:text-2xl font-normal text-charcoal-900 font-serif tracking-wide mt-1">
                         EHTASHAM
                       </h3>
-                      <p className="text-xs text-stone-500 mt-1 flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
-                        <span>New Delhi</span>
-                      </p>
                     </div>
                     <div className="flex flex-col items-end text-right shrink-0">
                       <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400">
@@ -116,17 +89,17 @@ export default function AboutSection() {
                   </div>
                 </div>
 
-                {/* Studio Philosophy Quote — Perfectly anchors the left column */}
-                <div className="mt-3 p-4 bg-stone-50 border border-stone-200/80">
-                  <Quote className="w-4 h-4 text-accent/60 mb-1.5" strokeWidth={1.5} />
-                  <p className="text-xs sm:text-[13px] text-stone-700 italic leading-relaxed font-serif">
+                {/* Studio Philosophy Quote — Anchors the left column */}
+                <div className="mt-4 p-5 sm:p-6 bg-stone-50 border border-stone-200/80">
+                  <Quote className="w-4 h-4 text-accent/60 mb-2" strokeWidth={1.5} />
+                  <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed font-serif">
                     &ldquo;Good interior design is never about imposing a fleeting trend. It is about
                     understanding how a family lives, cooks, and unwinds, and shaping spaces that feel
                     effortless, durable, and distinctly personal.&rdquo;
                   </p>
-                  <div className="mt-2.5 pt-2.5 border-t border-stone-200/70 flex items-center justify-between text-[11px] text-stone-500">
-                    <span>Ehtasham</span>
-                    <span className="text-accent font-medium">HOMES24DESIGNS · Delhi</span>
+                  <div className="mt-3.5 pt-2.5 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                    <span className="font-medium text-charcoal-800">Ehtasham</span>
+                    <span className="text-accent font-medium">HOMES24DESIGNS · Delhi NCR</span>
                   </div>
                 </div>
               </div>
@@ -153,37 +126,19 @@ export default function AboutSection() {
 
                 {/* Business Introduction */}
                 <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is an established design firm based in New Delhi. Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
+                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as one of the best interior designers in New Delhi, dedicated to shaping spaces that balance quiet elegance with practical daily life.
                 </p>
 
                 {/* Founder Story */}
                 <div className="p-5 bg-white border border-stone-200/90 shadow-sm space-y-3">
                   <div className="flex items-center justify-between border-b border-stone-100 pb-2">
                     <span className="text-xs font-semibold tracking-wider uppercase text-accent">
-                      Leadership Profile
+                      FOUNDER PROFILE
                     </span>
                     <span className="text-xs text-stone-500">Design Studio</span>
                   </div>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    Led by the principal designer <strong className="font-semibold text-charcoal-800">Ehtasham</strong>, we turn apartments, villas, contemporary homes, commercial spaces, and offices into functional sanctuaries. Guided by an
-                    appreciation for spatial balance, practical ergonomics, and material integrity, he leads each
-                    project with direct personal involvement and meticulous attention to detail.
-                  </p>
-                  <div className="p-3 bg-stone-50 border-l-2 border-accent text-xs sm:text-sm font-serif italic text-charcoal-900">
-                    &ldquo;We focus on how your space makes you feel.&rdquo;
-                  </div>
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    At HOMES24DESIGNS, our design philosophy is anchored in understanding each customer&apos;s distinct
-                    vision. We believe that exceptional residential interiors do not emerge from rigid templates, but
-                    from carefully listening to how you live. Every home has its own natural rhythm—shaped by family
-                    routines, storage habits, culinary traditions, and personal aesthetics. Our role is to design spaces
-                    that support and elevate that rhythm rather than working against it.
-                  </p>
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    By prioritizing transparent consultation, durable material selection, and honest execution over
-                    superficial ornamentation, HOMES24DESIGNS builds lasting customer relationships grounded in trust.
-                    Every space is approached as a dedicated partnership, resulting in spaces that feel refined,
-                    comfortable, and enduringly functional.
+                    <strong className="font-semibold text-charcoal-800">Ehtasham</strong> is the principal designer of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space planning, and personalized residential interior solutions, commercial spaces and office spaces. Guided by an appreciation for spatial balance, practical ergonomics, and material integrity, he leads each project with direct personal involvement and meticulous attention to detail.
                   </p>
                 </div>
 
@@ -471,7 +426,7 @@ export default function AboutSection() {
                 <span className="text-[11px] text-stone-400 font-medium">Verified Compliance</span>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="p-3.5 bg-white border border-stone-200/90 shadow-sm flex items-start gap-3 hover:border-accent/40 transition-colors">
                   <div className="w-8 h-8 bg-stone-100 flex items-center justify-center shrink-0 text-accent">
                     <ShieldCheck className="w-4 h-4" strokeWidth={1.5} />
@@ -516,26 +471,6 @@ export default function AboutSection() {
                     </span>
                     <span className="text-xs font-medium text-charcoal-900 block mt-0.5">
                       Micro Enterprise
-                    </span>
-                    <span className="text-[11px] text-stone-500 block mt-0.5">
-                      Interior Design Studio
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-3.5 bg-white border border-stone-200/90 shadow-sm flex items-start gap-3 hover:border-accent/40 transition-colors">
-                  <div className="w-8 h-8 bg-stone-100 flex items-center justify-center shrink-0 text-accent">
-                    <MapPin className="w-4 h-4" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400 block">
-                      Registered Studio
-                    </span>
-                    <span className="text-xs font-medium text-charcoal-900 block mt-0.5">
-                      OKHLA, South East Delhi
-                    </span>
-                    <span className="text-[11px] text-stone-500 block mt-0.5">
-                      New Delhi – 110025
                     </span>
                   </div>
                 </div>

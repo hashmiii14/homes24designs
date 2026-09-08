@@ -261,7 +261,7 @@ export default function Hero() {
             }
           >
             <MapPin className="w-3.5 h-3.5 text-accent-light shrink-0" strokeWidth={1.5} />
-            <span className="tracking-wide text-xs break-words">Studio: OKHLA, South East Delhi, New Delhi</span>
+            <span className="tracking-wide text-xs break-words">Studio: New Delhi · Serving Delhi NCR</span>
           </div>
 
           {/* Action CTAs: Petite and compact on mobile (w-auto, not stretched!) */}

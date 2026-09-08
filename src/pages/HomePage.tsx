@@ -25,9 +25,9 @@ export default function HomePage() {
     name: siteConfig.name,
     alternateName: [
       'Homes 24 Designs',
-      'HOMES24DESIGNS Okhla',
-      'Best Interior Designer in Okhla New Delhi',
-      'Interior Designer in Okhla',
+      'HOMES24DESIGNS New Delhi',
+      'Best Interior Designer in Delhi NCR',
+      'Interior Designer in New Delhi',
       'Interior Designer in Delhi NCR',
       'Interior Designers Near Me',
     ],
@@ -40,11 +40,10 @@ export default function HomePage() {
     priceRange: '₹₹₹',
     email: siteConfig.email,
     telephone: siteConfig.phone,
-    hasMap: 'https://maps.google.com/maps?q=OKHLA%2C+South+East+Delhi%2C+New+Delhi%2C+Delhi+110025',
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${siteConfig.address.line1}, ${siteConfig.address.line2}`,
-      addressLocality: 'OKHLA, New Delhi',
+      addressLocality: 'New Delhi',
       addressRegion: siteConfig.address.state,
       postalCode: siteConfig.address.pincode,
       addressCountry: siteConfig.address.country,
@@ -102,7 +101,7 @@ export default function HomePage() {
     <>
       <SEO
         title="Best Interior Designer in New Delhi | HOMES24DESIGNS"
-        description="HOMES24DESIGNS is an established design firm based in New Delhi (OKHLA, South East Delhi). We craft luxury residential interiors, modular kitchens, turnkey projects, and commercial spaces across Delhi NCR. Call +91 9818083436."
+        description="HOMES24DESIGNS is an established design firm based in New Delhi. We craft luxury residential interiors, modular kitchens, turnkey projects, and commercial spaces across Delhi NCR. Call +91 9818083436."
         path="/"
         jsonLd={[jsonLd, websiteLd, faqLd]}
       />

@@ -4,7 +4,6 @@ import {
   FileCheck,
   Clock,
   Wrench,
-  MapPin,
   Quote,
   ArrowRight,
 } from 'lucide-react';
@@ -57,42 +56,16 @@ export default function HomeAboutSection() {
                   aria-hidden="true"
                 />
 
-                {/* Optimized Portrait */}
-                <div
-                  className="relative aspect-[4/5] overflow-hidden bg-stone-200 border border-stone-300 shadow-md"
-                  style={{ transform: 'translate3d(0, 0, 0)' }}
-                >
-                  <img
-                    src="/ehtashamul-islam.webp"
-                    alt="Designer Ehtasham, Principal Designer at HOMES24DESIGNS"
-                    width="800"
-                    height="1000"
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="sync"
-                    className="w-full h-full object-cover object-top sm:transition-transform sm:duration-700 sm:ease-lux sm:hover:scale-[1.02]"
-                    style={{ transform: 'translate3d(0, 0, 0)' }}
-                  />
-                  <div
-                    className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-charcoal-900/60 via-charcoal-900/20 to-transparent pointer-events-none"
-                    aria-hidden="true"
-                  />
-                </div>
-
-                {/* Floating Nameplate Badge */}
-                <div className="mt-3 p-4 bg-white border border-stone-200 shadow-sm">
+                {/* Nameplate Badge */}
+                <div className="p-6 bg-white border border-stone-200 shadow-sm">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-accent block">
-                        Principal Designer
+                        Designer
                       </span>
-                      <h3 className="text-lg sm:text-xl font-normal text-charcoal-900 font-serif tracking-wide mt-0.5">
+                      <h3 className="text-xl sm:text-2xl font-normal text-charcoal-900 font-serif tracking-wide mt-1">
                         EHTASHAM
                       </h3>
-                      <p className="text-xs text-stone-500 mt-1 flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
-                        <span>New Delhi</span>
-                      </p>
                     </div>
                     <div className="flex flex-col items-end text-right shrink-0">
                       <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400">
@@ -104,15 +77,15 @@ export default function HomeAboutSection() {
                 </div>
 
                 {/* Studio Philosophy Quote */}
-                <div className="mt-3 p-4 bg-stone-50 border border-stone-200/80">
-                  <Quote className="w-4 h-4 text-accent/70 mb-1.5" strokeWidth={1.5} />
-                  <p className="text-xs sm:text-[13px] text-stone-700 italic leading-relaxed font-serif">
+                <div className="mt-4 p-5 sm:p-6 bg-stone-50 border border-stone-200/80">
+                  <Quote className="w-4 h-4 text-accent/70 mb-2" strokeWidth={1.5} />
+                  <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed font-serif">
                     &ldquo;Good interior design is never about imposing a fleeting trend. It is about
                     understanding how a family lives, cooks, and unwinds, and shaping spaces that feel
                     effortless, durable, and distinctly personal.&rdquo;
                   </p>
-                  <div className="mt-2.5 pt-2 border-t border-stone-200 flex items-center justify-between text-[11px] text-stone-500">
-                    <span>Ehtasham</span>
+                  <div className="mt-3.5 pt-2.5 border-t border-stone-200 flex items-center justify-between text-xs text-stone-500">
+                    <span className="font-medium text-charcoal-800">Ehtasham</span>
                     <span className="text-accent font-medium">HOMES24DESIGNS · Delhi NCR</span>
                   </div>
                 </div>
@@ -204,43 +177,8 @@ export default function HomeAboutSection() {
                         Direct Site Supervision
                       </h4>
                       <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                        On-site quality audits overseen personally by Designer Ehtasham from layout to handover.
+                        On-site quality audits cover civil masonry, electrical routing, and carpentry alignment — from layout to handover.
                       </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Architectural Material & Engineering Standards (Balances Desktop Column Height) */}
-                <div className="p-4 bg-stone-50/90 border border-stone-200/90 shadow-2xs">
-                  <div className="flex items-center justify-between gap-2 border-b border-stone-200/80 pb-2 mb-3">
-                    <span className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-accent flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                      Studio Material &amp; Engineering Benchmark
-                    </span>
-                    <span className="text-[10px] uppercase font-medium text-stone-500 tracking-wider">
-                      Zero Unbranded Core
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs text-charcoal-800">
-                    <div className="space-y-0.5">
-                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Cabinetry Core</span>
-                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">HDHMR &amp; Marine BWP</span>
-                      <span className="text-[10px] text-stone-500 block">Tested Moisture Resistant</span>
-                    </div>
-                    <div className="space-y-0.5">
-                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Hinges &amp; Slides</span>
-                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">Branded Soft-Close</span>
-                      <span className="text-[10px] text-stone-500 block">Tested Benchmark</span>
-                    </div>
-                    <div className="space-y-0.5">
-                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Surface Liners</span>
-                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">1mm Matt Laminates</span>
-                      <span className="text-[10px] text-stone-500 block">Anti-Scratch Finish</span>
-                    </div>
-                    <div className="space-y-0.5">
-                      <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Finishes &amp; Polish</span>
-                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">PU &amp; Luxury Emulsion</span>
-                      <span className="text-[10px] text-stone-500 block">Zero-VOC Formulation</span>
                     </div>
                   </div>
                 </div>

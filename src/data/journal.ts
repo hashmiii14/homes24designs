@@ -561,23 +561,23 @@ export const journalPosts: JournalPost[] = [
     ],
   },
   {
-    slug: 'interior-designers-okhla-south-delhi-guide',
-    title: 'Interior Design in OKHLA & Delhi NCR: The Homeowner Guide',
-    seoTitle: 'Best Interior Designers in OKHLA & Delhi NCR | HOMES24DESIGNS',
+    slug: 'interior-designers-delhi-ncr-guide',
+    title: 'Interior Design in New Delhi & Delhi NCR: The Homeowner Guide',
+    seoTitle: 'Best Interior Designers in Delhi NCR | HOMES24DESIGNS',
     metaDescription:
-      'Complete guide to interior design in OKHLA and Delhi NCR. Practical space planning, modular kitchens, wardrobes & realistic local cost breakdown.',
+      'Complete guide to interior design in New Delhi and Delhi NCR. Practical space planning, modular kitchens, wardrobes & realistic local cost breakdown.',
     excerpt:
-      'A practical homeowner guide to interior design in OKHLA and Delhi NCR — spatial planning, modular kitchens, custom wardrobes, and turnkey budgeting.',
+      'A practical homeowner guide to interior design in New Delhi and Delhi NCR — spatial planning, modular kitchens, custom wardrobes, and turnkey budgeting.',
     date: '2026-08-28',
     author: 'Ehtasham',
     readingTime: '7 min read',
     image: '/images/hero/hero-bg.jpg',
-    alt: 'Interior design in OKHLA and Delhi NCR residential apartments',
+    alt: 'Interior design in New Delhi and Delhi NCR residential apartments',
     content: [
       {
-        heading: 'Navigating Floor Plans in OKHLA & Delhi NCR',
+        heading: 'Navigating Floor Plans in New Delhi & Delhi NCR',
         paragraphs: [
-          'Residential properties across OKHLA, Jasola, New Friends Colony, Saket, and Greater Kailash vary widely in layout — from compact builder floors and independent multi-story homes to modern high-rise societies. Designing for these homes requires a deep understanding of local structural characteristics.',
+          'Residential properties across New Delhi, Jasola, New Friends Colony, Saket, and Greater Kailash vary widely in layout — from compact builder floors and independent multi-story homes to modern high-rise societies. Designing for these homes requires a deep understanding of local structural characteristics.',
           'Many older and dense urban apartments face challenges with natural light intake, deep floor plates, and structural beam protrusions. Rather than treating these as flaws, thoughtful interior planning uses architectural cove lighting, recessed fluted panelling, and mirrored accent surfaces to visually amplify spatial volume and create bright, open living environments.',
         ],
       },
@@ -596,7 +596,7 @@ export const journalPosts: JournalPost[] = [
         ],
       },
       {
-        heading: 'Realistic Interior Design Budgets in Delhi NCR & OKHLA',
+        heading: 'Realistic Interior Design Budgets in Delhi NCR & New Delhi',
         paragraphs: [
           'Interior design should never involve opaque estimates or hidden line-item shocks. Transparent pricing begins with a clear itemized Bill of Quantities (BOQ) covering materials, hardware brand specifications, and labor schedules.',
           'Our projects range from targeted room renovations and modular kitchen packages starting at ₹50,000, to comprehensive full-floor signature transformations starting at ₹2.5 Lakhs, through to complete luxury turnkey residences starting at ₹5.0 Lakhs+. Every package includes direct designer oversight and clear warranty assurances.',
@@ -605,19 +605,19 @@ export const journalPosts: JournalPost[] = [
     ],
     faq: [
       {
-        question: 'What is the typical interior design timeline for an apartment in OKHLA or Delhi NCR?',
+        question: 'What is the typical interior design timeline for an apartment in Delhi NCR?',
         answer:
           'A typical 2BHK or 3BHK turnkey interior project takes between 35 to 45 working days from 3D layout sign-off to final handover, depending on modular woodwork complexity and custom detailing.',
       },
       {
-        question: 'Does HOMES24DESIGNS offer free on-site design surveys in OKHLA and Delhi NCR?',
+        question: 'Does HOMES24DESIGNS offer free on-site design surveys in Delhi NCR?',
         answer:
-          'Yes. We offer direct on-site consultation visits across OKHLA, Jasola, New Friends Colony, Saket, and Greater Kailash. We measure the space, inspect plumbing/electrical layouts, and understand your family requirements firsthand.',
+          'Yes. We offer direct on-site consultation visits across Jasola, New Friends Colony, Saket, and Greater Kailash. We measure the space, inspect plumbing/electrical layouts, and understand your family requirements firsthand.',
       },
       {
-        question: 'Can I visit your studio in OKHLA to see material samples?',
+        question: 'Can I visit your studio to see material samples?',
         answer:
-          'Absolutely. Our studio is located at OKHLA, South East Delhi, New Delhi - 110025. We have catalogues, veneer samples, acrylic finishes, and hardware options available for physical inspection during visiting hours (10:00 AM to 8:00 PM daily).',
+          'Absolutely. Our studio is located in New Delhi - 110025. We have catalogues, veneer samples, acrylic finishes, and hardware options available for physical inspection during visiting hours (10:00 AM to 8:00 PM daily).',
       },
     ],
   },
@@ -626,7 +626,7 @@ export const journalPosts: JournalPost[] = [
     title: 'How to Choose Interior Materials for Delhi NCR Weather: Heat, Dust & Monsoon',
     seoTitle: 'Best Interior Materials for Delhi NCR Weather | HOMES24DESIGNS',
     metaDescription:
-      'Expert advice on selecting moisture-proof BWP marine plywood, dust-resistant acrylics, and termite-resistant joinery for homes across Delhi NCR, Okhla, and Noida.',
+      'Expert advice on selecting moisture-proof BWP marine plywood, dust-resistant acrylics, and termite-resistant joinery for homes across Delhi NCR, Gurugram, and Noida.',
     excerpt:
       'How to choose interior materials that withstand Delhi NCR weather — boiling water proof marine ply, anti-fingerprint acrylics, dust-resistant joinery, and termite protection.',
     date: '2026-09-02',
@@ -639,7 +639,7 @@ export const journalPosts: JournalPost[] = [
         heading: 'Delhi NCR’s Extreme Climate: Why Material Choice is Critical',
         paragraphs: [
           'Delhi NCR experiences one of the world’s most demanding domestic climate cycles: scorching summer temperatures exceeding 45°C, intense dusty squalls in April and May, followed by high-humidity monsoon downpours, and bone-chilling winter dampness.',
-          'In localities adjacent to the Yamuna riverbed — such as OKHLA, Mayur Vihar, and Noida — ambient seasonal humidity levels fluctuate sharply. Inferior composite boards like MDF, particle board, or uncalibrated commercial plywood expand, bow, and delaminate within two seasons if exposed to these conditions.',
+          'In localities adjacent to the Yamuna riverbed — such as Mayur Vihar and Noida — ambient seasonal humidity levels fluctuate sharply. Inferior composite boards like MDF, particle board, or uncalibrated commercial plywood expand, bow, and delaminate within two seasons if exposed to these conditions.',
         ],
       },
       {

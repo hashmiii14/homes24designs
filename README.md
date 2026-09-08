@@ -1,7 +1,7 @@
-﻿# HOMES24DESIGNS — Luxury Interior Design Studio
+# HOMES24DESIGNS — Luxury Interior Design Studio
 
 > **Official Website & Digital Showcase for HOMES24DESIGNS**  
-> Premier residential interior design firm based in Batla House, Jamia Nagar, Okhla, New Delhi — delivering bespoke residential interiors, waterproof modular kitchens, luxury wardrobes, and 45-day turnkey home execution across South Delhi and Delhi NCR.
+> Premier residential interior design firm based in New Delhi — delivering bespoke residential interiors, waterproof modular kitchens, luxury wardrobes, and 45-day turnkey home execution across Delhi NCR.
 
 ---
 
@@ -75,7 +75,6 @@ homes24designs/
 │   │   ├── portfolio/              # Featured project images & galleries
 │   │   └── services/               # Core service card visuals
 │   ├── apple-touch-icon.png        # iOS touch icon (180x180)
-│   ├── ehtashamul-islam.webp       # Founder portrait (optimized WebP)
 │   ├── favicon.svg                 # Scalable vector favicon
 │   ├── favicon-32x32.png           # Standard browser tab icon
 │   ├── favicon-16x16.png           # Small tab icon
@@ -142,8 +141,7 @@ The aesthetic follows an **architectural luxury** theme inspired by high-end des
 ### 3. Image Optimization & Asset Pipeline
 - All images in `public/images/` are compressed using **progressive JPEG encoding (quality 82)**, keeping resolution capped at 1400px.
 - Redundant and duplicate image files have been purged to save bandwidth and storage.
-- Founder portrait is delivered in modern **WebP** (`/ehtashamul-islam.webp`).
-- Critical above-the-fold assets (`hero-bg.jpg` and `ehtashamul-islam.webp`) are preloaded in `index.html` with `fetchpriority="high"`.
+- Critical above-the-fold assets are optimized WebP images.
 
 ### 4. Turnkey WhatsApp & Contact Integration
 - The consultation form in `src/components/sections/ConsultationForm.tsx` supports instant WhatsApp direct routing:
@@ -151,7 +149,7 @@ The aesthetic follows an **architectural luxury** theme inspired by high-end des
   - Floating WhatsApp button and direct telephone call buttons for rapid lead acquisition.
 
 ### 5. Local SEO & JSON-LD Structured Data
-- Deeply optimized for hyper-local search rankings (`Okhla`, `Jamia Nagar`, `Batla House`, `South Delhi`, `Delhi NCR`).
+- Deeply optimized for regional search rankings across New Delhi and Delhi NCR.
 - Rich Schema.org structured data embedded in `index.html` and `src/components/ui/SEO.tsx`:
   - `InteriorDesignFirm`
   - `LocalBusiness`
@@ -215,8 +213,8 @@ For single-page application (SPA) client-side routing, the repository includes r
 ## Firm & Legal Details
 
 - **Business Name**: HOMES24DESIGNS
-- **Proprietor & Principal Designer**: Ehtashamul Islam
-- **Studio Address**: M-74, First Floor, Batla House, Jamia Nagar, Okhla, New Delhi, Delhi 110025, India
+- **Principal Designer**: Ehtasham
+- **Studio Location**: New Delhi, Delhi NCR, India
 - **Phone**: [+91 9818083436](tel:+919818083436)
 - **Email**: [homes24designs@gmail.com](mailto:homes24designs@gmail.com)
 - **GSTIN**: `07AHGPI4995P2ZH`

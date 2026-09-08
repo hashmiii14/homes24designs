@@ -5,9 +5,9 @@ export interface FAQItem {
 
 export const faqItems: FAQItem[] = [
   {
-    question: 'Who is the best interior designer in Okhla, New Delhi?',
+    question: 'Who is the best interior designer in New Delhi?',
     answer:
-      'HOMES24DESIGNS, led by principal designer Ehtasham, is an established interior design firm based in New Delhi (OKHLA, South East Delhi). Our studio specializes in bespoke residential interiors, modular kitchens, luxury wardrobes, turnkey projects, and commercial spaces across Delhi NCR.',
+      'HOMES24DESIGNS, led by principal designer Ehtasham, is an established interior design firm based in New Delhi. Our studio specializes in bespoke residential interiors, modular kitchens, luxury wardrobes, turnkey projects, and commercial spaces across Delhi NCR.',
   },
   {
     question: 'What does an interior designer do?',
@@ -37,7 +37,7 @@ export const faqItems: FAQItem[] = [
   {
     question: 'Do you provide interior design services in Delhi NCR?',
     answer:
-      'Yes. Our studio is based in OKHLA, South East Delhi, New Delhi 110025. We provide on-site interior design consultations and turnkey execution across Delhi NCR.',
+      'Yes. Our studio is based in New Delhi. We provide on-site interior design consultations and turnkey execution across Delhi NCR.',
   },
   {
     question: 'Can I request customised interior design?',
@@ -68,10 +68,5 @@ export const faqItems: FAQItem[] = [
     question: 'Do you handle lighting and false ceiling design?',
     answer:
       'Yes. We design false ceilings and layered lighting plans — ambient, task and accent — that add depth and warmth to every room.',
-  },
-  {
-    question: 'How can I contact HOMES24DESIGNS?',
-    answer:
-      'You can call us at +91 9818083436, email homes24designs@gmail.com, message us on WhatsApp, or use the contact form on this site. We are based in OKHLA, South East Delhi, New Delhi, Delhi 110025.',
   },
 ];

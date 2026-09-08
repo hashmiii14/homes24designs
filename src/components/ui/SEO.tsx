@@ -15,7 +15,7 @@ interface SEOProps {
 export default function SEO({
   title,
   description = siteConfig.description,
-  keywords = 'interior designers near me, best interior designer near me, interior designers in okhla, interior designer delhi ncr, interior designer new delhi, luxury interior designers delhi, modular kitchen okhla, turnkey interior designers delhi',
+  keywords = 'interior designers near me, best interior designer near me, interior designers in delhi ncr, interior designer delhi ncr, interior designer new delhi, luxury interior designers delhi, modular kitchen delhi ncr, turnkey interior designers delhi',
   path = '',
   image = siteConfig.ogImage,
   type = 'website',

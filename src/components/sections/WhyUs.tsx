@@ -31,7 +31,7 @@ const values = [
   {
     icon: GitBranch,
     title: 'Direct Site Supervision',
-    desc: 'Designer Ehtasham personally visits sites to audit civil masonry, electrical routing, and carpentry alignment. We focus on how your space makes you feel.',
+    desc: 'On-site quality audits cover civil masonry, electrical routing, and carpentry alignment — from layout to handover.',
   },
   {
     icon: Home,

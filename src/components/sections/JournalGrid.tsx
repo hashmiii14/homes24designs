@@ -24,7 +24,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
   // Map category tag for clean visual pill
   const getCategoryTag = (slug: string) => {
     if (slug.includes('materials')) return 'Materials & Durability';
-    if (slug.includes('okhla')) return 'Delhi & Okhla Guide';
+    if (slug.includes('delhi-ncr')) return 'Delhi NCR Guide';
     if (slug.includes('kitchen')) return 'Modular Kitchens';
     if (slug.includes('cost')) return 'Budget & Planning';
     if (slug.includes('bedroom')) return 'Bedroom Interiors';
@@ -49,7 +49,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
       );
     } else if (selectedCategory === 'Planning & Local Guides') {
       list = journalPosts.filter(
-        (p) => p.slug.includes('cost') || p.slug.includes('choose') || p.slug.includes('mistakes') || p.slug.includes('okhla')
+        (p) => p.slug.includes('cost') || p.slug.includes('choose') || p.slug.includes('mistakes') || p.slug.includes('delhi-ncr')
       );
     } else if (selectedCategory === 'Small Spaces') {
       list = journalPosts.filter(

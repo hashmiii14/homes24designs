@@ -7,8 +7,8 @@ export default function ContactPage() {
   return (
     <>
       <SEO
-        title="Contact HOMES24DESIGNS | Studio in OKHLA, South East Delhi, New Delhi"
-        description="Contact HOMES24DESIGNS for interior design consultations in New Delhi and Delhi NCR. Call +91 9818083436 or visit our studio in OKHLA, South East Delhi."
+        title="Contact HOMES24DESIGNS | Interior Design Studio in New Delhi"
+        description="Contact HOMES24DESIGNS for interior design consultations in New Delhi and Delhi NCR. Call +91 9818083436 or visit our studio in New Delhi."
         path="/contact"
         jsonLd={{
           '@context': 'https://schema.org',
