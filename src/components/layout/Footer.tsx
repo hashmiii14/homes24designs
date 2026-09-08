@@ -116,7 +116,7 @@ export default function Footer() {
               </span>
               <span className="hidden sm:inline text-stone-700">·</span>
               <span className="text-xs text-stone-400">
-                Proprietorship: <span className="text-stone-300 font-medium">{siteConfig.proprietor}</span>
+                Principal Designer: <span className="text-stone-300 font-medium">{siteConfig.principalDesigner}</span>
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 shrink-0">

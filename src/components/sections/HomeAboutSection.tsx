@@ -141,11 +141,14 @@ export default function HomeAboutSection() {
                 {/* Concise Studio Intro & Specialties */}
                 <div className="space-y-3">
                   <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-                    <strong className="font-semibold text-charcoal-900">Homes24designs</strong> is an established design firm based in New Delhi. Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
+                    <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is an established design firm based in New Delhi. Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
                   </p>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                     Led by the principal designer <strong className="font-semibold text-charcoal-800">Ehtasham</strong>, we turn apartments, villas, contemporary homes, commercial spaces, and offices into functional sanctuaries.
                   </p>
+                  <div className="p-3 bg-white border-l-2 border-accent text-xs sm:text-sm font-serif italic text-charcoal-900 shadow-2xs">
+                    &ldquo;We focus on how your space makes you feel.&rdquo;
+                  </div>
                 </div>
 
                 {/* 4 Scannable Highlights */}
@@ -201,7 +204,7 @@ export default function HomeAboutSection() {
                         Direct Site Supervision
                       </h4>
                       <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                        On-site quality audits overseen personally by the designer from layout to handover. We focus on how your space makes you feel.
+                        On-site quality audits overseen personally by Designer Ehtasham from layout to handover.
                       </p>
                     </div>
                   </div>

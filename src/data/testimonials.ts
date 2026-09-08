@@ -37,7 +37,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: '3',
-    name: 'Dr. Ayesha Rahman',
+    name: 'Dr. Radhika Mehta',
     location: 'New Friends Colony, New Delhi',
     project: 'Modular Kitchen & Storage Architecture',
     scope: 'Anti-Fingerprint Acrylic Kitchen & Tall Pantry',

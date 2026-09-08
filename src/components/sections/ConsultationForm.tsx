@@ -223,7 +223,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
 
             <div className="mt-6 border-t border-stone-100 pt-4 flex items-center justify-between">
               <span className="text-[11px] text-stone-500">
-                Studio: Jamia Nagar, Okhla, New Delhi
+                Studio: OKHLA, South East Delhi, New Delhi
               </span>
               <button
                 type="button"
@@ -339,7 +339,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
 
                 <div className="border-t border-stone-100 pt-2 flex items-center gap-2 text-[11px] text-stone-500">
                   <MapPin className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
-                  <span>Turnkey residential execution across South Delhi &amp; Delhi NCR</span>
+                  <span>Turnkey residential execution across Delhi NCR</span>
                 </div>
               </div>
             </Reveal>
@@ -437,7 +437,7 @@ ${data.email ? `✉️ *Email:* ${data.email}\n` : ''}${data.message ? `💬 *No
                       type="text"
                       name="location"
                       id="location"
-                      placeholder="e.g. OKHLA, Jasola, GK, South Delhi, Noida"
+                      placeholder="e.g. OKHLA, Jasola, GK, Saket, Noida"
                       onChange={() => clearError('location')}
                       className="w-full h-12 px-4 bg-white border border-stone-300 text-charcoal-900 text-sm placeholder:text-stone-400 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40 transition-colors shadow-2xs"
                       aria-label="Location"

@@ -9,7 +9,7 @@ export default function FAQPage() {
     <>
       <SEO
         title="FAQ — Interior Design Questions Answered | HOMES24DESIGNS"
-        description="Answers to common questions about interior design costs, timelines, 45-day turnkey process, materials and working with HOMES24DESIGNS in Okhla, South Delhi & Delhi NCR."
+        description="Answers to common questions about interior design costs, timelines, 45-day turnkey process, materials and working with HOMES24DESIGNS across Delhi NCR."
         path="/faq"
         jsonLd={{
           '@context': 'https://schema.org',

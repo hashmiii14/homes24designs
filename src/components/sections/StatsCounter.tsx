@@ -16,7 +16,7 @@ const statsData: StatItem[] = [
     target: 50,
     suffix: '+',
     label: 'Projects Delivered',
-    sublabel: 'Turnkey homes across South Delhi & Delhi NCR',
+    sublabel: 'Turnkey homes across Delhi NCR',
     icon: Award,
   },
   {

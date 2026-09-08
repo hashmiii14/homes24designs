@@ -12,7 +12,6 @@ import PricingSection from '@/components/sections/PricingSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ConsultationForm from '@/components/sections/ConsultationForm';
 import JournalGrid from '@/components/sections/JournalGrid';
-import InstagramSection from '@/components/sections/InstagramSection';
 import FAQSection from '@/components/sections/FAQSection';
 import ContactSection from '@/components/sections/ContactSection';
 import { siteConfig } from '@/data/siteConfig';
@@ -120,7 +119,6 @@ export default function HomePage() {
       <TestimonialsSection />
       <ConsultationForm />
       <JournalGrid limit={3} />
-      <InstagramSection />
       <FAQSection />
       <ContactSection />
     </>

@@ -153,7 +153,7 @@ export default function AboutSection() {
 
                 {/* Business Introduction */}
                 <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-                  <strong className="font-semibold text-charcoal-900">Homes24designs</strong> is an established design firm based in New Delhi. Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
+                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is an established design firm based in New Delhi. Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
                 </p>
 
                 {/* Founder Story */}
@@ -169,6 +169,9 @@ export default function AboutSection() {
                     appreciation for spatial balance, practical ergonomics, and material integrity, he leads each
                     project with direct personal involvement and meticulous attention to detail.
                   </p>
+                  <div className="p-3 bg-stone-50 border-l-2 border-accent text-xs sm:text-sm font-serif italic text-charcoal-900">
+                    &ldquo;We focus on how your space makes you feel.&rdquo;
+                  </div>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
                     At HOMES24DESIGNS, our design philosophy is anchored in understanding each customer&apos;s distinct
                     vision. We believe that exceptional residential interiors do not emerge from rigid templates, but
@@ -234,7 +237,7 @@ export default function AboutSection() {
                         </span>
                       </div>
                       <span className="text-[10px] font-medium tracking-wider uppercase text-accent bg-accent/10 px-2 py-0.5 border border-accent/20">
-                        Proprietor Supervised
+                        Designer Supervised
                       </span>
                     </div>
 
@@ -245,7 +248,7 @@ export default function AboutSection() {
                           <span>On-Site Survey</span>
                         </div>
                         <p className="text-[11px] leading-relaxed text-stone-600">
-                          Personal site survey across Okhla, South Delhi &amp; NCR with laser measurements and space viability audit.
+                          Personal site survey across Delhi NCR with on-site measurements and space viability audit.
                         </p>
                       </div>
 
@@ -255,7 +258,7 @@ export default function AboutSection() {
                           <span>Transparent BOQ</span>
                         </div>
                         <p className="text-[11px] leading-relaxed text-stone-600">
-                          100% itemized pricing with genuine hardware brands (Hafele, Hettich, Merino) and zero hidden contractor markups.
+                          100% itemized pricing with genuine branded materials and zero hidden contractor markups.
                         </p>
                       </div>
 
@@ -265,7 +268,7 @@ export default function AboutSection() {
                           <span>Turnkey Handover</span>
                         </div>
                         <p className="text-[11px] leading-relaxed text-stone-600">
-                          45-day scheduled completion with weekly milestone progress logs shared directly by the proprietor.
+                          45-day scheduled completion with weekly milestone progress logs shared directly by Designer Ehtasham.
                         </p>
                       </div>
                     </div>
@@ -515,7 +518,7 @@ export default function AboutSection() {
                       Micro Enterprise
                     </span>
                     <span className="text-[11px] text-stone-500 block mt-0.5">
-                      Proprietorship Entity
+                      Interior Design Studio
                     </span>
                   </div>
                 </div>

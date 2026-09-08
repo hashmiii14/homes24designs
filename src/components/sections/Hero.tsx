@@ -149,7 +149,7 @@ export default function Hero() {
           <source srcSet="/images/hero/hero-bg.webp" type="image/webp" />
           <img
             src="/images/hero/hero-bg.jpg"
-            alt="Luxury modern living room interior in South Delhi designed by HOMES24DESIGNS"
+            alt="Luxury modern living room interior in Delhi NCR designed by HOMES24DESIGNS"
             className="w-full h-full object-cover object-[center_35%] sm:object-center block"
             loading="eager"
             fetchPriority="high"

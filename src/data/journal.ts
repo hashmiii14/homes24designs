@@ -562,29 +562,29 @@ export const journalPosts: JournalPost[] = [
   },
   {
     slug: 'interior-designers-okhla-south-delhi-guide',
-    title: 'Interior Design in Okhla, Jamia Nagar & South Delhi: The Homeowner Guide',
-    seoTitle: 'Best Interior Designers in Okhla & South Delhi | HOMES24DESIGNS',
+    title: 'Interior Design in OKHLA & Delhi NCR: The Homeowner Guide',
+    seoTitle: 'Best Interior Designers in OKHLA & Delhi NCR | HOMES24DESIGNS',
     metaDescription:
-      'Complete guide to interior design in Okhla, Jamia Nagar, Batla House and South Delhi. Practical space planning, modular kitchens, wardrobes & realistic local cost breakdown.',
+      'Complete guide to interior design in OKHLA and Delhi NCR. Practical space planning, modular kitchens, wardrobes & realistic local cost breakdown.',
     excerpt:
-      'A practical homeowner guide to interior design in Okhla, Jamia Nagar, and South Delhi — spatial planning, modular kitchens, custom wardrobes, and turnkey budgeting.',
+      'A practical homeowner guide to interior design in OKHLA and Delhi NCR — spatial planning, modular kitchens, custom wardrobes, and turnkey budgeting.',
     date: '2026-08-28',
     author: 'Ehtasham',
     readingTime: '7 min read',
     image: '/images/hero/hero-bg.jpg',
-    alt: 'Interior design in Okhla Jamia Nagar and South Delhi residential apartments',
+    alt: 'Interior design in OKHLA and Delhi NCR residential apartments',
     content: [
       {
-        heading: 'Navigating Floor Plans in Okhla, Jamia Nagar & South Delhi',
+        heading: 'Navigating Floor Plans in OKHLA & Delhi NCR',
         paragraphs: [
-          'Residential properties across Okhla, Jamia Nagar, Batla House, Jasola, and New Friends Colony vary widely in layout — from compact builder floors and independent multi-story homes to modern high-rise societies. Designing for these homes requires a deep understanding of local structural characteristics.',
+          'Residential properties across OKHLA, Jasola, New Friends Colony, Saket, and Greater Kailash vary widely in layout — from compact builder floors and independent multi-story homes to modern high-rise societies. Designing for these homes requires a deep understanding of local structural characteristics.',
           'Many older and dense urban apartments face challenges with natural light intake, deep floor plates, and structural beam protrusions. Rather than treating these as flaws, thoughtful interior planning uses architectural cove lighting, recessed fluted panelling, and mirrored accent surfaces to visually amplify spatial volume and create bright, open living environments.',
         ],
       },
       {
         heading: 'Modular Kitchens Tailored for High-Use Family Homes',
         paragraphs: [
-          'In South Delhi households, kitchens are dynamic spaces that handle heavy daily cooking, traditional spices, and extensive cookware collections. Off-the-shelf modular kitchen templates often deteriorate within two seasons under heavy use.',
+          'In modern Delhi NCR households, kitchens are dynamic spaces that handle heavy daily cooking, traditional spices, and extensive cookware collections. Off-the-shelf modular kitchen templates often deteriorate within two seasons under heavy use.',
           'At HOMES24DESIGNS, our modular kitchens feature IS:710 Marine Grade Boiling Water Proof (BWP) ply carcasses, seamless anti-fingerprint acrylic or PU finishes, and soft-close branded hardware. Deep pull-out tandem drawers, corner carousel units, and dedicated pantry tall units ensure that every inch of kitchen square footage performs effortlessly.',
         ],
       },
@@ -596,7 +596,7 @@ export const journalPosts: JournalPost[] = [
         ],
       },
       {
-        heading: 'Realistic Interior Design Budgets in South Delhi & Okhla',
+        heading: 'Realistic Interior Design Budgets in Delhi NCR & OKHLA',
         paragraphs: [
           'Interior design should never involve opaque estimates or hidden line-item shocks. Transparent pricing begins with a clear itemized Bill of Quantities (BOQ) covering materials, hardware brand specifications, and labor schedules.',
           'Our projects range from targeted room renovations and modular kitchen packages starting at ₹50,000, to comprehensive full-floor signature transformations starting at ₹2.5 Lakhs, through to complete luxury turnkey residences starting at ₹5.0 Lakhs+. Every package includes direct designer oversight and clear warranty assurances.',
@@ -605,19 +605,19 @@ export const journalPosts: JournalPost[] = [
     ],
     faq: [
       {
-        question: 'What is the typical interior design timeline for an apartment in Okhla or South Delhi?',
+        question: 'What is the typical interior design timeline for an apartment in OKHLA or Delhi NCR?',
         answer:
           'A typical 2BHK or 3BHK turnkey interior project takes between 35 to 45 working days from 3D layout sign-off to final handover, depending on modular woodwork complexity and custom detailing.',
       },
       {
-        question: 'Does HOMES24DESIGNS offer free on-site design surveys in Jamia Nagar and South Delhi?',
+        question: 'Does HOMES24DESIGNS offer free on-site design surveys in OKHLA and Delhi NCR?',
         answer:
-          'Yes. We offer direct on-site consultation visits across Jamia Nagar, Batla House, Okhla, Jasola, New Friends Colony, and Greater Kailash. We measure the space, inspect plumbing/electrical layouts, and understand your family requirements firsthand.',
+          'Yes. We offer direct on-site consultation visits across OKHLA, Jasola, New Friends Colony, Saket, and Greater Kailash. We measure the space, inspect plumbing/electrical layouts, and understand your family requirements firsthand.',
       },
       {
-        question: 'Can I visit your studio in Batla House to see material samples?',
+        question: 'Can I visit your studio in OKHLA to see material samples?',
         answer:
-          'Absolutely. Our studio is located at M-74, First Floor, Batla House, Jamia Nagar, New Delhi - 110025. We have catalogues, veneer samples, acrylic finishes, and hardware options available for physical inspection during visiting hours (10:00 AM to 8:00 PM daily).',
+          'Absolutely. Our studio is located at OKHLA, South East Delhi, New Delhi - 110025. We have catalogues, veneer samples, acrylic finishes, and hardware options available for physical inspection during visiting hours (10:00 AM to 8:00 PM daily).',
       },
     ],
   },
@@ -639,7 +639,7 @@ export const journalPosts: JournalPost[] = [
         heading: 'Delhi NCR’s Extreme Climate: Why Material Choice is Critical',
         paragraphs: [
           'Delhi NCR experiences one of the world’s most demanding domestic climate cycles: scorching summer temperatures exceeding 45°C, intense dusty squalls in April and May, followed by high-humidity monsoon downpours, and bone-chilling winter dampness.',
-          'In localities adjacent to the Yamuna riverbed — such as Okhla, Jamia Nagar, Batla House, Mayur Vihar, and Noida — ambient seasonal humidity levels fluctuate sharply. Inferior composite boards like MDF, particle board, or uncalibrated commercial plywood expand, bow, and delaminate within two years if exposed to these conditions.',
+          'In localities adjacent to the Yamuna riverbed — such as OKHLA, Mayur Vihar, and Noida — ambient seasonal humidity levels fluctuate sharply. Inferior composite boards like MDF, particle board, or uncalibrated commercial plywood expand, bow, and delaminate within two seasons if exposed to these conditions.',
         ],
       },
       {
@@ -653,7 +653,7 @@ export const journalPosts: JournalPost[] = [
         heading: 'Dust-Repellent & Easy-Clean Surface Finishes',
         paragraphs: [
           'Delhi’s particulate dust settles quickly on high-touch furniture surfaces. High-gloss finishes often highlight every fingerprint and dust speck, requiring daily micro-polishing.',
-          'To combat this, we recommend zero-glare soft-touch matte acrylics or premium anti-fingerprint laminate sheets (Merino, Greenlam, or Royal Touche) combined with 2mm laser edge-banding. These surfaces repel static dust accumulation, resist domestic heat, and can be effortlessly wiped clean with a damp microfiber cloth.',
+          'To combat this, we recommend zero-glare soft-touch matte acrylics or premium anti-fingerprint laminate sheets combined with 2mm PVC edge-banding. These surfaces repel static dust accumulation, resist domestic heat, and can be effortlessly wiped clean with a damp microfiber cloth.',
         ],
       },
       {
