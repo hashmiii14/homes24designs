@@ -70,11 +70,11 @@ export default function AboutSection() {
                 />
 
                 {/* Nameplate Badge */}
-                <div className="p-6 bg-white border border-stone-200/90 shadow-sm">
+                <div className="p-5 sm:p-6 bg-white border border-stone-200/90 shadow-sm">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-accent block">
-                        Designer
+                        Proprietor &amp; Principal Designer
                       </span>
                       <h3 className="text-xl sm:text-2xl font-normal text-charcoal-900 font-serif tracking-wide mt-1">
                         EHTASHAM
@@ -82,22 +82,35 @@ export default function AboutSection() {
                     </div>
                     <div className="flex flex-col items-end text-right shrink-0">
                       <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400">
-                        Enterprise
+                        Proprietorship Enterprise
                       </span>
                       <Logo variant="dark" size="sm" linkTo={null} className="items-end mt-1" />
                     </div>
                   </div>
                 </div>
 
+                {/* Founder Profile Card — Fills and balances the left column on desktop/laptop */}
+                <div className="mt-4 p-5 bg-white border border-stone-200/90 shadow-sm space-y-3">
+                  <div className="flex items-center justify-between border-b border-stone-100 pb-2">
+                    <span className="text-xs font-semibold tracking-wider uppercase text-accent">
+                      FOUNDER PROFILE
+                    </span>
+                    <span className="text-xs text-stone-500 font-medium">Proprietorship Enterprise:</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                    <strong className="font-semibold text-charcoal-800">Ehtasham</strong> is the proprietor and principal designer of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space planning, and personalized residential interior solutions, commercial spaces and office spaces. Guided by an appreciation for spatial balance, practical ergonomics, and material integrity, he leads each project with direct personal involvement, and meticulous attention to detail.
+                  </p>
+                </div>
+
                 {/* Studio Philosophy Quote — Anchors the left column */}
-                <div className="mt-4 p-5 sm:p-6 bg-stone-50 border border-stone-200/80">
+                <div className="mt-4 p-4 sm:p-5 bg-stone-50 border border-stone-200/80">
                   <Quote className="w-4 h-4 text-accent/60 mb-2" strokeWidth={1.5} />
                   <p className="text-xs sm:text-sm text-stone-700 italic leading-relaxed font-serif">
                     &ldquo;Good interior design is never about imposing a fleeting trend. It is about
                     understanding how a family lives, cooks, and unwinds, and shaping spaces that feel
                     effortless, durable, and distinctly personal.&rdquo;
                   </p>
-                  <div className="mt-3.5 pt-2.5 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                  <div className="mt-3 pt-2 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
                     <span className="font-medium text-charcoal-800">Ehtasham</span>
                     <span className="text-accent font-medium">HOMES24DESIGNS · Delhi NCR</span>
                   </div>
@@ -107,7 +120,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column: Founder Narrative & Core Brand Story (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-start">
+          <div className="lg:col-span-7 flex flex-col justify-between">
             <Reveal delay={60}>
               <div className="space-y-4">
                 {/* Eyebrow & Main Title (Desktop only: on mobile it renders above the founder image) */}
@@ -126,21 +139,8 @@ export default function AboutSection() {
 
                 {/* Business Introduction */}
                 <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as one of the best interior designers in New Delhi, dedicated to shaping spaces that balance quiet elegance with practical daily life.
+                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as one of the best interior designer in New Delhi, dedicated to shaping spaces that balance quiet elegance with practical daily life.
                 </p>
-
-                {/* Founder Story */}
-                <div className="p-5 bg-white border border-stone-200/90 shadow-sm space-y-3">
-                  <div className="flex items-center justify-between border-b border-stone-100 pb-2">
-                    <span className="text-xs font-semibold tracking-wider uppercase text-accent">
-                      FOUNDER PROFILE
-                    </span>
-                    <span className="text-xs text-stone-500">Design Studio</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    <strong className="font-semibold text-charcoal-800">Ehtasham</strong> is the principal designer of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space planning, and personalized residential interior solutions, commercial spaces and office spaces. Guided by an appreciation for spatial balance, practical ergonomics, and material integrity, he leads each project with direct personal involvement and meticulous attention to detail.
-                  </p>
-                </div>
 
                 {/* Quick Trust Badges Row */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
