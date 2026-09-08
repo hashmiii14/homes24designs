@@ -6,6 +6,7 @@ import {
   Wrench,
   Quote,
   ArrowRight,
+  Compass,
 } from 'lucide-react';
 import Reveal from '@/components/ui/Reveal';
 import { siteConfig } from '@/data/siteConfig';
@@ -100,6 +101,57 @@ export default function HomeAboutSection() {
                   <div className="mt-3 pt-2 border-t border-stone-200 flex items-center justify-between text-xs text-stone-500">
                     <span className="font-medium text-charcoal-800">Ehtasham</span>
                     <span className="text-accent font-medium">HOMES24DESIGNS · Delhi NCR</span>
+                  </div>
+                </div>
+
+                {/* Studio Consultation & On-Site Viability Badges (from About section) */}
+                <div className="mt-4 p-4 sm:p-5 bg-white border border-stone-200/90 shadow-sm space-y-3.5">
+                  <div className="flex items-center justify-between border-b border-stone-100 pb-2.5">
+                    <div className="flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-accent" strokeWidth={1.8} />
+                      <span className="text-xs font-semibold tracking-wider uppercase text-charcoal-900">
+                        Direct Studio Commitment
+                      </span>
+                    </div>
+                    <span className="text-[10px] font-medium tracking-wider uppercase text-accent bg-accent/10 px-2 py-0.5 border border-accent/20">
+                      Delhi NCR
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                        <Compass className="w-4 h-4" strokeWidth={1.75} />
+                      </div>
+                      <div>
+                        <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
+                          On-Site Survey &amp; Viability Audit
+                        </h4>
+                        <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
+                          Personal site survey across Delhi NCR with on-site measurements and space viability audit.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="pt-2.5 border-t border-stone-100 flex items-start gap-3">
+                      <div className="w-8 h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                        <Clock className="w-4 h-4" strokeWidth={1.75} />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
+                            Consultation &amp; Visiting Hours
+                          </h4>
+                          <span className="inline-flex items-center gap-1 text-[10px] font-medium text-emerald-700 bg-emerald-50 px-1.5 py-0.5 border border-emerald-200">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                            Daily
+                          </span>
+                        </div>
+                        <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
+                          10:00 AM – 8:00 PM · Studio: New Delhi · Serving Delhi NCR
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
