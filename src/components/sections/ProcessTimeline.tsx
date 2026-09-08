@@ -5,7 +5,7 @@ const steps = [
   {
     num: '01',
     title: 'Site Discovery',
-    desc: 'On-site laser measurements, architectural assessment, and deep review of your family’s routine and priorities.',
+    desc: 'On-site measurements, architectural assessment, and deep review of your family’s routine and priorities.',
   },
   {
     num: '02',
@@ -15,12 +15,12 @@ const steps = [
   {
     num: '03',
     title: 'Material Curation',
-    desc: 'Hands-on selection of laminates, BWR ply, stone surfaces, and branded hardware (Hafele, Hettich) with itemized BOQ.',
+    desc: 'Hands-on selection of laminates, carcass material, stone surfaces and branded hardware with itemized BOQ.',
   },
   {
     num: '04',
     title: 'Supervised Build',
-    desc: 'Milestone-based fabrication with direct on-site supervision by founder Ehtashamul Islam and weekly video logs.',
+    desc: 'Milestone-based fabrication with direct on-site supervision by designer and weekly video logs.',
   },
   {
     num: '05',

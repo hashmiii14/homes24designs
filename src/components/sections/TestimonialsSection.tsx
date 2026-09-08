@@ -106,7 +106,7 @@ export default function TestimonialsSection() {
               <SectionHeading
                 eyebrow="Client Experiences"
                 title="Trusted by Homeowners Across Delhi NCR"
-                description="Real feedback from families in Okhla, South Delhi and Delhi NCR who trusted HOMES24DESIGNS for their turnkey interiors and modular kitchens."
+                description="Real feedback from families in Delhi NCR who trusted HOMES24DESIGNS for their turnkey interiors and modular kitchens."
               />
             </div>
 
@@ -268,8 +268,8 @@ export default function TestimonialsSection() {
                 45-Day Turnkey Delivery &amp; Zero Hidden Costs
               </h3>
               <p className="text-xs sm:text-sm text-stone-400 mt-1 max-w-xl">
-                Every residential interior project is backed by our itemized BOQ, branded hardware
-                warranties, and direct site supervision by founder Ehtashamul Islam.
+                Every residential interior project is backed by our itemized BOQ, branded material
+                warranties, and direct site supervision by Designer Ehtasham.
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0">

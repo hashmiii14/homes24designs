@@ -29,7 +29,7 @@ export default function ContactSection() {
                     Studio Location &amp; Headquarters
                   </span>
                   <h3 className="font-serif text-lg sm:text-xl font-normal text-charcoal-900 mb-2">
-                    HOMES24DESIGNS · South Delhi
+                    HOMES24DESIGNS · New Delhi
                   </h3>
                   <div className="text-xs sm:text-sm leading-relaxed text-stone-600">
                     <p className="font-medium text-charcoal-800">{siteConfig.address.line1}, {siteConfig.address.line2}</p>
@@ -67,8 +67,8 @@ export default function ContactSection() {
                       How To Reach
                     </span>
                     <div className="text-xs text-stone-600 space-y-1">
-                      <p><strong className="text-charcoal-900 font-medium">Metro:</strong> Jamia Millia Islamia (Magenta Line · 650m)</p>
-                      <p><strong className="text-charcoal-900 font-medium">Landmark:</strong> Near Batla House Chowk</p>
+                      <p><strong className="text-charcoal-900 font-medium">Metro:</strong> Okhla / Jasola / Jamia (Magenta Line)</p>
+                      <p><strong className="text-charcoal-900 font-medium">Location:</strong> OKHLA, South East Delhi</p>
                       <span className="text-[10px] text-stone-600 block pt-1 flex items-center gap-1">
                         <Car className="w-3 h-3 text-accent shrink-0" />
                         Dedicated visitor parking assistance
@@ -87,7 +87,7 @@ export default function ContactSection() {
                       In-Studio Physical Material Library
                     </h4>
                     <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                      Touch and inspect authentic samples of Hafele/Hettich hardware, quartz slabs, acrylics, fluted panels, and natural veneers during your visit.
+                      Touch and inspect authentic samples of branded hardware, quartz slabs, acrylics, fluted panels, and natural veneers during your visit.
                     </p>
                   </div>
                 </div>
@@ -135,9 +135,9 @@ export default function ContactSection() {
                 <div className="p-3.5 bg-charcoal-900 text-ivory flex flex-wrap items-center justify-between gap-2 text-xs">
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-accent shrink-0 animate-pulse" />
-                    <span className="font-medium tracking-wide">Serving South Delhi &amp; Delhi NCR Turnkey Homes</span>
+                    <span className="font-medium tracking-wide">Serving Delhi NCR Turnkey Homes</span>
                   </div>
-                  <span className="text-[11px] text-stone-400">Batla House · Jamia Nagar · New Delhi</span>
+                  <span className="text-[11px] text-stone-400">OKHLA · South East Delhi · New Delhi</span>
                 </div>
               </div>
             </Reveal>

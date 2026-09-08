@@ -31,14 +31,14 @@ const statsData: StatItem[] = [
     target: 45,
     suffix: ' Days',
     label: 'Turnkey Handover',
-    sublabel: 'Direct site supervision by founder Ehtashamul Islam',
+    sublabel: 'Direct site supervision by Designer Ehtasham',
     icon: Clock,
   },
   {
     target: 100,
     suffix: '%',
     label: 'Itemized BOQ',
-    sublabel: 'Zero hidden costs with genuine branded hardware',
+    sublabel: 'Zero hidden costs with genuine branded material',
     icon: FileCheck2,
   },
 ];

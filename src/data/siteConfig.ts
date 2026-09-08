@@ -1,17 +1,17 @@
 export const siteConfig = {
   name: 'HOMES24DESIGNS',
   legalName: 'EHTASHAMUL ISLAM',
-  tagline: 'Best Interior Designer in Okhla, New Delhi · Luxury Residential Studio',
+  tagline: 'Interior Design Studio in New Delhi · Luxury Turnkey Living',
   description:
-    'Recognized as the best interior designer in Okhla, New Delhi. HOMES24DESIGNS in Batla House, Jamia Nagar delivers bespoke residential interiors, modular kitchens, luxury wardrobes, and 45-day turnkey execution across South Delhi & Delhi NCR.',
+    'HOMES24DESIGNS is an established design firm based in New Delhi (OKHLA, South East Delhi). Delivering bespoke residential interiors, modular kitchens, turnkey projects, and commercial spaces across Delhi NCR.',
   url: (import.meta.env.VITE_SITE_URL as string) || 'https://homes24designs.vercel.app',
   email: 'homes24designs@gmail.com',
   phone: '+91 9818083436',
   phoneRaw: '+919818083436',
   whatsapp: '919818083436',
   address: {
-    line1: 'M-74, First Floor',
-    line2: 'Batla House, Jamia Nagar',
+    line1: 'OKHLA',
+    line2: 'South East Delhi',
     city: 'New Delhi',
     state: 'Delhi',
     pincode: '110025',
@@ -37,7 +37,8 @@ export const siteConfig = {
   instagram: 'https://www.instagram.com/homes24designs',
   gst: '07AHGPI4995P2ZH',
   udyam: 'UDYAM-DL-09-0040538',
-  proprietor: 'EHTASHAMUL ISLAM',
+  proprietor: 'Ehtasham',
+  principalDesigner: 'Ehtasham',
   constitution: 'Proprietorship',
   enterpriseType: 'Micro Enterprise',
   registrationDate: '07 October 2025',
@@ -46,7 +47,7 @@ export const siteConfig = {
     'Architectural and engineering activities and related technical consultancy',
     'Specialized design activities / activities of interior decorators',
   ],
-  mapsQuery: 'M-74, First Floor, Batla House, Jamia Nagar, New Delhi, Delhi 110025',
+  mapsQuery: 'OKHLA, South East Delhi, New Delhi, Delhi 110025',
   ogImage: 'https://homes24designs.vercel.app/og-image.jpg',
 } as const;
 

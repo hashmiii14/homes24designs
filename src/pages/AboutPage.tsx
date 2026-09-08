@@ -11,8 +11,8 @@ export default function AboutPage() {
   return (
     <>
       <SEO
-        title="About HOMES24DESIGNS | Founder Ehtashamul Islam | Studio in Okhla, South Delhi"
-        description="Learn about HOMES24DESIGNS and founder Ehtashamul Islam — premier interior design studio based in Batla House, Jamia Nagar, Okhla serving South Delhi & Delhi NCR."
+        title="About HOMES24DESIGNS | Principal Designer Ehtasham | Studio in New Delhi"
+        description="Learn about HOMES24DESIGNS and principal designer Ehtasham — premier interior design studio based in OKHLA, South East Delhi, New Delhi serving Delhi NCR."
         path="/about"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -25,8 +25,8 @@ export default function AboutPage() {
             legalName: siteConfig.legalName,
             founder: {
               '@type': 'Person',
-              name: siteConfig.proprietor,
-              jobTitle: 'Proprietor & Founder',
+              name: siteConfig.principalDesigner,
+              jobTitle: 'Principal Designer',
             },
           },
         }}

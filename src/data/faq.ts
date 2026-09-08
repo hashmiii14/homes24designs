@@ -7,7 +7,7 @@ export const faqItems: FAQItem[] = [
   {
     question: 'Who is the best interior designer in Okhla, New Delhi?',
     answer:
-      'HOMES24DESIGNS, led by proprietor and principal designer Ehtashamul Islam, is recognized as the best interior designer in Okhla, New Delhi. Headquartered in Batla House, Jamia Nagar, our studio specializes in bespoke residential interiors, waterproof modular kitchens (IS:710 BWP marine ply), luxury wardrobes, and 45-day turnkey delivery across Okhla, Jasola, New Friends Colony, South Delhi, and Delhi NCR.',
+      'HOMES24DESIGNS, led by principal designer Ehtasham, is an established interior design firm based in New Delhi (OKHLA, South East Delhi). Our studio specializes in bespoke residential interiors, modular kitchens, luxury wardrobes, turnkey projects, and commercial spaces across Delhi NCR.',
   },
   {
     question: 'What does an interior designer do?',
@@ -35,9 +35,9 @@ export const faqItems: FAQItem[] = [
       'Yes. We design modular kitchens with workflow-optimised layouts, cabinet and storage planning, finish and hardware selection, backsplash treatment and integrated lighting.',
   },
   {
-    question: 'Do you provide interior design services in Okhla, Jamia Nagar and South Delhi?',
+    question: 'Do you provide interior design services in Delhi NCR?',
     answer:
-      'Yes. Our studio is located at M-74, First Floor, Batla House, Jamia Nagar, New Delhi 110025. We provide on-site interior design consultations and turnkey execution across Okhla, Jamia Nagar, Batla House, Jasola, New Friends Colony, Greater Kailash, Saket, and throughout South Delhi and Delhi NCR.',
+      'Yes. Our studio is based in OKHLA, South East Delhi, New Delhi 110025. We provide on-site interior design consultations and turnkey execution across Delhi NCR.',
   },
   {
     question: 'Can I request customised interior design?',
@@ -72,6 +72,6 @@ export const faqItems: FAQItem[] = [
   {
     question: 'How can I contact HOMES24DESIGNS?',
     answer:
-      'You can call us at +91 9818083436, email homes24designs@gmail.com, message us on WhatsApp, or use the contact form on this site. We are based at M-74, First Floor, Batla House, Jamia Nagar, New Delhi, Delhi 110025.',
+      'You can call us at +91 9818083436, email homes24designs@gmail.com, message us on WhatsApp, or use the contact form on this site. We are based in OKHLA, South East Delhi, New Delhi, Delhi 110025.',
   },
 ];

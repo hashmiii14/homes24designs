@@ -21,7 +21,7 @@ const values = [
   {
     icon: Layers,
     title: 'Tested Material Integrity',
-    desc: 'Calibrated BWR/BWP grade plywood, anti-fingerprint acrylics, and genuine branded hardware built to withstand Delhi’s seasonal humidity.',
+    desc: 'Branded material with brand warranty of 10 years.',
   },
   {
     icon: MessageSquare,
@@ -31,7 +31,7 @@ const values = [
   {
     icon: GitBranch,
     title: 'Direct Site Supervision',
-    desc: 'Proprietor Ehtashamul Islam personally visits sites to audit civil masonry, electrical routing, and carpentry alignment.',
+    desc: 'Designer Ehtasham personally visits sites to audit civil masonry, electrical routing, and carpentry alignment. We focus on how your space makes you feel.',
   },
   {
     icon: Home,
@@ -41,7 +41,7 @@ const values = [
   {
     icon: MapPin,
     title: 'Delhi NCR Expertise',
-    desc: 'Deep regional knowledge of local dust management, ventilation requirements, and direct access to premier Okhla & NCR vendor hubs.',
+    desc: 'Deep regional knowledge of local dust management and ventilation requirements.',
   },
 ];
 

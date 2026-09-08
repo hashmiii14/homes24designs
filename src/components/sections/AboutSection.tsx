@@ -76,7 +76,7 @@ export default function AboutSection() {
                 >
                   <img
                     src="/ehtashamul-islam.webp"
-                    alt="Ehtashamul Islam, Proprietor of HOMES24DESIGNS"
+                    alt="Ehtasham, Principal Designer of HOMES24DESIGNS"
                     width="800"
                     height="1000"
                     loading="eager"
@@ -97,14 +97,14 @@ export default function AboutSection() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-accent block">
-                        Proprietor &amp; Founder
+                        Principal Designer
                       </span>
                       <h3 className="text-lg sm:text-xl font-normal text-charcoal-900 font-serif tracking-wide mt-0.5">
-                        EHTASHAMUL ISLAM
+                        EHTASHAM
                       </h3>
                       <p className="text-xs text-stone-500 mt-1 flex items-center gap-1.5">
                         <MapPin className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
-                        <span>Batla House, Jamia Nagar, New Delhi</span>
+                        <span>New Delhi</span>
                       </p>
                     </div>
                     <div className="flex flex-col items-end text-right shrink-0">
@@ -125,7 +125,7 @@ export default function AboutSection() {
                     effortless, durable, and distinctly personal.&rdquo;
                   </p>
                   <div className="mt-2.5 pt-2.5 border-t border-stone-200/70 flex items-center justify-between text-[11px] text-stone-500">
-                    <span>Ehtashamul Islam</span>
+                    <span>Ehtasham</span>
                     <span className="text-accent font-medium">HOMES24DESIGNS · Delhi</span>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export default function AboutSection() {
                   <div className="flex items-center gap-3 mb-2.5">
                     <span className="h-px w-8 bg-accent" />
                     <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
-                      Best Interior Designer in Okhla, New Delhi · Founder Profile
+                      Interior Design Studio · New Delhi · Leadership Profile
                     </span>
                   </div>
                   <h2 className="text-section font-light text-charcoal-800 leading-[1.12]">
@@ -153,22 +153,19 @@ export default function AboutSection() {
 
                 {/* Business Introduction */}
                 <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-                  <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as the{' '}
-                  <strong className="font-semibold text-charcoal-800">best interior designer in Okhla, New Delhi</strong>, dedicated to shaping residential spaces that balance quiet elegance with practical daily life. Headquartered in Batla House, Jamia Nagar, we combine creative vision with structured planning to turn houses into personal sanctuaries.
+                  <strong className="font-semibold text-charcoal-900">Homes24designs</strong> is an established design firm based in New Delhi. Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
                 </p>
 
                 {/* Founder Story */}
                 <div className="p-5 bg-white border border-stone-200/90 shadow-sm space-y-3">
                   <div className="flex items-center justify-between border-b border-stone-100 pb-2">
                     <span className="text-xs font-semibold tracking-wider uppercase text-accent">
-                      Founder Profile
+                      Leadership Profile
                     </span>
-                    <span className="text-xs text-stone-500">Proprietorship Enterprise</span>
+                    <span className="text-xs text-stone-500">Design Studio</span>
                   </div>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    <strong className="font-semibold text-charcoal-800">Ehtashamul Islam</strong> is the proprietor
-                    and principal designer of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space
-                    planning, and personalized residential interior solutions across Okhla, Jamia Nagar, Batla House, South Delhi, and Delhi NCR. Guided by an
+                    Led by the principal designer <strong className="font-semibold text-charcoal-800">Ehtasham</strong>, we turn apartments, villas, contemporary homes, commercial spaces, and offices into functional sanctuaries. Guided by an
                     appreciation for spatial balance, practical ergonomics, and material integrity, he leads each
                     project with direct personal involvement and meticulous attention to detail.
                   </p>
@@ -532,7 +529,7 @@ export default function AboutSection() {
                       Registered Studio
                     </span>
                     <span className="text-xs font-medium text-charcoal-900 block mt-0.5">
-                      Batla House, Jamia Nagar
+                      OKHLA, South East Delhi
                     </span>
                     <span className="text-[11px] text-stone-500 block mt-0.5">
                       New Delhi – 110025

@@ -125,10 +125,10 @@ export default function FAQSection() {
                   <ShieldCheck className="w-4 h-4" strokeWidth={1.5} />
                 </div>
                 <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
-                  Direct Founder Oversight
+                  Direct Designer Oversight
                 </h4>
                 <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
-                  No junior subcontractor delegation. Principal designer Ehtashamul Islam personally audits carcass alignment, leveling, and joinery on-site.
+                  No junior subcontractor delegation. Designer Ehtasham personally audits carcass alignment, leveling, and joinery on-site. We focus on how your space makes you feel.
                 </p>
               </div>
 
@@ -137,10 +137,10 @@ export default function FAQSection() {
                   <Wrench className="w-4 h-4" strokeWidth={1.5} />
                 </div>
                 <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
-                  10-Year Hardware Warranty
+                  10-Year Material Warranty
                 </h4>
                 <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
-                  Genuine Hafele and Hettich German fittings with original manufacturer warranty cards handed over to you upon final project completion.
+                  Genuine branded fittings and materials with original manufacturer warranty cards handed over to you upon final project completion.
                 </p>
               </div>
             </div>

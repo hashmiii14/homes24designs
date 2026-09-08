@@ -29,10 +29,10 @@ export default function HomePage() {
       'HOMES24DESIGNS Okhla',
       'Best Interior Designer in Okhla New Delhi',
       'Interior Designer in Okhla',
-      'Interior Designer Jamia Nagar Batla House',
+      'Interior Designer in Delhi NCR',
       'Interior Designers Near Me',
     ],
-    slogan: 'Best Interior Designer in Okhla, New Delhi',
+    slogan: 'Interior Design Studio in New Delhi · Luxury Turnkey Living',
     legalName: siteConfig.legalName,
     description: siteConfig.description,
     url: siteConfig.url,
@@ -41,11 +41,11 @@ export default function HomePage() {
     priceRange: '₹₹₹',
     email: siteConfig.email,
     telephone: siteConfig.phone,
-    hasMap: 'https://maps.google.com/maps?q=M-74%2C+First+Floor%2C+Batla+House%2C+Jamia+Nagar%2C+New+Delhi%2C+Delhi+110025',
+    hasMap: 'https://maps.google.com/maps?q=OKHLA%2C+South+East+Delhi%2C+New+Delhi%2C+Delhi+110025',
     address: {
       '@type': 'PostalAddress',
       streetAddress: `${siteConfig.address.line1}, ${siteConfig.address.line2}`,
-      addressLocality: 'Okhla, New Delhi',
+      addressLocality: 'OKHLA, New Delhi',
       addressRegion: siteConfig.address.state,
       postalCode: siteConfig.address.pincode,
       addressCountry: siteConfig.address.country,
@@ -58,8 +58,8 @@ export default function HomePage() {
     areaServed: siteConfig.serviceAreas,
     founder: {
       '@type': 'Person',
-      name: siteConfig.proprietor,
-      jobTitle: 'Proprietor & Principal Designer',
+      name: siteConfig.principalDesigner,
+      jobTitle: 'Principal Designer',
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -102,8 +102,8 @@ export default function HomePage() {
   return (
     <>
       <SEO
-        title="Best Interior Designer in Okhla, New Delhi | HOMES24DESIGNS"
-        description="HOMES24DESIGNS is recognized as the best interior designer in Okhla, New Delhi. Located in Batla House, Jamia Nagar, we craft luxury residential interiors, modular kitchens, wardrobes & turnkey homes across South Delhi & Delhi NCR. Call +91 9818083436."
+        title="Best Interior Designer in New Delhi | HOMES24DESIGNS"
+        description="HOMES24DESIGNS is an established design firm based in New Delhi (OKHLA, South East Delhi). We craft luxury residential interiors, modular kitchens, turnkey projects, and commercial spaces across Delhi NCR. Call +91 9818083436."
         path="/"
         jsonLd={[jsonLd, websiteLd, faqLd]}
       />

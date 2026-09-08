@@ -225,7 +225,7 @@ export default function Hero() {
                 : { opacity: 0 }
             }
           >
-            Bespoke residential interiors, modular kitchens and complete turnkey living across South Delhi and Delhi NCR — designed with architectural intent and delivered with precision.
+            Bespoke residential interior, modular kitchens, turnkey projects, across Delhi NCR — designed with architectural intent and delivered with precision.
           </p>
 
           {/* Key Trust Highlights Lines */}
@@ -243,7 +243,7 @@ export default function Hero() {
             </span>
             <span className="inline-flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-              German Hardware Warranty
+              10-Year Material Warranty
             </span>
             <span className="inline-flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
@@ -261,7 +261,7 @@ export default function Hero() {
             }
           >
             <MapPin className="w-3.5 h-3.5 text-accent-light shrink-0" strokeWidth={1.5} />
-            <span className="tracking-wide text-xs break-words">Studio: Batla House · Jamia Nagar, Okhla · New Delhi</span>
+            <span className="tracking-wide text-xs break-words">Studio: OKHLA, South East Delhi, New Delhi</span>
           </div>
 
           {/* Action CTAs: Petite and compact on mobile (w-auto, not stretched!) */}

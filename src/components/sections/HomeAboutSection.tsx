@@ -64,7 +64,7 @@ export default function HomeAboutSection() {
                 >
                   <img
                     src="/ehtashamul-islam.webp"
-                    alt="Ehtashamul Islam, Proprietor and Principal Designer at HOMES24DESIGNS"
+                    alt="Designer Ehtasham, Principal Designer at HOMES24DESIGNS"
                     width="800"
                     height="1000"
                     loading="eager"
@@ -84,14 +84,14 @@ export default function HomeAboutSection() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-accent block">
-                        Proprietor &amp; Principal Designer
+                        Principal Designer
                       </span>
                       <h3 className="text-lg sm:text-xl font-normal text-charcoal-900 font-serif tracking-wide mt-0.5">
-                        EHTASHAMUL ISLAM
+                        EHTASHAM
                       </h3>
                       <p className="text-xs text-stone-500 mt-1 flex items-center gap-1.5">
                         <MapPin className="w-3.5 h-3.5 text-accent shrink-0" strokeWidth={1.5} />
-                        <span>Batla House, Jamia Nagar, New Delhi</span>
+                        <span>New Delhi</span>
                       </p>
                     </div>
                     <div className="flex flex-col items-end text-right shrink-0">
@@ -112,7 +112,7 @@ export default function HomeAboutSection() {
                     effortless, durable, and distinctly personal.&rdquo;
                   </p>
                   <div className="mt-2.5 pt-2 border-t border-stone-200 flex items-center justify-between text-[11px] text-stone-500">
-                    <span>Ehtashamul Islam</span>
+                    <span>Ehtasham</span>
                     <span className="text-accent font-medium">HOMES24DESIGNS · Delhi NCR</span>
                   </div>
                 </div>
@@ -141,10 +141,10 @@ export default function HomeAboutSection() {
                 {/* Concise Studio Intro & Specialties */}
                 <div className="space-y-3">
                   <p className="text-sm sm:text-base text-stone-700 leading-relaxed">
-                    <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is an established interior design studio based in Jamia Nagar, Okhla, New Delhi, creating refined residential environments across South Delhi and Delhi NCR. Led personally by principal designer <strong className="font-semibold text-charcoal-800">Ehtashamul Islam</strong>, we turn apartments, villas, and contemporary homes into functional sanctuaries.
+                    <strong className="font-semibold text-charcoal-900">Homes24designs</strong> is an established design firm based in New Delhi. Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
                   </p>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    We specialize in end-to-end turnkey residential interiors, bespoke modular kitchens, luxury wardrobes, and architectural space planning. Every project prioritizes practical ergonomics, robust storage solutions for Indian households, and enduring material craftsmanship over transient ornamentation.
+                    Led by the principal designer <strong className="font-semibold text-charcoal-800">Ehtasham</strong>, we turn apartments, villas, contemporary homes, commercial spaces, and offices into functional sanctuaries.
                   </p>
                 </div>
 
@@ -159,7 +159,7 @@ export default function HomeAboutSection() {
                         45-Day Turnkey Handover
                       </h4>
                       <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                        Milestone-driven execution with weekly progress updates shared directly by the founder.
+                        Milestone-driven execution with weekly progress updates shared directly by the designer.
                       </p>
                     </div>
                   </div>
@@ -184,10 +184,10 @@ export default function HomeAboutSection() {
                     </div>
                     <div>
                       <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
-                        Branded Hardware
+                        Branded Material
                       </h4>
                       <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                        Genuine hardware and laminates from Hafele, Hettich, Merino, and Greenlam.
+                        Hardware, Carcass, flooring, electricals etc.
                       </p>
                     </div>
                   </div>
@@ -201,7 +201,7 @@ export default function HomeAboutSection() {
                         Direct Site Supervision
                       </h4>
                       <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
-                        On-site quality audits overseen personally by the proprietor from layout to handover.
+                        On-site quality audits overseen personally by the designer from layout to handover. We focus on how your space makes you feel.
                       </p>
                     </div>
                   </div>
@@ -222,22 +222,22 @@ export default function HomeAboutSection() {
                     <div className="space-y-0.5">
                       <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Cabinetry Core</span>
                       <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">HDHMR &amp; Marine BWP</span>
-                      <span className="text-[10px] text-stone-500 block">Action TESA / Greenply</span>
+                      <span className="text-[10px] text-stone-500 block">Tested Moisture Resistant</span>
                     </div>
                     <div className="space-y-0.5">
                       <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Hinges &amp; Slides</span>
-                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">German Soft-Close</span>
-                      <span className="text-[10px] text-stone-500 block">Hafele &amp; Hettich</span>
+                      <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">Branded Soft-Close</span>
+                      <span className="text-[10px] text-stone-500 block">Tested Benchmark</span>
                     </div>
                     <div className="space-y-0.5">
                       <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Surface Liners</span>
                       <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">1mm Matt Laminates</span>
-                      <span className="text-[10px] text-stone-500 block">Merino &amp; Greenlam</span>
+                      <span className="text-[10px] text-stone-500 block">Anti-Scratch Finish</span>
                     </div>
                     <div className="space-y-0.5">
                       <span className="text-[10px] text-stone-500 uppercase tracking-wider block">Finishes &amp; Polish</span>
                       <span className="font-medium text-[11px] sm:text-xs block text-charcoal-900">PU &amp; Luxury Emulsion</span>
-                      <span className="text-[10px] text-stone-500 block">Asian Paints Zero-VOC</span>
+                      <span className="text-[10px] text-stone-500 block">Zero-VOC Formulation</span>
                     </div>
                   </div>
                 </div>

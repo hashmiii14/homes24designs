@@ -569,7 +569,7 @@ export const journalPosts: JournalPost[] = [
     excerpt:
       'A practical homeowner guide to interior design in Okhla, Jamia Nagar, and South Delhi — spatial planning, modular kitchens, custom wardrobes, and turnkey budgeting.',
     date: '2026-08-28',
-    author: 'Ehtashamul Islam',
+    author: 'Ehtasham',
     readingTime: '7 min read',
     image: '/images/hero/hero-bg.jpg',
     alt: 'Interior design in Okhla Jamia Nagar and South Delhi residential apartments',
@@ -585,21 +585,21 @@ export const journalPosts: JournalPost[] = [
         heading: 'Modular Kitchens Tailored for High-Use Family Homes',
         paragraphs: [
           'In South Delhi households, kitchens are dynamic spaces that handle heavy daily cooking, traditional spices, and extensive cookware collections. Off-the-shelf modular kitchen templates often deteriorate within two seasons under heavy use.',
-          'At HOMES24DESIGNS, our modular kitchens feature IS:710 Marine Grade Boiling Water Proof (BWP) ply carcasses, seamless anti-fingerprint acrylic or PU finishes, and soft-close German hardware from Hafele and Hettich. Deep pull-out tandem drawers, corner carousel units, and dedicated pantry tall units ensure that every inch of kitchen square footage performs effortlessly.',
+          'At HOMES24DESIGNS, our modular kitchens feature IS:710 Marine Grade Boiling Water Proof (BWP) ply carcasses, seamless anti-fingerprint acrylic or PU finishes, and soft-close branded hardware. Deep pull-out tandem drawers, corner carousel units, and dedicated pantry tall units ensure that every inch of kitchen square footage performs effortlessly.',
         ],
       },
       {
         heading: 'Why Direct Studio Supervision Beats Fragmented Contractors',
         paragraphs: [
           'Hiring separate local carpenters, painters, electricians, and false ceiling teams frequently leads to miscommunication, escalating budgets, and extended timeline delays. When an issue arises, tradespeople inevitably blame one another.',
-          'HOMES24DESIGNS operates on a unified turnkey model. Founder Ehtashamul Islam personally visits your site, supervises material delivery, and oversees daily carpentry and finishing milestones. Homeowners receive structured weekly photo and video progress logs over WhatsApp, giving you absolute peace of mind without having to manage contractors yourself.',
+          'HOMES24DESIGNS operates on a unified turnkey model. Designer Ehtasham personally visits your site, supervises material delivery, and oversees daily carpentry and finishing milestones. Homeowners receive structured weekly photo and video progress logs over WhatsApp, giving you absolute peace of mind without having to manage contractors yourself.',
         ],
       },
       {
         heading: 'Realistic Interior Design Budgets in South Delhi & Okhla',
         paragraphs: [
           'Interior design should never involve opaque estimates or hidden line-item shocks. Transparent pricing begins with a clear itemized Bill of Quantities (BOQ) covering materials, hardware brand specifications, and labor schedules.',
-          'Our projects range from targeted room renovations and modular kitchen packages starting at ₹50,000, to comprehensive full-floor signature transformations starting at ₹2.5 Lakhs, through to complete luxury turnkey residences starting at ₹5.0 Lakhs+. Every package includes direct proprietor oversight and clear warranty assurances.',
+          'Our projects range from targeted room renovations and modular kitchen packages starting at ₹50,000, to comprehensive full-floor signature transformations starting at ₹2.5 Lakhs, through to complete luxury turnkey residences starting at ₹5.0 Lakhs+. Every package includes direct designer oversight and clear warranty assurances.',
         ],
       },
     ],
