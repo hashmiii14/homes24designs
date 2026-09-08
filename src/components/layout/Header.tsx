@@ -32,7 +32,7 @@ export default function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
           transparent
             ? 'bg-transparent'
-            : 'bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm'
+            : 'bg-white md:bg-white/95 md:backdrop-blur-md border-b border-stone-200/80 shadow-xs'
         }`}
         style={{ transform: 'translate3d(0, 0, 0)' }}
       >
@@ -108,7 +108,7 @@ export default function Header() {
         aria-hidden={!menuOpen}
       >
         <div
-          className="absolute inset-0 bg-charcoal-900/40 backdrop-blur-sm"
+          className="absolute inset-0 bg-charcoal-900/50 md:backdrop-blur-sm"
           onClick={() => setMenuOpen(false)}
         />
         <div

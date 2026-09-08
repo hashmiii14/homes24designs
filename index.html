@@ -212,7 +212,7 @@
         color: #f7f4ef;
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
         transform: translateY(0);
-        transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.4s ease 0.5s;
+        transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.3s ease 0.3s;
         pointer-events: auto;
         will-change: transform;
       }
@@ -299,7 +299,7 @@
         var bar = document.getElementById('h24-bar');
         if (!loader) return;
 
-        var duration = 1800; // 1.8 seconds loading progress
+        var duration = 650; // 0.65 seconds loading progress
         var startTime = performance.now ? performance.now() : Date.now();
         var isDone = false;
 
@@ -330,8 +330,8 @@
                 if (loader && loader.parentNode) {
                   loader.parentNode.removeChild(loader);
                 }
-              }, 900);
-            }, 80);
+              }, 550);
+            }, 40);
           }
         }
 

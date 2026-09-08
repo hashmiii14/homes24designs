@@ -153,7 +153,6 @@ export default function TestimonialsSection() {
           style={{
             contain: 'paint layout',
             isolation: 'isolate',
-            WebkitMaskImage: '-webkit-radial-gradient(white, black)',
           }}
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -164,7 +163,7 @@ export default function TestimonialsSection() {
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{
-              transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`,
+              transform: `translate3d(-${currentIndex * (100 / visibleCount)}%, 0, 0)`,
             }}
           >
             {testimonials.map((item, idx) => (

@@ -75,17 +75,17 @@ export default function InstagramSection() {
 
                   {/* Top Badges */}
                   <div className="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between pointer-events-none">
-                    <span className="px-3 py-1 bg-ivory/95 backdrop-blur-sm text-[10px] tracking-[0.15em] uppercase text-charcoal-800 font-medium shadow-sm">
+                    <span className="px-3 py-1 bg-ivory/98 md:backdrop-blur-sm text-[10px] tracking-[0.15em] uppercase text-charcoal-800 font-medium shadow-sm">
                       {post.category}
                     </span>
-                    <span className="w-8 h-8 rounded-full bg-charcoal-900/80 backdrop-blur-sm text-ivory flex items-center justify-center shadow-sm group-hover:bg-accent group-hover:text-ivory transition-colors duration-300">
+                    <span className="w-8 h-8 rounded-full bg-charcoal-900/90 md:backdrop-blur-sm text-ivory flex items-center justify-center shadow-sm group-hover:bg-accent group-hover:text-ivory transition-colors duration-300">
                       <Instagram className="w-4 h-4" strokeWidth={1.8} />
                     </span>
                   </div>
 
                   {/* Center Hover Action */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal-900/90 text-ivory backdrop-blur-md text-xs font-medium tracking-wide shadow-lg border border-accent/40">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal-900/95 text-ivory md:backdrop-blur-md text-xs font-medium tracking-wide shadow-lg border border-accent/40">
                       <span>View on Instagram</span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-accent" />
                     </span>

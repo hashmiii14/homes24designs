@@ -102,8 +102,8 @@ export default function Hero() {
     const handler = () => setIsLoaded(true);
     window.addEventListener('h24-loader-done', handler);
 
-    // Safety fallback: if event was somehow missed, trigger after 1.5s
-    const timer = setTimeout(() => setIsLoaded(true), 1500);
+    // Safety fallback: if event was somehow missed, trigger after 750ms
+    const timer = setTimeout(() => setIsLoaded(true), 750);
 
     return () => {
       window.removeEventListener('h24-loader-done', handler);
@@ -153,7 +153,7 @@ export default function Hero() {
             className="w-full h-full object-cover object-[center_35%] sm:object-center block"
             loading="eager"
             fetchPriority="high"
-            decoding="sync"
+            decoding="async"
             style={{
               transform: 'translate3d(0, 0, 0)',
               WebkitTransform: 'translate3d(0, 0, 0)',

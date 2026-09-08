@@ -114,7 +114,7 @@ export default function JournalGrid({ limit, showHeading = true }: JournalGridPr
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/40 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                   <div className="absolute top-3 left-3">
-                    <span className="px-2.5 py-1 bg-ivory/95 backdrop-blur-sm text-[10px] tracking-[0.16em] uppercase text-charcoal-800 font-semibold shadow-sm">
+                    <span className="px-2.5 py-1 bg-ivory/98 md:backdrop-blur-sm text-[10px] tracking-[0.16em] uppercase text-charcoal-800 font-semibold shadow-sm">
                       {getCategoryTag(post.slug)}
                     </span>
                   </div>

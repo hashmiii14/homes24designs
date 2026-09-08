@@ -26,6 +26,8 @@
     max-width: 100%;
     width: 100%;
     overscroll-behavior-x: none;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -40,7 +42,7 @@
     forced-color-adjust: none;
     -webkit-forced-color-adjust: none;
     overscroll-behavior-x: none;
-    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
 
   #root, #main-content {
@@ -112,13 +114,25 @@
 
   .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translate3d(0, 16px, 0);
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .reveal.is-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (max-width: 768px) {
+    .reveal {
+      transform: none !important;
+      transition: opacity 0.22s ease-out;
+    }
+    .reveal.is-visible {
+      transform: none !important;
+    }
   }
 
   .link-underline {
@@ -171,11 +185,11 @@
 @keyframes letterReveal {
   0% {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translate3d(0, 16px, 0);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -192,6 +206,10 @@
   display: flex;
   width: max-content;
   animation: marquee 34s linear infinite;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   will-change: transform;
 }
 

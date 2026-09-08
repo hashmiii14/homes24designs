@@ -17,7 +17,6 @@ export default function MarqueeStrip() {
       style={{
         contain: 'paint layout',
         isolation: 'isolate',
-        WebkitMaskImage: '-webkit-radial-gradient(white, black)',
       }}
       role="region"
       aria-label="Brand highlights and credentials"

@@ -74,7 +74,7 @@ export default function PortfolioGrid() {
                     <p className="text-xs text-stone-300 mt-0.5">{project.location}</p>
                     <div className="mt-3.5">
                       <span
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-ivory/15 group-hover:bg-accent text-ivory text-[11px] font-medium tracking-wider uppercase border border-ivory/30 backdrop-blur-sm transition-all duration-300 active:scale-95"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-charcoal-900/60 md:bg-ivory/15 group-hover:bg-accent text-ivory text-[11px] font-medium tracking-wider uppercase border border-ivory/30 md:backdrop-blur-sm transition-all duration-300 active:scale-95"
                       >
                         <Eye className="w-3.5 h-3.5 text-accent-light group-hover:text-ivory transition-colors" strokeWidth={1.5} />
                         <span>View Details</span>

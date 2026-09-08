@@ -15,11 +15,9 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
       return;
     }
 
-    // Elements already in visible viewport animate in with a slight stagger
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      const timer = setTimeout(() => setIsVisible(true), 60);
-      return () => clearTimeout(timer);
+    if (typeof IntersectionObserver === 'undefined') {
+      setIsVisible(true);
+      return;
     }
 
     const observer = new IntersectionObserver(
@@ -29,7 +27,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.08, rootMargin: '0px 0px -20px 0px', ...options }
+      { threshold: 0.01, rootMargin: '120px 0px 60px 0px', ...options }
     );
 
     observer.observe(el);
@@ -41,25 +39,33 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
 
 export function useScrollPosition() {
   const [scrolled, setScrolled] = useState(false);
+  const prevRef = useRef(false);
 
   useEffect(() => {
-    const handler = () => {
-      const y =
-        window.scrollY ||
-        window.pageYOffset ||
-        document.documentElement.scrollTop ||
-        document.body.scrollTop ||
-        0;
-      setScrolled(y > 20);
+    let ticking = false;
+
+    const checkScroll = () => {
+      const y = window.scrollY || window.pageYOffset || 0;
+      const isScrolled = y > 20;
+      if (isScrolled !== prevRef.current) {
+        prevRef.current = isScrolled;
+        setScrolled(isScrolled);
+      }
+      ticking = false;
     };
 
-    handler();
+    const handler = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(checkScroll);
+        ticking = true;
+      }
+    };
+
+    checkScroll();
     window.addEventListener('scroll', handler, { passive: true });
-    document.addEventListener('scroll', handler, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handler);
-      document.removeEventListener('scroll', handler);
     };
   }, []);
 
