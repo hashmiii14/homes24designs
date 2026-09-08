@@ -164,7 +164,7 @@ To update website content without modifying layout logic, edit the files in `src
 
 | Data File | Description |
 | :--- | :--- |
-| **`siteConfig.ts`** | Studio address, phone numbers, email, GSTIN, UDYAM registration number, and social links. |
+| **`siteConfig.ts`** | Studio address, phone numbers, email, principal designer, and social links. |
 | **`services.ts`** | Core service offerings (Full home, modular kitchens, wardrobes, lighting, etc.) with titles, descriptions, and feature lists. |
 | **`portfolio.ts`** | Featured projects, categories, gallery photos, and project location tags. |
 | **`journal.ts`** | Architectural blog posts, homeowner guides, and interior articles with headings and paragraphs. |
@@ -217,6 +217,4 @@ For single-page application (SPA) client-side routing, the repository includes r
 - **Studio Location**: New Delhi, Delhi NCR, India
 - **Phone**: [+91 9818083436](tel:+919818083436)
 - **Email**: [homes24designs@gmail.com](mailto:homes24designs@gmail.com)
-- **GSTIN**: `07AHGPI4995P2ZH`
-- **UDYAM**: `UDYAM-DL-09-0040538`
 - **Copyright**: © 2026 HOMES24DESIGNS. All rights reserved.

@@ -145,12 +145,12 @@ export default function AboutSection() {
                 {/* Quick Trust Badges Row */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
                   <div className="p-2.5 bg-stone-50 border border-stone-200 text-center">
-                    <span className="text-[10px] uppercase tracking-wider text-stone-400 block font-semibold">GSTIN</span>
-                    <span className="text-xs font-mono font-medium text-charcoal-800 block mt-0.5">{siteConfig.gst}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-stone-400 block font-semibold">DELIVERY</span>
+                    <span className="text-xs font-medium text-charcoal-800 block mt-0.5">45-Day Handover</span>
                   </div>
                   <div className="p-2.5 bg-stone-50 border border-stone-200 text-center">
-                    <span className="text-[10px] uppercase tracking-wider text-stone-400 block font-semibold">UDYAM</span>
-                    <span className="text-xs font-mono font-medium text-charcoal-800 block mt-0.5">{siteConfig.udyam}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-stone-400 block font-semibold">PRICING</span>
+                    <span className="text-xs font-medium text-charcoal-800 block mt-0.5">100% Itemized BOQ</span>
                   </div>
                   <div className="p-2.5 bg-stone-50 border border-stone-200 text-center">
                     <span className="text-[10px] uppercase tracking-wider text-stone-400 block font-semibold">ENTERPRISE</span>
@@ -417,29 +417,29 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* Credentials 4 Cards */}
+            {/* Studio Standards & Assurance Cards */}
             <div>
               <div className="flex items-center justify-between gap-4 mb-3">
                 <h3 className="text-xs font-semibold tracking-[0.2em] uppercase text-charcoal-700">
-                  Government Registered Credentials
+                  Studio Standards &amp; Assurance
                 </h3>
-                <span className="text-[11px] text-stone-400 font-medium">Verified Compliance</span>
+                <span className="text-[11px] text-stone-400 font-medium">Commitment to Quality</span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <div className="p-3.5 bg-white border border-stone-200/90 shadow-sm flex items-start gap-3 hover:border-accent/40 transition-colors">
                   <div className="w-8 h-8 bg-stone-100 flex items-center justify-center shrink-0 text-accent">
-                    <ShieldCheck className="w-4 h-4" strokeWidth={1.5} />
+                    <Clock className="w-4 h-4" strokeWidth={1.5} />
                   </div>
                   <div>
                     <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400 block">
-                      GST Registered
+                      Turnkey Delivery
                     </span>
-                    <span className="text-xs font-mono font-medium text-charcoal-900 block mt-0.5">
-                      {siteConfig.gst}
+                    <span className="text-xs font-medium text-charcoal-900 block mt-0.5">
+                      45-Day Handover
                     </span>
                     <span className="text-[11px] text-stone-500 block mt-0.5">
-                      Tax Compliant · Delhi
+                      Scheduled Milestone Tracking
                     </span>
                   </div>
                 </div>
@@ -450,13 +450,13 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400 block">
-                      Udyam Registered
+                      Transparent Pricing
                     </span>
-                    <span className="text-xs font-mono font-medium text-charcoal-900 block mt-0.5">
-                      {siteConfig.udyam}
+                    <span className="text-xs font-medium text-charcoal-900 block mt-0.5">
+                      100% Itemized BOQ
                     </span>
                     <span className="text-[11px] text-stone-500 block mt-0.5">
-                      Ministry of MSME, India
+                      Zero Hidden Extras
                     </span>
                   </div>
                 </div>
@@ -467,10 +467,13 @@ export default function AboutSection() {
                   </div>
                   <div>
                     <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400 block">
-                      Classification
+                      Enterprise
                     </span>
                     <span className="text-xs font-medium text-charcoal-900 block mt-0.5">
                       Micro Enterprise
+                    </span>
+                    <span className="text-[11px] text-stone-500 block mt-0.5">
+                      Established Design Firm
                     </span>
                   </div>
                 </div>

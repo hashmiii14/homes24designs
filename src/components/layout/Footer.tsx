@@ -107,15 +107,15 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 sm:gap-x-6 gap-y-2 text-center md:text-left">
               <span className="text-xs text-stone-400">
-                GSTIN: <span className="font-mono text-stone-300 font-medium tracking-wide">{siteConfig.gst}</span>
-              </span>
-              <span className="hidden sm:inline text-stone-700">·</span>
-              <span className="text-xs text-stone-400">
-                Udyam: <span className="font-mono text-stone-300 font-medium tracking-wide">{siteConfig.udyam}</span>
-              </span>
-              <span className="hidden sm:inline text-stone-700">·</span>
-              <span className="text-xs text-stone-400">
                 Principal Designer: <span className="text-stone-300 font-medium">{siteConfig.principalDesigner}</span>
+              </span>
+              <span className="hidden sm:inline text-stone-700">·</span>
+              <span className="text-xs text-stone-400">
+                Studio: <span className="text-stone-300 font-medium">{siteConfig.address.city}, {siteConfig.address.line2}</span>
+              </span>
+              <span className="hidden sm:inline text-stone-700">·</span>
+              <span className="text-xs text-stone-400">
+                Turnkey Execution: <span className="text-stone-300 font-medium">45-Day Delivery</span>
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 shrink-0">

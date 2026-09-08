@@ -30,13 +30,9 @@ export const siteConfig = {
   ],
   targetDomain: 'homes24designs.in',
   instagram: 'https://www.instagram.com/homes24designs',
-  gst: '07AHGPI4995P2ZH',
-  udyam: 'UDYAM-DL-09-0040538',
   principalDesigner: 'Ehtasham',
   constitution: 'Micro Enterprise',
   enterpriseType: 'Micro Enterprise',
-  registrationDate: '07 October 2025',
-  udyamRegistrationDate: '19 October 2025',
   registeredActivities: [
     'Architectural and engineering activities and related technical consultancy',
     'Specialized design activities / activities of interior decorators',

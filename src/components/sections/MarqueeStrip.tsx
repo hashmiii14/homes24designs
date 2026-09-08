@@ -7,7 +7,7 @@ const marqueeItems = [
   '100% ITEMIZED BOQ',
   'DELHI NCR',
   'ARCHITECTURAL PRECISION & 3D DESIGN',
-  'GST & UDYAM REGISTERED ENTERPRISE',
+  'COMMERCIAL & RESIDENTIAL EXCELLENCE',
 ];
 
 export default function MarqueeStrip() {

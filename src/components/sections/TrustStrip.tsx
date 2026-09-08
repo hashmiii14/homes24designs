@@ -1,10 +1,10 @@
-import { Building2, FileCheck, Home, Palette } from 'lucide-react';
+import { Building2, Clock, Home, Palette } from 'lucide-react';
 
 const trustPoints = [
   { icon: Home, label: 'Residential Interior Solutions' },
   { icon: Palette, label: 'Interior Decoration Services' },
   { icon: Building2, label: 'Architectural & Interior Consultancy' },
-  { icon: FileCheck, label: 'GST & Udyam Registered Business' },
+  { icon: Clock, label: '45-Day Turnkey Delivery' },
 ];
 
 export default function TrustStrip() {
