@@ -74,7 +74,7 @@ export default function AboutSection() {
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <span className="text-[10px] font-semibold tracking-[0.2em] uppercase text-accent block">
-                        Proprietor &amp; Principal Designer
+                        Founder
                       </span>
                       <h3 className="text-xl sm:text-2xl font-normal text-charcoal-900 font-serif tracking-wide mt-1">
                         EHTASHAM
@@ -82,7 +82,7 @@ export default function AboutSection() {
                     </div>
                     <div className="flex flex-col items-end text-right shrink-0">
                       <span className="text-[10px] font-semibold tracking-wider uppercase text-stone-400">
-                        Proprietorship Enterprise
+                        Design Studio
                       </span>
                       <Logo variant="dark" size="sm" linkTo={null} className="items-end mt-1" />
                     </div>
@@ -95,10 +95,10 @@ export default function AboutSection() {
                     <span className="text-xs font-semibold tracking-wider uppercase text-accent">
                       FOUNDER PROFILE
                     </span>
-                    <span className="text-xs text-stone-500 font-medium">Proprietorship Enterprise:</span>
+                    <span className="text-xs text-stone-500 font-medium">Design Studio</span>
                   </div>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    <strong className="font-semibold text-charcoal-800">Ehtasham</strong> is the proprietor and principal designer of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space planning, and personalized residential interior solutions, commercial spaces and office spaces. Guided by an appreciation for spatial balance, practical ergonomics, and material integrity, he leads each project with direct personal involvement, and meticulous attention to detail.
+                    <strong className="font-semibold text-charcoal-800">Ehtasham</strong> is the founder of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space planning, and personalized residential interior solutions, commercial spaces and office spaces. Guided by an appreciation for spatial balance, practical ergonomics, and material integrity, he leads each project with direct personal involvement, and meticulous attention to detail.
                   </p>
                 </div>
 
