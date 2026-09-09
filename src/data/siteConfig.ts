@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: 'Interior Design Studio in New Delhi · Luxury Turnkey Living',
   description:
     'HOMES24DESIGNS is an established design firm based in New Delhi. Delivering bespoke residential interiors, modular kitchens, turnkey projects, and commercial spaces across Delhi NCR.',
-  url: (import.meta.env.VITE_SITE_URL as string) || 'https://homes24designs.vercel.app',
+  url: (import.meta.env.VITE_SITE_URL as string) || 'https://homes24designs.in',
   email: 'homes24designs@gmail.com',
   phone: '+91 9818083436',
   phoneRaw: '+919818083436',
@@ -38,7 +38,7 @@ export const siteConfig = {
     'Specialized design activities / activities of interior decorators',
   ],
   mapsQuery: 'New Delhi, Delhi 110025',
-  ogImage: 'https://homes24designs.vercel.app/og-image.jpg',
+  ogImage: 'https://homes24designs.in/og-image.jpg',
 } as const;
 
 export const navItems = [

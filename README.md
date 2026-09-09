@@ -1,6 +1,6 @@
 # HOMES24DESIGNS — Luxury Interior Design Studio
 
-> **Official Website & Digital Showcase for HOMES24DESIGNS**  
+> **Official Website**: [https://homes24designs.in](https://homes24designs.in) · [https://www.homes24designs.in](https://www.homes24designs.in)  
 > Premier residential interior design firm based in New Delhi — delivering bespoke residential interiors, waterproof modular kitchens, luxury wardrobes, and 45-day turnkey home execution across Delhi NCR.
 
 ---
