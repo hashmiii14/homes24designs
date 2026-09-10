@@ -32,23 +32,23 @@ export default function HomeAboutSection() {
       />
 
       <div className="container-lux relative z-10">
-        {/* Mobile Eyebrow & Heading: Positioned above left column on mobile */}
-        <div className="lg:hidden mb-4 sm:mb-6">
-          <div className="flex items-center gap-2 mb-1.5 sm:mb-2">
-            <span className="h-px w-6 sm:w-8 bg-accent" />
-            <span className="text-[10.5px] sm:text-xs font-semibold tracking-[0.18em] sm:tracking-[0.2em] uppercase text-accent">
+        {/* Mobile Eyebrow & Heading: Positioned above content on mobile only */}
+        <div className="md:hidden mb-4 sm:mb-5">
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="h-px w-6 bg-accent" />
+            <span className="text-[10.5px] font-semibold tracking-[0.18em] uppercase text-accent">
               Interior Design Studio · New Delhi
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-light text-charcoal-900 leading-[1.15]">
+          <h2 className="text-2xl font-light text-charcoal-900 leading-[1.15]">
             Designed Around Your Vision.{' '}
             <span className="italic font-normal text-stone-700">Built Around Your Trust.</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-          {/* Left Column: Studio Brand Identity & Direct Commitment (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-12 items-start">
+          {/* Left Column: Studio Brand Identity & Direct Commitment (5 cols on tablet/desktop, hidden on mobile) */}
+          <div className="hidden md:flex md:col-span-5 flex-col">
             <Reveal>
               <div className="relative mx-auto max-w-md lg:max-w-none w-full">
                 {/* Architectural decorative accent lines */}
@@ -167,12 +167,12 @@ export default function HomeAboutSection() {
             </Reveal>
           </div>
 
-          {/* Right Column: Studio Narrative & Scannable Highlights (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-start">
+          {/* Right Column: Studio Narrative & Scannable Highlights (7 cols on tablet/desktop, full on mobile) */}
+          <div className="md:col-span-7 flex flex-col justify-start">
             <Reveal delay={60}>
               <div className="space-y-4 sm:space-y-5">
-                {/* Eyebrow & Heading (Desktop only) */}
-                <div className="hidden lg:block">
+                {/* Eyebrow & Heading (Tablet & Desktop) */}
+                <div className="hidden md:block">
                   <div className="flex items-center gap-3 mb-2.5">
                     <span className="h-px w-8 bg-accent" />
                     <span className="text-xs font-semibold tracking-[0.2em] uppercase text-accent">
@@ -190,14 +190,14 @@ export default function HomeAboutSection() {
                   <div className="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">
                     <p>
                       <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as one of the premier interior design firms in New Delhi, dedicated to shaping spaces that balance quiet elegance with practical daily life.
-                      <span className={`${narrativeExpanded ? 'inline' : 'hidden'} lg:inline`}>
+                      <span className={`${narrativeExpanded ? 'inline' : 'hidden'} md:inline`}>
                         {' '}We craft refined residential environments where every room feels intentional, welcoming, and uniquely yours. From dream home interiors and modern modular kitchens to custom wardrobes, false ceiling illumination, and commercial environments, we deliver end-to-end turnkey spaces with meticulous attention to detail.
                       </span>
                     </p>
                     <button
                       type="button"
                       onClick={() => setNarrativeExpanded(!narrativeExpanded)}
-                      className="lg:hidden mt-1 text-[11px] font-semibold text-accent hover:text-accent-dark tracking-wide inline-flex items-center gap-1 touch-manipulation focus:outline-none py-0.5"
+                      className="md:hidden mt-1.5 text-[11.5px] font-semibold text-accent hover:text-accent-dark tracking-wide inline-flex items-center gap-1 touch-manipulation focus:outline-none py-0.5"
                     >
                       <span>{narrativeExpanded ? 'Show Less' : 'Read Full Overview'}</span>
                       {narrativeExpanded ? (
@@ -207,10 +207,10 @@ export default function HomeAboutSection() {
                       )}
                     </button>
                   </div>
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                  <p className="hidden md:block text-xs sm:text-sm text-stone-600 leading-relaxed">
                     We transform apartments, villas, contemporary homes, commercial spaces, and offices into functional sanctuaries.
                   </p>
-                  <div className="p-2.5 sm:p-3 bg-white border-l-2 border-accent text-xs sm:text-sm font-serif italic text-charcoal-900 shadow-2xs">
+                  <div className="hidden md:block p-2.5 sm:p-3 bg-white border-l-2 border-accent text-xs sm:text-sm font-serif italic text-charcoal-900 shadow-2xs">
                     &ldquo;We focus on how your space makes you feel.&rdquo;
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export default function HomeAboutSection() {
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
                         45-Day Handover
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-2 sm:line-clamp-none">
                         Milestone-driven execution with weekly progress updates shared directly from the studio.
                       </p>
                     </div>
@@ -239,7 +239,7 @@ export default function HomeAboutSection() {
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
                         100% Itemized BOQ
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-2 sm:line-clamp-none">
                         Clear, transparent pricing schedules with zero hidden contractor surprises.
                       </p>
                     </div>
@@ -253,7 +253,7 @@ export default function HomeAboutSection() {
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
                         Branded Material
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-2 sm:line-clamp-none">
                         Hardware, carcass, flooring, and electricals with authentic 10-year brand warranty.
                       </p>
                     </div>
@@ -267,7 +267,7 @@ export default function HomeAboutSection() {
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
                         Dedicated Supervision
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-2 sm:line-clamp-none">
                         Strict on-site quality control auditing civil masonry, electrical routing, and carpentry.
                       </p>
                     </div>

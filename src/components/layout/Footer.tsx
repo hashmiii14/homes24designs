@@ -76,8 +76,7 @@ export default function Footer() {
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 mt-0.5 text-accent-light shrink-0" strokeWidth={1.5} />
                 <span className="text-sm text-stone-400 leading-relaxed">
-                  {siteConfig.address.line1}, {siteConfig.address.line2},{' '}
-                  {siteConfig.address.state} {siteConfig.address.pincode}, {siteConfig.address.country}
+                  New Delhi, 110025
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
@@ -107,7 +106,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 sm:gap-x-6 gap-y-2 text-center md:text-left">
               <span className="text-xs text-stone-400">
-                Studio: <span className="text-stone-300 font-medium">{siteConfig.address.city}, {siteConfig.address.line2}</span>
+                Studio: <span className="text-stone-300 font-medium">New Delhi, 110025</span>
               </span>
               <span className="hidden sm:inline text-stone-700">·</span>
               <span className="text-xs text-stone-400">

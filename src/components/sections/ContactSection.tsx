@@ -30,8 +30,7 @@ export default function ContactSection() {
                     HOMES24DESIGNS · New Delhi
                   </h3>
                   <div className="text-xs sm:text-sm leading-relaxed text-stone-600">
-                    <p className="font-medium text-charcoal-800">New Delhi, Delhi NCR</p>
-                    <p>New Delhi, Delhi — 110025</p>
+                    <p className="font-medium text-charcoal-800">New Delhi, 110025</p>
                   </div>
                 </div>
 
