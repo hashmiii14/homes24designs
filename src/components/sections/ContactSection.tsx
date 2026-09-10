@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Clock, Layers } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -90,6 +91,16 @@ export default function ContactSection() {
                       </span>
                       <span className="font-medium truncate">{siteConfig.email}</span>
                     </a>
+
+                    <div className="pl-9 -mt-1 pb-1 flex items-center gap-3 text-[11px] text-stone-500">
+                      <Link to="/privacy" className="hover:text-accent underline underline-offset-2 transition-colors">
+                        Privacy Policy
+                      </Link>
+                      <span>·</span>
+                      <Link to="/terms" className="hover:text-accent underline underline-offset-2 transition-colors">
+                        Terms &amp; Conditions
+                      </Link>
+                    </div>
 
                     <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-xs text-charcoal-800 hover:text-accent transition-colors group">
                       <span className="w-7 h-7 flex items-center justify-center bg-charcoal-800 text-ivory group-hover:bg-accent transition-colors shrink-0">

@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
-import { X, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, Eye, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import { portfolioProjects, portfolioFilters } from '@/data/portfolio';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
@@ -33,6 +33,9 @@ export default function PortfolioGrid() {
   useEffect(() => {
     if (lightbox === null) return;
 
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setLightbox(null);
@@ -44,7 +47,10 @@ export default function PortfolioGrid() {
     };
 
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [lightbox, handlePrevImage, handleNextImage]);
 
   return (
@@ -140,20 +146,43 @@ export default function PortfolioGrid() {
       {/* Lightbox */}
       {currentProject && (
         <div
-          className="fixed inset-0 z-[80] bg-charcoal-900/90 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 md:p-6 overflow-y-auto overflow-x-hidden"
+          className="fixed inset-0 z-[80] bg-charcoal-900/90 backdrop-blur-sm flex items-center justify-center p-2 sm:p-5 md:p-6 overflow-y-auto overflow-x-hidden"
           onClick={() => setLightbox(null)}
         >
+          {/* Desktop/Tablet Floating Close Button */}
           <button
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 rounded-full bg-charcoal-800/80 hover:bg-accent text-ivory transition-colors z-20 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-accent"
-            aria-label="Close"
+            className="hidden sm:flex absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 rounded-full bg-charcoal-800/80 hover:bg-accent text-ivory transition-colors z-30 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-accent"
+            aria-label="Close image viewer"
             onClick={() => setLightbox(null)}
           >
             <X className="w-6 h-6" strokeWidth={1.5} />
           </button>
+
           <div
-            className="max-w-4xl w-full bg-ivory overflow-hidden shadow-2xl my-auto rounded-none border border-stone-200/40"
+            className="max-w-4xl w-full bg-ivory overflow-hidden shadow-2xl my-auto rounded-none border border-stone-200/40 relative z-20"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Mobile Sticky Top Bar with prominent "Back to Portfolio" */}
+            <div className="flex sm:hidden items-center justify-between px-3.5 py-2.5 bg-charcoal-900 text-ivory border-b border-charcoal-700/60 sticky top-0 z-30">
+              <button
+                type="button"
+                onClick={() => setLightbox(null)}
+                className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-stone-200 hover:text-accent-light active:scale-95 transition-colors py-1 px-1.5 -ml-1 rounded"
+                aria-label="Back to Portfolio"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Back to Portfolio</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setLightbox(null)}
+                className="p-1.5 text-stone-300 hover:text-white"
+                aria-label="Close image viewer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
             {/* Adaptive Viewport: Zero Cropping, Full Detail, Ambient Luxury Backdrop */}
             {(() => {
               const currentSrc = currentImages[activeImageIdx] || currentProject.image;
@@ -254,6 +283,18 @@ export default function PortfolioGrid() {
               <p className="mt-3 text-xs sm:text-sm leading-relaxed text-stone-600">
                 {currentProject.description}
               </p>
+
+              {/* Explicit Back to Portfolio button */}
+              <div className="mt-5 pt-4 border-t border-stone-200 flex sm:hidden justify-center">
+                <button
+                  type="button"
+                  onClick={() => setLightbox(null)}
+                  className="w-full py-3 bg-charcoal-800 text-ivory text-xs font-semibold tracking-wider uppercase text-center active:bg-charcoal-900 transition-colors flex items-center justify-center gap-2"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                  <span>Back to Portfolio</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

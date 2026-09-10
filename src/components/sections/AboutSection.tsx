@@ -24,7 +24,7 @@ export default function AboutSection() {
   )}`;
 
   return (
-    <section id="story" className="py-12 md:py-18 lg:py-22 bg-ivory relative overflow-hidden">
+    <section id="story" className="py-8 md:py-12 lg:py-16 bg-ivory relative overflow-hidden">
       {/* Subtle blueprint grid accent */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -36,7 +36,7 @@ export default function AboutSection() {
         aria-hidden="true"
       />
 
-      <div className="container-lux relative z-10 space-y-12 md:space-y-14">
+      <div className="container-lux relative z-10 space-y-8 md:space-y-10">
         {/* Mobile Heading: Positioned directly ABOVE the founder portrait on mobile screens */}
         <div className="lg:hidden">
           <div className="flex items-center gap-3 mb-2.5">

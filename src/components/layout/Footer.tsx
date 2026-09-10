@@ -104,7 +104,7 @@ export default function Footer() {
         {/* Trust badges */}
         <div className="mt-12 pt-8 border-t border-stone-700/50">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 sm:gap-x-6 gap-y-2 text-center md:text-left">
+            <div className="hidden md:flex flex-wrap items-center justify-start gap-x-4 sm:gap-x-6 gap-y-2 text-left">
               <span className="text-xs text-stone-400">
                 Studio: <span className="text-stone-300 font-medium">New Delhi, 110025</span>
               </span>
@@ -117,7 +117,7 @@ export default function Footer() {
                 Turnkey Execution: <span className="text-stone-300 font-medium">45-Day Delivery</span>
               </span>
             </div>
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 shrink-0">
+            <div className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 shrink-0 w-full md:w-auto">
               <Link to="/privacy" className="text-xs text-stone-400 hover:text-accent-light transition-colors">
                 Privacy Policy
               </Link>

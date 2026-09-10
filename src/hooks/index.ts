@@ -1,7 +1,35 @@
 import { useEffect, useRef, useState } from 'react';
 
+type RevealCallback = () => void;
+let sharedRevealObserver: IntersectionObserver | null = null;
+const observerCallbacks = new Map<Element, RevealCallback>();
+
+function getSharedRevealObserver(): IntersectionObserver | null {
+  if (typeof window === 'undefined' || typeof IntersectionObserver === 'undefined') {
+    return null;
+  }
+  if (!sharedRevealObserver) {
+    sharedRevealObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const cb = observerCallbacks.get(entry.target);
+            if (cb) {
+              cb();
+              observerCallbacks.delete(entry.target);
+              sharedRevealObserver?.unobserve(entry.target);
+            }
+          }
+        }
+      },
+      { threshold: 0.01, rootMargin: '120px 0px 60px 0px' }
+    );
+  }
+  return sharedRevealObserver;
+}
+
 export function useReveal<T extends HTMLElement = HTMLDivElement>(
-  options?: IntersectionObserverInit
+  _options?: IntersectionObserverInit
 ) {
   const ref = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -10,29 +38,30 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
     const el = ref.current;
     if (!el) return;
 
-    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
       setIsVisible(true);
       return;
     }
 
-    if (typeof IntersectionObserver === 'undefined') {
+    const observer = getSharedRevealObserver();
+    if (!observer) {
       setIsVisible(true);
       return;
     }
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.01, rootMargin: '120px 0px 60px 0px', ...options }
-    );
-
+    observerCallbacks.set(el, () => {
+      setIsVisible(true);
+    });
     observer.observe(el);
-    return () => observer.disconnect();
-  }, [options]);
+
+    return () => {
+      observerCallbacks.delete(el);
+      observer.unobserve(el);
+    };
+  }, []);
 
   return { ref, isVisible };
 }

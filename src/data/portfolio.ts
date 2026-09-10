@@ -149,7 +149,6 @@ export const portfolioProjects: PortfolioProject[] = [
     image: '/images/portfolio/project-8-main.jpg',
     alt: 'Elegant bedroom interior design in Delhi',
     gallery: [
-      '/images/portfolio/project-8-gallery-1.jpg',
       '/images/portfolio/project-8-gallery-2.jpg',
     ],
     category: ['Bedroom', 'Contemporary'],
