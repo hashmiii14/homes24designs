@@ -52,10 +52,9 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A restful bedroom with layered lighting, a custom wardrobe and a calm, tactile finish palette.',
     image: '/images/portfolio/project-3-main.jpg',
-    alt: 'Luxury bedroom interior design in South East Delhi',
+    alt: 'Luxury serene bedroom with tufted headboard and chandelier by HOMES24DESIGNS',
     gallery: [
       '/images/portfolio/project-3-gallery-1.jpg',
-      '/images/portfolio/project-3-gallery-2.jpg',
     ],
     category: ['Bedroom', 'Luxury'],
   },
