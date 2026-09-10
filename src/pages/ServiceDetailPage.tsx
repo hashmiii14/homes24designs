@@ -56,15 +56,9 @@ export default function ServiceDetailPage() {
       <section className="pb-12 md:pb-20 bg-ivory overflow-hidden">
         <div className="container-lux">
           <Reveal>
-            <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] max-h-[560px] overflow-hidden bg-charcoal-950 flex items-center justify-center border border-stone-200/50 shadow-sm">
-              {/* Ambient backdrop */}
-              <div
-                className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-25 scale-110 pointer-events-none"
-                style={{ backgroundImage: `url(${service.image})` }}
-                aria-hidden="true"
-              />
+            <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] max-h-[560px] overflow-hidden bg-white flex items-center justify-center border border-stone-200/50 shadow-sm">
               {/* Complete uncropped image */}
-              <picture className="relative z-10 w-full h-full flex items-center justify-center p-2 sm:p-4">
+              <picture className="w-full h-full flex items-center justify-center p-2 sm:p-4">
                 <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
                 <img
                   src={service.image}

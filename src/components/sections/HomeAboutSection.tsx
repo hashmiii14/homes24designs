@@ -24,21 +24,70 @@ export default function HomeAboutSection() {
       />
 
       <div className="container-lux relative z-10">
-        {/* Mobile Eyebrow & Heading */}
-        <div className="md:hidden mb-4">
-          <div className="flex items-center gap-2 mb-1.5">
-            <span className="h-px w-6 bg-accent" />
-            <span className="text-[10px] font-semibold tracking-[0.18em] uppercase text-accent">
-              Interior Design Studio · New Delhi
-            </span>
-          </div>
-          <h2 className="text-xl sm:text-2xl font-light text-charcoal-900 leading-snug">
-            Designed Around Your Vision.{' '}
-            <span className="italic font-normal text-stone-700">Built Around Your Trust.</span>
-          </h2>
+        {/* Mobile View: Short, Clean Preview */}
+        <div className="block md:hidden">
+          <Reveal>
+            <div className="p-4 sm:p-5 bg-white border border-stone-200/90 shadow-2xs space-y-3.5">
+              {/* Eyebrow & Brand Header */}
+              <div className="flex items-start justify-between gap-3 pb-3 border-b border-stone-100">
+                <div>
+                  <span className="text-[9.5px] font-semibold tracking-[0.2em] uppercase text-accent block">
+                    Interior Design Studio · New Delhi
+                  </span>
+                  <h3 className="text-lg font-normal text-charcoal-900 font-serif tracking-wide mt-0.5">
+                    HOMES24DESIGNS
+                  </h3>
+                  <p className="text-[11px] text-stone-500 mt-0.5">
+                    Principal Designer: <strong className="text-charcoal-800 font-medium">Ehtasham</strong>
+                  </p>
+                </div>
+                <Logo variant="dark" size="sm" linkTo={null} className="shrink-0" />
+              </div>
+
+              {/* Concise Preview Statement */}
+              <p className="text-xs text-stone-700 leading-relaxed">
+                Bespoke luxury residential interiors, modern modular kitchens, and turnkey homes across Delhi NCR — delivered with 100% itemized pricing and 45-day handover.
+              </p>
+
+              {/* 3 Quick Badges in one row */}
+              <div className="grid grid-cols-3 gap-2 py-2 border-y border-stone-100 text-center">
+                <div className="p-1.5 bg-stone-50/70 border border-stone-200/60">
+                  <span className="block font-serif text-sm font-medium text-charcoal-900">10+</span>
+                  <span className="text-[8.5px] uppercase tracking-wider text-stone-500 block">Years</span>
+                </div>
+                <div className="p-1.5 bg-stone-50/70 border border-stone-200/60">
+                  <span className="block font-serif text-sm font-medium text-charcoal-900">100%</span>
+                  <span className="text-[8.5px] uppercase tracking-wider text-stone-500 block">BOQ</span>
+                </div>
+                <div className="p-1.5 bg-stone-50/70 border border-stone-200/60">
+                  <span className="block font-serif text-sm font-medium text-charcoal-900">45-Day</span>
+                  <span className="text-[8.5px] uppercase tracking-wider text-stone-500 block">Delivery</span>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex items-center gap-2 pt-1">
+                <Link
+                  to="/services"
+                  className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-charcoal-800 text-ivory text-xs font-semibold tracking-wide hover:bg-charcoal-900 active:scale-95 transition-all text-center"
+                  style={{ color: '#f7f4ef' }}
+                >
+                  <span>Explore Services</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-accent-light shrink-0" strokeWidth={1.5} />
+                </Link>
+                <Link
+                  to="/about"
+                  className="flex-1 inline-flex items-center justify-center py-2.5 px-3 border border-charcoal-800 text-charcoal-800 text-xs font-medium tracking-wide hover:bg-charcoal-800 hover:text-ivory active:scale-95 transition-all text-center"
+                >
+                  About Studio →
+                </Link>
+              </div>
+            </div>
+          </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-8 items-stretch">
+        {/* Desktop & Tablet View: Full 2-Column Showcase (Unchanged) */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-12 gap-5 lg:gap-8 items-stretch">
           {/* Left Column: Studio & Founder Identity Card */}
           <div className="md:col-span-5 flex flex-col justify-between">
             <Reveal className="h-full">
