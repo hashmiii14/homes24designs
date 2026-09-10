@@ -167,7 +167,8 @@ export const portfolioProjects: PortfolioProject[] = [
     image: '/images/portfolio/project-10-main.jpg',
     alt: 'Luxury contemporary kitchen with waterfall marble island and warm cabinetry in Delhi NCR',
     gallery: [
-      '/images/portfolio/project-10-main.jpg',
+      '/images/portfolio/project-10-gallery-1.jpg',
+      '/images/portfolio/project-10-gallery-2.jpg',
     ],
     category: ['Kitchen', 'Contemporary', 'Luxury'],
   },
@@ -182,7 +183,8 @@ export const portfolioProjects: PortfolioProject[] = [
     image: '/images/portfolio/project-11-main.jpg',
     alt: 'Contemporary luxury living lounge with fluted feature wall and warm lighting in South Delhi',
     gallery: [
-      '/images/portfolio/project-11-main.jpg',
+      '/images/portfolio/project-11-gallery-1.jpg',
+      '/images/portfolio/project-11-gallery-2.jpg',
     ],
     category: ['Living Room', 'Luxury'],
   },
@@ -197,7 +199,8 @@ export const portfolioProjects: PortfolioProject[] = [
     image: '/images/portfolio/project-12-main.jpg',
     alt: 'Luxury residential dining room with marble table and brass chandelier in New Delhi',
     gallery: [
-      '/images/portfolio/project-12-main.jpg',
+      '/images/portfolio/project-12-gallery-1.jpg',
+      '/images/portfolio/project-12-gallery-2.jpg',
     ],
     category: ['Full Home', 'Luxury', 'Contemporary'],
   },
