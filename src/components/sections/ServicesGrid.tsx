@@ -26,13 +26,16 @@ export default function ServicesGrid() {
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 shrink-0">
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  <picture>
+                    <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                    <img
+                      src={service.image}
+                      alt={service.alt}
+                      className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
+                      loading={i < 4 ? 'eager' : 'lazy'}
+                      decoding="async"
+                    />
+                  </picture>
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 

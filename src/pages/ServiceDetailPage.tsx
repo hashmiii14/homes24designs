@@ -56,13 +56,17 @@ export default function ServiceDetailPage() {
       <section className="pb-12 md:pb-20 bg-ivory overflow-hidden">
         <div className="container-lux">
           <Reveal>
-            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
-              <img
-                src={service.image}
-                alt={service.alt}
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden bg-stone-100">
+              <picture>
+                <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="w-full h-full object-cover object-center"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </Reveal>
         </div>
