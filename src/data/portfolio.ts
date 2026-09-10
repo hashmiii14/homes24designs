@@ -21,10 +21,9 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A warm, light-filled living room with a restrained palette, layered lighting and considered furniture placement.',
     image: '/images/portfolio/project-1-main.jpg',
-    alt: 'Contemporary living room interior design in New Delhi',
+    alt: 'Luxury contemporary living room with marble TV wall and layered lighting by HOMES24DESIGNS',
     gallery: [
       '/images/portfolio/project-1-gallery-1.jpg',
-      '/images/portfolio/project-1-gallery-2.jpg',
     ],
     category: ['Living Room', 'Contemporary'],
   },
