@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react';
-import { X, Eye } from 'lucide-react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { X, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
 import { portfolioProjects, portfolioFilters } from '@/data/portfolio';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
@@ -13,6 +13,39 @@ export default function PortfolioGrid() {
     if (filter === 'All') return portfolioProjects;
     return portfolioProjects.filter((p) => p.category.includes(filter));
   }, [filter]);
+
+  const currentProject = lightbox !== null ? filtered[lightbox] : null;
+  const currentImages = useMemo(() => {
+    if (!currentProject) return [];
+    return [currentProject.image, ...(currentProject.gallery || [])];
+  }, [currentProject]);
+
+  const handlePrevImage = useCallback(() => {
+    if (currentImages.length <= 1) return;
+    setActiveImageIdx((prev) => (prev > 0 ? prev - 1 : currentImages.length - 1));
+  }, [currentImages]);
+
+  const handleNextImage = useCallback(() => {
+    if (currentImages.length <= 1) return;
+    setActiveImageIdx((prev) => (prev < currentImages.length - 1 ? prev + 1 : 0));
+  }, [currentImages]);
+
+  useEffect(() => {
+    if (lightbox === null) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setLightbox(null);
+      } else if (e.key === 'ArrowLeft') {
+        handlePrevImage();
+      } else if (e.key === 'ArrowRight') {
+        handleNextImage();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightbox, handlePrevImage, handleNextImage]);
 
   return (
     <section className="py-10 md:py-16 lg:py-18 bg-ivory overflow-hidden">
@@ -48,117 +81,183 @@ export default function PortfolioGrid() {
 
         {/* Grid */}
         <div className="mt-7 sm:mt-10 md:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
-          {filtered.map((project, i) => (
-            <Reveal key={project.id} delay={i * 60}>
-              <div
-                onClick={() => { setLightbox(i); setActiveImageIdx(0); }}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setLightbox(i); setActiveImageIdx(0); } }}
-                role="button"
-                tabIndex={0}
-                className="group block w-full text-left cursor-pointer touch-manipulation focus:outline-none focus:ring-2 focus:ring-accent"
-                aria-label={`View details of ${project.title}`}
-              >
-                <div className="relative aspect-[4/5] overflow-hidden bg-stone-100">
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/85 via-charcoal-900/30 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-500" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-accent-light">
-                      {project.type} · {project.style}
-                    </span>
-                    <h3 className="text-lg font-medium text-ivory mt-1">{project.title}</h3>
-                    <p className="text-xs text-stone-300 mt-0.5">{project.location}</p>
-                    <div className="mt-3.5">
-                      <span
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-charcoal-900/60 md:bg-ivory/15 group-hover:bg-accent text-ivory text-[11px] font-medium tracking-wider uppercase border border-ivory/30 md:backdrop-blur-sm transition-all duration-300 active:scale-95"
-                      >
-                        <Eye className="w-3.5 h-3.5 text-accent-light group-hover:text-ivory transition-colors" strokeWidth={1.5} />
-                        <span>View Details</span>
+          {filtered.map((project, i) => {
+            const webpSrc = project.image.replace(/\.jpg$/, '.webp');
+            return (
+              <Reveal key={project.id} delay={i * 50}>
+                <div
+                  onClick={() => {
+                    setLightbox(i);
+                    setActiveImageIdx(0);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setLightbox(i);
+                      setActiveImageIdx(0);
+                    }
+                  }}
+                  role="button"
+                  tabIndex={0}
+                  className="group block w-full text-left cursor-pointer touch-manipulation focus:outline-none focus:ring-2 focus:ring-accent"
+                  aria-label={`View details of ${project.title}`}
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden bg-stone-100">
+                    <picture>
+                      <source srcSet={webpSrc} type="image/webp" />
+                      <img
+                        src={project.image}
+                        alt={project.alt}
+                        className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
+                        loading={i < 4 ? 'eager' : 'lazy'}
+                        decoding="async"
+                      />
+                    </picture>
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/85 via-charcoal-900/30 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-500" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
+                      <span className="text-[10px] tracking-[0.2em] uppercase text-accent-light">
+                        {project.type} · {project.style}
                       </span>
+                      <h3 className="text-lg font-medium text-ivory mt-1">{project.title}</h3>
+                      <p className="text-xs text-stone-300 mt-0.5">{project.location}</p>
+                      <div className="mt-3.5">
+                        <span
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-charcoal-900/60 md:bg-ivory/15 group-hover:bg-accent text-ivory text-[11px] font-medium tracking-wider uppercase border border-ivory/30 md:backdrop-blur-sm transition-all duration-300 active:scale-95"
+                        >
+                          <Eye className="w-3.5 h-3.5 text-accent-light group-hover:text-ivory transition-colors" strokeWidth={1.5} />
+                          <span>View Details</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
 
       {/* Lightbox */}
-      {lightbox !== null && filtered[lightbox] && (() => {
-        const project = filtered[lightbox];
-        const images = [project.image, ...(project.gallery || [])];
-        const currentSrc = images[activeImageIdx] || project.image;
-
-        return (
-          <div
-            className="fixed inset-0 z-[80] bg-charcoal-900/90 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 overflow-y-auto overflow-x-hidden"
+      {currentProject && (
+        <div
+          className="fixed inset-0 z-[80] bg-charcoal-900/90 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 md:p-6 overflow-y-auto overflow-x-hidden"
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 rounded-full bg-charcoal-800/80 hover:bg-accent text-ivory transition-colors z-20 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-accent"
+            aria-label="Close"
             onClick={() => setLightbox(null)}
           >
-            <button
-              className="absolute top-6 right-6 p-2 text-ivory hover:text-accent-light transition-colors z-10"
-              aria-label="Close"
-              onClick={() => setLightbox(null)}
-            >
-              <X className="w-7 h-7" strokeWidth={1.5} />
-            </button>
-            <div
-              className="max-w-4xl w-full bg-ivory overflow-hidden shadow-2xl my-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="aspect-[16/10] overflow-hidden bg-stone-900 relative">
-                <img
-                  src={currentSrc}
-                  alt={project.alt}
-                  className="w-full h-full object-cover transition-all duration-300"
-                />
-              </div>
+            <X className="w-6 h-6" strokeWidth={1.5} />
+          </button>
+          <div
+            className="max-w-4xl w-full bg-ivory overflow-hidden shadow-2xl my-auto rounded-none border border-stone-200/40"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Adaptive Viewport: Zero Cropping, Full Detail, Ambient Luxury Backdrop */}
+            {(() => {
+              const currentSrc = currentImages[activeImageIdx] || currentProject.image;
+              const webpCurrent = currentSrc.replace(/\.jpg$/, '.webp');
 
-              {/* Gallery Thumbnails Strip */}
-              {images.length > 1 && (
-                <div className="flex items-center gap-2 p-3 bg-stone-100/90 border-b border-stone-200 overflow-x-auto">
-                  {images.map((img, idx) => (
+              return (
+                <div className="relative w-full h-[52vh] sm:h-[62vh] md:h-[70vh] min-h-[300px] md:min-h-[480px] bg-stone-950 flex items-center justify-center overflow-hidden select-none">
+                  {/* Ambient backdrop */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-20 scale-110 pointer-events-none transition-all duration-500"
+                    style={{ backgroundImage: `url(${currentSrc})` }}
+                    aria-hidden="true"
+                  />
+
+                  {/* Main uncropped foreground image */}
+                  <picture className="relative z-10 max-h-full max-w-full flex items-center justify-center p-2 sm:p-4">
+                    <source srcSet={webpCurrent} type="image/webp" />
+                    <img
+                      key={currentSrc}
+                      src={currentSrc}
+                      alt={currentProject.alt}
+                      className="max-h-[48vh] sm:max-h-[58vh] md:max-h-[66vh] w-auto max-w-full object-contain mx-auto shadow-2xl transition-opacity duration-300 rounded-sm"
+                      loading="eager"
+                      decoding="sync"
+                    />
+                  </picture>
+
+                  {/* Navigation Arrows */}
+                  {currentImages.length > 1 && (
+                    <>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePrevImage();
+                        }}
+                        className="absolute left-2.5 sm:left-4 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-2.5 rounded-full bg-charcoal-900/75 hover:bg-accent text-ivory backdrop-blur-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent"
+                        aria-label="Previous photo"
+                      >
+                        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2} />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleNextImage();
+                        }}
+                        className="absolute right-2.5 sm:right-4 top-1/2 -translate-y-1/2 z-20 p-2 sm:p-2.5 rounded-full bg-charcoal-900/75 hover:bg-accent text-ivory backdrop-blur-md transition-all duration-200 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent"
+                        aria-label="Next photo"
+                      >
+                        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={2} />
+                      </button>
+                    </>
+                  )}
+                </div>
+              );
+            })()}
+
+            {/* Gallery Thumbnails Strip */}
+            {currentImages.length > 1 && (
+              <div className="flex items-center gap-2 p-2.5 sm:p-3 bg-stone-100 border-b border-stone-200 overflow-x-auto">
+                {currentImages.map((img, idx) => {
+                  const thumbWebp = img.replace(/\.jpg$/, '.webp');
+                  const isActive = activeImageIdx === idx;
+                  return (
                     <button
                       key={idx}
                       type="button"
                       onClick={() => setActiveImageIdx(idx)}
-                      className={`relative w-16 h-12 shrink-0 border-2 overflow-hidden transition-all focus:outline-none ${
-                        activeImageIdx === idx
-                          ? 'border-accent ring-1 ring-accent'
+                      className={`relative w-14 h-11 sm:w-16 sm:h-12 shrink-0 border-2 overflow-hidden transition-all focus:outline-none ${
+                        isActive
+                          ? 'border-accent ring-2 ring-accent/60 scale-105 shadow-sm'
                           : 'border-transparent opacity-60 hover:opacity-100'
                       }`}
                       aria-label={`View photo ${idx + 1}`}
                     >
-                      <img src={img} alt="" className="w-full h-full object-cover" />
+                      <picture>
+                        <source srcSet={thumbWebp} type="image/webp" />
+                        <img src={img} alt="" className="w-full h-full object-cover" loading="eager" />
+                      </picture>
                     </button>
-                  ))}
-                  <span className="text-[11px] text-stone-500 font-medium pl-2 shrink-0">
-                    {activeImageIdx + 1} of {images.length}
-                  </span>
-                </div>
-              )}
-
-              <div className="p-6 md:p-8">
-                <span className="text-[10px] tracking-[0.2em] uppercase text-accent font-semibold">
-                  {project.type} · {project.style}
+                  );
+                })}
+                <span className="text-[11px] text-stone-500 font-medium pl-2 shrink-0">
+                  {activeImageIdx + 1} of {currentImages.length}
                 </span>
-                <h3 className="text-2xl font-light text-charcoal-800 mt-1.5 font-serif">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-stone-500 mt-0.5">{project.location}</p>
-                <p className="mt-3.5 text-sm leading-relaxed text-stone-600">
-                  {project.description}
-                </p>
               </div>
+            )}
+
+            <div className="p-5 sm:p-6 md:p-8">
+              <span className="text-[10px] tracking-[0.2em] uppercase text-accent font-semibold">
+                {currentProject.type} · {currentProject.style}
+              </span>
+              <h3 className="text-xl sm:text-2xl font-light text-charcoal-800 mt-1 font-serif">
+                {currentProject.title}
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-500 mt-0.5">{currentProject.location}</p>
+              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-stone-600">
+                {currentProject.description}
+              </p>
             </div>
           </div>
-        );
-      })()}
+        </div>
+      )}
     </section>
   );
 }
