@@ -87,28 +87,10 @@ function AnimatedWords({
 }
 
 export default function Hero() {
-  const [isLoaded, setIsLoaded] = useState(
-    typeof window !== 'undefined' ? Boolean(window.__h24_loaded) : false
-  );
+  const [isLoaded, setIsLoaded] = useState(true);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    if (window.__h24_loaded || !document.getElementById('h24-initial-loader')) {
-      setIsLoaded(true);
-      return;
-    }
-
-    const handler = () => setIsLoaded(true);
-    window.addEventListener('h24-loader-done', handler);
-
-    // Safety fallback: if event was somehow missed, trigger after 750ms
-    const timer = setTimeout(() => setIsLoaded(true), 750);
-
-    return () => {
-      window.removeEventListener('h24-loader-done', handler);
-      clearTimeout(timer);
-    };
+    setIsLoaded(true);
   }, []);
 
   const handleConsultationClick = (e: React.MouseEvent<HTMLAnchorElement>) => {

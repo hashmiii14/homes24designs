@@ -32,16 +32,14 @@ export default function Header() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-out ${
           transparent
             ? 'bg-transparent'
-            : 'bg-white md:bg-white/95 md:backdrop-blur-md border-b border-stone-200/80 shadow-xs'
+            : 'bg-black/95 backdrop-blur-md border-b border-stone-800/80 shadow-md'
         }`}
         style={{ transform: 'translate3d(0, 0, 0)' }}
       >
         <div className="container-lux">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-16 sm:h-18 md:h-20">
             {/* Logo */}
             <Logo
-              variant="header-adaptive"
-              transparent={transparent}
               size="md"
               onClick={() => handleNavClick('/')}
             />
@@ -56,13 +54,9 @@ export default function Header() {
                     to={item.path}
                     onClick={() => handleNavClick(item.path)}
                     className={`link-underline text-sm font-medium tracking-wide transition-colors duration-300 ${
-                      transparent
-                        ? active
-                          ? 'text-accent-light'
-                          : 'text-ivory/90 hover:text-ivory'
-                        : active
-                        ? 'text-accent'
-                        : 'text-charcoal-600 hover:text-charcoal-900'
+                      active
+                        ? 'text-accent-light'
+                        : 'text-stone-300 hover:text-ivory'
                     }`}
                   >
                     {item.label}
@@ -75,20 +69,14 @@ export default function Header() {
             <div className="flex items-center gap-3 sm:gap-4">
               <Link
                 to="/contact"
-                className={`hidden md:inline-flex items-center justify-center px-5 lg:px-6 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-300 shadow-sm active:scale-95 touch-manipulation ${
-                  transparent
-                    ? 'border border-ivory/60 text-ivory hover:bg-ivory hover:text-charcoal-900'
-                    : 'bg-charcoal-800 text-ivory hover:bg-charcoal-900 hover:shadow-md'
-                }`}
+                className="hidden md:inline-flex items-center justify-center px-5 lg:px-6 py-2.5 text-xs font-semibold tracking-[0.15em] uppercase transition-all duration-300 shadow-sm active:scale-95 touch-manipulation bg-accent hover:bg-accent-light text-charcoal-950 hover:shadow-md"
               >
                 Book a Consultation
               </Link>
 
               <button
                 onClick={() => setMenuOpen(true)}
-                className={`lg:hidden p-2.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent touch-manipulation ${
-                  transparent ? 'text-ivory hover:text-accent-light' : 'text-charcoal-800 hover:text-accent'
-                }`}
+                className="lg:hidden p-2.5 text-stone-200 hover:text-accent-light transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent touch-manipulation"
                 aria-label="Open menu"
                 aria-expanded={menuOpen}
               >
@@ -108,19 +96,19 @@ export default function Header() {
         aria-hidden={!menuOpen}
       >
         <div
-          className="absolute inset-0 bg-charcoal-900/50 md:backdrop-blur-sm"
+          className="absolute inset-0 bg-black/70 backdrop-blur-sm"
           onClick={() => setMenuOpen(false)}
         />
         <div
-          className={`absolute right-0 top-0 h-full w-full max-w-sm bg-ivory shadow-2xl transition-transform duration-500 ease-lux ${
+          className={`absolute right-0 top-0 h-full w-full max-w-sm bg-stone-950 text-ivory shadow-2xl transition-transform duration-500 ease-lux border-l border-stone-800/80 ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex items-center justify-between h-16 px-6 border-b border-stone-200">
-            <Logo variant="dark" size="sm" onClick={() => handleNavClick('/')} />
+          <div className="flex items-center justify-between h-16 sm:h-20 px-6 border-b border-stone-800/80 bg-black">
+            <Logo size="sm" onClick={() => handleNavClick('/')} />
             <button
               onClick={() => setMenuOpen(false)}
-              className="p-2 text-charcoal-700 hover:text-accent transition-colors"
+              className="p-2 text-stone-300 hover:text-accent-light transition-colors"
               aria-label="Close menu"
             >
               <X className="w-6 h-6" strokeWidth={1.5} />
@@ -135,8 +123,8 @@ export default function Header() {
                   key={item.path}
                   to={item.path}
                   onClick={() => handleNavClick(item.path)}
-                  className={`py-3 text-lg font-light border-b border-stone-200/60 transition-colors ${
-                    active ? 'text-accent' : 'text-charcoal-700 hover:text-accent'
+                  className={`py-3 text-lg font-light border-b border-stone-800/50 transition-colors ${
+                    active ? 'text-accent-light' : 'text-stone-300 hover:text-accent-light'
                   }`}
                   style={{
                     animation: menuOpen
@@ -154,7 +142,7 @@ export default function Header() {
             <Link
               to="/contact"
               onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-center w-full py-3.5 bg-charcoal-800 text-ivory text-sm font-semibold tracking-wide hover:bg-charcoal-900 active:scale-[0.98] transition-all shadow-md touch-manipulation"
+              className="flex items-center justify-center w-full py-3.5 bg-accent text-charcoal-950 text-sm font-semibold tracking-wide hover:bg-accent-light active:scale-[0.98] transition-all shadow-md touch-manipulation"
             >
               Book a Consultation
             </Link>
@@ -163,13 +151,13 @@ export default function Header() {
           <div className="px-6 mt-8 space-y-2">
             <a
               href={`tel:${siteConfig.phoneRaw}`}
-              className="block text-sm text-stone-600 hover:text-accent transition-colors"
+              className="block text-sm text-stone-400 hover:text-accent-light transition-colors"
             >
               {siteConfig.phone}
             </a>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="block text-sm text-stone-600 hover:text-accent transition-colors"
+              className="block text-sm text-stone-400 hover:text-accent-light transition-colors"
             >
               {siteConfig.email}
             </a>

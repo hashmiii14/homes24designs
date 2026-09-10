@@ -156,6 +156,51 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
     category: ['Bedroom', 'Contemporary'],
   },
+  {
+    id: 'p10',
+    title: 'Minimalist Island Kitchen',
+    location: 'Delhi NCR',
+    type: 'Kitchen',
+    style: 'Contemporary',
+    description:
+      'A bespoke modular kitchen featuring a dramatic waterfall marble breakfast island, fluted warm walnut cabinetry, integrated appliances, and warm architectural under-counter profile illumination.',
+    image: '/images/portfolio/project-10-main.jpg',
+    alt: 'Luxury contemporary kitchen with waterfall marble island and warm cabinetry in Delhi NCR',
+    gallery: [
+      '/images/portfolio/project-10-main.jpg',
+    ],
+    category: ['Kitchen', 'Contemporary', 'Luxury'],
+  },
+  {
+    id: 'p11',
+    title: 'Architectural Living Lounge',
+    location: 'South Delhi',
+    type: 'Living Room',
+    style: 'Luxury',
+    description:
+      'An expansive living lounge featuring floor-to-ceiling double-height glazing, custom fluted acoustic wall panelling with integrated warm linear lighting, and refined designer upholstery.',
+    image: '/images/portfolio/project-11-main.jpg',
+    alt: 'Contemporary luxury living lounge with fluted feature wall and warm lighting in South Delhi',
+    gallery: [
+      '/images/portfolio/project-11-main.jpg',
+    ],
+    category: ['Living Room', 'Luxury'],
+  },
+  {
+    id: 'p12',
+    title: 'Grand Dining Residence',
+    location: 'New Delhi',
+    type: 'Full Home',
+    style: 'Luxury',
+    description:
+      'A statement dining setting centered around a Calacatta marble table, custom brass sculptural chandelier, slatted architectural wood panelling, and seamless indoor-outdoor sightlines.',
+    image: '/images/portfolio/project-12-main.jpg',
+    alt: 'Luxury residential dining room with marble table and brass chandelier in New Delhi',
+    gallery: [
+      '/images/portfolio/project-12-main.jpg',
+    ],
+    category: ['Full Home', 'Luxury', 'Contemporary'],
+  },
 ];
 
 export const portfolioFilters = [
