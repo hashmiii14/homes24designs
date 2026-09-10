@@ -36,7 +36,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       'A sleek modular kitchen with optimised counter layout, integrated appliances and warm under-cabinet lighting.',
     image: '/images/portfolio/project-2-main.jpg',
-    alt: 'Modern modular kitchen interior in Delhi NCR',
+    alt: 'Modern luxury modular kitchen with custom cabinetry and integrated lighting by HOMES24DESIGNS',
     gallery: [
       '/images/portfolio/project-2-gallery-1.jpg',
       '/images/portfolio/project-2-gallery-2.jpg',
