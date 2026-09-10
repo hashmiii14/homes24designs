@@ -25,18 +25,25 @@ export default function ServicesGrid() {
                 aria-label={`View ${service.title} service details`}
               >
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 shrink-0">
-                  <picture>
+                <div className="relative aspect-[1/1] overflow-hidden bg-charcoal-950 flex items-center justify-center shrink-0">
+                  {/* Ambient backdrop */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center filter blur-2xl opacity-25 scale-110 pointer-events-none transition-all duration-500 group-hover:opacity-35"
+                    style={{ backgroundImage: `url(${service.image})` }}
+                    aria-hidden="true"
+                  />
+                  {/* Complete uncropped image */}
+                  <picture className="relative z-10 w-full h-full flex items-center justify-center">
                     <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
                     <img
                       src={service.image}
                       alt={service.alt}
-                      className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
+                      className="w-full h-full object-contain transition-transform duration-700 ease-lux group-hover:scale-105"
                       loading={i < 4 ? 'eager' : 'lazy'}
                       decoding="async"
                     />
                   </picture>
-                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </div>
 
                 {/* Content */}
