@@ -28,6 +28,21 @@ export const portfolioProjects: PortfolioProject[] = [
     category: ['Living Room', 'Contemporary'],
   },
   {
+    id: 'p3',
+    title: 'Serene Bedroom Design',
+    location: 'South East Delhi',
+    type: 'Bedroom',
+    style: 'Luxury',
+    description:
+      'A restful bedroom with layered lighting, a custom wardrobe and a calm, tactile finish palette.',
+    image: '/images/portfolio/project-3-main.jpg',
+    alt: 'Luxury serene bedroom with tufted headboard and chandelier by HOMES24DESIGNS',
+    gallery: [
+      '/images/portfolio/project-3-gallery-1.jpg',
+    ],
+    category: ['Bedroom', 'Luxury'],
+  },
+  {
     id: 'p2',
     title: 'Modern Modular Kitchen',
     location: 'Delhi NCR',
@@ -42,21 +57,6 @@ export const portfolioProjects: PortfolioProject[] = [
       '/images/portfolio/project-2-gallery-2.jpg',
     ],
     category: ['Kitchen', 'Contemporary'],
-  },
-  {
-    id: 'p3',
-    title: 'Serene Bedroom Design',
-    location: 'South East Delhi',
-    type: 'Bedroom',
-    style: 'Luxury',
-    description:
-      'A restful bedroom with layered lighting, a custom wardrobe and a calm, tactile finish palette.',
-    image: '/images/portfolio/project-3-main.jpg',
-    alt: 'Luxury serene bedroom with tufted headboard and chandelier by HOMES24DESIGNS',
-    gallery: [
-      '/images/portfolio/project-3-gallery-1.jpg',
-    ],
-    category: ['Bedroom', 'Luxury'],
   },
   {
     id: 'p4',
