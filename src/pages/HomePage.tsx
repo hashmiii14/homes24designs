@@ -13,7 +13,6 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ConsultationForm from '@/components/sections/ConsultationForm';
 import JournalGrid from '@/components/sections/JournalGrid';
 import FAQSection from '@/components/sections/FAQSection';
-import ContactSection from '@/components/sections/ContactSection';
 import { siteConfig } from '@/data/siteConfig';
 import { services } from '@/data/services';
 import { faqItems } from '@/data/faq';
@@ -119,7 +118,6 @@ export default function HomePage() {
       <ConsultationForm />
       <JournalGrid limit={3} />
       <FAQSection />
-      <ContactSection />
     </>
   );
 }

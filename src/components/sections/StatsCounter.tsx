@@ -31,7 +31,7 @@ const statsData: StatItem[] = [
     target: 45,
     suffix: ' Days',
     label: 'Turnkey Handover',
-    sublabel: 'Direct site supervision by Designer Ehtasham',
+    sublabel: 'Direct on-site supervision & quality control',
     icon: Clock,
   },
   {

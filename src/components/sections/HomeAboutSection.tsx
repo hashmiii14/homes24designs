@@ -16,10 +16,9 @@ import Logo from '@/components/ui/Logo';
 
 export default function HomeAboutSection() {
   const [narrativeExpanded, setNarrativeExpanded] = useState(false);
-  const [bioExpanded, setBioExpanded] = useState(false);
 
   return (
-    <section id="about" className="py-6 sm:py-10 md:py-16 lg:py-20 bg-ivory relative overflow-hidden">
+    <section id="about" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-ivory relative overflow-hidden">
       {/* Subtle architectural background line accents */}
       <div
         className="absolute inset-0 opacity-[0.025] pointer-events-none hidden sm:block"
@@ -34,7 +33,7 @@ export default function HomeAboutSection() {
 
       <div className="container-lux relative z-10">
         {/* Mobile Eyebrow & Heading: Positioned above left column on mobile */}
-        <div className="lg:hidden mb-3 sm:mb-6">
+        <div className="lg:hidden mb-4 sm:mb-6">
           <div className="flex items-center gap-2 mb-1.5 sm:mb-2">
             <span className="h-px w-6 sm:w-8 bg-accent" />
             <span className="text-[10.5px] sm:text-xs font-semibold tracking-[0.18em] sm:tracking-[0.2em] uppercase text-accent">
@@ -47,8 +46,8 @@ export default function HomeAboutSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-12 items-start">
-          {/* Left Column: Founder Profile & Studio Philosophy (5 cols) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
+          {/* Left Column: Studio Brand Identity & Direct Commitment (5 cols) */}
           <div className="lg:col-span-5 flex flex-col">
             <Reveal>
               <div className="relative mx-auto max-w-md lg:max-w-none w-full">
@@ -62,73 +61,61 @@ export default function HomeAboutSection() {
                   aria-hidden="true"
                 />
 
-                {/* Nameplate Badge */}
-                <div className="p-3.5 sm:p-5 lg:p-6 bg-white border border-stone-200 shadow-sm">
+                {/* Studio Identity Badge */}
+                <div className="p-4 sm:p-5 lg:p-6 bg-white border border-stone-200 shadow-sm">
                   <div className="flex items-start justify-between gap-3">
                     <div>
                       <span className="text-[9.5px] sm:text-[10px] font-semibold tracking-[0.2em] uppercase text-accent block">
-                        Founder
+                        Established Studio
                       </span>
                       <h3 className="text-lg sm:text-xl lg:text-2xl font-normal text-charcoal-900 font-serif tracking-wide mt-0.5 sm:mt-1">
-                        EHTASHAM
+                        HOMES24DESIGNS
                       </h3>
+                      <p className="text-[11px] sm:text-xs text-stone-500 mt-0.5">
+                        New Delhi · Serving Delhi NCR
+                      </p>
                     </div>
-                    <div className="flex flex-col items-end text-right shrink-0">
-                      <span className="text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase text-stone-400">
-                        Design Studio
-                      </span>
-                      <Logo variant="dark" size="sm" linkTo={null} className="items-end mt-0.5 sm:mt-1 scale-90 sm:scale-100 origin-right" />
+                    <div className="shrink-0">
+                      <Logo variant="dark" size="sm" linkTo={null} className="scale-90 sm:scale-100 origin-right" />
                     </div>
                   </div>
                 </div>
 
-                {/* Founder Profile Card — Fills and balances the left column on desktop/laptop */}
-                <div className="mt-2.5 sm:mt-4 p-3.5 sm:p-5 bg-white border border-stone-200/90 shadow-sm space-y-2 sm:space-y-3">
-                  <div className="flex items-center justify-between border-b border-stone-100 pb-1.5 sm:pb-2">
+                {/* Studio Focus Card */}
+                <div className="mt-3 sm:mt-4 p-4 sm:p-5 bg-white border border-stone-200/90 shadow-sm space-y-2 sm:space-y-3">
+                  <div className="flex items-center justify-between border-b border-stone-100 pb-2">
                     <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-accent">
-                      FOUNDER PROFILE
+                      STUDIO PHILOSOPHY
                     </span>
-                    <span className="text-[10.5px] sm:text-xs text-stone-500 font-medium">Design Studio</span>
+                    <span className="text-[10.5px] sm:text-xs text-stone-500 font-medium">Bespoke Living</span>
                   </div>
-                  <div className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                  <div className="text-xs sm:text-sm text-stone-600 leading-relaxed space-y-2">
                     <p>
-                      <strong className="font-semibold text-charcoal-800">Ehtasham</strong> is the founder of HOMES24DESIGNS, leading the studio with a commitment to thoughtful design, functional space planning, and personalized residential interior solutions, commercial spaces and office spaces.
-                      <span className={`${bioExpanded ? 'inline' : 'hidden'} lg:inline`}>
-                        {' '}Guided by an appreciation for spatial balance, practical ergonomics, and material integrity, he leads each project with direct personal involvement, and meticulous attention to detail.
-                      </span>
+                      At <strong className="font-semibold text-charcoal-800">HOMES24DESIGNS</strong>, we believe exceptional interiors are shaped around spatial harmony, practical ergonomics, and genuine material integrity.
                     </p>
-                    <button
-                      type="button"
-                      onClick={() => setBioExpanded(!bioExpanded)}
-                      className="lg:hidden mt-1 text-[11px] font-semibold text-accent hover:text-accent-dark tracking-wide inline-flex items-center gap-1 touch-manipulation focus:outline-none py-0.5"
-                    >
-                      <span>{bioExpanded ? 'Read Less' : 'Read Full Bio'}</span>
-                      {bioExpanded ? (
-                        <ChevronUp className="w-3 h-3 text-accent" />
-                      ) : (
-                        <ChevronDown className="w-3 h-3 text-accent" />
-                      )}
-                    </button>
+                    <p>
+                      Every residence we design is treated as a tailored sanctuary—balancing quiet elegance, smart functional storage, and durable craftsmanship designed for long-term daily living.
+                    </p>
                   </div>
                 </div>
 
                 {/* Studio Philosophy Quote */}
-                <div className="mt-2.5 sm:mt-4 p-3 sm:p-4 lg:p-5 bg-stone-50 border border-stone-200/80">
-                  <Quote className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-accent/70 mb-1 sm:mb-2" strokeWidth={1.5} />
+                <div className="mt-3 sm:mt-4 p-3.5 sm:p-4 lg:p-5 bg-stone-50 border border-stone-200/80">
+                  <Quote className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-accent/70 mb-1.5 sm:mb-2" strokeWidth={1.5} />
                   <p className="text-[11.5px] sm:text-xs lg:text-sm text-stone-700 italic leading-relaxed font-serif">
                     &ldquo;Good interior design is never about imposing a fleeting trend. It is about
                     understanding how a family lives, cooks, and unwinds, and shaping spaces that feel
                     effortless, durable, and distinctly personal.&rdquo;
                   </p>
-                  <div className="mt-2 sm:mt-3 pt-1.5 sm:pt-2 border-t border-stone-200 flex items-center justify-between text-[10.5px] sm:text-xs text-stone-500">
-                    <span className="font-medium text-charcoal-800">Ehtasham</span>
+                  <div className="mt-2.5 sm:mt-3 pt-2 border-t border-stone-200 flex items-center justify-between text-[10.5px] sm:text-xs text-stone-500">
+                    <span className="font-medium text-charcoal-800">Studio Principle</span>
                     <span className="text-accent font-medium">HOMES24DESIGNS · Delhi NCR</span>
                   </div>
                 </div>
 
-                {/* Studio Consultation & On-Site Viability Badges (from About section) */}
-                <div className="mt-2.5 sm:mt-4 p-3 sm:p-4 lg:p-5 bg-white border border-stone-200/90 shadow-sm space-y-2.5 sm:space-y-3.5">
-                  <div className="flex items-center justify-between border-b border-stone-100 pb-1.5 sm:pb-2.5">
+                {/* Studio Consultation & On-Site Viability Badges */}
+                <div className="mt-3 sm:mt-4 p-3.5 sm:p-4 lg:p-5 bg-white border border-stone-200/90 shadow-sm space-y-3">
+                  <div className="flex items-center justify-between border-b border-stone-100 pb-2">
                     <div className="flex items-center gap-1.5 sm:gap-2">
                       <ShieldCheck className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-accent" strokeWidth={1.8} />
                       <span className="text-[11px] sm:text-xs font-semibold tracking-wider uppercase text-charcoal-900">
@@ -150,7 +137,7 @@ export default function HomeAboutSection() {
                           On-Site Survey &amp; Viability Audit
                         </h4>
                         <p className="text-[10.5px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
-                          Personal site survey across Delhi NCR with on-site measurements and space viability audit.
+                          Site surveys across Delhi NCR with on-site measurements and space viability audit.
                         </p>
                       </div>
                     </div>
@@ -180,10 +167,10 @@ export default function HomeAboutSection() {
             </Reveal>
           </div>
 
-          {/* Right Column: Concise Studio Narrative & Scannable Highlights (7 cols) */}
+          {/* Right Column: Studio Narrative & Scannable Highlights (7 cols) */}
           <div className="lg:col-span-7 flex flex-col justify-start">
             <Reveal delay={60}>
-              <div className="space-y-3.5 sm:space-y-5">
+              <div className="space-y-4 sm:space-y-5">
                 {/* Eyebrow & Heading (Desktop only) */}
                 <div className="hidden lg:block">
                   <div className="flex items-center gap-3 mb-2.5">
@@ -199,12 +186,12 @@ export default function HomeAboutSection() {
                 </div>
 
                 {/* Concise Studio Intro & Specialties */}
-                <div className="space-y-2 sm:space-y-3">
+                <div className="space-y-2.5 sm:space-y-3">
                   <div className="text-xs sm:text-sm md:text-base text-stone-700 leading-relaxed">
                     <p>
-                      <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as one of the best interior designer in New Delhi, dedicated to shaping spaces that balance quiet elegance with practical daily life.
+                      <strong className="font-semibold text-charcoal-900">HOMES24DESIGNS</strong> is widely recognized as one of the premier interior design firms in New Delhi, dedicated to shaping spaces that balance quiet elegance with practical daily life.
                       <span className={`${narrativeExpanded ? 'inline' : 'hidden'} lg:inline`}>
-                        {' '}Creating refined residential environments, dream home experiences where every room feels intentional, welcoming, and uniquely yours. Office Experiences with environments that inspire productivity, professionalism, and growth. Commercial Experiences with spaces those attract customers and leave lasting impressions. Renovation Experiences of turning outdated spaces into places people genuinely enjoy spending time in.
+                        {' '}We craft refined residential environments where every room feels intentional, welcoming, and uniquely yours. From dream home interiors and modern modular kitchens to custom wardrobes, false ceiling illumination, and commercial environments, we deliver end-to-end turnkey spaces with meticulous attention to detail.
                       </span>
                     </p>
                     <button
@@ -212,7 +199,7 @@ export default function HomeAboutSection() {
                       onClick={() => setNarrativeExpanded(!narrativeExpanded)}
                       className="lg:hidden mt-1 text-[11px] font-semibold text-accent hover:text-accent-dark tracking-wide inline-flex items-center gap-1 touch-manipulation focus:outline-none py-0.5"
                     >
-                      <span>{narrativeExpanded ? 'Show Less' : 'Read Full Narrative'}</span>
+                      <span>{narrativeExpanded ? 'Show Less' : 'Read Full Overview'}</span>
                       {narrativeExpanded ? (
                         <ChevronUp className="w-3 h-3 text-accent" />
                       ) : (
@@ -221,7 +208,7 @@ export default function HomeAboutSection() {
                     </button>
                   </div>
                   <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-                    Led by founder <strong className="font-semibold text-charcoal-800">Ehtasham</strong>, we turn apartments, villas, contemporary homes, commercial spaces, and offices into functional sanctuaries.
+                    We transform apartments, villas, contemporary homes, commercial spaces, and offices into functional sanctuaries.
                   </p>
                   <div className="p-2.5 sm:p-3 bg-white border-l-2 border-accent text-xs sm:text-sm font-serif italic text-charcoal-900 shadow-2xs">
                     &ldquo;We focus on how your space makes you feel.&rdquo;
@@ -229,100 +216,100 @@ export default function HomeAboutSection() {
                 </div>
 
                 {/* 4 Scannable Highlights — 2x2 Grid on Mobile for compact vertical height */}
-                <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-0.5 sm:pt-1">
-                  <div className="p-2.5 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                      <Clock className="w-3 h-3 sm:w-4 sm:h-4" strokeWidth={1.75} />
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3 pt-1">
+                  <div className="p-3 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                      <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={1.75} />
                     </div>
                     <div className="min-w-0">
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
                         45-Day Handover
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-3 xs:line-clamp-none">
-                        Milestone-driven execution with weekly progress updates shared directly by the designer.
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
+                        Milestone-driven execution with weekly progress updates shared directly from the studio.
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-2.5 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                      <FileCheck className="w-3 h-3 sm:w-4 sm:h-4" strokeWidth={1.75} />
+                  <div className="p-3 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                      <FileCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={1.75} />
                     </div>
                     <div className="min-w-0">
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
                         100% Itemized BOQ
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-3 xs:line-clamp-none">
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
                         Clear, transparent pricing schedules with zero hidden contractor surprises.
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-2.5 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                      <Wrench className="w-3 h-3 sm:w-4 sm:h-4" strokeWidth={1.75} />
+                  <div className="p-3 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                      <Wrench className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={1.75} />
                     </div>
                     <div className="min-w-0">
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
                         Branded Material
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-3 xs:line-clamp-none">
-                        Hardware, Carcass, flooring, electricals etc.
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
+                        Hardware, carcass, flooring, and electricals with authentic 10-year brand warranty.
                       </p>
                     </div>
                   </div>
 
-                  <div className="p-2.5 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                      <ShieldCheck className="w-3 h-3 sm:w-4 sm:h-4" strokeWidth={1.75} />
+                  <div className="p-3 sm:p-3.5 bg-white border border-stone-200/90 shadow-sm flex flex-col xs:flex-row items-start gap-2 sm:gap-3">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-none bg-stone-100 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                      <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={1.75} />
                     </div>
                     <div className="min-w-0">
                       <h4 className="text-[11px] sm:text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
-                        Site Supervision
+                        Dedicated Supervision
                       </h4>
-                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed line-clamp-3 xs:line-clamp-none">
-                        Designer Ehtasham personally visits sites to audit civil masonry, electrical routing, and carpentry.
+                      <p className="text-[10px] sm:text-xs text-stone-600 mt-0.5 leading-relaxed">
+                        Strict on-site quality control auditing civil masonry, electrical routing, and carpentry.
                       </p>
                     </div>
                   </div>
                 </div>
 
                 {/* Studio Metrics Row */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 pt-0.5">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-2.5 pt-1">
                   <div className="p-2 sm:p-3 bg-white border border-stone-200/90 text-center">
                     <span className="block font-serif text-base sm:text-lg lg:text-xl font-normal text-charcoal-900 leading-none">10+</span>
                     <span className="text-[9.5px] sm:text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Years in Delhi NCR</span>
                   </div>
                   <div className="p-2 sm:p-3 bg-white border border-stone-200/90 text-center">
-                    <span className="block font-serif text-base sm:text-lg lg:text-xl font-normal text-charcoal-900 leading-none">150+</span>
-                    <span className="text-[9.5px] sm:text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Homes Delivered</span>
+                    <span className="block font-serif text-base sm:text-lg lg:text-xl font-normal text-charcoal-900 leading-none">50+</span>
+                    <span className="text-[9.5px] sm:text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Projects Delivered</span>
                   </div>
                   <div className="p-2 sm:p-3 bg-white border border-stone-200/90 text-center">
                     <span className="block font-serif text-base sm:text-lg lg:text-xl font-normal text-charcoal-900 leading-none">100%</span>
                     <span className="text-[9.5px] sm:text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Itemized BOQ</span>
                   </div>
                   <div className="p-2 sm:p-3 bg-white border border-stone-200/90 text-center">
-                    <span className="block font-serif text-base sm:text-lg lg:text-xl font-normal text-charcoal-900 leading-none">0</span>
-                    <span className="text-[9.5px] sm:text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Subcontract Handoff</span>
+                    <span className="block font-serif text-base sm:text-lg lg:text-xl font-normal text-charcoal-900 leading-none">45-Day</span>
+                    <span className="text-[9.5px] sm:text-[10px] text-stone-500 uppercase tracking-wider mt-1 block">Turnkey Handover</span>
                   </div>
                 </div>
 
                 {/* Navigation Actions */}
-                <div className="pt-1.5 sm:pt-2 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-3">
+                <div className="pt-2 sm:pt-3 flex flex-col xs:flex-row items-stretch xs:items-center gap-2.5 sm:gap-3">
                   <Link
-                    to="/about"
+                    to="/services"
                     className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 bg-charcoal-800 text-ivory text-xs sm:text-sm font-semibold tracking-wide hover:bg-charcoal-900 active:scale-95 transition-all shadow-sm touch-manipulation text-center"
                     style={{ color: '#f7f4ef' }}
                   >
-                    <span>Meet the Founder &amp; Story</span>
+                    <span>Explore Our Services</span>
                     <ArrowRight className="w-4 h-4 text-accent-light shrink-0" strokeWidth={1.5} />
                   </Link>
 
                   <Link
-                    to="/services"
+                    to="/contact"
                     className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-3 sm:py-3.5 border border-charcoal-800 text-charcoal-800 text-xs sm:text-sm font-medium tracking-wide hover:bg-charcoal-800 hover:text-ivory active:scale-95 transition-all touch-manipulation text-center"
                   >
-                    Explore Our Services
+                    Book a Consultation
                   </Link>
                 </div>
               </div>

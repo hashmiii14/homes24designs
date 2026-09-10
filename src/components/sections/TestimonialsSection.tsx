@@ -268,7 +268,7 @@ export default function TestimonialsSection() {
               </h3>
               <p className="text-xs sm:text-sm text-stone-400 mt-1 max-w-xl">
                 Every residential interior project is backed by our itemized BOQ, branded material
-                warranties, and direct site supervision by Designer Ehtasham.
+                warranties, and dedicated on-site supervision.
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0">

@@ -125,10 +125,10 @@ export default function FAQSection() {
                   <ShieldCheck className="w-4 h-4" strokeWidth={1.5} />
                 </div>
                 <h4 className="text-xs font-semibold text-charcoal-900 uppercase tracking-wide">
-                  Direct Designer Oversight
+                  Rigorous Quality Oversight
                 </h4>
                 <p className="text-xs text-stone-600 mt-1.5 leading-relaxed">
-                  No junior subcontractor delegation. Designer Ehtasham personally audits carcass alignment, leveling, and joinery on-site. We focus on how your space makes you feel.
+                  No junior subcontractor delegation. Our senior design directors audit carcass alignment, leveling, and joinery on-site to ensure immaculate execution.
                 </p>
               </div>
 

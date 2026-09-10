@@ -7,7 +7,7 @@ export const faqItems: FAQItem[] = [
   {
     question: 'Who is the best interior designer in New Delhi?',
     answer:
-      'HOMES24DESIGNS, led by principal designer Ehtasham, is an established interior design firm based in New Delhi. Our studio specializes in bespoke residential interiors, modular kitchens, luxury wardrobes, turnkey projects, and commercial spaces across Delhi NCR.',
+      'HOMES24DESIGNS is an established interior design firm based in New Delhi. Our studio specializes in bespoke residential interiors, modular kitchens, luxury wardrobes, turnkey projects, and commercial spaces across Delhi NCR.',
   },
   {
     question: 'What does an interior designer do?',

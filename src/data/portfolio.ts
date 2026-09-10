@@ -62,19 +62,35 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     id: 'p4',
-    title: 'Walk-in Wardrobe',
+    title: 'Contemporary Foyer & Console',
     location: 'New Delhi',
-    type: 'Wardrobe',
+    type: 'Console',
     style: 'Contemporary',
     description:
-      'A space-optimised walk-in wardrobe with warm wood shelving, integrated lighting and clean lines.',
+      'A refined entrance foyer featuring a custom cane console credenza, statement circular mirror, warm ambient sconces, and organic textures.',
     image: '/images/portfolio/project-4-main.jpg',
-    alt: 'Custom walk-in wardrobe and dressing suite in New Delhi',
+    alt: 'Contemporary entrance foyer with custom console credenza and circular mirror in New Delhi',
     gallery: [
       '/images/portfolio/project-4-gallery-1.jpg',
       '/images/portfolio/project-4-gallery-2.jpg',
     ],
-    category: ['Wardrobe', 'Contemporary'],
+    category: ['Console', 'Contemporary'],
+  },
+  {
+    id: 'p9',
+    title: 'Luxury Walk-in Wardrobe',
+    location: 'Delhi NCR',
+    type: 'Wardrobe',
+    style: 'Luxury',
+    description:
+      'A bespoke walk-in wardrobe suite featuring custom warm timber joinery, integrated warm LED profile lighting, luxury accessory display drawers, and full-length mirrors.',
+    image: '/images/portfolio/project-wardrobe-main.jpg',
+    alt: 'Custom luxury walk-in wardrobe and dressing suite in Delhi NCR by HOMES24DESIGNS',
+    gallery: [
+      '/images/portfolio/project-wardrobe-gallery-1.jpg',
+      '/images/portfolio/project-wardrobe-gallery-2.jpg',
+    ],
+    category: ['Wardrobe', 'Luxury'],
   },
   {
     id: 'p5',
@@ -149,6 +165,7 @@ export const portfolioFilters = [
   'Bedroom',
   'Kitchen',
   'Wardrobe',
+  'Console',
   'Contemporary',
   'Luxury',
 ];

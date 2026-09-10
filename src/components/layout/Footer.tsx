@@ -107,11 +107,11 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-4 sm:gap-x-6 gap-y-2 text-center md:text-left">
               <span className="text-xs text-stone-400">
-                Founder: <span className="text-stone-300 font-medium">{siteConfig.principalDesigner}</span>
+                Studio: <span className="text-stone-300 font-medium">{siteConfig.address.city}, {siteConfig.address.line2}</span>
               </span>
               <span className="hidden sm:inline text-stone-700">·</span>
               <span className="text-xs text-stone-400">
-                Studio: <span className="text-stone-300 font-medium">{siteConfig.address.city}, {siteConfig.address.line2}</span>
+                Experience: <span className="text-stone-300 font-medium">10+ Years in Delhi NCR</span>
               </span>
               <span className="hidden sm:inline text-stone-700">·</span>
               <span className="text-xs text-stone-400">

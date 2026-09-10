@@ -1,8 +1,7 @@
-import { Phone, Mail, MapPin, Instagram, Clock, Compass, Layers, Calendar } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Clock, Layers } from 'lucide-react';
 import { siteConfig } from '@/data/siteConfig';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Reveal from '@/components/ui/Reveal';
-import Button from '@/components/ui/Button';
 
 export default function ContactSection() {
   return (
@@ -10,9 +9,9 @@ export default function ContactSection() {
       <div className="container-lux">
         <Reveal>
           <SectionHeading
-            eyebrow="Contact"
-            title="Get In Touch"
-            description="Reach out to discuss your residential interior project across Delhi NCR. We respond promptly."
+            eyebrow="Studio"
+            title="Studio Headquarters & Hours"
+            description="Visit our design studio in New Delhi or connect directly with our interior specialists across Delhi NCR."
           />
         </Reveal>
 
@@ -102,10 +101,15 @@ export default function ContactSection() {
                   </div>
 
                   <div className="pt-2 border-t border-stone-100 flex items-center justify-between">
-                    <span className="text-xs text-stone-500">Ready to plan your space?</span>
-                    <Button to="/contact" variant="primary">
-                      Book Consultation
-                    </Button>
+                    <span className="text-xs text-stone-500">Need immediate assistance?</span>
+                    <a
+                      href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent('Hello Homes24Designs, I would like to inquire about interior design services.')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-700 hover:text-emerald-800 transition-colors"
+                    >
+                      WhatsApp Us
+                    </a>
                   </div>
                 </div>
               </div>
