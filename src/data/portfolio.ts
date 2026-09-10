@@ -195,7 +195,7 @@ export const portfolioProjects: PortfolioProject[] = [
     image: '/images/portfolio/project-12-main.jpg',
     alt: 'Luxury residential dining room with marble table and brass chandelier in New Delhi',
     gallery: [
-      '/images/portfolio/project-12-main.jpg',
+      '/images/portfolio/project-12-gallery-1.jpg',
     ],
     category: ['Full Home', 'Luxury', 'Contemporary'],
   },
