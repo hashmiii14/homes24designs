@@ -165,7 +165,7 @@ export const portfolioProjects: PortfolioProject[] = [
     image: '/images/portfolio/project-10-main.jpg',
     alt: 'Luxury contemporary kitchen with waterfall marble island and warm cabinetry in Delhi NCR',
     gallery: [
-      '/images/portfolio/project-10-main.jpg',
+      '/images/portfolio/project-10-gallery-1.jpg',
     ],
     category: ['Kitchen', 'Contemporary', 'Luxury'],
   },
