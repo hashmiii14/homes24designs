@@ -180,7 +180,7 @@ export const portfolioProjects: PortfolioProject[] = [
     image: '/images/portfolio/project-11-main.jpg',
     alt: 'Contemporary luxury living lounge with fluted feature wall and warm lighting in South Delhi',
     gallery: [
-      '/images/portfolio/project-11-main.jpg',
+      '/images/portfolio/project-11-gallery-1.jpg',
     ],
     category: ['Living Room', 'Luxury'],
   },
