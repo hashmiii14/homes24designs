@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, X } from 'lucide-react';
 import SEO from '@/components/ui/SEO';
 import PageHeader from '@/components/layout/PageHeader';
 import Reveal from '@/components/ui/Reveal';
@@ -10,7 +11,24 @@ import ConsultationForm from '@/components/sections/ConsultationForm';
 
 export default function ServiceDetailPage() {
   const { slug } = useParams<{ slug: string }>();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const service = services.find((s) => s.slug === slug);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightboxOpen(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [lightboxOpen]);
 
   if (!service) return <Navigate to="/services" replace />;
 
@@ -52,18 +70,36 @@ export default function ServiceDetailPage() {
         ]}
       />
 
-      {/* Hero image */}
+      {/* Hero image - Dark luxury presentation, zero white background */}
       <section className="pb-12 md:pb-20 bg-ivory overflow-hidden">
         <div className="container-lux">
           <Reveal>
-            <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] max-h-[560px] overflow-hidden bg-white flex items-center justify-center border border-stone-200/50 shadow-sm">
+            <div
+              onClick={() => setLightboxOpen(true)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setLightboxOpen(true);
+                }
+              }}
+              className="group relative w-full aspect-[4/3] sm:aspect-[16/9] max-h-[560px] overflow-hidden bg-charcoal-950 flex items-center justify-center border border-stone-800/60 shadow-xl cursor-pointer select-none"
+              aria-label={`Enlarge image for ${service.title}`}
+            >
+              {/* Ambient backdrop */}
+              <div
+                className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-20 scale-110 pointer-events-none transition-all duration-500 group-hover:opacity-30"
+                style={{ backgroundImage: `url(${service.image})` }}
+                aria-hidden="true"
+              />
               {/* Complete uncropped image */}
-              <picture className="w-full h-full flex items-center justify-center p-2 sm:p-4">
+              <picture className="relative z-10 w-full h-full flex items-center justify-center p-2 sm:p-4">
                 <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
                 <img
                   src={service.image}
                   alt={service.alt}
-                  className="w-full h-full object-contain mx-auto transition-transform duration-500"
+                  className="w-full h-full object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.01]"
                   loading="eager"
                   decoding="async"
                 />
@@ -72,6 +108,55 @@ export default function ServiceDetailPage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Lightbox Modal for Detail Page Hero Image */}
+      {lightboxOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${service.title} enlarged view`}
+          className="fixed inset-0 z-[90] bg-charcoal-900/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 md:p-8 animate-modal-fade select-none touch-manipulation overflow-hidden"
+          onClick={() => setLightboxOpen(false)}
+        >
+          {/* Floating Close (X) Button */}
+          <button
+            type="button"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 sm:p-3 rounded-full bg-charcoal-800/80 hover:bg-accent text-ivory transition-all duration-200 z-30 backdrop-blur-sm shadow-xl focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer active:scale-95"
+            aria-label="Close image preview"
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxOpen(false);
+            }}
+          >
+            <X className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.5} />
+          </button>
+
+          {/* Centered Image Container - Zero white frame */}
+          <div
+            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center my-auto animate-modal-scale"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="relative max-h-[78vh] w-auto max-w-full flex items-center justify-center overflow-hidden">
+              <div
+                className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-20 scale-125 pointer-events-none"
+                style={{ backgroundImage: `url(${service.image})` }}
+                aria-hidden="true"
+              />
+
+              <picture className="relative z-10 flex items-center justify-center">
+                <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="max-h-[74vh] w-auto max-w-full object-contain mx-auto shadow-2xl select-none"
+                  loading="eager"
+                  decoding="sync"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Content */}
       <section className="py-12 md:py-20 bg-stone-50 overflow-hidden">
