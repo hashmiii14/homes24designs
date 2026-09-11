@@ -35,6 +35,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=20260911" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20260911" />
     <link rel="manifest" href="/manifest.json" />
+    <link rel="preload" as="image" href="/logo-white.png" type="image/png" fetchpriority="high" />
     <link rel="preload" as="image" href="/images/hero/hero-bg-mobile.webp" type="image/webp" media="(max-width: 640px)" fetchpriority="high" />
     <link rel="preload" as="image" href="/images/hero/hero-bg.webp" type="image/webp" media="(min-width: 641px)" fetchpriority="high" />
 
@@ -239,30 +240,21 @@
         text-align: center;
         padding: 0 1.5rem;
       }
-      .h24-loader-title {
-        color: #f7f4ef;
-        font-family: 'Cormorant Garamond', Georgia, serif;
-        font-size: clamp(2.4rem, 6vw, 3.6rem);
-        font-weight: 300;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        margin: 0;
-        line-height: 1;
+      .h24-loader-logo {
+        height: 56px;
+        width: auto;
+        aspect-ratio: 804 / 400;
+        max-width: 80vw;
+        margin-bottom: 1rem;
+        object-fit: contain;
+        display: block;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: auto;
       }
-      .h24-loader-title span {
-        color: #a8855f;
-        font-weight: 300;
-        letter-spacing: 0.22em;
-      }
-      .h24-loader-subtitle {
-        color: #a8855f;
-        font-family: 'Inter', system-ui, sans-serif;
-        font-size: 0.7rem;
-        letter-spacing: 0.5em;
-        text-transform: uppercase;
-        font-weight: 600;
-        margin-top: 0.55rem;
-        margin-bottom: 0;
+      @media (min-width: 1024px) {
+        .h24-loader-logo {
+          height: 72px;
+        }
       }
       .h24-loader-track {
         margin-top: 2rem;
@@ -286,7 +278,15 @@
     <div id="h24-initial-loader">
       <div class="h24-loader-grid"></div>
       <div class="h24-loader-content">
-        <img src="/logo-white.png" alt="HOMES24DESIGNS" style="height: 56px; width: auto; max-width: 80vw; margin-bottom: 1rem; object-fit: contain;" />
+        <img
+          src="/logo-white.png"
+          alt="HOMES24DESIGNS"
+          width="804"
+          height="400"
+          class="h24-loader-logo"
+          fetchpriority="high"
+          decoding="sync"
+        />
         <div class="h24-loader-track">
           <div id="h24-bar" class="h24-loader-bar"></div>
         </div>
