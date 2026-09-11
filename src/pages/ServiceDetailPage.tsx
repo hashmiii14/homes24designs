@@ -37,8 +37,6 @@ export default function ServiceDetailPage() {
 
   const webpSrc = service.image.replace(/\.jpg$/, '.webp');
 
-  const isWallDesign = service.slug === 'wall-design';
-
   return (
     <>
       <SEO
@@ -122,37 +120,22 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Featured image — Matches Journal section presentation */}
+      {/* Featured image — Matches Wall Design & Finishes uncropped adaptive presentation */}
       <section className="pb-16 md:pb-20 bg-stone-100 overflow-hidden">
         <div className="container-lux">
           <Reveal>
-            {isWallDesign ? (
-              <div className="w-full flex justify-center overflow-hidden">
-                <picture className="w-auto max-w-full flex justify-center">
-                  <source srcSet={webpSrc} type="image/webp" />
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    className="w-auto max-w-full h-auto max-h-[75vh] md:max-h-[82vh] object-contain mx-auto block"
-                    loading="eager"
-                    decoding="async"
-                  />
-                </picture>
-              </div>
-            ) : (
-              <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
-                <picture className="w-full h-full">
-                  <source srcSet={webpSrc} type="image/webp" />
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    className="w-full h-full object-cover"
-                    loading="eager"
-                    decoding="async"
-                  />
-                </picture>
-              </div>
-            )}
+            <div className="w-full flex justify-center overflow-hidden">
+              <picture className="w-auto max-w-full flex justify-center">
+                <source srcSet={webpSrc} type="image/webp" />
+                <img
+                  src={service.image}
+                  alt={service.alt}
+                  className="w-auto max-w-full h-auto max-h-[75vh] md:max-h-[82vh] object-contain mx-auto block"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
+            </div>
           </Reveal>
         </div>
       </section>
