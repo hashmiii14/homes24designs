@@ -120,23 +120,17 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Featured Hero Image — Journal Presentation with Zero White Frame */}
-      <section className="pb-14 md:pb-20 bg-stone-100 overflow-hidden">
+      {/* Featured image — Matches Journal section presentation */}
+      <section className="pb-16 md:pb-20 bg-stone-100 overflow-hidden">
         <div className="container-lux">
           <Reveal>
-            <div className="relative w-full max-h-[640px] overflow-hidden bg-charcoal-950 flex items-center justify-center border border-stone-800/80 shadow-2xl">
-              {/* Subtle ambient backdrop to enhance dark theme depth without any white box */}
-              <div
-                className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-20 scale-110 pointer-events-none"
-                style={{ backgroundImage: `url(${service.image})` }}
-                aria-hidden="true"
-              />
-              <picture className="relative z-10 w-full flex items-center justify-center p-2 sm:p-4 md:p-6">
+            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+              <picture className="w-full h-full">
                 <source srcSet={webpSrc} type="image/webp" />
                 <img
                   src={service.image}
                   alt={service.alt}
-                  className="max-h-[58vh] md:max-h-[600px] w-auto max-w-full object-contain mx-auto shadow-xl"
+                  className="w-full h-full object-cover"
                   loading="eager"
                   decoding="async"
                 />
