@@ -8,7 +8,7 @@ export const siteConfig = {
   email: 'homes24designs@gmail.com',
   phone: '+91 9818083436',
   phoneRaw: '+919818083436',
-  whatsapp: '919818083436',
+  whatsapp: '918193048781',
   address: {
     line1: 'New Delhi',
     line2: 'Delhi NCR',
