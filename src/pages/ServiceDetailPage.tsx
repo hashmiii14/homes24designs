@@ -1,34 +1,26 @@
-import { useState, useEffect } from 'react';
 import { useParams, Navigate, Link } from 'react-router-dom';
-import { Check, ArrowRight, X } from 'lucide-react';
+import {
+  Check,
+  ArrowRight,
+  ArrowLeft,
+  Sparkles,
+  ShieldCheck,
+  Clock,
+  FileCheck,
+  Phone,
+  MessageSquare,
+} from 'lucide-react';
 import SEO from '@/components/ui/SEO';
-import PageHeader from '@/components/layout/PageHeader';
 import Reveal from '@/components/ui/Reveal';
-import Button from '@/components/ui/Button';
+import Breadcrumbs from '@/components/ui/Breadcrumbs';
 import { services } from '@/data/services';
 import { journalPosts } from '@/data/journal';
+import { siteConfig } from '@/data/siteConfig';
 import ConsultationForm from '@/components/sections/ConsultationForm';
 
 export default function ServiceDetailPage() {
   const { slug } = useParams<{ slug: string }>();
-  const [lightboxOpen, setLightboxOpen] = useState(false);
   const service = services.find((s) => s.slug === slug);
-
-  useEffect(() => {
-    if (!lightboxOpen) return;
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = 'hidden';
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setLightboxOpen(false);
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      document.body.style.overflow = originalOverflow;
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [lightboxOpen]);
 
   if (!service) return <Navigate to="/services" replace />;
 
@@ -41,65 +33,110 @@ export default function ServiceDetailPage() {
     )
     .slice(0, 3);
 
-  const otherServices = services.filter((s) => s.slug !== slug).slice(0, 4);
+  const otherServices = services.filter((s) => s.slug !== slug);
+
+  const webpSrc = service.image.replace(/\.jpg$/, '.webp');
 
   return (
     <>
       <SEO
-        title={`${service.title} in Delhi | HOMES24DESIGNS`}
+        title={`${service.title} in Delhi NCR | HOMES24DESIGNS`}
         description={service.description}
         path={`/services/${service.slug}`}
         type="article"
+        image={service.image}
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'Service',
           name: service.title,
           description: service.description,
-          provider: { '@type': 'Organization', name: 'HOMES24DESIGNS' },
+          image: service.image,
+          provider: {
+            '@type': 'Organization',
+            name: 'HOMES24DESIGNS',
+            url: siteConfig.url,
+            telephone: siteConfig.phone,
+          },
           areaServed: 'Delhi, New Delhi, Delhi NCR',
         }}
       />
-      <PageHeader
-        eyebrow="Service"
-        title={service.title}
-        description={service.description}
-        breadcrumbs={[
-          { label: 'Home', path: '/' },
-          { label: 'Services', path: '/services' },
-          { label: service.shortTitle },
-        ]}
-      />
 
-      {/* Hero image - Dark luxury presentation, zero white background */}
-      <section className="pb-12 md:pb-20 bg-ivory overflow-hidden">
+      {/* Header — Journal-Style Editorial Intro */}
+      <section className="pt-28 md:pt-36 pb-8 md:pb-12 bg-stone-100 overflow-hidden">
+        <div className="container-lux">
+          {/* Back to Services Navigation */}
+          <div className="mb-4">
+            <Link
+              to="/services"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-accent hover:text-accent-dark transition-colors group"
+            >
+              <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
+              <span>Back to Services</span>
+            </Link>
+          </div>
+
+          <Breadcrumbs
+            items={[
+              { label: 'Home', path: '/' },
+              { label: 'Services', path: '/services' },
+              { label: service.title },
+            ]}
+          />
+
+          <div className="mt-6 sm:mt-8 max-w-4xl">
+            <span className="text-[10.5px] font-semibold tracking-[0.2em] uppercase text-accent block">
+              HOMES24DESIGNS · Interior Design Service
+            </span>
+            <h1 className="text-display font-light text-charcoal-900 break-words mt-2 font-serif">
+              {service.title}
+            </h1>
+            <p className="mt-3 sm:mt-4 text-sm md:text-base text-stone-600 leading-relaxed max-w-3xl">
+              {service.description}
+            </p>
+
+            {/* Service Highlights / Trust Badges */}
+            <div className="mt-6 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-stone-600">
+              <span className="flex items-center gap-1.5 font-medium">
+                <Sparkles className="w-3.5 h-3.5 text-accent" strokeWidth={1.5} />
+                Bespoke Design Direction
+              </span>
+              <span className="w-1 h-1 rounded-full bg-stone-300 hidden sm:block" />
+              <span className="flex items-center gap-1.5 font-medium">
+                <ShieldCheck className="w-3.5 h-3.5 text-accent" strokeWidth={1.5} />
+                10-Year Warranty
+              </span>
+              <span className="w-1 h-1 rounded-full bg-stone-300 hidden sm:block" />
+              <span className="flex items-center gap-1.5 font-medium">
+                <Clock className="w-3.5 h-3.5 text-accent" strokeWidth={1.5} />
+                45-Day Handover
+              </span>
+              <span className="w-1 h-1 rounded-full bg-stone-300 hidden sm:block" />
+              <span className="flex items-center gap-1.5 font-medium">
+                <FileCheck className="w-3.5 h-3.5 text-accent" strokeWidth={1.5} />
+                100% Itemized BOQ
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Hero Image — Journal Presentation with Zero White Frame */}
+      <section className="pb-14 md:pb-20 bg-stone-100 overflow-hidden">
         <div className="container-lux">
           <Reveal>
-            <div
-              onClick={() => setLightboxOpen(true)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  setLightboxOpen(true);
-                }
-              }}
-              className="group relative w-full aspect-[4/3] sm:aspect-[16/9] max-h-[560px] overflow-hidden bg-charcoal-950 flex items-center justify-center border border-stone-800/60 shadow-xl cursor-pointer select-none"
-              aria-label={`Enlarge image for ${service.title}`}
-            >
-              {/* Ambient backdrop */}
+            <div className="relative w-full max-h-[640px] overflow-hidden bg-charcoal-950 flex items-center justify-center border border-stone-800/80 shadow-2xl">
+              {/* Subtle ambient backdrop to enhance dark theme depth without any white box */}
               <div
-                className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-20 scale-110 pointer-events-none transition-all duration-500 group-hover:opacity-30"
+                className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-20 scale-110 pointer-events-none"
                 style={{ backgroundImage: `url(${service.image})` }}
                 aria-hidden="true"
               />
-              {/* Complete uncropped image */}
-              <picture className="relative z-10 w-full h-full flex items-center justify-center p-2 sm:p-4">
-                <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
+              <picture className="relative z-10 w-full flex items-center justify-center p-2 sm:p-4 md:p-6">
+                <source srcSet={webpSrc} type="image/webp" />
                 <img
                   src={service.image}
                   alt={service.alt}
-                  className="w-full h-full object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.01]"
+                  className="max-h-[58vh] md:max-h-[600px] w-auto max-w-full object-contain mx-auto shadow-xl"
                   loading="eager"
                   decoding="async"
                 />
@@ -109,159 +146,228 @@ export default function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Lightbox Modal for Detail Page Hero Image */}
-      {lightboxOpen && (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${service.title} enlarged view`}
-          className="fixed inset-0 z-[90] bg-charcoal-900/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 md:p-8 animate-modal-fade select-none touch-manipulation overflow-hidden"
-          onClick={() => setLightboxOpen(false)}
-        >
-          {/* Floating Close (X) Button */}
-          <button
-            type="button"
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2.5 sm:p-3 rounded-full bg-charcoal-800/80 hover:bg-accent text-ivory transition-all duration-200 z-30 backdrop-blur-sm shadow-xl focus:outline-none focus:ring-2 focus:ring-accent cursor-pointer active:scale-95"
-            aria-label="Close image preview"
-            onClick={(e) => {
-              e.stopPropagation();
-              setLightboxOpen(false);
-            }}
-          >
-            <X className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.5} />
-          </button>
-
-          {/* Centered Image Container - Zero white frame */}
-          <div
-            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center my-auto animate-modal-scale"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="relative max-h-[78vh] w-auto max-w-full flex items-center justify-center overflow-hidden">
-              <div
-                className="absolute inset-0 bg-cover bg-center filter blur-3xl opacity-20 scale-125 pointer-events-none"
-                style={{ backgroundImage: `url(${service.image})` }}
-                aria-hidden="true"
-              />
-
-              <picture className="relative z-10 flex items-center justify-center">
-                <source srcSet={service.image.replace(/\.jpg$/, '.webp')} type="image/webp" />
-                <img
-                  src={service.image}
-                  alt={service.alt}
-                  className="max-h-[74vh] w-auto max-w-full object-contain mx-auto shadow-2xl select-none"
-                  loading="eager"
-                  decoding="sync"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Content */}
-      <section className="py-12 md:py-20 bg-stone-50 overflow-hidden">
+      {/* Article Content & Editorial Layout */}
+      <section className="py-14 md:py-24 bg-ivory overflow-hidden">
         <div className="container-lux">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
-            <div className="lg:col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+            {/* Main Editorial Article Column */}
+            <article className="lg:col-span-8 max-w-3xl">
+              {/* Overview & Design Philosophy */}
               <Reveal>
-                <h2 className="text-2xl font-light text-charcoal-800 mb-6">
-                  About This Service
-                </h2>
-                <p className="text-base leading-relaxed text-stone-600">
-                  {service.longDescription}
-                </p>
+                <div className="mb-10">
+                  <h2 className="text-xl md:text-2xl font-serif font-normal text-charcoal-900 mb-4">
+                    About This Service
+                  </h2>
+                  <p className="text-base leading-relaxed text-stone-700">
+                    {service.longDescription}
+                  </p>
+                </div>
               </Reveal>
 
+              {/* What's Included & Specifications */}
               <Reveal delay={100}>
-                <div className="mt-10">
-                  <h3 className="text-lg font-medium text-charcoal-800 mb-4">What's Included</h3>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {service.features.map((f, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm text-stone-600">
-                        <Check className="w-4 h-4 mt-0.5 text-accent shrink-0" strokeWidth={2} />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Reveal>
-
-              <Reveal delay={200}>
-                <div className="mt-10 flex flex-wrap items-center gap-4">
-                  <a
-                    href="#consultation"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm active:scale-95 touch-manipulation"
-                    style={{ color: '#f7f4ef' }}
-                  >
-                    <span>Request Service Consultation</span>
-                  </a>
-                  <Link
-                    to="/services"
-                    className="inline-flex items-center text-xs text-charcoal-700 hover:text-accent font-medium transition-colors"
-                  >
-                    <span>Browse All Services &rarr;</span>
-                  </Link>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <Reveal delay={150}>
-                <div className="bg-ivory p-6 md:p-8 sticky top-24">
-                  <h3 className="text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
-                    Other Services
+                <div className="mb-12">
+                  <h3 className="text-lg md:text-xl font-serif font-normal text-charcoal-900 mb-5">
+                    What's Included &amp; Key Specifications
                   </h3>
-                  <ul className="space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    {service.features.map((feature, i) => (
+                      <div
+                        key={i}
+                        className="flex items-start gap-3 p-4 bg-white border border-stone-200/80 shadow-2xs"
+                      >
+                        <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" strokeWidth={2} />
+                        <span className="text-xs sm:text-sm font-medium text-charcoal-800 leading-snug">
+                          {feature}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Turnkey Delivery Milestones */}
+              <Reveal delay={150}>
+                <div className="mb-12 pt-8 border-t border-stone-200">
+                  <h3 className="text-lg md:text-xl font-serif font-normal text-charcoal-900 mb-5">
+                    Our 4-Step Turnkey Process
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-white border border-stone-200/80 flex items-start gap-3.5">
+                      <span className="w-6 h-6 rounded-full bg-charcoal-900 text-ivory text-xs font-semibold flex items-center justify-center shrink-0">
+                        1
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-semibold text-charcoal-900">
+                          Consultation &amp; Spatial Planning
+                        </h4>
+                        <p className="text-xs text-stone-600 mt-1 leading-relaxed">
+                          On-site assessment, lifestyle brief, and custom 2D layouts tailored to your exact floor plan.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-white border border-stone-200/80 flex items-start gap-3.5">
+                      <span className="w-6 h-6 rounded-full bg-charcoal-900 text-ivory text-xs font-semibold flex items-center justify-center shrink-0">
+                        2
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-semibold text-charcoal-900">
+                          3D Photorealistic Visualisation &amp; Itemized BOQ
+                        </h4>
+                        <p className="text-xs text-stone-600 mt-1 leading-relaxed">
+                          Experience your finished space before work begins with 100% transparent pricing and material specs.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-white border border-stone-200/80 flex items-start gap-3.5">
+                      <span className="w-6 h-6 rounded-full bg-charcoal-900 text-ivory text-xs font-semibold flex items-center justify-center shrink-0">
+                        3
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-semibold text-charcoal-900">
+                          Precision Factory Joinery &amp; On-Site Execution
+                        </h4>
+                        <p className="text-xs text-stone-600 mt-1 leading-relaxed">
+                          German-precision edge banding, high-grade marine ply, branded hardware (Hafele/Blum), and daily supervisor tracking.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="p-4 bg-white border border-stone-200/80 flex items-start gap-3.5">
+                      <span className="w-6 h-6 rounded-full bg-charcoal-900 text-ivory text-xs font-semibold flex items-center justify-center shrink-0">
+                        4
+                      </span>
+                      <div>
+                        <h4 className="text-sm font-semibold text-charcoal-900">
+                          45-Day Handover &amp; 10-Year Warranty
+                        </h4>
+                        <p className="text-xs text-stone-600 mt-1 leading-relaxed">
+                          Deep site cleaning, quality inspection checklist, official warranty certificate, and lifetime post-handover support.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Editorial Note & Bridge to Form (Matches Journal Detail Page) */}
+              <Reveal delay={200}>
+                <div className="mt-10 p-6 sm:p-8 bg-stone-50 border-l-2 border-accent">
+                  <p className="text-base sm:text-lg font-serif italic text-charcoal-800 mb-2">
+                    &ldquo;Thoughtful interior design turns everyday routines into moments of ease and understated luxury.&rdquo;
+                  </p>
+                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed mb-4">
+                    Have questions about your space, modular kitchen layout, or materials? Speak directly with Principal Designer Ehtasham for a personalized estimate and layout review.
+                  </p>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href="#consultation"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal-800 hover:bg-charcoal-900 text-ivory text-xs font-semibold tracking-wider uppercase transition-colors shadow-sm"
+                      style={{ color: '#f7f4ef' }}
+                    >
+                      <span>Request Service Consultation</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                    <a
+                      href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent(`Hello HOMES24DESIGNS, I am interested in your ${service.title} service.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2.5 border border-stone-300 text-charcoal-800 text-xs font-medium tracking-wide hover:bg-stone-100 transition-colors"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5 text-accent" />
+                      <span>WhatsApp Inquire</span>
+                    </a>
+                  </div>
+                </div>
+              </Reveal>
+            </article>
+
+            {/* Sidebar Column */}
+            <aside className="lg:col-span-4">
+              <div className="sticky top-24 space-y-8">
+                {/* Other Services Navigation List */}
+                <div className="bg-stone-50 p-6 border border-stone-200/70">
+                  <h3 className="text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
+                    All Interior Services
+                  </h3>
+                  <ul className="space-y-2">
                     {otherServices.map((s) => (
                       <li key={s.slug}>
                         <Link
                           to={`/services/${s.slug}`}
-                          className="group flex items-center justify-between text-sm text-charcoal-700 hover:text-accent transition-colors"
+                          className="group flex items-center justify-between py-1.5 px-2 text-sm text-charcoal-700 hover:text-accent hover:bg-stone-100/70 transition-colors rounded-none"
                         >
-                          {s.shortTitle}
+                          <span>{s.shortTitle}</span>
                           <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" strokeWidth={1.5} />
                         </Link>
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 pt-6 border-t border-stone-200">
-                    <Button to="/services" variant="ghost">View All Services</Button>
+                  <div className="mt-5 pt-4 border-t border-stone-200">
+                    <Link
+                      to="/services"
+                      className="text-xs font-semibold uppercase tracking-wider text-accent hover:text-accent-dark transition-colors"
+                    >
+                      View All Services &rarr;
+                    </Link>
                   </div>
                 </div>
-              </Reveal>
-            </div>
+
+                {/* Related Design Guides from Journal (Matches JournalArticlePage Sidebar) */}
+                {relatedArticles.length > 0 && (
+                  <div className="bg-stone-50 p-6 border border-stone-200/70">
+                    <h3 className="text-xs font-medium tracking-[0.2em] uppercase text-accent mb-4">
+                      Related Design Guides
+                    </h3>
+                    <ul className="space-y-4">
+                      {relatedArticles.map((r) => (
+                        <li key={r.slug}>
+                          <Link to={`/journal/${r.slug}`} className="group block">
+                            <div className="aspect-[16/10] overflow-hidden mb-2 bg-stone-100">
+                              <img
+                                src={r.image}
+                                alt={r.alt}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                loading="lazy"
+                              />
+                            </div>
+                            <p className="text-sm font-medium text-charcoal-700 group-hover:text-accent transition-colors leading-snug">
+                              {r.title}
+                            </p>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Quick Contact Card */}
+                <div className="bg-charcoal-900 text-ivory p-6 shadow-md border border-charcoal-800">
+                  <span className="text-[10px] tracking-[0.2em] uppercase text-accent-light font-semibold block mb-1">
+                    Direct Contact
+                  </span>
+                  <h4 className="text-base font-serif font-light text-ivory">
+                    Speak With A Designer
+                  </h4>
+                  <p className="text-xs text-stone-300 mt-1 leading-relaxed">
+                    Have architectural drawings ready or need an on-site visit in Delhi NCR?
+                  </p>
+                  <div className="mt-4 space-y-2">
+                    <a
+                      href={`tel:${siteConfig.phone}`}
+                      className="flex items-center gap-2 text-xs text-ivory hover:text-accent-light transition-colors py-1"
+                    >
+                      <Phone className="w-3.5 h-3.5 text-accent-light" />
+                      <span>{siteConfig.phone}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
 
-      {/* Related articles */}
-      {relatedArticles.length > 0 && (
-        <section className="py-12 md:py-20 bg-ivory overflow-hidden">
-          <div className="container-lux">
-            <Reveal>
-              <h2 className="text-section font-light text-charcoal-800 mb-10">
-                Related Articles
-              </h2>
-            </Reveal>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {relatedArticles.map((post, i) => (
-                <Reveal key={post.slug} delay={i * 80}>
-                  <Link to={`/journal/${post.slug}`} className="group block">
-                    <div className="aspect-[4/3] overflow-hidden bg-stone-100">
-                      <img src={post.image} alt={post.alt} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
-                    </div>
-                    <h3 className="mt-4 text-base font-medium text-charcoal-800 group-hover:text-accent transition-colors">
-                      {post.title}
-                    </h3>
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
+      {/* Consultation Form at page bottom */}
       <ConsultationForm />
     </>
   );
