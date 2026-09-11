@@ -109,7 +109,7 @@ export default function PortfolioGrid() {
                   aria-label={`View details of ${project.title}`}
                 >
                   <div className="relative aspect-[4/5] overflow-hidden bg-stone-100">
-                    <picture>
+                    <picture className="block w-full h-full">
                       <source srcSet={webpSrc} type="image/webp" />
                       <img
                         src={project.image}
@@ -117,6 +117,12 @@ export default function PortfolioGrid() {
                         className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
                         loading={i < 4 ? 'eager' : 'lazy'}
                         decoding="async"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (target.src !== project.image) {
+                            target.src = project.image;
+                          }
+                        }}
                       />
                     </picture>
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/85 via-charcoal-900/30 to-transparent opacity-75 group-hover:opacity-90 transition-opacity duration-500" />
@@ -198,15 +204,23 @@ export default function PortfolioGrid() {
                   />
 
                   {/* Main uncropped foreground image */}
-                  <picture className="relative z-10 max-h-full max-w-full flex items-center justify-center p-2 sm:p-4">
+                  <picture
+                    key={currentSrc}
+                    className="relative z-10 max-h-full max-w-full block p-2 sm:p-4 text-center"
+                  >
                     <source srcSet={webpCurrent} type="image/webp" />
                     <img
-                      key={currentSrc}
                       src={currentSrc}
                       alt={currentProject.alt}
-                      className="max-h-[48vh] sm:max-h-[58vh] md:max-h-[66vh] w-auto max-w-full object-contain mx-auto shadow-2xl transition-opacity duration-300 rounded-sm"
+                      className="max-h-[48vh] sm:max-h-[58vh] md:max-h-[66vh] w-auto max-w-full object-contain mx-auto shadow-2xl transition-opacity duration-300 rounded-sm block"
                       loading="eager"
                       decoding="sync"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src !== currentSrc) {
+                          target.src = currentSrc;
+                        }
+                      }}
                     />
                   </picture>
 
@@ -259,9 +273,20 @@ export default function PortfolioGrid() {
                       }`}
                       aria-label={`View photo ${idx + 1}`}
                     >
-                      <picture>
+                      <picture className="block w-full h-full">
                         <source srcSet={thumbWebp} type="image/webp" />
-                        <img src={img} alt="" className="w-full h-full object-cover" loading="eager" />
+                        <img
+                          src={img}
+                          alt=""
+                          className="w-full h-full object-cover"
+                          loading="eager"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            if (target.src !== img) {
+                              target.src = img;
+                            }
+                          }}
+                        />
                       </picture>
                     </button>
                   );

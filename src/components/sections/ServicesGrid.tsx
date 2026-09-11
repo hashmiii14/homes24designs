@@ -27,7 +27,7 @@ export default function ServicesGrid() {
                   aria-label={`View ${service.title} details`}
                 >
                   <div className="relative aspect-[4/5] overflow-hidden bg-stone-100">
-                    <picture>
+                    <picture className="block w-full h-full">
                       <source srcSet={webpSrc} type="image/webp" />
                       <img
                         src={service.image}
@@ -35,6 +35,12 @@ export default function ServicesGrid() {
                         className="w-full h-full object-cover transition-transform duration-700 ease-lux group-hover:scale-105"
                         loading={i < 4 ? 'eager' : 'lazy'}
                         decoding="async"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (target.src !== service.image) {
+                            target.src = service.image;
+                          }
+                        }}
                       />
                     </picture>
                     {/* Gradient overlay */}
