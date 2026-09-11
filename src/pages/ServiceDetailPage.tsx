@@ -347,7 +347,7 @@ export default function ServiceDetailPage() {
                   </p>
                   <div className="mt-4 space-y-2">
                     <a
-                      href={`tel:${siteConfig.phone}`}
+                      href={`tel:${siteConfig.phoneRaw}`}
                       className="flex items-center gap-2 text-xs text-ivory hover:text-accent-light transition-colors py-1"
                     >
                       <Phone className="w-3.5 h-3.5 text-accent-light" />
